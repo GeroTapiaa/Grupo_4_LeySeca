@@ -2,6 +2,5 @@
 
 
 #INTEGRANTES
--Obreque Gaston, 26 años, Cutral-Có
--Nadia Maldonado, edad : 25 años, lugar de residencia : Bernal Oeste (Buenos Aires).
-
+## Obreque Gaston, 26 años, Cutral-Có
+## Nadia Maldonado: 25 años, reside en Bernal Oeste (Buenos Aires). Estudiante de programación web FullStack en fundación Formar. 
