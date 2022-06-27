@@ -8,9 +8,9 @@
 ## Obreque Gaston, 26 años, Cutral-Có/Neuquén. Cursando programación WEB FullStack.
 ## Nadia Maldonado: 25 años, reside en Bernal Oeste (Buenos Aires). Estudiante de programación web FullStack en fundación Formar. 
 ## Gerónimo Tapia: 24 años, soy de Cutral Co, provincia de Neuquén. Actualmente cursando programación web FullStack.
-  >
-## Inspiración en referntes de mercado: 
-### los listados a contunación fuero elegidos por la estética de sus sitios, y la navegabilidad de los mismos. 
+  
+## Inspiración en referentes del mercado: 
+### Los sitios listados a continuación fueron elegidos por la estética y la navegabilidad de los mismos. 
 * [Cerveza Patagonia](https://www.cervezapatagonia.com.ar/)
 
 * [Venex](https://www.venex.com.ar/)
