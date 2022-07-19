@@ -1,5 +1,5 @@
 # Descripción del e-commerce : 
-## *"Somos Ley Seca, una empresa con mas de xx años en el mercado  , al servicio de nuestros clientes, ofreciendo las mejores variedades de cervezas artesanales Trabajamos en equipo para poder llegar a la cerveza perfecta, con la combinación ideal entre lúpulo, levadura, malta y agua! Nuestros clientes están orientados a jóvenes (mayores de edad ) y dultos, con pasión por la cerveza artesanal, con ganas de explorar nuevos gustos y descubrir nuevas forma de tomar cerveza*
+## *"Somos Ley Seca, una empresa con mas de xx años en el mercado  , al servicio de nuestros clientes, ofreciendo las mejores variedades de cervezas artesanales Trabajamos en equipo para poder llegar a la cerveza perfecta, con la combinación ideal entre lúpulo, levadura, malta y agua! Nuestros clientes están orientados a jóvenes (mayores de edad ) y adultos, con pasión por la cerveza artesanal, con ganas de explorar nuevos gustos y descubrir nuevas forma de tomar cerveza*
 
 
  >
