@@ -1,1 +1,26 @@
-/*buenas*/
+:root {
+    --colorBlack: #151314;
+    --colorGreen: #36652f;
+    --colorLightGreen: #4d7250;
+    --colorMossGreen: #445c49;
+    --colorPearlGray: #DEDEDE;
+    --colorLightGray: #e2e0e6;
+    --colorOrange: #D19E59;
+    --fontButtonText: 'Metal Mania', cursive;
+    --fontBodyText: 'Cormorant', serif;
+    --img: url('/images/images_Ley-Seca/background_ley-seca.webp');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--colorPearlGray);
+}
+
+h2 {
+    font-family: var(--fontButtonText);
+}
