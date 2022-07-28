@@ -1,14 +1,10 @@
 :root {
     --colorBlack: #151314;
-    --colorGreen: #36652f;
-    --colorLightGreen: #4d7250;
-    --colorMossGreen: #445c49;
     --colorPearlGray: #DEDEDE;
-    --colorLightGray: #e2e0e6;
+    --colorGray: rgb(78, 74, 74);
     --colorOrange: #D19E59;
-    --fontButtonText: 'Metal Mania', cursive;
-    --fontBodyText: 'Cormorant', serif;
-    --img: url('/images/images_Ley-Seca/background_ley-seca.webp');
+    --fontBodyText: 'Bebas Neue', cursive;
+    --img: url('/images/logos/background_ley-seca.webp');
 }
 
 * {
@@ -19,8 +15,9 @@
 
 body {
     background-color: var(--colorPearlGray);
+    font-family: var(--fontBodyText);
 }
 
 h2 {
-    font-family: var(--fontButtonText);
+    text-align: center;
 }

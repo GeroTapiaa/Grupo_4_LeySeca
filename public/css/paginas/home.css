@@ -1,0 +1,169 @@
+@media (min-width: 320px) {
+    /* HEADER */
+    .home__header {
+        background-image: var(--img);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 350px;
+    }
+    /* LOGO */
+    .home__header__logo {
+        background-color: var(--colorBlack);
+        display: flex;
+        width: 100%;
+        height: 15%;
+    }
+    .home__header__logo-letters {
+        width: 80%;
+    }
+    .home__header__logo img {
+        width: 30%;
+        height: 100%;
+    }
+    .home__header__logo__burguer-menu {
+        width: 20%;
+    }
+    .home__header__logo__burguer-menu img {
+        width: 100%;
+        height: 100%;
+    }
+    .button__know-more {
+        position: absolute;
+        width: 100%;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 34%;
+    }
+    .home__header__logo-image {
+        display: none;
+    }
+    .home__header__menu {
+        display: none;
+    }
+    /* MAIN */
+    /* SECCION PRODUCTOS */
+    .home__main__section__products {
+        display: flex;
+        flex-direction: column;
+        margin: 16px;
+        gap: 17px;
+    }
+    .home__main__section--product {
+        position: relative;
+        background-color: #fff;
+        border-radius: 2%;
+        padding: 10px;
+        box-shadow: 3px 0px 8px;
+    }
+    .home__main__section--product label {
+        background-color: var(--colorOrange);
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        padding: 4px;
+        border-radius: 10%;
+    }
+    .home__main__description-products {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .home__main__description-products h3 {
+        padding-left: 10px;
+        text-align: center;
+    }
+    .descount {
+        color: gray;
+        text-decoration: line-through;
+    }
+    .button__products {
+        display: flex;
+        justify-content: center;
+    }
+    /* SECTION EXPERIENCE */
+    .home__main__section__experience {
+        display: flex;
+        flex-direction: column;
+        margin: 16px;
+        gap: 17px;
+    }
+    .home__main__section--experience {
+        position: relative;
+        background-color: #fff;
+        border-radius: 2%;
+        padding: 10px;
+        box-shadow: 3px 0px 8px;
+    }
+    .home__main__section--experience label {
+        position: absolute;
+        color: #fff;
+        padding: 3px;
+        top: 18px;
+        left: 17px;
+        border: 3px solid var(--colorOrange);
+    }
+    .home__main__description-experience {
+        width: 100%;
+    }
+    .home__main__description-experience img {
+        width: 100%;
+    }
+    /* FOOTER */
+    .home__footer {
+        background-color: var(--colorBlack);
+    }
+    .home__footer__redes {
+        position: relative;
+        display: flex;
+        height: 17%;
+    }
+    .home__footer__redes img {
+        width: 100%;
+        opacity: 50%;
+    }
+    .home__footer__redes-icon {
+        justify-content: space-around;
+        position: absolute;
+        bottom: 25px;
+        display: flex;
+        font-size: 26px;
+        color: #fff;
+        width: 100%;
+    }
+    .home__footer__logo-letters {
+        display: inline-block;
+        width: 23%;
+    }
+    .home__footer__logo-letters img {
+        width: 100%;
+    }
+    .home__footer__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .home__footer__links ul {
+        list-style: none;
+        margin: 10px;
+    }
+    .home__footer__links li a {
+        color: var(--colorPearlGray);
+        text-decoration: none;
+    }
+    .home__footer__logo-letters li {
+        margin: 5px;
+    }
+    hr {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .home__footer__terms {
+        margin: 10px;
+        color: var(--colorGray);
+        font-size: 14px;
+        text-align: center;
+    }
+}
