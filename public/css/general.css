@@ -4,6 +4,7 @@
     --colorGray: rgb(78, 74, 74);
     --colorOrange: #D19E59;
     --fontBodyText: 'Bebas Neue', cursive;
+    --fontText: 'Martel Sans', sans-seri;
     --img: url('/images/logos/background_ley-seca.webp');
 }
 
@@ -18,6 +19,6 @@ body {
     font-family: var(--fontBodyText);
 }
 
-h2 {
+h1 {
     text-align: center;
 }
