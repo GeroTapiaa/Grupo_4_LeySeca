@@ -2,7 +2,7 @@
  
  .button {
      padding: 3px;
-     width: 25%;
+     width: 70px;
      background-color: var(--colorBlack);
      font-family: var(--fontBodyText);
      color: var(--colorPearlGray);
