@@ -13,8 +13,137 @@
 
 
     
+    /*FORMULARIO*/
+.container {
+	max-width: 450px;
+	height: auto;
+	background-color:#EFEFEF;
+	margin: 5% auto;
+	padding-bottom: 1rem;
+   
+	
+}
+
+.form__titulo {
+	width: 100%;
+	text-align: center;
+	padding: 2rem 0 1rem;
+	border-top: solid .4rem;
+	margin-bottom: 1rem;
+    
+}
+
+.form__titulo  {
+	font-weight: bold;
+	color: #CAC8C8;
+	font-size: 18px;
+    color: #151314;
+    font-family: 'Bebas Neue';
+}
+
+
+.form__reg {
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    
+}
+
+.btn__form {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1rem;
+}
+
+.input, .btn__submit, .btn__reset{
+	background-color: #EFEFEF;
+	padding: .5rem;
+	margin: .5rem 0;
+	border: none;
+	border-bottom: solid #C8C8C8 .2rem;
+	transition: all .5s;
+   
+}
+
+.input:focus {
+	border-bottom: solid #dedede.2rem;
+}
+
+.btn__submit, .btn__reset {
+	width: 40%;
+	border-bottom: none;
+	background-color:#151314;
+	color: white;
+    font-family: 'Bebas Neue';
+    border-radius: 5px;
+}
+
+.btn__reset {
+    
+	background: color #151314;
+    border-radius: 5px;
+}
+
+.btn__submit:hover {
+	background-color: grey;
+}
+
+.btn__reset:hover{
+	background-color:grey;
+}
+.forms__reg link{
+    text-decoration: none;
+    color:#151314 ;
+}
+.p-form{
+    text-align: center;
+}
+
+
+@media (min-width: 0px) and (max-width: 767px) {
     .homeheaderlogo {
-        background-color: black;
+        background-color: #151314;
+        display: flex;
+        width: 100%;
+        height: 15%;
+    }
+    .homeheaderlogo-letters {
+        width: 80%;
+    }
+    .homeheaderlogo img {
+        width: 30%;
+        height: 100%;
+    }
+    .homeheaderlogoburguer-menu {
+        width: 20%;
+    }
+    .homeheaderlogoburguer-menu img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .homeheadermenu {
+        display: none;
+    } 
+}
+    
+    
+    
+
+
+@media (min-width: 768px) and (max-width:1023px) {
+    
+    }
+    .homeheaderlogoburguer-menu {
+        display: none;
+    }
+    .homeheaderlogo-image {
+        display: none;
+    }
+    /* nav */
+    .homeheaderlogo {
+        background-color:#151314;
         display: flex;
         width: 100%;
         height: 25%;
@@ -32,216 +161,18 @@
     .homeheadermenu {
         display: flex;
         width: 100%;
-        font-family: 'Bebas Neue'
     }
     .homeheadermenu ul {
         list-style: none;
         margin-top: 34px;
     }
     .homeheadermenu li a {
-        color:#dedede ;
+        color:#dedede;
         text-decoration: none;
+        font-family:'Bebas Neue' ;
     }
     .homeheadermenu li {
         margin: 5px;
         display: inline;
         padding: 43px;
-    }
-    
-
-.contenedor {
-    
-    width: 100%;
-}      
-    
-   
-    
-
-
-
-
-
-h1 {
-    color: #151314;
-    text-align: center;
-    font-size: 40px;
-    font-family: 'Bebas Neue';
-    font-weight: 700;
-}
-
-
-input[type="text"],
-input[type="password"] {
-    font-size: 20px;
-    width: 80%;
-    padding: 10px ;
-    border: none;
-    outline: none;
-
-
-}
-
-
-
-input::placeholder {
-
-    color: #6f7174;
-    font-size: 1em;
-    font-family: sans-serif;
-
-
-}
-
-.input-contenedor {
-    margin-bottom: 15px;
-    border: 1px #151314 solid;
-    border-radius: 5px;
-
-
-}
-
-.icono {
-    min-width: 30px;
-    text-align: center;
-    color: #151314;
-}
-
-.button {
-    
-    border: none;
-    width: 100%;
-    color: white;
-    background-color: #151314;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 5px ;
-    cursor: pointer;
-    font-family: 'Bebas Neue';
-    font-weight: 600;
-    margin-top: 10px;
-    
-}
-
-.button:hover {
-    background: gray;
-}
-
-p {
-    text-align: center;
-    font-size: 16px;
-}
-
-.form__checkbox {
-    
-    margin-bottom: 15px;
-    
-    
-    
-}
-
-.link {
-    text-decoration: none;
-    color:#151314 ;
-    font-weight: 600;
-}
-
-.link:hover {
-    color: #999;
-}
-.forms__footer__redes-icon{
-    color: white;
-}
-
-
-
-
-
-
-
-
-
-@media (min-width: 0px) and (max-width: 767px) {
-    
-    .home__header {
-        
-        background-position: center;
-        background-size: cover;
-        width: 100%;
-        height: 350px;
-    }
-    
-    .homeheaderlogo {
-        background-color: black;
-        display: flex;
-        width: 100%;
-        height: 15%;
-    }
-    .homeheaderlogo-letters {
-        width: 80%;
-    }
-    .homeheaderlogo img {
-        width: 30%;
-        height: 100%;
-    }.homeheaderlogoburguer-menu {
-        width: 20%;
-        
-    }
-    
-    .homeheaderlogoburguer-menu img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .homeheadermenu {
-        display: none;
-    } 
-    .contenedor {
-        margin: auto;
-        width: 60%;
-        margin-top: 50px;
-        margin-top: 50px;
-        margin-top: 150px;
-}
-
-
-}
-.homeheaderlogo-image {
-        display: none;
-    }
-
-    @media (min-width: 768px) and (max-width:1023px) {
-        .home__header__logo__burguer-menu {
-            display: none;
-        }
-        .home__header__logo-image {
-            display: none;
-        }
-        .home__header__logo {
-            background-color: var(--colorBlack);
-            display: flex;
-            width: 100%;
-            height: 25%;
-        }
-        .home__header__logo-letters {
-            width: 20%;
-        }
-        .home__header__menu {
-            display: flex;
-            width: 100%;
-        }
-        .home__header__menu ul {
-            list-style: none;
-            margin-top: 34px;
-        }
-        .home__header__menu li a {
-            color: var(--colorPearlGray);
-            text-decoration: none;
-        }
-        .home__header__menu li {
-            margin: 5px;
-            display: inline;
-            padding: 43px;
-        }
-
-
     }

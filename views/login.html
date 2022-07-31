@@ -7,22 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header class="homeheader">
+
+        <!-- HEADER-LOGO -->
+
         <div class="homeheaderlogo">
 
             <div class=" homeheaderlogo-letters ">
                 <img src="/images/LETRAS_LEY-SECA2.png" alt="">
             </div>
-            
+            <!-- BURGUER-MENU -->
 
             <div class="homeheaderlogoburguer-menu">
-                <img src="/images/png-transparent-hamburger-button-.jpg" alt="">
+                <img src="/images/hamburger-button.jpg" alt="">
             </div>
 
 
 
 
-           
+            <!-- HEADER-NAVBAR -->
 
             <nav class="homeheadermenu">
 
@@ -38,31 +41,31 @@
             </nav>
 
         </div>
-        
-
-    </header> 
 
 
- <form class="formulario">
-        <h1>Ingresar</h1>
-        <div class="contenedor">
-            <div class="input-contenedor">
-                <i class="fa-solid fa-user icono"></i>
-                <input type="text" placeholder="Usuario">
-            </div>
+    </header>
 
 
-            <div class="input-contenedor ">
-                <i class="fa-solid fa-key icono"></i>
-                <input type="password" placeholder="Contraseña">
-            </div>
-            <p>¿Olvidaste tu contraseña?</p>
-            <div>
-                <input type="submit" value="Ingresar" class="button">
-                <p> ¿No tenés cuenta? <a href="/register" class="link">Registrate acá</a> </p>
-            </div>
 
+    <div class="container">
+		<div class="form__titulo">
+			<h2>Crear cuenta</h2>
+		</div>		
+    <form class="form__reg" action="">
+      
+        <input class="input" type="text" placeholder="  Usuario" required autofocus>
+  
+       <input class="input" type="password" placeholder="  Contraseña" required >
+  
+        <div class="btn__form">
+            <input class="btn__submit" type="submit" value="INGRESAR">
+            <input class="btn__reset" type="reset" value="LIMPIAR">	
         </div>
-    <form>
+        <p class="p-form"> ¿No tenés cuenta? <a class="forms__" href="/register" class="link">Registrate acá</a> </p>
+    </form>
+
+
+
+   
 </body>
 </html>
