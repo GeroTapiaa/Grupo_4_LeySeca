@@ -1,6 +1,6 @@
 @media (min-width: 0px) and (max-width: 767px) {
     /* HEADER */
-    .home__header {
+    #home__header {
         background-image: var(--img);
         background-position: center;
         background-size: cover;
@@ -190,7 +190,7 @@
 }
 
 @media (min-width: 768px) and (max-width:1023px) {
-    .home__header {
+    #home__header {
         background-image: var(--img);
         background-position: center;
         background-size: cover;
@@ -251,7 +251,7 @@
     }
     /* MAIN */
     /* SECCION PRODUCTOS */
-    .title_experience {
+    #title_experience {
         padding: 20px;
         background: radial-gradient(#151314, gray);
     }
@@ -411,7 +411,7 @@
 
 @media (min-width:1024px) {
     /* header */
-    .home__header {
+    #home__header {
         background-image: var(--img);
         background-position: center;
         background-size: cover;
@@ -506,7 +506,7 @@
         height: 34%;
     }
     /* SECCION PRODUCTOS */
-    .title_experience {
+    #title_experience {
         padding: 20px;
         font-size: 60px;
         background: radial-gradient(#151314, gray);
