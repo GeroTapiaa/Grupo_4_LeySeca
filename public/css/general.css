@@ -1,10 +1,21 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
-    font-family: "Roboto";
-    font-size: 16px;
-    
+
+:root {
+    --tipografia: "Bebas Neue";
+    --tipografia2: "Kaushan Script";
+    --colorBlack: #151314;
+    --colorPearlGray: #DEDEDE;
+    --colorGray: rgb(78, 74, 74);
+    --colorOrange: #D19E59;
+    --fontBodyText: 'Bebas Neue', cursive;
+    --img: url('/images/logos/background_ley-seca.webp');
+    --fontText: 'Martel Sans', sans-seri;
+
+
 }
+
+
