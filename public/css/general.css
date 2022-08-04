@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     box-sizing: border-box;
     margin: 0;
@@ -32,3 +33,31 @@ button{
     padding: 3px 6px;
 } 
 
+=======
+:root {
+    --colorBlack: #151314;
+    --colorPearlGray: #DEDEDE;
+    --colorGray: rgb(78, 74, 74);
+    --colorOrange: #D19E59;
+    --fontBodyText: 'Bebas Neue', cursive;
+    --fontText: 'Martel Sans', sans-seri;
+    --img: url('/images/logos/background_ley-seca.webp');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--colorPearlGray);
+    font-family: var(--fontBodyText);
+    width: 100vw;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+}
+>>>>>>> a5aa4ad68812baf6de945658c3612c1a5e9c79a3
