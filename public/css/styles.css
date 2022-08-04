@@ -1,3 +1,10 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import"./general.css";
 @import"./productDetail.css";
+=======
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Martel+Sans&display=swap');
+@import './general.css';
+@import './componentes/componentes.css';
+@import './paginas/paginas.css';
+>>>>>>> a5aa4ad68812baf6de945658c3612c1a5e9c79a3

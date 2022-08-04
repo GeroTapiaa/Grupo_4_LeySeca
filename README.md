@@ -22,4 +22,7 @@
 * [Mercado Libre](https://www.mercadolibre.com.ar/#from=homecom)
 
 * [cheverry](https://cheverry.com.ar/)
->>>>>>> 46c15a02d435b5ec5903cec1b9cd5dddfb7945c0
+>
+
+#Espacio de trabajo:
+* [Tablero Trello](https://trello.com/b/1eBA106j/grupo-4)
