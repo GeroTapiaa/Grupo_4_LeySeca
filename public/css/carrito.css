@@ -64,8 +64,12 @@
 -moz-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.83);
 } */
 .cart {
-    font-family: var(--tipografia);
+    font-family: var(--fontBodyText);
+    background-color: #fff;
 
+}
+.carrito__main--section-article{
+    background-color: #fff;
 }
 .carrito__main--section-article img{
     width: 100%;
@@ -383,7 +387,7 @@ hr {
     .form__group{
         position: relative;
     }
-    .form__input{
+    .form__group input{
         width: 130%;
         font-family: inherit;
         font-size: 1rem;
