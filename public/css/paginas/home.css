@@ -1,4 +1,4 @@
-@media (min-width: 0px) and (max-width: 767px) {
+@media (min-width: 0px) and (max-width: 320px) {
     /* HEADER */
     #home__header {
         background-image: var(--img);
@@ -37,7 +37,7 @@
         justify-content: center;
         height: 34%;
     }
-    .form {
+    .home__form {
         display: none;
     }
     .home__header__logo-image {
@@ -48,6 +48,14 @@
     }
     /* MAIN */
     /* SECCION PRODUCTOS */
+    #title_shop {
+        text-align: center;
+        font-size: 60px;
+    }
+    #title_experience {
+        text-align: center;
+        font-size: 60px;
+    }
     .home__main__section__products {
         display: flex;
         flex-direction: column;
@@ -74,6 +82,9 @@
         flex-direction: column;
         gap: 5px;
     }
+    .home__main__description-products img {
+        width: 100%;
+    }
     .home__main__description-products h3 {
         padding-left: 10px;
         text-align: center;
@@ -82,7 +93,7 @@
         color: gray;
         text-decoration: line-through;
     }
-    .button__products {
+    .home__button__products {
         display: flex;
         justify-content: center;
     }
@@ -197,7 +208,7 @@
         width: 100%;
         height: 350px;
     }
-    .form {
+    .home__form {
         display: none;
     }
     .home__header__logo__burguer-menu {
@@ -251,6 +262,10 @@
     }
     /* MAIN */
     /* SECCION PRODUCTOS */
+    #title_shop {
+        text-align: center;
+        font-size: 60px;
+    }
     #title_experience {
         padding: 20px;
         background: radial-gradient(#151314, gray);
@@ -282,11 +297,6 @@
         padding: 4px;
         border-radius: 10%;
     }
-    .home__main__description-products {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
     .description-products {
         margin: 20px;
     }
@@ -298,9 +308,10 @@
         color: gray;
         text-decoration: line-through;
     }
-    .button__products {
-        display: flex;
-        justify-content: center;
+    .home__button__products {
+        position: absolute;
+        bottom: 0px;
+        left: 129px;
     }
     /* SECTION EXPERIENCE */
     .home__main__section__experience {
@@ -463,14 +474,14 @@
         padding: 9px;
     }
     /* search bar */
-    .form {
+    .home__form {
         display: flex;
     }
-    .formgroup {
+    .home__formgroup {
         position: relative;
         margin: 22px;
     }
-    .form input {
+    .home__form input {
         font-size: 1rem;
         padding: 5px;
         border: none;
@@ -479,7 +490,7 @@
         background: transparent;
         color: black;
     }
-    .form label {
+    .home__form label {
         cursor: pointer;
         position: absolute;
         top: 0px;
@@ -487,12 +498,12 @@
         transform: translate(10px);
         transition: transform .5s, color .3s;
     }
-    .form input:focus+.form label,
+    .home__form input:focus+.home__form label,
     .forminput:not(:placeholder-shown)+.form__label {
         transform: translateY(-12px) scale(.7);
         transform-origin: top left;
     }
-    .form i {
+    .home__form i {
         color: black;
     }
     /* button */
@@ -506,6 +517,10 @@
         height: 34%;
     }
     /* SECCION PRODUCTOS */
+    #title_shop {
+        text-align: center;
+        font-size: 60px;
+    }
     #title_experience {
         padding: 20px;
         font-size: 60px;
@@ -514,21 +529,19 @@
     .home__main__section__products {
         display: flex;
         width: 100%;
-        height: 470px;
+        height: 510px;
         justify-content: center;
         padding: 27px;
         gap: 9px;
     }
     .home__main__section--product {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         position: relative;
         width: 24%;
-        /* height: 100%; */
         margin: 4px;
         background-color: #fff;
         border-radius: 2%;
-        padding: 5px;
         box-shadow: 3px 0px 8px;
     }
     .home__main__section--product img {
@@ -547,6 +560,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: auto;
+    }
+    .home__main__description-products img {
+        width: 71%;
+    }
+    .home__main__description-products a {
+        width: 85%;
+        margin-left: 66px;
     }
     .description-products {
         margin: 7px;
@@ -560,10 +581,12 @@
         color: gray;
         text-decoration: line-through;
     }
-    .button__products {
+    .home__button__products {
         display: flex;
-        margin-top: 11px;
         justify-content: center;
+        position: absolute;
+        bottom: 0px;
+        ;
     }
     .home__main__section__experience {
         display: flex;
