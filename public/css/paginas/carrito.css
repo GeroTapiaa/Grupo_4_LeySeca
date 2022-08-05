@@ -14,10 +14,10 @@
         width: 100%;
         height: 15%;
     }
-    .form{
+    .form {
         display: none;
     }
-    .form--login--cart a{
+    .form--login--cart a {
         color: var(--colorPearlGray);
     }
     .cartheaderlogo-letters {
@@ -34,12 +34,14 @@
         width: 100%;
         height: 100%;
     }
-
     .cartheadermenu {
         display: none;
-    } 
+    }
 }
+
+
 /*main*/
+
 
 /* .home__main--section--container {
     padding: 10px 20px;
@@ -58,18 +60,20 @@
     align-items: center;
 
 } */
+
+
 /* .carrito__main--section-article{
     box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.83);
 -webkit-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.83);
 -moz-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.83);
 } */
+
 .cart {
     font-family: var(--tipografia);
-
 }
-.carrito__main--section-article img{
+
+.carrito__main--section-article img {
     width: 100%;
-    
 }
 
 .carrito__producto--compra {
@@ -80,21 +84,24 @@
     text-align: center;
     gap: 10px;
     padding: 10px 20px;
-    
 }
-.carrito__producto--compra p{
+
+.carrito__producto--compra p {
     font-size: 1.2rem;
 }
-.title__beer--ipa{
+
+.title__beer--ipa {
     font-size: 30px;
 }
-.cantidad--btn{
+
+.cantidad--btn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
-.btn--agregar{
+
+.btn--agregar {
     font-size: 12px;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -104,7 +111,8 @@
     padding: 6px 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
-.btn--agregar:hover{
+
+.btn--agregar:hover {
     background-color: #362f32;
 }
 
@@ -113,9 +121,9 @@
     justify-content: space-between;
     padding: 10px 20px;
     margin-bottom: 15px;
-    
 }
-.cart__main--section--btn button{
+
+.cart__main--section--btn button {
     font-size: 12px;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -125,7 +133,8 @@
     padding: 6px 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
-.cart__main--section--btn button:hover{
+
+.cart__main--section--btn button:hover {
     background-color: #362f32;
 }
 
@@ -135,32 +144,35 @@
     background-color: black;
     color: #fff;
     line-height: 40px;
-
 }
 
 .description h2 {
     font-size: 35px;
     font-weight: bold;
 }
-.description p{
+
+.description p {
     font-size: 1.2rem;
 }
 
+
 /* FOOTER */
+
 .cart__footer {
     background-color: var(--colorBlack);
 }
+
 .cart__footer__redes {
     position: relative;
     display: flex;
     flex-direction: column;
-    
 }
+
 .cart__footer__redes img {
     width: 100%;
     opacity: 50%;
-    
 }
+
 .cart__footer__redes-icon {
     justify-content: space-around;
     display: flex;
@@ -168,44 +180,49 @@
     color: #fff;
     width: 100%;
 }
+
 .cart__footer__logo-letters {
     display: inline-block;
     width: 23%;
     display: none;
 }
+
 .cart__footer__logo-letters img {
     width: 100%;
 }
+
 .cart__footer__links {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
+
 .cart__footer__links ul {
     list-style: none;
     margin: 10px;
     text-align: center;
 }
+
 .cart__footer__links li a {
     color: var(--colorPearlGray);
     text-decoration: none;
 }
+
 .cart__footer__logo-letters li {
     margin: 5px;
 }
+
 hr {
     width: 100%;
     margin: 8px
 }
+
 .cart__footer__terms {
     margin: 10px;
     color: var(--colorGray);
     font-size: 16px;
     text-align: center;
 }
-
-
 
 .conteiner__pagar--btn {
     position: fixed;
@@ -222,7 +239,8 @@ hr {
     background-color: #fff;
     color: black;
 }
-.conteiner__pagar--btn button{
+
+.conteiner__pagar--btn button {
     font-size: 15px;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -232,7 +250,8 @@ hr {
     padding: 6px 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
-.conteiner__pagar--btn button:hover{
+
+.conteiner__pagar--btn button:hover {
     background-color: #199600;
 }
 
@@ -244,7 +263,7 @@ hr {
         width: 100%;
         /* height: 350px; */
     }
-    .form{
+    .form {
         display: none;
     }
     .cartheaderlogoburguer-menu {
@@ -287,7 +306,6 @@ hr {
         display: inline;
         padding: 43px;
     }
-
     /*main*/
     .carrito__producto--compra {
         display: flex;
@@ -298,54 +316,46 @@ hr {
         gap: 10px;
         margin-bottom: 10px;
         padding: 10px 60px;
-        
     }
-    .cantidad--btn{
+    .cantidad--btn {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
     }
-    .btn--agregar{
+    .btn--agregar {
         font-size: 12px;
     }
-    
     .home__main--section--container {
         padding: 10px 60px;
         margin: 70px 0;
     }
-    hr{
-        display: none  ;
+    hr {
+        display: none;
     }
     .cart__main--section--btn {
         display: none;
         padding: 10px 20px;
         margin-bottom: 15px;
     }
-    
-
     .description {
         text-align: left;
         padding: 70px 60px;
         background-color: black;
         color: #fff;
         line-height: 40px;
-
     }
     /*footer*/
-    .cart__footer__links  {
+    .cart__footer__links {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         padding: 0 60px;
         font-size: 20px;
-        
-        
     }
-    .cart__footer__links ul{
+    .cart__footer__links ul {
         text-align: left;
     }
-
     .pagar-btn {
         display: none;
     }
@@ -358,22 +368,19 @@ hr {
         width: 100%;
         height: 25%;
     }
-
-    .form{
+    .form {
         display: flex;
         background-color: var(--colorBlack);
         padding: 10px 60px;
         justify-content: space-between;
-        
     }
-    .form i{
-         color:rgb(176 175 175)
-        
+    .form i {
+        color: rgb(176 175 175)
     }
-    .form__group{
+    .form__group {
         position: relative;
     }
-    .form__input{
+    .form__input {
         width: 130%;
         font-family: inherit;
         font-size: 1rem;
@@ -384,7 +391,7 @@ hr {
         background-color: var(--colorBlack);
         color: #fff;
     }
-    .form__label{
+    .form__label {
         cursor: pointer;
         position: absolute;
         top: 0px;
@@ -393,17 +400,17 @@ hr {
         transition: transform .5s, color .3s;
         color: #fff;
     }
-    .form__input:focus + .form__label, .form__input:not(:placeholder-shown) + .form__label{
+    .form__input:focus+.form__label,
+    .form__input:not(:placeholder-shown)+.form__label {
         transform: translateY(-12px) scale(.7);
         transform-origin: top left;
     }
-    .form--login--cart{
+    .form--login--cart {
         font-size: 30px;
         display: flex;
         gap: 24px;
-        
     }
-    .cartheaderlogo{
+    .cartheaderlogo {
         width: 100%;
         display: flex;
         flex-direction: row-reverse;
@@ -437,7 +444,6 @@ hr {
     .cartheadermenu li a {
         color: var(--colorPearlGray);
         text-decoration: none;
-
     }
     .cartheadermenu li {
         margin: 5px;
@@ -449,14 +455,14 @@ hr {
         padding: 10px 60px;
         margin: 70px 0;
     } */
-    .carrito__main--section-article{
+    .carrito__main--section-article {
         width: 100%;
         display: flex;
     }
-    .carrito__main--section-article img{
+    .carrito__main--section-article img {
         width: 70%;
     }
-    .image--product{
+    .image--product {
         width: 50%;
     }
     .carrito__producto--compra {
@@ -470,16 +476,16 @@ hr {
         padding: 10px 60px;
         width: 50%;
     }
-    .cantidad--btn{
+    .cantidad--btn {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
     }
-    .btn--agregar{
+    .btn--agregar {
         font-size: 12px;
     }
-    hr{
+    hr {
         display: none;
     }
     .cart__main--section--btn {
@@ -493,9 +499,8 @@ hr {
         display: flex;
         flex-direction: row;
         background-color: black;
-        
     }
-    .cart__footer__redes img{
+    .cart__footer__redes img {
         width: 50%;
         opacity: 50%;
     }
@@ -548,7 +553,7 @@ hr {
         font-size: 14px;
         text-align: center;
     }
-    .conteiner__pagar--btn{
+    .conteiner__pagar--btn {
         display: none;
     }
 }

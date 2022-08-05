@@ -37,7 +37,7 @@
         justify-content: center;
         height: 34%;
     }
-    .form {
+    .home__form {
         display: none;
     }
     .home__header__logo-image {
@@ -49,6 +49,10 @@
     /* MAIN */
     /* SECCION PRODUCTOS */
     #title_shop {
+        text-align: center;
+        font-size: 60px;
+    }
+    #title_experience {
         text-align: center;
         font-size: 60px;
     }
@@ -204,7 +208,7 @@
         width: 100%;
         height: 350px;
     }
-    .form {
+    .home__form {
         display: none;
     }
     .home__header__logo__burguer-menu {
@@ -470,14 +474,14 @@
         padding: 9px;
     }
     /* search bar */
-    .form {
+    .home__form {
         display: flex;
     }
-    .formgroup {
+    .home__formgroup {
         position: relative;
         margin: 22px;
     }
-    .form input {
+    .home__form input {
         font-size: 1rem;
         padding: 5px;
         border: none;
@@ -486,7 +490,7 @@
         background: transparent;
         color: black;
     }
-    .form label {
+    .home__form label {
         cursor: pointer;
         position: absolute;
         top: 0px;
@@ -494,12 +498,12 @@
         transform: translate(10px);
         transition: transform .5s, color .3s;
     }
-    .form input:focus+.form label,
+    .home__form input:focus+.home__form label,
     .forminput:not(:placeholder-shown)+.form__label {
         transform: translateY(-12px) scale(.7);
         transform-origin: top left;
     }
-    .form i {
+    .home__form i {
         color: black;
     }
     /* button */
