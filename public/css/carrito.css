@@ -285,10 +285,20 @@ hr {
     .cartheadermenu li {
         margin: 5px;
         display: inline;
-        padding: 43px;
+        padding: 42px;
     }
 
     /*main*/
+    .carrito__main--section-article{
+        width: 100%;
+        display: flex;
+    }
+    .carrito__main--section-article img{
+        width: 70%;
+    }
+    .image--product{
+        width: 70%;
+    }
     .carrito__producto--compra {
         display: flex;
         flex-wrap: wrap;
@@ -298,7 +308,7 @@ hr {
         gap: 10px;
         margin-bottom: 10px;
         padding: 10px 60px;
-        
+        width: 50%;
     }
     .cantidad--btn{
         display: flex;
