@@ -17,10 +17,4 @@
 body {
     background-color: var(--colorPearlGray);
     font-family: var(--fontBodyText);
-    width: 100vw;
-}
-
-h1 {
-    text-align: center;
-    font-size: 60px;
 }
