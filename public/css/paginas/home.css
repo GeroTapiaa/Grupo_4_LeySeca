@@ -22,7 +22,8 @@
             height: 100%;
         }
         .home__header__menu {
-            width: 40%;
+            position: relative;
+            bottom: 54px;
         }
         .nav__input {
             display: none;
@@ -53,11 +54,13 @@
         }
         .home__header__browser-menu__items {
             height: 0px;
+            position: absolute;
             opacity: 0;
             display: flex;
             transition: 0s;
         }
         .nav__input:checked+.home__header__browser-menu__items {
+            position: relative;
             opacity: 1;
             height: 180px;
             transition: 0.5s;
@@ -65,12 +68,12 @@
         }
         .button__know-more {
             position: absolute;
+            top: 180px;
             width: 100%;
             margin: 10px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 34%;
         }
         .home__form {
             display: none;
@@ -265,6 +268,11 @@
         }
         .home__header__logo-letters img {
             width: 100%;
+        }
+        .home__header__menu {
+            position: absolute;
+            top: 0px;
+            left: 145px;
         }
         .nav__input {
             display: none;
@@ -498,7 +506,9 @@
             display: none;
         }
         .home__header__menu {
-            width: 70%;
+            position: absolute;
+            top: 0;
+            left: 160px;
         }
         .home__header__menu ul {
             display: flex;
@@ -520,6 +530,8 @@
         /* search bar */
         .home__form {
             display: flex;
+            justify-content: end;
+            width: 82%;
         }
         .home__formgroup {
             position: relative;
@@ -558,7 +570,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 34%;
         }
         /* SECCION PRODUCTOS */
         #title_shop {
