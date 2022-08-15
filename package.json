@@ -1,25 +1,17 @@
 {
-  "dependencies": {
-    "express": "^4.18.1",
-    "nodemon": "^2.0.19"
-  },
-  "name": "grupo_4_leyseca",
-  "description": ">",
-  "version": "1.0.0",
-  "main": "app.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GeroTapiaa/Grupo_4_LeySeca.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GeroTapiaa/Grupo_4_LeySeca/issues"
-  },
-  "homepage": "https://github.com/GeroTapiaa/Grupo_4_LeySeca#readme"
+    "name": "grupo-4-leyseca",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node ./src/bin/www"
+    },
+    "dependencies": {
+        "cookie-parser": "~1.4.4",
+        "debug": "~2.6.9",
+        "ejs": "~2.6.1",
+        "express": "~4.16.1",
+        "express-generator": "^4.16.1",
+        "http-errors": "~1.6.3",
+        "morgan": "~1.9.1"
+    }
 }
