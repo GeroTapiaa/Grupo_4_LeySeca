@@ -1,0 +1,11 @@
+ /* HEADER BUTTON */
+ 
+ .button {
+     padding: 3px;
+     width: 70px;
+     background-color: var(--colorBlack);
+     font-family: var(--fontBodyText);
+     color: var(--colorPearlGray);
+     border: none;
+     border-radius: 10%;
+ }
