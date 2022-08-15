@@ -1,67 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminos y condiciones</title>
-</head>
+    <%- include("./partials/head",{
+        title : "Terminos y condiciones"
+    }) %> 
 
 <body>
 
 
-    <header id="home__header">
-
-        <!-- HEADER-LOGO -->
-
-        <div class="home__header__logo">
-
-            <div class=" home__header__logo-letters ">
-                <img src="/images/logos/LETRAS_LEY-SECA2.png" alt="">
-            </div>
-            <!-- BURGUER-MENU -->
-
-            <div class="home__header__logo__burguer-menu">
-                <img src="/images/logos/png-transparent-hamburger-button-.png" alt="">
-            </div>
-
-
-            <div class="home__header__logo-image">
-                <img src="/images/logos/logo_ley_seca.png">
-            </div>
-
-            <!-- HEADER-NAVBAR -->
-
-            <nav class="home__header__menu">
-
-                <ul>
-                    <li><a href=" ">Productos</a></li>
-                    <li><a href="#title_shop">Shop</a></li>
-                    <li><a href="#title_experience">Experiencias</a></li>
-                    <li><a href="/register">Registrate</a></li>
-                </ul>
-
-
-
-            </nav>
-
-            <form class="home__form">
-                <div class="home__formgroup">
-                    <input type="text" id="name" class="forminput" placeholder=" ">
-                    <label for="name" class="form__label"><i class="fa-solid fa-magnifying-glass"></i></label>
-                </div>
-            </form>
-
-        </div>
-
-        <!-- HEADER BUTTON -->
-
-        <div class="button__know-more">
-            <button class="button" type="button">Conocé más</button>
-        </div>
-
-    </header>
+    <%- include('./partials/header') %>
     <main>
 
 
