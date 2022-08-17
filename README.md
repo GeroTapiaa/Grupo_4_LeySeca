@@ -25,4 +25,4 @@
 >
 
 #Espacio de trabajo:
-* [Tablero Trello](https://trello.com/b/1eBA106j/grupo-4)
+* [Tablero Trello](https://trello.com/b/1eBA106j)
