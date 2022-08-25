@@ -4,6 +4,8 @@ module.exports = {
     },
     carrito: (req, res) => {
         res.render('carrito')
+    },
+    create: (req ,res) =>{
+         res.render('form-create')
     }
-
 }
