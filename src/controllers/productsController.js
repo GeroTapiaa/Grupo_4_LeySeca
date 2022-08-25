@@ -7,5 +7,8 @@ module.exports = {
     },
     create: (req ,res) =>{
          res.render('form-create')
+    },
+    store : (req ,res) =>{
+        res.render('form-edit')
     }
 }

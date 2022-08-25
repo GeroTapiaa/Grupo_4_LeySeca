@@ -19,7 +19,13 @@
     width: 100%;
     padding: 10px;
 }
-
+textarea{
+    resize: none;
+}
+.form__box--description{
+    width: 100%;
+    padding: 10px;
+}
 .label-form{
     padding-left: 4px;
 }
@@ -31,9 +37,12 @@
     padding: 10px;
     
 }
+.btn__product:hover{
+    background-color: gray;
+}
 .btn__product{
     width: 50%;
-    background-color:rgb(151, 151, 151);
+    background-color:rgb(212, 212, 212);
     border: 1px solid black;
     border-radius: 8px;
     padding: 10px;
@@ -66,7 +75,7 @@
     }
     .btn__product{
         width: 90%;
-        background-color:rgb(151, 151, 151);
+        background-color:rgb(212, 212, 212);
         border: 1px solid black;
         border-radius: 8px;
         padding: 10px;
