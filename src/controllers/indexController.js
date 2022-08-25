@@ -4,7 +4,7 @@ module.exports = {
 
     },
     terms: (req, res) => {
-        res.render('ter-condiciones')
+        res.render('terms')
     },
 
 }
