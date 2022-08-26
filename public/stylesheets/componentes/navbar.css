@@ -6,7 +6,7 @@
         height: 63px;
     }
     .home__header__logo img {
-        width: 38%;
+        width: 92px;
         height: 100%;
     }
     .home__header__logo-letters {
@@ -27,7 +27,7 @@
     }
     .nav_label {
         display: inline;
-        margin-left: 278px;
+        margin-left: 87%;
     }
     .nav_label i {
         background-color: var(--colorBlack);
