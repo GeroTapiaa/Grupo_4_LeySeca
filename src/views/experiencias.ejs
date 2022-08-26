@@ -4,7 +4,7 @@
 
 
 
-        <%- include('./partials/header') %>
+        <%- include('./partials/navbar') %>
 
 
             <!-- MAIN -->
@@ -13,24 +13,7 @@
 
                 <!-- MAIN SECTION PRODUCTS -->
 
-                <h1 id="title_shop">Los elegidos para vos</h1>
-                <section class="home__main__section__products">
 
-                    <% productsDiscount.forEach(({id, name, price , discount, image}) => { %>
-                        <%- include('./partials/products',{
-                    id, 
-                    name,
-                    price,
-                    discount,
-                    image,
-                    toThousand
-
-                 }) %>
-                            <% }) %>
-
-
-
-                </section>
 
                 <!-- SECTION EXPERIENCE -->
                 <h1 id="title_experience">EXPERIENCIAS</h1>
@@ -82,16 +65,8 @@
                             <p> Descubrí todas nuestras sucursales.</p>
                         </div>
                     </article>
-
-
-                    <article class=" home__main__section--experience-2 ">
-                   <div class="home__main__description-experience-2 ">
-                    <img src="/images/logos/barriles_banner.jpg " alt=" ">
-                    <h2 id=" sucursales ">NUESTROS BARES</h2>
-                  <p> Descubrí todas nuestras sucursales.</p>
-                  
-                   </div>
-                    
+                    <article class=" home__main__section--experience-none-2 ">
+                 
                     </article>
 
                 </section>

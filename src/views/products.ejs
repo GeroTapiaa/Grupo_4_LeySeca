@@ -1,0 +1,52 @@
+<%- include('./partials/head', { title : 'Shop' }) %>
+
+    <body class="home">
+
+
+
+        <%- include('./partials/navbar') %>
+
+
+            <!-- MAIN -->
+
+            <main class="home__main">
+
+                <!-- MAIN SECTION PRODUCTS -->
+
+                <h1 id="title_shop">Nuestros Productos</h1>
+
+                <section class="home__main__section__products">
+
+                    <% products.forEach(({id, name, price , discount, image}) => { %>
+                        <%- include('./partials/products',{
+                    id, 
+                    name,
+                    price,
+                    discount,
+                    image,
+                    toThousand
+
+                 }) %>
+                            <% }) %>
+
+
+
+                </section>
+
+
+
+
+
+
+
+
+
+
+
+            </main>
+
+            <%- include('./partials/footer') %>
+
+    </body>
+
+    </html>
