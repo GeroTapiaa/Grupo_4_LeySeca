@@ -25,14 +25,14 @@
                                 <p>Cantidad</p>
                                 <button>- 1 +</button>
                                 <div class="detalle__button--carrito">
-                                    <a href="/products/carrito"> <button>AGREGAR AL CARRITO</button></a>
+                                    <a href="/products/shopping-cart"> <button>AGREGAR AL CARRITO</button></a>
                                 </div>
 
                             </div>
                             <div class="detalle__button--carrito">
                                 <a href="/products/edit/<%=id%>"> <button>EDITAR</button></a>
                             </div>
-                            <form action="/products/delete/<%=id%>?_method=DELETE " method="POST">
+                            <form action="/products/delete/<%= id %> ?_method=DELETE " method="POST">
                                 <button type="submit" class="btn__product">ELIMINAR</button>
                             </form>
                             <% }) %>
@@ -67,7 +67,7 @@
 
                                 <div class="detalle__button__products">
 
-                                    <a href="/products/carrito"><button class="button">Comprar</button></a>
+                                    <a href="/products/shopping-cart"><button class="button">Comprar</button></a>
                                 </div>
 
 

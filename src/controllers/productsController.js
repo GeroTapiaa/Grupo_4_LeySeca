@@ -9,9 +9,10 @@ const saveProducts = (products) => {
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
-    productos: (req, res) => {
-        res.render('productos', {
-            products
+    products: (req, res) => {
+        res.render('products', {
+            products,
+            toThousand
         })
     },
     experiencias: (req, res) => {
@@ -30,7 +31,7 @@ module.exports = {
         })
     },
     carrito: (req, res) => {
-        res.render('carrito')
+        res.render('shopping-cart')
     },
     productos: (req, res) => {
         res.render('productos', {
@@ -77,7 +78,7 @@ module.exports = {
         let { id } = req.params;
         let productsModify = products.filter(product => product.id !== +id)
         saveProducts(productsModify);
-        res.redirect('/productos');
+        res.redirect('/products/products');
 
     },
 
