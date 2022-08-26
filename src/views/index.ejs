@@ -13,13 +13,22 @@
 
                 <!-- MAIN SECTION PRODUCTS -->
 
-                <h1 id="title_shop">SHOP</h1>
+                <h1 id="title_shop">Los elegidos para vos</h1>
                 <section class="home__main__section__products">
 
-                    <%- include('./partials/products') %>
-                        <%- include('./partials/products') %>
-                            <%- include('./partials/products') %>
-                                <%- include('./partials/products') %>
+                    <% productsDiscount.forEach(({id, name, price , discount, image}) => { %>
+                        <%- include('./partials/products',{
+                    id, 
+                    name,
+                    price,
+                    discount,
+                    image,
+                    toThousand
+
+                 }) %>
+                            <% }) %>
+
+
 
                 </section>
 

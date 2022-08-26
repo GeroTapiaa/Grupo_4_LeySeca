@@ -13,32 +13,26 @@
 
                 <!-- MAIN SECTION PRODUCTS -->
 
-                <h1 id="title_shop">SHOP</h1>
-                <section class="home__main__section__products">
-
-                    <%- include('./partials/products') %>
-                        <%- include('./partials/products') %>
-                            <%- include('./partials/products') %>
-                                <%- include('./partials/products') %>
-
-                </section>
+                <h1 id="title_shop">Nuestros Productos</h1>
 
                 <section class="home__main__section__products">
 
-                    <%- include('./partials/products') %>
-                        <%- include('./partials/products') %>
-                            <%- include('./partials/products') %>
-                                <%- include('./partials/products') %>
+                    <% products.forEach(({id, name, price , discount, image}) => { %>
+                        <%- include('./partials/products',{
+                    id, 
+                    name,
+                    price,
+                    discount,
+                    image,
+                    toThousand
+
+                 }) %>
+                            <% }) %>
+
+
 
                 </section>
-                <section class="home__main__section__products">
 
-                    <%- include('./partials/products') %>
-                        <%- include('./partials/products') %>
-                            <%- include('./partials/products') %>
-                                <%- include('./partials/products') %>
-
-                </section>
 
 
 

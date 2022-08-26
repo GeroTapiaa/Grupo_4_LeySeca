@@ -1,10 +1,11 @@
-.title-created{
+.title-created {
     width: 100%;
     display: flex;
     justify-content: center;
     padding-top: 8px;
 }
-.form-create{
+
+.form-create {
     background-color: #fff;
     margin: 8px;
     padding: 10px;
@@ -12,37 +13,44 @@
     display: flex;
     flex-wrap: wrap;
 }
-.product-detail{
+
+.product-detail {
     width: 100%;
 }
-.form__box{
+
+.form__box {
     width: 100%;
     padding: 10px;
 }
-textarea{
+
+textarea {
     resize: none;
 }
-.form__box--description{
+
+.form__box--description {
     width: 100%;
     padding: 10px;
 }
-.label-form{
+
+.label-form {
     padding-left: 4px;
 }
-.input_form{
+
+.input_form {
     width: 100%;
     margin: 0px 1px;
     border-radius: 8px;
     border: 1px solid black;
     padding: 10px;
-    
 }
-.btn__product:hover{
+
+.btn__product:hover {
     background-color: gray;
 }
-.btn__product{
+
+.btn__product {
     width: 50%;
-    background-color:rgb(212, 212, 212);
+    background-color: rgb(212, 212, 212);
     border: 1px solid black;
     border-radius: 8px;
     padding: 10px;
@@ -50,32 +58,31 @@ textarea{
 }
 
 @media (min-width:768px) {
-    .form-create{
+    .form-create {
         margin-bottom: 30px;
-        
     }
-    .product-detail{
+    .product-detail {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
-    .form__box{
+    .form__box {
         width: 50%;
         padding: 10px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .form__box-btn{
+    .form__box-btn {
         padding-right: 5px;
         align-items: end;
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 14px;
     }
-    .btn__product{
+    .btn__product {
         width: 90%;
-        background-color:rgb(212, 212, 212);
+        background-color: rgb(212, 212, 212);
         border: 1px solid black;
         border-radius: 8px;
         padding: 10px;

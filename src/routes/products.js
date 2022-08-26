@@ -1,15 +1,18 @@
 var express = require('express');
 var router = express.Router();
-const { carrito, details, productos, experiencias, create, store } = require('../controllers/productsController');
+const { carrito, details, productos, experiencias, create, store, edit, update, destroy } = require('../controllers/productsController');
 
 // user
 
 router
     .get('/carrito', carrito)
-    .get('/productDetail', details)
+    .get('/productDetail/:id', details)
     .get('/productos', productos)
     .get('/experiencias', experiencias)
-    .get('/formCreate', create)
-    .get('/formEdit', store)
+    .get('/create', create)
+    .get('/edit/:id', edit)
+    .put('/update/:id', update)
+    .delete('/delete/:id', destroy)
+
 
 module.exports = router;
