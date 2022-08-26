@@ -10,6 +10,12 @@ module.exports = {
     },
     experiencias: (req, res) => {
         res.render('experiencias')
+    },
+    create: (req ,res) =>{
+         res.render('form-create')
+    },
+    store : (req ,res) =>{
+        res.render('form-edit')
     }
 
 

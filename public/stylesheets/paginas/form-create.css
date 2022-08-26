@@ -1,0 +1,84 @@
+.title-created{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+}
+.form-create{
+    background-color: #fff;
+    margin: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-detail{
+    width: 100%;
+}
+.form__box{
+    width: 100%;
+    padding: 10px;
+}
+textarea{
+    resize: none;
+}
+.form__box--description{
+    width: 100%;
+    padding: 10px;
+}
+.label-form{
+    padding-left: 4px;
+}
+.input_form{
+    width: 100%;
+    margin: 0px 1px;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 10px;
+    
+}
+.btn__product:hover{
+    background-color: gray;
+}
+.btn__product{
+    width: 50%;
+    background-color:rgb(212, 212, 212);
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px 10px;
+}
+
+@media (min-width:768px) {
+    .form-create{
+        margin-bottom: 30px;
+        
+    }
+    .product-detail{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .form__box{
+        width: 50%;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .form__box-btn{
+        padding-right: 5px;
+        align-items: end;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 14px;
+    }
+    .btn__product{
+        width: 90%;
+        background-color:rgb(212, 212, 212);
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 10px;
+        margin: 5px 10px;
+    }
+}

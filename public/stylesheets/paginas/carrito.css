@@ -1,4 +1,5 @@
 @media (min-width: 0px) and (max-width: 767px) {
+
     /* HEADER /
     .home__header {
         background-image: var(--img);
@@ -14,26 +15,33 @@
         width: 100%;
         height: 15%;
     }
+
     .form {
         display: none;
     }
+
     .form--login--cart a {
         color: var(--colorPearlGray);
     }
+
     .cartheaderlogo-letters {
         width: 80%;
     }
+
     .cartheaderlogo img {
         width: 30%;
         height: 100%;
     }
+
     .cartheaderlogoburguer-menu {
         width: 20%;
     }
+
     .cartheaderlogoburguer-menu img {
         width: 100%;
         height: 100%;
     }
+
     .cartheadermenu {
         display: none;
     }
@@ -73,10 +81,12 @@
     background-color: #fff;
 
 }
-.carrito__main--section-article{
+
+.carrito__main--section-article {
     background-color: #fff;
 }
-.carrito__main--section-article img{
+
+.carrito__main--section-article img {
     width: 100%;
 }
 
@@ -86,7 +96,7 @@
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 30px;
     padding: 10px 20px;
 }
 
@@ -96,6 +106,7 @@
 
 .title__beer--ipa {
     font-size: 30px;
+    font-weight: 300;
 }
 
 .cantidad--btn {
@@ -267,15 +278,19 @@ hr {
         width: 100%;
         /* height: 350px; */
     }
+
     .form {
         display: none;
     }
+
     .cartheaderlogoburguer-menu {
         display: none;
     }
+
     .cartheaderlogo-image {
         display: none;
     }
+
     /* nav */
     .cartheaderlogo {
         background-color: var(--colorBlack);
@@ -283,44 +298,61 @@ hr {
         width: 100%;
         height: 25%;
     }
+
     .cartheaderlogo img {
         width: 30%;
         height: 100%;
     }
+
     .cartheaderlogo-letters {
         width: 20%;
     }
+
     .cartheaderlogo-letters img {
         width: 100%;
     }
+
     .carheadermenu {
         display: flex;
         width: 100%;
     }
+
     .cartheadermenu ul {
         list-style: none;
         margin-top: 34px;
     }
+
     .cartheadermenu li a {
         color: var(--colorPearlGray);
         text-decoration: none;
     }
+
     .cartheadermenu li {
         margin: 5px;
         display: inline;
         padding: 42px;
     }
+
     /*main*/
-    .carrito__main--section-article{
+    .carrito__main--section-article {
         width: 100%;
         display: flex;
     }
-    .carrito__main--section-article img{
-        width: 70%;
+
+    .carrito__main--section-article img {
+        width: 87%;
+        
     }
-    .image--product{
+
+    .image--product {
         width: 70%;
+        
     }
+    .title__beer--ipa {
+        font-size: 50px;
+        
+    }
+
     .carrito__producto--compra {
         display: flex;
         flex-wrap: wrap;
@@ -332,27 +364,38 @@ hr {
         padding: 10px 60px;
         width: 50%;
     }
+    .carrito__producto--compra p{
+        font-size: 17px;
+        line-height: 30px;
+        text-align: left;
+    }
+
     .cantidad--btn {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
     }
+
     .btn--agregar {
         font-size: 12px;
     }
+
     .home__main--section--container {
         padding: 10px 60px;
         margin: 70px 0;
     }
+
     hr {
         display: none;
     }
+
     .cart__main--section--btn {
         display: none;
         padding: 10px 20px;
         margin-bottom: 15px;
     }
+
     .description {
         text-align: left;
         padding: 70px 60px;
@@ -360,6 +403,7 @@ hr {
         color: #fff;
         line-height: 40px;
     }
+
     /*footer*/
     .cart__footer__links {
         display: flex;
@@ -368,9 +412,11 @@ hr {
         padding: 0 60px;
         font-size: 20px;
     }
+
     .cart__footer__links ul {
         text-align: left;
     }
+
     .pagar-btn {
         display: none;
     }
@@ -383,19 +429,23 @@ hr {
         width: 100%;
         height: 25%;
     }
+
     .form {
         display: flex;
         background-color: var(--colorBlack);
         padding: 10px 60px;
         justify-content: space-between;
     }
+
     .form i {
         color: rgb(176 175 175)
     }
+
     .form__group {
         position: relative;
     }
-    .form__group input{
+
+    .form__group input {
         width: 130%;
         font-family: inherit;
         font-size: 1rem;
@@ -406,6 +456,7 @@ hr {
         background-color: var(--colorBlack);
         color: #fff;
     }
+
     .form__label {
         cursor: pointer;
         position: absolute;
@@ -415,34 +466,42 @@ hr {
         transition: transform .5s, color .3s;
         color: #fff;
     }
+
     .form__input:focus+.form__label,
     .form__input:not(:placeholder-shown)+.form__label {
         transform: translateY(-12px) scale(.7);
         transform-origin: top left;
     }
+
     .form--login--cart {
         font-size: 30px;
         display: flex;
         gap: 24px;
     }
+
     .cartheaderlogo {
         width: 100%;
         display: flex;
         flex-direction: row-reverse;
     }
+
     .cartheaderlogo-letters {
         width: 20%;
     }
+
     .cartheaderlogo-letters img {
         width: 95%;
         margin: 0px 15px;
     }
+
     .cartheaderlogoburguer-menu {
         display: none;
     }
+
     .cartheaderlogo-image {
         display: none;
     }
+
     .cartheadermenu {
         display: flex;
         width: 100%;
@@ -452,19 +511,23 @@ hr {
         justify-content: space-between;
         font-size: 25px;
     }
+
     .cartheadermenu ul {
         list-style: none;
         margin-top: 34px;
     }
+
     .cartheadermenu li a {
         color: var(--colorPearlGray);
         text-decoration: none;
     }
+
     .cartheadermenu li {
         margin: 5px;
         display: inline;
         padding: 43px;
     }
+
     /*main*/
     /* .home__main--section--container {
         padding: 10px 60px;
@@ -473,13 +536,23 @@ hr {
     .carrito__main--section-article {
         width: 100%;
         display: flex;
+        justify-content: center;
     }
+
     .carrito__main--section-article img {
-        width: 70%;
+        width: 100%;
+        background-color: rgb(184, 182, 182);
     }
+
     .image--product {
-        width: 50%;
+        width: 30%;
+        
     }
+    .title__beer--ipa {
+        font-size: 50px;
+        
+    }
+
     .carrito__producto--compra {
         display: flex;
         flex-wrap: wrap;
@@ -491,23 +564,33 @@ hr {
         padding: 10px 60px;
         width: 50%;
     }
+    .carrito__producto--compra p{
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+    }
+
     .cantidad--btn {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
     }
+
     .btn--agregar {
         font-size: 12px;
     }
+
     hr {
         display: none;
     }
+
     .cart__main--section--btn {
         display: none;
         padding: 10px 20px;
         margin-bottom: 15px;
     }
+
     /*footer*/
     .cart__footer__redes {
         position: relative;
@@ -515,10 +598,12 @@ hr {
         flex-direction: row;
         background-color: black;
     }
+
     .cart__footer__redes img {
         width: 50%;
         opacity: 50%;
     }
+
     .cart__footer__redes-icon {
         justify-content: space-around;
         position: absolute;
@@ -528,13 +613,16 @@ hr {
         color: #fff;
         width: 50%;
     }
+
     .cart__footer__logo-letters {
         display: none;
         width: 23%;
     }
+
     .cart__footer__logo-letters img {
         width: 60%;
     }
+
     .cart__footer__links {
         display: flex;
         width: 50%;
@@ -543,6 +631,7 @@ hr {
         flex-direction: column;
         font-size: 14px;
     }
+
     .cart__footer__links ul {
         list-style: none;
         display: flex;
@@ -550,24 +639,29 @@ hr {
         gap: 7px;
         align-items: center;
     }
+
     .cart__footer__links li a {
         color: var(--colorPearlGray);
         text-decoration: none;
     }
+
     .cart__footer__logo-letters li {
         margin: 5px;
         display: inline;
     }
+
     hr {
         width: 80%;
         margin-left: 10%;
     }
+
     .cart__footer__terms {
         margin: 10px;
         color: var(--colorGray);
         font-size: 14px;
         text-align: center;
     }
+
     .conteiner__pagar--btn {
         display: none;
     }
