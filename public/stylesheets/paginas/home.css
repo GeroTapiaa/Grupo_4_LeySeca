@@ -1,5 +1,12 @@
 @media (min-width: 320px) and (max-width: 767px) {
     /* MAIN */
+    .home__main {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        width: 90%;
+        margin: auto;
+    }
     /* SECCION PRODUCTOS */
     #title_shop {
         text-align: center;
@@ -11,13 +18,16 @@
     }
     .home__main__section__products {
         display: flex;
-        flex-direction: column;
-        margin: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 17px;
     }
     .home__main__section--product {
         position: relative;
+        display: flex;
+        justify-content: center;
         background-color: #fff;
+        width: 276px;
         border-radius: 2%;
         padding: 10px;
         box-shadow: 3px 0px 8px;
@@ -36,7 +46,7 @@
         gap: 5px;
     }
     .home__main__description-products img {
-        width: 100%;
+        width: 256px;
     }
     .home__main__description-products h3 {
         padding-left: 10px;
@@ -53,12 +63,14 @@
     /* SECTION EXPERIENCE */
     .home__main__section__experience {
         display: flex;
-        flex-direction: column;
-        padding: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
         gap: 17px;
     }
     .home__main__section--experience {
         position: relative;
+        width: 276px;
     }
     .home__main__section--experience label {
         position: absolute;
@@ -96,6 +108,9 @@
     .home__main__section--experience-none {
         display: none;
     }
+    .home__main__section--experience-2 {
+        display: none;
+    }
 }
 
 @media (min-width: 768px) and (max-width:1023px) {
@@ -118,7 +133,9 @@
     }
     .home__main__section--product {
         position: relative;
-        width: 46%;
+        display: flex;
+        justify-content: center;
+        width: 267px;
         margin: 10px;
         background-color: #fff;
         border-radius: 2%;
@@ -126,7 +143,7 @@
         box-shadow: 3px 0px 8px;
     }
     .home__main__section--product img {
-        width: 100%;
+        width: 200px;
     }
     .home__main__section--product label {
         background-color: var(--colorOrange);
@@ -150,18 +167,20 @@
     .home__button__products {
         position: absolute;
         bottom: 0px;
-        left: 129px;
+        left: 36%;
     }
     /* SECTION EXPERIENCE */
     .home__main__section__experience {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         background: radial-gradient(#151314, gray);
         padding: 16px;
         gap: 9px;
     }
     .home__main__section--experience {
         position: relative;
-        width: 33%;
+        width: 239px;
     }
     .home__main__description-experience img {
         width: 100%;
@@ -197,6 +216,9 @@
         color: #fff;
     }
     .home__main__section--experience-none {
+        display: none;
+    }
+    .home__main__section--experience-2 {
         display: none;
     }
 }
@@ -230,9 +252,6 @@
         border-radius: 2%;
         box-shadow: 3px 0px 8px;
     }
-    .home__main__section--product img {
-        width: 66%;
-    }
     .home__main__section--product label {
         background-color: var(--colorOrange);
         position: absolute;
@@ -249,15 +268,7 @@
         margin: auto;
     }
     .home__main__description-products img {
-        width: 71%;
-    }
-    /* .home__main__description-products a {
-        width: 85%;
-        margin-left: 66px;
-    } */
-    .home__detalle {
-        width: 85%;
-        margin-left: 66px;
+        width: 170px;
     }
     .description-products {
         margin: 7px;
@@ -280,19 +291,19 @@
     }
     .home__main__section__experience {
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
         background: radial-gradient(#151314, gray);
         padding: 16px;
         gap: 26px;
     }
     .home__main__section--experience {
         position: relative;
-        width: 46%;
+        width: 312px;
     }
     .home__main__description-experience img {
-        width: 100%;
-        height: 517px;
+        width: 318px;
+        height: 340px;
         border-radius: 3%;
         ;
     }
@@ -321,12 +332,12 @@
         bottom: 1px;
         font-family: var(--fontText);
         font-weight: 400;
-        font-size: 18px;
+        font-size: 16px;
         color: #fff;
     }
     .home__main__section--experience-none {
         position: relative;
-        width: 46%;
+        width: 312px;
     }
     .home__main__description-experience-none img {
         width: 100%;
@@ -341,5 +352,35 @@
         top: 18px;
         left: 17px;
         border: 3px solid var(--colorOrange);
+    }
+    /* experiencia-2 */
+    .home__main__section--experience-2 {
+        position: relative;
+        width: 654px;
+    }
+    .home__main__description-experience-2 {
+        width: 100%;
+    }
+    .home__main__description-experience-2 img {
+        width: 100%;
+        height: 342px;
+        border-radius: 3%;
+    }
+    .home__main__description-experience-2 h2 {
+        position: absolute;
+        bottom: 65px;
+        left: 39%;
+        color: #fff;
+    }
+    .home__main__description-experience-2 p {
+        position: absolute;
+        text-align: center;
+        padding: 5px;
+        left: 26%;
+        bottom: 1px;
+        font-family: var(--fontText);
+        font-weight: 400;
+        font-size: 16px;
+        color: #fff;
     }
 }
