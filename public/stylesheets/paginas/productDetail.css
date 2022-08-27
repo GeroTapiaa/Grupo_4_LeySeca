@@ -225,15 +225,12 @@
     .detalle__main__section__products {
         display: flex;
         flex-wrap: wrap;
-        gap: 25px;
+        width: 100%;
+        justify-content: center;
     }
     .detalle__main__section--product {
-        /* position: relative;
-        width: 31%;
-        background-color: #fff;
-        padding: 10px; */
         position: relative;
-        width: 31%;
+        width: 210px;
         background-color: #fff;
         padding: 10px;
     }
