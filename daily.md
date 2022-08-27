@@ -1,0 +1,3 @@
+## Gastón Obreque realizó el archivo Json en donde se cargaron los datos de los productos. Se encontró con la dificultad de los saltos lineas, en donde decidimos quitar los espacios y personalizar las descripciones con Css. 
+## Nadia Maldonado realizó una parte del CRUD (Formulario de edición de productos, acción de edición y acción de borrado). Se encontró con la dificultad de un error de ruta en la redireccion después del borrado, que se resolvio por la intervención del profesor Aquino. 
+## Geronimo Tapia realizó los formularios de creación y edición de productos, en donde no se encontro con niguna dificultad que necesite interveción de los compañeros. 

@@ -15,8 +15,14 @@ module.exports = {
             toThousand
         })
     },
-    experiencias: (req, res) => {
-        res.render('experiencias')
+    experience: (req, res) => {
+        res.render('experienceDoms')
+    },
+    experienceTour: (req, res) => {
+        res.render('experienceTour')
+    },
+    experiencePatagonia: (req, res) => {
+        res.render('experiencePatagonia')
     },
     details: (req, res) => {
         let { id } = req.params;

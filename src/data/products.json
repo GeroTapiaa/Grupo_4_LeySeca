@@ -160,6 +160,7 @@
         "image": "salsas-bbq.jpg",
         "category": "Cerveza",
         "price": 2900,
+        "discount": 10,
         "off": true
     },
     {

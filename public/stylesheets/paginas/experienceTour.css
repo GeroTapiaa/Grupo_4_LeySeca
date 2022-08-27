@@ -1,0 +1,105 @@
+@media (min-width:320px) and (max-width:767px) {
+    .main__experience__tour {
+        height: 670px;
+    }
+    .experience__tour__image {
+        background-image: var(--img-tour);
+        position: relative;
+        bottom: 38px;
+        height: 710px;
+    }
+    .main__experience__tour__card {
+        background: linear-gradient(360deg, #151314, transparent);
+        width: 100%;
+        height: 30%;
+        border-radius: 9%;
+    }
+    .main__experience__tour_text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        width: 80%;
+        margin: auto;
+    }
+    .tour-card {
+        width: 336px;
+        margin: auto;
+        margin-top: 16%;
+    }
+    .tour-card img {
+        width: 95%;
+        border-radius: 10%;
+    }
+    p {
+        text-align: center;
+    }
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+    .experience__tour__image {
+        background-image: var(--img-tour);
+        position: relative;
+        height: 710px;
+    }
+    .main__experience__tour__card {
+        background: linear-gradient(360deg, #151314, transparent);
+        width: 50%;
+        margin: auto;
+        border-radius: 9%;
+    }
+    .main__experience__tour_text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 23px;
+        width: 80%;
+        margin: auto;
+    }
+    .tour-card {
+        width: 336px;
+        margin: auto;
+        margin-top: 16%;
+    }
+    .tour-card img {
+        width: 100%;
+        border-radius: 10%;
+    }
+    p {
+        text-align: center;
+    }
+}
+
+@media (min-width:1024px) {
+    .experience__tour__image {
+        background-image: var(--img-tour);
+        position: relative;
+        height: 810px;
+    }
+    .main__experience__tour_text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        width: 80%;
+        margin: auto;
+    }
+    .main__experience__tour__card {
+        background: linear-gradient(360deg, #151314, transparent);
+        width: 50%;
+        margin: auto;
+        border-radius: 9%;
+    }
+    .tour-card {
+        width: 336px;
+        margin: auto;
+        margin-top: 16%;
+    }
+    .tour-card img {
+        width: 100%;
+        border-radius: 10%;
+    }
+    p {
+        text-align: center;
+    }
+}
