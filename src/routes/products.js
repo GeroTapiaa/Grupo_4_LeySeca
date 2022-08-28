@@ -5,11 +5,12 @@ const { carrito, details, products, experiencias, create, store, edit, update, d
 // user
 
 router
-    .get('/shopping-cart', carrito)
+    .get('/shopping-cart/:id', carrito)
     .get('/productDetail/:id', details)
     .get('/products', products)
     .get('/experience', experiencias)
     .get('/create', create)
+    .post('/store', store)
     .get('/edit/:id', edit)
     .put('/update/:id', update)
     .delete('/delete/:id', destroy)
