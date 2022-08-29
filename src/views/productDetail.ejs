@@ -3,7 +3,7 @@
     }) %>
 
     <body class="detalle">
-        <%- include('./partials/navbar') %>
+        <%- include('./partials/header') %>
 
             <main class="detalle__main">
                 <section class="detalle__main--section">
@@ -25,15 +25,15 @@
                                 <p>Cantidad</p>
                                 <button>- 1 +</button>
                                 <div class="detalle__button--carrito">
-                                    <a href="/products/shopping-cart"> <button>AGREGAR AL CARRITO</button></a>
+                                    <a href="/products/shopping-cart"> <button class="button">AGREGAR AL CARRITO</button></a>
                                 </div>
 
                             </div>
                             <div class="detalle__button--carrito">
-                                <a href="/products/edit/<%=id%>"> <button>EDITAR</button></a>
+                                <a href="/products/edit/<%=id%>"> <button class="button">EDITAR</button></a>
                             </div>
                             <form action="/products/delete/<%= id %> ?_method=DELETE " method="POST">
-                                <button type="submit" class="btn__product">ELIMINAR</button>
+                                <button type="submit" class="button">ELIMINAR</button>
                             </form>
                             <% }) %>
 
