@@ -1,29 +1,29 @@
 [
     {
-        "id": "",
-        "name": "", 
-        "surname":"",
-        "email":  "",
-        "password": "",
-        "category": "",
-        "image" : ""
+        "id": "Identificador",
+        "name": "Nombre", 
+        "surname":"Apellido",
+        "email":  "Email",
+        "password": "Contraseña",
+        "category": "Categoria",
+        "image" : "Imagen"
     },
     {
-        "id": "",
-        "name": "", 
-        "surname":"",
-        "email":  "",
-        "password": "",
-        "category": "",
-        "image" : ""
+        "id": "Identificador",
+        "name": "Nombre", 
+        "surname":"Apellido",
+        "email":  "Email",
+        "password": "Contraseña",
+        "category": "Categoria",
+        "image" : "Imagen"
     },
     {
-        "id": "",
-        "name": "", 
-        "surname":"",
-        "email":  "",
-        "password": "",
-        "category": "",
-        "image" : ""
+        "id": "Identificador",
+        "name": "Nombre", 
+        "surname":"Apellido",
+        "email":  "Email",
+        "password": "Contraseña",
+        "category": "Categoria",
+        "image" : "Imagen"
     }
 ]
