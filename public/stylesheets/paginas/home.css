@@ -23,6 +23,8 @@
     }
     .home__main__section__products {
         display: flex;
+        width: 90%;
+        margin: auto;
         justify-content: center;
         flex-wrap: wrap;
         gap: 17px;
@@ -30,6 +32,7 @@
     .home__main__section--product {
         position: relative;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         background-color: #fff;
         width: 276px;
@@ -44,6 +47,14 @@
         left: 10px;
         padding: 4px;
         border-radius: 10%;
+    }
+    .description-products {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 7px;
+        margin-bottom: 47px;
     }
     .home__main__description-products {
         display: flex;
@@ -130,6 +141,8 @@
     }
     .home__main__section__products {
         display: flex;
+        width: 90%;
+        margin: auto;
         justify-content: center;
         flex-wrap: wrap;
         padding: 16px;
@@ -138,6 +151,7 @@
     .home__main__section--product {
         position: relative;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         width: 267px;
         margin: 10px;
@@ -158,7 +172,18 @@
         border-radius: 10%;
     }
     .description-products {
-        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 7px;
+        margin-bottom: 47px;
+    }
+    .home__main__description-products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
     }
     .home__main__description-products h3 {
         padding-left: 10px;
@@ -240,6 +265,8 @@
     }
     .home__main__section__products {
         display: flex;
+        width: 90%;
+        margin: auto;
         flex-wrap: wrap;
         width: 100%;
         height: 100%;
@@ -277,7 +304,12 @@
         width: 170px;
     }
     .description-products {
-        margin: 7px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 7px;
+        margin-bottom: 47px;
     }
     .home__main__description-products h3 {
         padding-left: 10px;
@@ -290,10 +322,10 @@
     }
     .home__button__products {
         display: flex;
+        left: 35%;
         justify-content: center;
         position: absolute;
         bottom: 0px;
-        ;
     }
     .home__main__section__experience {
         display: flex;
