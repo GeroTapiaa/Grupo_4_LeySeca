@@ -37,7 +37,12 @@ module.exports = {
         })
     },
     carrito: (req, res) => {
-        res.render('shopping-cart')
+        let productCart = products.filter(product => product.id === +req.params.id)
+        
+        res.render('shopping-cart',{
+            
+            productCart
+        })
     },
     productos: (req, res) => {
         res.render('productos', {
@@ -93,7 +98,19 @@ module.exports = {
         res.render('form-create')
     },
     store: (req, res) => {
-        res.render('form-edit')
+        const {name, price,discount,description, category} =(req.body);
+        const newProduct = {
+            id : products[products.length -1 ].id +1,
+			name : name.trim(),
+			description : description.trim(),
+			price : +price,
+			discount : +discount,
+			category,
+        }
+        productsModify = [...products, newProduct]
+        saveProducts(productsModify)
+        
+        res.redirect('/products/products');
     }
 
 

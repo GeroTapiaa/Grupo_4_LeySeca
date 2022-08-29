@@ -7,32 +7,28 @@
 
     <body class="cart">
         <%- include('./partials/navbar') %>
-            <!-- <main class="home__main">
-        <section class="home__main--section">
-            <div class="home__main--section--container">
-                <h2>cart</h2>
-                <p>is empty</p>
-            </div>
-
-        </section> -->
+        
             <main class="carrito__main">
                 <section class="carrito__main--section">
+                    
                     <article class="carrito__main--section-article">
-                        <div class="image--product">
-                            <img src="/images/images_Ley-Seca/Cerveza-Ipa.png" alt=" botella ">
-                        </div>
-                        <div class="carrito__producto--compra ">
-                            <h3 class="title__beer--ipa ">Cerveza "Ipa Patagonica "</h3>
-                            <p>
-                                Predominan las maltas caramelizadas, que le aportan su color rubí. Carácter intenso debido a la cantidad de lúpulo que la compone. Su característica principal es un amargor bien marcado. Muy floral y aromática. -- Contiene una caja con 12 porrones de
-                                355cc.
-                            </p>
-                            <h4>Total: $2.850</h4>
-                            <div class="cantidad--btn ">
-                                <p>Cantidad:</p>
-                                <button class="btn--agregar ">- 1 +</button></div>
-
-                        </div>
+                        <% productCart.forEach(({id,name,description,price,discount,image}) => { %>
+                            <div class="image--product">
+                                <img src="/images/images_Ley-Seca/<%= image %>" alt=" botella ">
+                            </div>
+                            <div class="carrito__producto--compra ">
+                                <h3 class="title__beer--ipa "><%=name %></h3>
+                                <p>
+                                   <%=description %> 
+                                </p>
+                                <h4><%= price %></h4>
+                                <div class="cantidad--btn ">
+                                    <p>Cantidad:</p>
+                                    <button class="btn--agregar ">- 1 +</button></div>
+    
+                            </div>
+                        <% }) %>
+                        
 
 
                     </article>
