@@ -15,8 +15,14 @@ module.exports = {
             toThousand
         })
     },
-    experiencias: (req, res) => {
-        res.render('experiencias')
+    experience: (req, res) => {
+        res.render('experienceDoms')
+    },
+    experienceTour: (req, res) => {
+        res.render('experienceTour')
+    },
+    experiencePatagonia: (req, res) => {
+        res.render('experiencePatagonia')
     },
     details: (req, res) => {
         let { id } = req.params;
@@ -32,18 +38,13 @@ module.exports = {
     },
     carrito: (req, res) => {
         let productCart = products.filter(product => product.id === +req.params.id)
-        
-        res.render('shopping-cart',{
-            
+
+        res.render('shopping-cart', {
+
             productCart
         })
     },
-    productos: (req, res) => {
-        res.render('productos', {
-            products,
-            toThousand
-        })
-    },
+
     edit: (req, res) => {
         let { id } = req.params;
         let productEdit = products.find(product => product.id === +id);
@@ -92,18 +93,18 @@ module.exports = {
         res.render('form-create')
     },
     store: (req, res) => {
-        const {name, price,discount,description, category} =(req.body);
+        const { name, price, discount, description, category } = (req.body);
         const newProduct = {
-            id : products[products.length -1 ].id +1,
-			name : name.trim(),
-			description : description.trim(),
-			price : +price,
-			discount : +discount,
-			category,
+            id: products[products.length - 1].id + 1,
+            name: name.trim(),
+            description: description.trim(),
+            price: +price,
+            discount: +discount,
+            category,
         }
         productsModify = [...products, newProduct]
         saveProducts(productsModify)
-        
+
         res.redirect('/products/products');
     }
 

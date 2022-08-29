@@ -1,11 +1,16 @@
 @media (min-width: 320px) and (max-width: 767px) {
     /* MAIN */
+    .background {
+        width: 100%;
+        height: 158px;
+    }
+    .background img {
+        width: 100%;
+        height: 100%;
+    }
     .home__main {
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
-        width: 90%;
-        margin: auto;
     }
     /* SECCION PRODUCTOS */
     #title_shop {
@@ -114,7 +119,6 @@
 }
 
 @media (min-width: 768px) and (max-width:1023px) {
-    /* MAIN */
     /* SECCION PRODUCTOS */
     #title_shop {
         text-align: center;
@@ -241,7 +245,7 @@
         height: 100%;
         justify-content: center;
         padding: 27px;
-        gap: 9px;
+        gap: 3px;
     }
     .home__main__section--product {
         display: flex;
@@ -280,7 +284,7 @@
         text-align: center;
         font-size: 16px;
     }
-    .descount {
+    .discount {
         color: gray;
         text-decoration: line-through;
     }

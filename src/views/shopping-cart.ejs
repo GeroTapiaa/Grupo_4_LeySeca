@@ -7,28 +7,32 @@
 
     <body class="cart">
         <%- include('./partials/navbar') %>
-        
+
             <main class="carrito__main">
                 <section class="carrito__main--section">
-                    
+
                     <article class="carrito__main--section-article">
                         <% productCart.forEach(({id,name,description,price,discount,image}) => { %>
                             <div class="image--product">
                                 <img src="/images/images_Ley-Seca/<%= image %>" alt=" botella ">
                             </div>
                             <div class="carrito__producto--compra ">
-                                <h3 class="title__beer--ipa "><%=name %></h3>
+                                <h3 class="title__beer--ipa ">
+                                    <%=name %>
+                                </h3>
                                 <p>
-                                   <%=description %> 
+                                    <%=description %>
                                 </p>
-                                <h4><%= price %></h4>
+                                <h4>
+                                    <%= price %>
+                                </h4>
                                 <div class="cantidad--btn ">
                                     <p>Cantidad:</p>
                                     <button class="btn--agregar ">- 1 +</button></div>
-    
+
                             </div>
-                        <% }) %>
-                        
+                            <% }) %>
+
 
 
                     </article>
@@ -56,4 +60,4 @@
 
     </body>
 
-    </html>
+</html>

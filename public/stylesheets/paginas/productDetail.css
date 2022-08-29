@@ -96,62 +96,6 @@
         display: flex;
         justify-content: center;
     }
-    /* footer */
-    .detalle__footer {
-        background-color: #151314;
-    }
-    .detalle__footer__redes {
-        width: 100%;
-        position: relative;
-        display: flex;
-        height: 17%;
-    }
-    .detalle__footer__redes img {
-        width: 100%;
-        opacity: 50%;
-    }
-    .detalle__footer__redes-icon {
-        justify-content: space-around;
-        position: absolute;
-        bottom: 25px;
-        display: flex;
-        font-size: 26px;
-        color: #fff;
-        width: 100%;
-    }
-    .detalle__footer__logo-letters {
-        display: inline-block;
-        width: 23%;
-    }
-    .detalle__footer__logo-letters img {
-        width: 100%;
-    }
-    .detalle__footer__links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .detalle__footer__links ul {
-        list-style: none;
-        margin: 10px;
-    }
-    .detalle__footer__links li a {
-        color: var(--colorPearlGray);
-        text-decoration: none;
-    }
-    .detalle__footer__links li {
-        margin: 5px;
-    }
-    hr {
-        width: 80%;
-        margin-left: 10%;
-    }
-    .detalle__footer__terms {
-        margin: 10px;
-        color: var(--colorGray);
-        font-size: 14px;
-        text-align: center;
-    }
 }
 
 @media (min-width: 768px) and (max-width:1023px) {
@@ -270,64 +214,6 @@
         position: absolute;
         bottom: 10px;
         left: 78px;
-    }
-    /* FOOTER */
-    .detalle__footer {
-        background-color: #151314;
-    }
-    .detalle__footer__redes {
-        position: relative;
-        display: flex;
-        height: 17%;
-    }
-    .detalle__footer__redes img {
-        width: 100%;
-        opacity: 50%;
-    }
-    .detalle__footer__redes-icon {
-        justify-content: space-around;
-        position: absolute;
-        bottom: 70px;
-        display: flex;
-        font-size: 26px;
-        color: #fff;
-        width: 100%;
-    }
-    .detalle__footer__logo-letters {
-        display: inline-block;
-        width: 23%;
-    }
-    .detalle__footer__logo-letters img {
-        width: 100%;
-    }
-    .detalle__footer__links {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-    }
-    .detalle__footer__links ul {
-        list-style: none;
-        display: flex;
-        margin: 10px;
-        gap: 47px;
-    }
-    .detalle__footer__links li a {
-        color: #dedede;
-        text-decoration: none;
-    }
-    .detalle__footer__logo-letters li {
-        margin: 5px;
-        display: inline;
-    }
-    hr {
-        width: 80%;
-        margin-left: 10%;
-    }
-    .detalle__footer__terms {
-        margin: 10px;
-        color: var(--colorGray);
-        font-size: 14px;
-        text-align: center;
     }
 }
 
@@ -493,64 +379,5 @@
         justify-content: center;
         position: absolute;
         bottom: 0px;
-    }
-    /* FOOTER */
-    .detalle__footer {
-        background-color: #151314;
-    }
-    .detalle__footer__redes {
-        position: relative;
-        display: flex;
-        height: 17%;
-    }
-    .detalle__footer__redes img {
-        width: 100%;
-        height: 147px;
-        opacity: 50%;
-    }
-    .detalle__footer__redes-icon {
-        justify-content: space-around;
-        position: absolute;
-        bottom: 70px;
-        display: flex;
-        font-size: 26px;
-        color: #fff;
-        width: 100%;
-    }
-    .detalle__footer__logo-letters {
-        display: inline-block;
-        width: 23%;
-    }
-    .detalle__footer__logo-letters img {
-        width: 60%;
-    }
-    .detalle__footer__links {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-    }
-    .detalle__footer__links ul {
-        list-style: none;
-        display: flex;
-        margin: 10px;
-        gap: 47px;
-    }
-    .detalle__footer__links li a {
-        color: #dedede;
-        text-decoration: none;
-    }
-    .detalle__footer__logo-letters li {
-        margin: 5px;
-        display: inline;
-    }
-    hr {
-        width: 80%;
-        margin-left: 10%;
-    }
-    .detalle__footer__terms {
-        margin: 10px;
-        color: #dedede;
-        font-size: 14px;
-        text-align: center;
     }
 }

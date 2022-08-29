@@ -6,6 +6,9 @@
     --fontBodyText: 'Bebas Neue', cursive;
     --fontText: 'Martel Sans', sans-seri;
     --img: url('/images/logos/background_ley-seca.webp');
+    --img-domo: url('/images/background/domos-background.jpeg');
+    --img-pata: url('/images/background/patagonia-background.jpeg');
+    --img-tour: url('/images/background/tour-background.jpeg');
 }
 
 * {
@@ -17,4 +20,9 @@
 body {
     background-color: var(--colorPearlGray);
     font-family: var(--fontBodyText);
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
