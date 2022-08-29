@@ -1,33 +1,41 @@
-<article class="home__main__section--product">
-    <% if (discount> 0) { %>
-        <label> <%=discount %> % Off</label>
+<a href="/products/productDetail/<%= id %> ">
+    <article class="home__main__section--product">
+        <% if (discount> 0) { %>
+            <label> <%=discount %> % Off</label>
 
-        <% } %>
+            <% } %>
 
-            <div class="home__main__description-products">
-                <a href="/products/productDetail/<%= id %> " class="home__detalle"><img src="/images/images_Ley-Seca/<%= image %>" alt=""></a>
-                <div class="description-products">
+                <div class="home__main__description-products">
+                    <a href="/products/productDetail/<%= id %> " class="home__detalle"><img src="/images/images_Ley-Seca/<%= image %>" alt=""></a>
+                    <div class="description-products">
 
-                    <% if (discount> 0) { %>
-                        <b>
-                            <h3 class="descount">
-                                <%= toThousand((price - (price / 100 * discount)) .toFixed(0)) %>
-                            </h3>
-                        </b>
-                        <% } %>
-
-                            <h3>$
+                        <% if (discount> 0) { %>
+                            <p class="discount">
+                                $
                                 <%= price %>
-                            </h3>
-                            <h3>
-                                <%= name %>
-                            </h3>
+                            </p>
+                            <p>
+                                $
+                                <%= toThousand((price - (price / 100 * discount)) .toFixed(0)) %>
+                            </p>
+                            <% }else{ %>
+                                <p>
+                                    $
+                                    <%= price %>
+                                </p>
+                                <% } %>
+                                    <h3>
+                                        <a href="/products/productDetail/<%= id %> ">
+                                            <%=name %>
+                                        </a>
+                                    </h3>
+                    </div>
+
+                    <div class="home__button__products">
+
+                        <a href="/products/shopping-cart/<%= id %>"> <button class="button">Comprar</button></a>
+                    </div>
+
                 </div>
-
-                <div class="home__button__products">
-
-                    <a href="/products/carrito"> <button class="button">Comprar</button></a>
-                </div>
-
-            </div>
-</article>
+    </article>
+</a>

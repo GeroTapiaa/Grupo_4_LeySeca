@@ -15,6 +15,19 @@ module.exports = {
         })
 
     },
+    search: (req, res) => {
+
+        let { keywords } = req.query;
+        let results = products.filter(product => product.name.toLowerCase().includes(keywords.toLowerCase()));
+        res.render('results', {
+            results,
+
+            keywords,
+            toThousand
+        });
+
+    },
+
     terms: (req, res) => {
         res.render('terms')
     },

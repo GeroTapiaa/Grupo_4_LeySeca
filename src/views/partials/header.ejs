@@ -1,7 +1,4 @@
-<header id="home__header">
-
-    <!-- HEADER-LOGO -->
-
+<header class="home__header">
     <div class="home__header__logo">
 
         <div class=" home__header__logo-letters ">
@@ -16,40 +13,42 @@
 
 
         <!-- SEARCH-BAR -->
-        <form class="home__form">
+        <form action="/results" method="GET" class="home__form">
             <div class="home__formgroup">
-                <input type="text" id="name" class="home__forminput" placeholder=" ">
-                <label for="name" class="form__label"><i class="fa-solid fa-magnifying-glass"></i></label>
+                <input type="text" name="keywords" class="home__forminput" autocomplete="off">
+                <button type="submit" class="home__formbutton"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </form>
+        <div class="icon">
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
 
     </div>
-
-    <!-- HEADER BUTTON -->
-
-    <div class="button__know-more">
-        <button class="button" type="button">Conocé más</button>
-    </div>
-
     <!-- HEADER-NAVBAR -->
     <nav class="home__header__menu">
+        <!-- burguer menu -->
         <label for="menu" class="nav_label">
-            <i class="fa-solid fa-bars"></i>
-        </label>
+    <i class="fa-solid fa-bars"></i>
+</label>
         <input type="checkbox" id="menu" class="nav__input">
-        <div class=" home__header__browser-menu__items">
+        <!-- burguer menu -->
 
+
+        <div class=" home__header__browser-menu__items">
             <ul>
                 <li><a href="/products/products">Productos</a></li>
+                <li><a href="/products/create">Vender</a></li>
                 <li><a href="">Shop</a></li>
-
                 <li><a href="/users/register">Registrate</a></li>
-                <li><a href="/users/register">Vender</a></li>
             </ul>
+
 
         </div>
 
 
     </nav>
+
 
 </header>

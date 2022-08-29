@@ -1,41 +1,55 @@
-<div class="home__header__logo">
+<nav class="home__nav">
+    <div class="home__header__logo">
 
-    <div class=" home__header__logo-letters ">
-        <a href="/"><img src="/images/logos/LETRAS_LEY-SECA2.png" alt=""></a>
-    </div>
-
-
-
-    <div class="home__header__logo-image">
-        <a href="/"><img src="/images/logos/logo_ley_seca.png"></a>
-    </div>
-
-
-    <!-- SEARCH-BAR -->
-    <form class="home__form">
-        <div class="home__formgroup">
-            <input type="text" id="name" class="home__forminput" placeholder=" ">
-            <label for="name" class="form__label"><i class="fa-solid fa-magnifying-glass"></i></label>
+        <div class=" home__header__logo-letters ">
+            <a href="/"><img src="/images/logos/LETRAS_LEY-SECA2.png" alt=""></a>
         </div>
-    </form>
+
+
+
+        <div class="home__header__logo-image">
+            <a href="/"><img src="/images/logos/logo_ley_seca.png"></a>
+        </div>
+
+
+        <!-- SEARCH-BAR -->
+
+        <form action="/results" method="GET" class="home__form">
+            <div class="home__formgroup">
+                <input type="text" name="keywords" class="home__forminput" autocomplete="off">
+                <button type="submit" class="form__label"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+
+
+        <div class="icon">
+            <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+
+    </div>
     <!-- HEADER-NAVBAR -->
+    <div class="home__header__menu">
+        <!-- burguer menu -->
+        <label for="menu" class="nav_label">
+    <i class="fa-solid fa-bars"></i>
+</label>
+        <input type="checkbox" id="menu" class="nav__input">
+        <!-- burguer menu -->
 
 
-</div>
-<nav class="home__header__menu">
-    <label for="menu" class="nav_label">
-        <i class="fa-solid fa-bars"></i>
-    </label>
-    <input type="checkbox" id="menu" class="nav__input">
-    <div class=" home__header__browser-menu__items">
+        <div class=" home__header__browser-menu__items">
+            <ul>
+                <li><a href="/products/products">Productos</a></li>
+                <li><a href="/products/create">Vender</a></li>
+                <li><a href="">Shop</a></li>
+                <li><a href="/users/register">Registrate</a></li>
+            </ul>
 
-        <ul>
-            <li><a href="/products/products">Productos</a></li>
-            <li><a href="">Shop</a></li>
 
-            <li><a href="/users/register">Registrate</a></li>
-            <li><a href="/users/register">Vender</a></li>
-        </ul>
+        </div>
+
 
     </div>
 
