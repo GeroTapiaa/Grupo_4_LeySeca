@@ -17,4 +17,11 @@
 ##Pedir más ayuda a los profesores y compañeros. 
 
 
+# CONCLUSIONES DEL TERCER SPRINT:
+## Seguir trabando en equipo.
+## Seguir con el ritmo que tuvimos en este sprint, ya que logramos llegar cómodos con el tiempo.
+## Dedicarle más tiempo a hacer consultas a los profesores. 
+## Estar más activos en trello. 
+## Tratar de comunicarnos más, dar a conocer dudas o incovenientes y pedir ayuda a los compañeros. 
+
 
