@@ -1,4 +1,4 @@
-<%- include('./partials/head', { title : 'BUSQUEDA' }) %>
+<%- include('./partials/head', { title : 'Resultado de búsqueda' }) %>
 
     <body class="home">
         <%- include('./partials/navbar') %>
@@ -11,14 +11,14 @@
 
             <!-- MAIN -->
 
-            <main class="home__main">
+            <main class="main__results">
 
 
 
 
 
-                <div class="col-12">
-                    <h2 class="products-title">
+                <div class="main__results__title">
+                    <h2>
                         Resultados de la búsqueda:
                         <%= keywords %>
                     </h2>
@@ -37,15 +37,18 @@
                          }) %>
                                 <% }) %>
                                     <% } else { %>
-                                        <div>
-                                            <h2 class="home__main__section__products">
-                                                No hay productos que coincidan con su búsqueda.
+                                        <div class="main__results__products">
+                                            <h2>
+                                                No hubo resultados para su búsqueda.
+                                                <img src=" /images/logos/background-carita.webp " alt=" ">
                                             </h2>
                                         </div>
                                         <% }%>
 
 
                 </section>
+
+
 
 
 

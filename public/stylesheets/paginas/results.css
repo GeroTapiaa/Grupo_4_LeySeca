@@ -1,0 +1,25 @@
+@media (min-width:320px)and (max-width: 768px) {
+    .main__results {
+        margin: 50px;
+    }
+    .main__results__title {
+        margin: 20px;
+    }
+    .main__results__products img {
+        opacity: 50%;
+        width: 100%;
+    }
+}
+
+@media (min-width:768px) {
+    .main__results {
+        margin: 97px;
+    }
+    .main__results__title {
+        margin: 20px;
+    }
+    .main__results__products img {
+        opacity: 50%;
+        width: 100%;
+    }
+}
