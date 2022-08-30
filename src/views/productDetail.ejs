@@ -45,37 +45,23 @@
                 </section>
 
                 <h2 class="detalle__text--sugerencia">Te puede interesar</h2>
-                <section class="detalle__main__section__products">
-                    <% productsStatus.forEach(({id, name, price , discount, image, description}) => { %>
+                <section class="home__main__section__products">
 
-                        <article class="detalle__main__section--product">
-                            <label> <%= discount %> % Off</label>
+                    <% productsStatus.forEach(({id, name, price , discount, image}) => { %>
+                        <%- include('./partials/products',{
+                    id, 
+                    name,
+                    price,
+                    discount,
+                    image,
+                    toThousand
 
-                            <div class="detalle__main__description-products">
-                                <a href="/products/productDetail/<%= id %> "><img src="/images/images_Ley-Seca/<%=image%> " alt=""></a>
-                                <div class="detalle__description-products">
-                                    <h3 class="descount">$
-                                        <%= toThousand((price - (price / 100 * discount)) .toFixed(0)) %>
-                                    </h3>
-                                    <h3>$
-                                        <%=price%>
-                                    </h3>
-                                    <h3>
-                                        <%= name %>
-                                    </h3>
-                                </div>
-
-                                <div class="detalle__button__products">
-
-                                    <a href="/products/shopping-cart"><button class="button">Comprar</button></a>
-                                </div>
+                 }) %>
+                            <% }) %>
 
 
-                            </div>
-                        </article>
 
-                        <% }) %>
-
+                </section>
 
 
 
