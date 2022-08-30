@@ -1,7 +1,7 @@
-<%- include('./partials/head', { title : 'Resultado de búsqueda' }) %>
+<%- include('../partials/head', { title : 'Resultado de búsqueda' }) %>
 
     <body class="home">
-        <%- include('./partials/navbar') %>
+        <%- include('../partials/navbar') %>
 
 
 
@@ -26,7 +26,7 @@
                 <section class="home__main__section__products">
                     <% if (results.length > 0) { %>
                         <% results.forEach(({id, name, price , discount, image}) => { %>
-                            <%- include('./partials/products',{
+                            <%- include('../partials/products',{
                             id, 
                             name,
                             price,
@@ -61,7 +61,7 @@
 
             </main>
 
-            <%- include('./partials/footer') %>
+            <%- include('../partials/footer') %>
 
     </body>
 

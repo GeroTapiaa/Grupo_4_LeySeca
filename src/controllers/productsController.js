@@ -12,7 +12,7 @@ module.exports = {
     products: (req, res) => {
         let product = products.filter(product => product.category === 'Cerveza')
 
-        res.render('products', {
+        res.render('products/products', {
             product,
             toThousand
 
@@ -20,27 +20,27 @@ module.exports = {
     },
     shop: (req, res) => {
         let clothing = products.filter(product => product.category === 'indumentaria')
-        res.render('shop', {
+        res.render('products/shop', {
             clothing,
             toThousand
 
         })
     },
     experience: (req, res) => {
-        res.render('experienceDoms')
+        res.render('products/experienceDoms')
     },
     experienceTour: (req, res) => {
-        res.render('experienceTour')
+        res.render('products/experienceTour')
     },
     experiencePatagonia: (req, res) => {
-        res.render('experiencePatagonia')
+        res.render('products/experiencePatagonia')
     },
     details: (req, res) => {
         let { id } = req.params;
         let productId = products.filter(product => product.id === +id);
         let productsStatus = products.filter(product => product.status === "te puede interesar")
 
-        res.render('productDetail', {
+        res.render('products/productDetail', {
             productId,
             productsStatus,
             toThousand
@@ -50,7 +50,7 @@ module.exports = {
     carrito: (req, res) => {
         let productCart = products.filter(product => product.id === +req.params.id)
 
-        res.render('shopping-cart', {
+        res.render('products/shopping-cart', {
 
             productCart
         })
@@ -59,7 +59,7 @@ module.exports = {
     edit: (req, res) => {
         let { id } = req.params;
         let productEdit = products.find(product => product.id === +id);
-        res.render('form-edit', {
+        res.render('user/form-edit', {
             productEdit
         })
 
@@ -101,7 +101,7 @@ module.exports = {
 
 
     create: (req, res) => {
-        res.render('form-create')
+        res.render('user/form-create')
     },
     store: (req, res) => {
         const { name, price, discount, description, category } = (req.body);

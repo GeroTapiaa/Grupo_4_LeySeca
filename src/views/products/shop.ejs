@@ -1,10 +1,10 @@
-<%- include('./partials/head', { title : 'Shop' }) %>
+<%- include('../partials/head', { title : 'Shop' }) %>
 
     <body class="home">
 
 
 
-        <%- include('./partials/navbar') %>
+        <%- include('../partials/navbar') %>
 
 
             <!-- MAIN -->
@@ -13,12 +13,12 @@
 
                 <!-- MAIN SECTION PRODUCTS -->
 
-                <h1 id="title_shop">Nuestros Productos</h1>
+                <h1 id="title_shop">Nuestro Shop</h1>
 
                 <section class="home__main__section__products">
 
-                    <% product.forEach(({id, name, price , discount, image}) => { %>
-                        <%- include('./partials/products',{
+                    <%  clothing.forEach(({id, name, price , discount, image}) => { %>
+                        <%- include('../partials/products',{
                     id, 
                     name,
                     price,
@@ -45,7 +45,7 @@
 
             </main>
 
-            <%- include('./partials/footer') %>
+            <%- include('../partials/footer') %>
 
     </body>
 

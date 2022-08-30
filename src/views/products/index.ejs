@@ -1,7 +1,7 @@
-<%- include('./partials/head', { title : 'Home' }) %>
+<%- include('../partials/head', { title : 'Home' }) %>
 
     <body class="home">
-        <%- include('./partials/header') %>
+        <%- include('../partials/header') %>
 
 
 
@@ -22,7 +22,7 @@
                 <section class="home__main__section__products">
 
                     <% productsDiscount.forEach(({id, name, price , discount, image}) => { %>
-                        <%- include('./partials/products',{
+                        <%- include('../partials/products',{
                     id, 
                     name,
                     price,
@@ -111,7 +111,7 @@
 
             </main>
 
-            <%- include('./partials/footer') %>
+            <%- include('../partials/footer') %>
 
     </body>
 

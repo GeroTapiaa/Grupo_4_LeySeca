@@ -1,9 +1,9 @@
-<%- include("./partials/head",{
+<%- include("../partials/head",{
         title : "Detalle del producto"
     }) %>
 
     <body class="detalle">
-        <%- include('./partials/header') %>
+        <%- include('../partials/header') %>
 
             <main class="detalle__main">
                 <section class="detalle__main--section">
@@ -25,7 +25,7 @@
                                 <p>Cantidad</p>
                                 <button>- 1 +</button>
                                 <div class="detalle__button--carrito">
-                                    <a href="/products/shopping-cart"> <button class="button">AGREGAR AL CARRITO</button></a>
+                                    <a href="/products/shopping-cart/<%= id %>"> <button class="button">AGREGAR AL CARRITO</button></a>
                                 </div>
 
                             </div>
@@ -48,7 +48,7 @@
                 <section class="home__main__section__products">
 
                     <% productsStatus.forEach(({id, name, price , discount, image}) => { %>
-                        <%- include('./partials/products',{
+                        <%- include('../partials/products',{
                     id, 
                     name,
                     price,
@@ -75,7 +75,7 @@
 
             </main>
 
-            <%- include('./partials/footer') %>
+            <%- include('../partials/footer') %>
     </body>
 
     </html>

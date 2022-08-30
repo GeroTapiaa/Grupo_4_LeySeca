@@ -8,7 +8,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
     home: (req, res) => {
         let productsDiscount = products.filter(product => product.off === true)
-        res.render('index', {
+        res.render('products/index', {
             productsDiscount,
             toThousand
 
@@ -19,7 +19,7 @@ module.exports = {
 
         let { keywords } = req.query;
         let results = products.filter(product => product.name.toLowerCase().includes(keywords.toLowerCase()));
-        res.render('results', {
+        res.render('products/results', {
             results,
 
             keywords,
@@ -29,7 +29,7 @@ module.exports = {
     },
 
     terms: (req, res) => {
-        res.render('terms')
+        res.render('user/terms')
     },
 
 }
