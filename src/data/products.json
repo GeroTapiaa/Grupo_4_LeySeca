@@ -349,7 +349,7 @@
         "discount": 5
     },
     {
-        "id": 45,
+        "id": 46,
         "name": "Vicera Beers",
         "description": "Colores disponibles: Rojo , Blanco, gris.",
         "image": "vicera-negra-logo.png",
@@ -357,7 +357,7 @@
         "price": 2000
     },
     {
-        "id": 46,
+        "id": 47,
         "name": "Vicera negra Ley Seca",
         "description": "Colores disponibles: Rojo , Blanco, gris.",
         "image": "vicera-negra.png",
@@ -365,7 +365,7 @@
         "price": 2000
     },
     {
-        "id": 47,
+        "id": 48,
         "name": "Vicera vede I love Beer",
         "description": "Colores disponibles: Negro , Blanco, gris.",
         "image": "vicera-verde.png",
@@ -374,7 +374,7 @@
         "discount": 5
     },
     {
-        "id": 48,
+        "id": 49,
         "name": "Gorra negra de lana Ley Seca",
         "description": "Colores disponibles: Verde militar , Blanco",
         "image": "gorra-lana-negra.png",

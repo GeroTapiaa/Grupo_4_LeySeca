@@ -59,7 +59,7 @@ module.exports = {
     edit: (req, res) => {
         let { id } = req.params;
         let productEdit = products.find(product => product.id === +id);
-        res.render('user/form-edit', {
+        res.render('products/form-edit', {
             productEdit
         })
 
@@ -101,7 +101,7 @@ module.exports = {
 
 
     create: (req, res) => {
-        res.render('user/form-create')
+        res.render('products/form-create')
     },
     store: (req, res) => {
         const { name, price, discount, description, category } = (req.body);
