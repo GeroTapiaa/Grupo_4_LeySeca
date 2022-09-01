@@ -95,7 +95,17 @@ module.exports = {
         let { id } = req.params;
         let productsModify = products.filter(product => product.id !== +id)
         saveProducts(productsModify);
-        res.redirect('/products/products');
+        res.redirect('/');
+
+
+
+
+
+
+
+
+
+
 
     },
 
@@ -104,6 +114,7 @@ module.exports = {
         res.render('user/form-create')
     },
     store: (req, res) => {
+
         const { name, price, discount, description, category } = (req.body);
         const newProduct = {
             id: products[products.length - 1].id + 1,
@@ -115,9 +126,14 @@ module.exports = {
         }
         productsModify = [...products, newProduct]
         saveProducts(productsModify)
+        if (newProduct.category === 'indumentaria') {
+            res.redirect('/products/shop');
+        } else {
+            res.redirect('/products/products');
+        }
 
-        res.redirect('/products/products');
-    }
 
 
+
+    },
 }
