@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', { title : 'Perfil' }) %>
+
+    <body class="body__register">
+        <%- include( '../partials/navbar') %>
+
+            <main class="main__profile">
+
+                <div class="main__profile-section">
+
+
+                    <form action="" class="profile">
+
+
+                        <h2 class="form__title">Tu perfil</h2>
+                        <div class="form__register-container">
+
+
+                            <div class="form__register-photo">
+
+                                <figure class="image_profile">
+                                    <img src="/images/logos/default-ley-seca.jpg" width="200px" alt="">
+                                    <input type="file" name="avatar" id="avatar" accept="jpg">
+
+                                    <label class="label_photo" for="avatar">  <i class="fa-solid fa-camera"></i></label>
+                                </figure>
+
+
+
+
+                            </div>
+
+
+                            <div class="form_profile">
+                                <input type="text" id="name" class="form__input" placeholder=" " autocomplete="off" required minlength="3">
+                                <label for="name" class="form__label">Nombre y apellido:</label>
+
+                            </div>
+                            <div class="form_profile">
+                                <input type="text" id="user" class="form__input" placeholder=" " autocomplete="off">
+                                <label for="user" class="form__label">Usuario:</label>
+
+                            </div>
+                            <div class="form__register-date">
+                                <p>Fecha de nacimiento:</p>
+                                <input type="date" id="date" class="register-date">
+
+                            </div>
+                            <div class="form_profile">
+                                <input type="text" id="address" class="form__input" placeholder=" " autocomplete="off" required minlength="3">
+
+                                <label for="address" class="form__label">Dirección:</label>
+
+                            </div>
+                            <div class="form_profile">
+                                <label class="form__label" for="email">Email:</label>
+                                <input class="form__input" type="email" id="email" name="email" value="" readonly>
+                            </div>
+
+
+                            <div class="form_profile">
+                                <input type="password" id="password" class="form__input" placeholder=" ">
+                                <label for="password" class="form__label">Contraseña:</label>
+
+                            </div>
+                            <div class="form_profile">
+                                <input type="password" id="password" class="form__input" placeholder=" ">
+                                <label for="password" class="form__label">Confirmar contraseña:</label>
+
+                            </div>
+
+
+
+
+                            <div class="form__register-button">
+                                <input type="submit" class="button" value="Guardar Cambios">
+                                <input type="reset" class="button" value="Descartar Cambios">
+                            </div>
+
+
+                        </div>
+
+
+                    </form>
+
+                    <%- include( '../partials/footer') %>
+
+
+                </div>
+
+            </main>
+    </body>
+
+</html>
