@@ -44,6 +44,8 @@
     .detalle__main--section {
         padding: 20px;
         background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 3px 0px 8px;
     }
     .detalle__section-producto img {
         width: 100%;
@@ -54,6 +56,36 @@
         align-items: center;
         gap: 15px;
     }
+    .precio-cantidad{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        
+    }
+    .precio-cantidad p{
+        padding-left: 50px;
+    }
+    .detalle__button--agregar{
+        width: 100%;
+    }
+    
+    .detalle__button--agregar button{
+        width: 100%;
+        border-radius: 8px;
+        margin: 10px 0px;
+    }
+    .edit-delete{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        border-radius: 6px;
+       
+    }
+    .edit-delete button{
+        padding: 8px;
+        font-size: 15px;
+    }
+    
     .detalle__text--sugerencia {
         padding: 10px;
     }
@@ -149,6 +181,8 @@
     .detalle__main--section {
         padding: 20px;
         background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 3px 0px 8px
     }
     .detalle__main--section-producto {
         display: flex;
@@ -162,6 +196,35 @@
         align-items: center;
         gap: 15px;
         margin: auto;
+    }
+    .precio-cantidad{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        
+    }
+    .precio-cantidad p{
+        padding-left: 50px;
+    }
+    .detalle__button--agregar{
+        width: 100%;
+    }
+    
+    .detalle__button--agregar button{
+        width: 100%;
+        border-radius: 8px;
+        margin: 10px 0px;
+    }
+    .edit-delete{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        border-radius: 6px;
+       
+    }
+    .edit-delete button{
+        padding: 8px;
+        font-size: 15px;
     }
     .detalle__text--sugerencia {
         padding: 10px;
