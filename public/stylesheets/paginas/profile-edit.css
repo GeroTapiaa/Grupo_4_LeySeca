@@ -1,0 +1,300 @@
+    @media (min-width: 320px) and (max-width:767px) {
+        .main__profile-section-edit {
+            background-image: var(--img-profile);
+            background-size: cover;
+            position: relative;
+            bottom: 22px;
+            height: 942px;
+            padding-top: 26px;
+        }
+        .profile-edit {
+            background-color: rgba(239, 239, 239, 0.9);
+            border-radius: 2%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            margin: auto;
+        }
+        .form__register-photo {
+            width: 280px;
+        }
+        .form__title {
+            text-align: center;
+            margin-bottom: 33px;
+        }
+        .image_profile-edit {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            opacity: 93%;
+        }
+        .image_profile-edit img {
+            width: 43%;
+            border-radius: 50%;
+            border: 3px solid dimgrey;
+        }
+        .label_photo {
+            position: absolute;
+            background-color: dimgrey;
+            border-radius: 51%;
+            padding: 4px 5px;
+            right: 75px;
+            top: 75px;
+        }
+        #avatar {
+            display: none;
+        }
+        .form_profile {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .form__register-container {
+            background: transparent;
+            width: 60%;
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 55px;
+        }
+        .form__input {
+            width: 80%;
+            font-size: 20px;
+            padding: 3px -3px;
+            border: none;
+            outline: none;
+            background-color: #EFEFEF;
+            border-bottom: 1px solid #5757577e;
+        }
+        .form__label {
+            cursor: pointer;
+            position: absolute;
+            top: 0px;
+            left: 30px;
+            transform: translateY(5px);
+            transition: transform .5s, color .3s;
+        }
+        .form__input:focus+.form__label,
+        .fform__input:not(:placeholder-shown)+.form__label {
+            transform: translateY(-10px) scale(.7);
+            transform-origin: left top;
+            color: #5757577e;
+        }
+        .form__register-date {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .form__register-date p {
+            width: 60%;
+            margin-left: 10px;
+        }
+        #date {
+            background-color: #EFEFEF;
+            margin-left: 31px;
+            border: none;
+        }
+    }
+    
+    @media (min-width: 768px) and (max-width:1023px) {
+        .main__profile {
+            margin-top: 20px;
+        }
+        .main__profile-section-edit {
+            background-image: var(--img-profile);
+            background-size: cover;
+            position: relative;
+            bottom: 3px;
+            height: 927px;
+            padding-top: 21px;
+        }
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 65%;
+            margin: auto;
+        }
+        .form__title {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        .image_profile-edit {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            opacity: 93%;
+            margin-top: 40px;
+        }
+        .image_profile-edit img {
+            width: 43%;
+            border-radius: 50%;
+            border: 3px solid dimgrey;
+        }
+        .label_photo {
+            position: absolute;
+            background-color: dimgrey;
+            border-radius: 51%;
+            padding: 4px 5px;
+            right: 97px;
+            top: 120px;
+        }
+        #avatar {
+            display: none;
+        }
+        .form_profile {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .form__register-container {
+            background-color: rgba(239, 239, 239, 0.9);
+            border-radius: 2%;
+            width: 60%;
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 55px;
+        }
+        .form__input {
+            width: 80%;
+            font-size: 20px;
+            padding: 3px -3px;
+            border: none;
+            outline: none;
+            background-color: #EFEFEF;
+            border-bottom: 1px solid #5757577e;
+        }
+        .form__label {
+            cursor: pointer;
+            position: absolute;
+            color: black;
+            top: 0px;
+            left: 30px;
+            transform: translateY(5px);
+            transition: transform .5s, color .3s;
+        }
+        .form__input:focus+.form__label,
+        .fform__input:not(:placeholder-shown)+.form__label {
+            transform: translateY(-10px) scale(.7);
+            transform-origin: left top;
+            color: #5757577e;
+        }
+        .form__register-date {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .form__register-date p {
+            width: 60%;
+            margin-left: 10px;
+        }
+        #date {
+            background-color: #EFEFEF;
+            margin-left: 31px;
+            border: none;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .main__profile-section-edit {
+            background-image: var(--img-profile);
+            background-size: cover;
+            position: relative;
+            bottom: 3px;
+            height: 927px;
+            padding-top: 21px;
+        }
+        .profile {
+            background-color: rgba(239, 239, 239, 0.9);
+            border-radius: 2%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 45%;
+            margin: auto;
+        }
+        .form__title {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        .image_profile-edit {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            opacity: 93%;
+            margin-top: 40px;
+        }
+        .image_profile-edit img {
+            width: 43%;
+            border-radius: 50%;
+            border: 3px solid dimgrey;
+        }
+        .label_photo {
+            position: absolute;
+            background-color: dimgrey;
+            border-radius: 51%;
+            padding: 4px 5px;
+            right: 97px;
+            top: 120px;
+        }
+        #avatar {
+            display: none;
+        }
+        .form_profile {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .form__register-container {
+            background-color: rgba(239, 239, 239, 0.9);
+            border-radius: 2%;
+            width: 60%;
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 55px;
+        }
+        .form__input {
+            width: 80%;
+            font-size: 20px;
+            padding: 3px -3px;
+            border: none;
+            outline: none;
+            background-color: #EFEFEF;
+            border-bottom: 1px solid #5757577e;
+        }
+        .form__label {
+            cursor: pointer;
+            position: absolute;
+            color: black;
+            top: 0px;
+            left: 30px;
+            transform: translateY(5px);
+            transition: transform .5s, color .3s;
+        }
+        .form__input:focus+.form__label,
+        .fform__input:not(:placeholder-shown)+.form__label {
+            transform: translateY(-10px) scale(.7);
+            transform-origin: left top;
+            color: #5757577e;
+        }
+        .form__register-date {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .form__register-date p {
+            width: 60%;
+            margin-left: 10px;
+        }
+        #date {
+            background-color: #EFEFEF;
+            margin-left: 31px;
+            border: none;
+        }
+    }
