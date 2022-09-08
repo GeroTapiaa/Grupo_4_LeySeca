@@ -8,34 +8,47 @@
 
 
         <%- include('../partials/navbar') %>
+            <main class="main__profile-edit">
 
+                <div class="main__profile-section-edit">
 
+                    <h2 class="form__title">Inicia Sesión</h2>
 
-            <div class="container">
-                <div class="form__titulo">
-                    <h2>Inicia Sesión</h2>
+                    <form class="profile-edit" action="">
+                        <div class="form__register-container">
+                            <div class="form_profile">
+                                <input type="text" id="user" class="form__input" name="user">
+                                <label for="user" class="form__label">Usuario:</label>
+
+                <div class="main__profile-section-edit">
+
+                    <h2 class="form__title">Inicia Sesión</h2>
+
+                    <form class="profile-edit" action="">
+                        <div class="form__register-container">
+                            <div class="form_profile">
+                                <input type="text" id="user" class="form__input" name="user">
+                                <label for="user" class="form__label">Usuario:</label>
+
+                            </div>
+                            <div class="form_profile">
+                                <input class="form__input" type="password" id="password" name="password">
+                                <label class="form__label" for="password">Contraseña:</label>
+
+                            </div>
+
+                            <div class="form__register-button">
+                                <button type="submit" class="button" value="Guardar">Ingresar</button>
+                                <input type="reset" class="button" value="Salir">
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
-                <form class="form__reg" action="">
-                    <div class="form__reg-login">
-                        <input class="input" type="text" placeholder="  Usuario" required autofocus>
-                        <label for="name" class="form__label--login">Nombre de usuario:</label>
-                    </div>
-                    <div class="form__reg-login">
-                        <input class="input" type="password" placeholder="  Contraseña" required>
-                        <label for="name" class="form__label--login">Contraseña:</label>
-                    </div>
-                    <div class="btn__form">
-                        <input class="btn__submit" type="submit" value="INGRESAR">
-                        <input class="btn__reset" type="reset" value="LIMPIAR">
-                    </div>
-                    <p class="p-form"> ¿No tenés cuenta? <a class="forms__" href="/users/register"
-                            class="link">Registrate acá</a> </p>
-                </form>
-
-            </div>
-            <%- include('../partials/footer') %>
+                <%- include('../partials/footer') %>
 
 
+            </main>
     </body>
 
 </html>

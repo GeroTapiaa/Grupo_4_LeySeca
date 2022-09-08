@@ -1,0 +1,15 @@
+[
+
+    {
+        "id": 1,
+        "name": "Nadia Florencia",
+        "lastName": "Maldonado",
+        "user": "nadia15011",
+        "date": "2000-11-02",
+        "address": "Calle 165 N 1818",
+        "email": "ndo3011@gmail.com",
+        "password": "$2a$10$cnbnkKpKG8OgP4z2wmGxseMcA9P4NsrM5neskppSaiISbgWzlX5Iq",
+        "avatar": "",
+        "rol": "user"
+    }
+]
