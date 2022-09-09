@@ -10,6 +10,17 @@ module.exports = {
     login: (req, res) => {
         res.render('user/login')
     },
+    loginRegister : (req ,res) =>{
+        let errors = validationResult(req)
+        if (errors.isEmpty()) {
+            return res.redirect('/user/login')
+        }else{
+            return res.render('login',{
+                errors : errors.mapped()
+            })
+        }
+        
+    },
     register: (req, res) => {
         res.render('user/register')
     },
