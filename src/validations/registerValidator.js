@@ -1,5 +1,4 @@
 const { check, body } = require("express-validator");
-const { max } = require("moment");
 const moment = require("moment");
 const { loadUsers } = require("../data/db-module");
 

@@ -8,39 +8,41 @@
 
 
         <%- include('../partials/navbar') %>
-            <main class="main__profile-edit">
 
+            <h2 class="form__title">Inicia Sesión</h2>
+            <p>¿No tenés cuenta?<a href="/users/register"> Registrate acá</a></p>
 
+            <form class="profile-edit" action="" method="post">
+                <div class="form__register-container">
+                    <div class="form_profile">
+                        <input type="text" id="user" class="form__input" name="user">
+                        <label for="user" class="form__label">Usuario:</label>
+                        <small>
+                            <%= locals.errors && errors.user ? errors.user.msg : null%>
+                        </small>
 
-                <div class="main__profile-section-edit">
+                    </div>
+                    <div class="form_profile">
+                        <input class="form__input" type="password" id="password" name="password">
+                        <label class="form__label" for="password">Contraseña:</label>
+                        <small>
+                            <%= locals.errors && errors.password ? errors.password.msg : null%>
+                        </small>
 
-                    <h2 class="form__title">Inicia Sesión</h2>
+                    </div>
 
-                    <form class="profile-edit" action="">
-                        <div class="form__register-container">
-                            <div class="form_profile">
-                                <input type="text" id="user" class="form__input" name="user">
-                                <label for="user" class="form__label">Usuario:</label>
-
-                            </div>
-                            <div class="form_profile">
-                                <input class="form__input" type="password" id="password" name="password">
-                                <label class="form__label" for="password">Contraseña:</label>
-
-                            </div>
-
-                            <div class="form__register-button">
-                                <button type="submit" class="button" value="Guardar">Ingresar</button>
-                                <input type="reset" class="button" value="Salir">
-                            </div>
-                        </div>
-                    </form>
-
+                    <div class="form__register-button">
+                        <button type="submit" class="button" value="Guardar">Ingresar</button>
+                        <input type="reset" class="button" value="Salir">
+                    </div>
                 </div>
-                <%- include('../partials/footer') %>
+            </form>
+
+            </div>
+            <%- include('../partials/footer') %>
 
 
-            </main>
+                </main>
     </body>
 
 </html>
