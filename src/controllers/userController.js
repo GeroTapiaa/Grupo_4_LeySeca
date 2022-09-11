@@ -10,17 +10,27 @@ module.exports = {
     login: (req, res) => {
         res.render('user/login')
     },
-    loginRegister : (req ,res) =>{
-        let errors = validationResult(req)
+    loginRegister: (req, res) => {
+        let errors = validationResult(req);
+    
         if (errors.isEmpty()) {
-            return res.redirect('/user/login')
-        }else{
-            return res.render('login',{
-                errors : errors.mapped()
-            })
+          let { name, rol, avatar, id } = loadUsers().find(
+            (user) => user.user === req.body.user
+          );
+    
+          req.session.userLogin = {
+            name,
+            rol,
+            avatar,
+            id,
+          };
+          res.redirect("/");
+        } else {
+          res.render("user/login", {
+            errors: errors.mapped(),
+          });
         }
-        
-    },
+      },
     register: (req, res) => {
         res.render('user/register')
     },
