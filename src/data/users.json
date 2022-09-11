@@ -1,15 +1,26 @@
 [
-
-    {
-        "id": 1,
-        "name": "Nadia Florencia",
-        "lastName": "Maldonado",
-        "user": "nadia15011",
-        "date": "2000-11-02",
-        "address": "Calle 165 N 1818",
-        "email": "ndo3011@gmail.com",
-        "password": "$2a$10$cnbnkKpKG8OgP4z2wmGxseMcA9P4NsrM5neskppSaiISbgWzlX5Iq",
-        "avatar": "",
-        "rol": "user"
-    }
+   {
+      "id": 1,
+      "name": "Nadia Florencia",
+      "lastName": "Maldonado",
+      "user": "nadia15011",
+      "date": "2000-11-02",
+      "address": "Calle 165 N 1818",
+      "email": "ndo3011@gmail.com",
+      "password": "$2a$10$cnbnkKpKG8OgP4z2wmGxseMcA9P4NsrM5neskppSaiISbgWzlX5Iq",
+      "avatar": "",
+      "rol": "user"
+   },
+   {
+      "id": 2,
+      "name": "Geronimo",
+      "lastName": "Tapia",
+      "user": "gerotapia",
+      "date": "2000-02-04",
+      "address": "calle falsa 123",
+      "email": "geronimook@hotmail.com",
+      "password": "$2a$10$RBuFlKnk5t9MiwFuIfNxL.zAJR9.yfqJqJOOF0xKBAzmbHJSCv8D2",
+      "avatar": "",
+      "rol": "user"
+   }
 ]
