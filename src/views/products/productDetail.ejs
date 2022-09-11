@@ -1,6 +1,4 @@
-<%- include("../partials/head",{
-        title : "Detalle del producto"
-    }) %>
+<%- include("../partials/head",{ title : "Detalle del producto" }) %>
 
     <body class="detalle">
         <%- include('../partials/navbar') %>
@@ -8,7 +6,7 @@
             <main class="detalle__main">
                 <section class="detalle__main--section">
                     <article class="detalle__main--section-producto">
-                        <%  productId.forEach(({id, name, price , discount, image, description}) => { %>
+                        <% productId.forEach(({id, name, price , discount, image, description})=> { %>
                             <div class="detalle__section-producto">
                                 <img src="/images/images_Ley-Seca/<%= image %>" alt="">
                             </div>
@@ -19,22 +17,31 @@
                                 <p>
                                     <%= description %>
                                 </p>
-                                <h4>$
-                                    <%= price %>
-                                </h4>
-                                <p>Cantidad</p>
-                                <button>- 1 +</button>
-                                <div class="detalle__button--carrito">
-                                    <a href="/products/shopping-cart/<%= id %>"> <button class="button">AGREGAR AL CARRITO</button></a>
+                                <div class="precio-cantidad">
+                                    <h4>Precio: $
+                                        <%= price %>
+                                    </h4>
+                                    <p>Cantidad:</p>
+
+                                    <button>- 1 +</button>
+                                </div>
+                                <hr>
+                                <div class="detalle__button--agregar">
+                                    <a href="/products/shopping-cart/<%= id %>"> <button class="button-add-cart">AGREGAR AL
+                                            CARRITO</button></a>
+
+
+                                    <div class="edit-delete"><a href="/products/edit/<%=id%>"> <button
+                                                class="button-edit">EDITAR</button></a></div>
+                                    <form action="/products/delete/<%= id %> ?_method=DELETE " method="POST">
+                                        <button type="submit" class="button-delete">ELIMINAR</button>
+                                    </form>
                                 </div>
 
+
                             </div>
-                            <div class="detalle__button--carrito">
-                                <a href="/products/edit/<%=id%>"> <button class="button">EDITAR</button></a>
-                            </div>
-                            <form action="/products/delete/<%= id %> ?_method=DELETE " method="POST">
-                                <button type="submit" class="button">ELIMINAR</button>
-                            </form>
+
+
                             <% }) %>
 
 
@@ -47,16 +54,8 @@
                 <h2 class="detalle__text--sugerencia">Te puede interesar</h2>
                 <section class="home__main__section__products">
 
-                    <% productsStatus.forEach(({id, name, price , discount, image}) => { %>
-                        <%- include('../partials/products',{
-                    id, 
-                    name,
-                    price,
-                    discount,
-                    image,
-                    toThousand
-
-                 }) %>
+                    <% productsStatus.forEach(({id, name, price , discount, image})=> { %>
+                        <%- include('../partials/products',{ id, name, price, discount, image, toThousand }) %>
                             <% }) %>
 
 

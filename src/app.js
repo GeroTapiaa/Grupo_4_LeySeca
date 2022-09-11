@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const localsUserCheck = require('./middleware/localsUserCheck')
 
 
 var indexRouter = require('./routes/index');
@@ -22,11 +23,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(methodOverride('_method'));
-app.use(session({
-    secret : 'leysecaForEver',
-    resave : false ,
-    saveUninitialized : true
-}))
+app.use(
+    session({
+        secret : "leySecaForever",
+        resave : false,
+        saveUninitialized : true,
+    })
+);
+app.use(localsUserCheck);
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
