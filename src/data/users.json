@@ -22,5 +22,17 @@
       "password": "$2a$10$RBuFlKnk5t9MiwFuIfNxL.zAJR9.yfqJqJOOF0xKBAzmbHJSCv8D2",
       "avatar": "",
       "rol": "user"
+   },
+   {
+      "id": 3,
+      "name": "geronimo",
+      "lastName": "tapia",
+      "user": "gerot98",
+      "date": "1998-02-04",
+      "address": "calle falsa 123",
+      "email": "gerock98@hotmail.com",
+      "password": "$2a$10$wUqEIyKTlrKIvQh5X7t/2O8MLP8bcltKmXOIcaoftPO.3MhoczBIC",
+      "avatar": "",
+      "rol": "user"
    }
 ]
