@@ -23,8 +23,13 @@
 
 
         <div class="icon">
-            <a href="/users/login"><i class="fa-solid fa-user"></i></a>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <% if (locals.userLogin) { %>
+                <a href="/users/profile"><i class="fa-solid fa-user"></i></a>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <li><a href="/users/logout">salir</a></li>
+                <% } else { %>
+                    <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+                    <% } %>
         </div>
 
 
@@ -39,16 +44,25 @@
         <!-- burguer menu -->
 
 
-        <div class=" home__header__browser-menu__items">
+        <div class="home__header__browser-menu__items">
             <ul>
-                <li><a href="/products/products">Productos</a></li>
-                <li><a href="/products/create">Vender</a></li>
-                <li><a href="/products/shop">Shop</a></li>
-                <li><a href="/users/register">Registrate</a></li>
-                <li><a href="/users/profile">Perfil</a></li>
+                <% if (locals.userLogin) { %>
+                    <li><a href="/products/products">
+                            <%= userLogin.name %>
+                        </a></li>
+                    <li><a href="/products/shop">Shop</a></li>
+                    <li><a href="/users/logout">salir</a></li>
+
+                    <% if (userLogin.rol==='admin' ) { %>
+                        <li><a href="/products/create">Vender</a></li>
+                        <% } %>
+                            <% } else { %>
+
+                                <li><a href="/products/products">Productos</a></li>
+                                <li><a href="/products/shop">Shop</a></li>
+
+                                <% } %>
             </ul>
-
-
         </div>
 
 
