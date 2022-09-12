@@ -39,11 +39,19 @@
 
         <div class=" home__header__browser-menu__items">
             <ul>
+                <% if (locals.userLogin) { %>
+                    <li><a href="/users/profile"><%= userLogin.name %> </a></li>
+                    <li><a href="/users/logout">Salir</a></li>
+                    <% if (userLogin.rol === "admin") { %>
+                        <li><a href="/products/create">Vender</a></li>
+                    <% } %>
+                <% }else{ %>
                 <li><a href="/products/products">Productos</a></li>
                 <li><a href="/products/create">Vender</a></li>
                 <li><a href="/products/shop">Shop</a></li>
                 <li><a href="/users/register">Registrate</a></li>
                 <li><a href="/users/profile">Perfil</a></li>
+                <% } %>
             </ul>
 
 

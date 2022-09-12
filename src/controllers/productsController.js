@@ -93,18 +93,10 @@ module.exports = {
     destroy: (req, res) => {
 
         let { id } = req.params;
+
         let productsModify = products.filter(product => product.id !== +id)
         saveProducts(productsModify);
         res.redirect('/');
-
-
-
-
-
-
-
-
-
 
 
     },

@@ -33,29 +33,29 @@
 
 
                         <div class="form_profile">
-                            <input type="text" id="name" class="form__input" placeholder=" " autocomplete="off" required minlength="3">
+                            <input type="text" id="name" class="form__input" placeholder=" " autocomplete="off" required minlength="3" value="<%= user.name && user.lastName %>">
                             <label for="name" class="form__label">Nombre y apellido:</label>
 
                         </div>
                         <div class="form_profile">
-                            <input type="text" id="user" class="form__input" placeholder=" " autocomplete="off">
+                            <input type="text" id="user" class="form__input" placeholder=" " autocomplete="off" value="<%= user.user %>">
                             <label for="user" class="form__label">Usuario:</label>
 
                         </div>
                         <div class="form__register-date">
                             <p>Fecha de nacimiento:</p>
-                            <input type="date" id="date" class="register-date">
+                            <input type="date" id="date" class="register-date" value="<%= user.birthday %>">
 
                         </div>
                         <div class="form_profile">
-                            <input type="text" id="address" class="form__input" placeholder=" " autocomplete="off" required minlength="3">
+                            <input type="text" id="address" class="form__input" placeholder=" " autocomplete="off" required minlength="3" value="<%= user.address %>">
 
                             <label for="address" class="form__label">Dirección:</label>
 
                         </div>
                         <div class="form_profile">
                             <label class="form__label" for="email">Email:</label>
-                            <input class="form__input" type="email" id="email" name="email" value="" readonly>
+                            <input class="form__input" type="email" id="email" name="email" value="<%= user.email %>" readonly>
                         </div>
 
 
