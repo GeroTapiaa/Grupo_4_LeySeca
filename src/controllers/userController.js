@@ -55,7 +55,8 @@ module.exports = {
                 email: email.trim(),
                 password: bcrypt.hashSync(password.trim(), 10),
                 avatar,
-                rol: "user"
+                rol: "user",
+                birthday : null
 
             }
             const userModify = [...users, newUser]
@@ -72,13 +73,39 @@ module.exports = {
 
     },
     profile: (req, res) => {
-        res.render('user/profile')
+      let user  = loadUsers().find(user => user.id === req.session.userLogin.id);
+        res.render('user/profile' , {
+          user
+        })
     },
     update: (req, res) => {
-        res.send(req.body)
+
+      const {firstName, lastName, birthday, address} = req.body;
+      const usersModify = loadUsers().map(user => {
+        if(user.id === +req.params.id){
+          return {
+            ...user,
+            ...req.body
+          }
+        }
+        return user
+      })
+
+      req.session.userLogin = {
+        ...req.session.userLogin, 
+        firstName
+      }
+
+      storeUsers(usersModify);
+      res.redirect('/users/profile');
+
     },
     edit: (req, res) => {
         res.render('user/profileEdit')
+    },
+    logout : (req,res) => {
+      req.session.destroy()
+      return res.redirect('/')
     }
 
 }
