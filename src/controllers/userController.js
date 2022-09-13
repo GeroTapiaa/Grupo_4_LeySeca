@@ -1,8 +1,6 @@
 const { loadUsers, storeUsers } = require('../data/db-module');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
-
-
 const fs = require('fs');
 const path = require('path');
 
@@ -24,9 +22,9 @@ module.exports = {
         avatar,
         id,
       };
-      if(req.body.remenber){
+      if (req.body.remenber) {
         res.cookie('userLeySeca', req.session.userLogin, {
-          maxAge : 1000 * 60 
+          maxAge: 1000 * 60
         })
       }
       res.redirect("/");
@@ -41,16 +39,15 @@ module.exports = {
   },
 
   userRegister: (req, res) => {
-
     const errors = validationResult(req);
 
 
     if (errors.isEmpty()) {
-      const { name, lastName, user, date, address, email, password, avatar } = req.body;
+      const { name, lastName, user, date, address, email, password } =
+        req.body;
       const users = loadUsers();
 
       newUser = {
-
         id: users[users.length - 1] ? users[users.length - 1].id + 1 : 1,
         name: name.trim(),
         lastName: lastName.trim(),
@@ -59,57 +56,83 @@ module.exports = {
         address: address.trim(),
         email: email.trim(),
         password: bcrypt.hashSync(password.trim(), 10),
-        avatar,
-        rol: "user"
-
-      }
-      const userModify = [...users, newUser]
+        avatar: req.file ? req.file.filename : 'default-ley-seca.jpg',
+        rol: "user",
+      };
+      const userModify = [...users, newUser];
       storeUsers(userModify);
 
-      res.redirect('/users/login');
+      res.redirect("/users/login");
     }
-    res.render('user/register', {
+    res.render("user/register", {
       errors: errors.mapped(),
-      old: req.body
-    })
+      old: req.body,
+    });
+  },
+
+  // PERFIL
+
+  profile: (req, res) => {
+    let user = loadUsers().find((user) => user.id === req.session.userLogin.id);
+    res.render("user/profile", {
+      user,
+    });
+  },
+
+  // EDITAR PERFIL
+
+  profileEdit: (req, res) => {
+    let user = loadUsers().find((user) => user.id === req.session.userLogin.id);
+    res.render("user/profileEdit", {
+      user,
+    });
+  },
+
+  // EDICION
 
 
+  update: (req, res) => {
+    const { user, address, name, } = req.body;
 
-    },
-    profile: (req, res) => {
-      let user  = loadUsers().find(user => user.id === req.session.userLogin.id);
-        res.render('user/profile' , {
-          user
-        })
-    },
-    update: (req, res) => {
+    let usersModify = loadUsers().map((user) => {
+      if (user.id === +req.params.id) {
+        return {
+          ...user,
+          ...req.body,
 
-      const {firstName, lastName, birthday, address} = req.body;
-      const usersModify = loadUsers().map(user => {
-        if(user.id === +req.params.id){
-          return {
-            ...user,
-            ...req.body
-          }
-        }
-        return user
-      })
-
-      req.session.userLogin = {
-        ...req.session.userLogin, 
-        firstName
+          avatar: req.file ? req.file.filename : req.session.userLogin.avatar,
+        };
       }
+      return user;
+    });
 
-      storeUsers(usersModify);
-      res.redirect('/users/profile');
 
-    },
-    edit: (req, res) => {
-        res.render('user/profileEdit')
-    },
-    logout : (req,res) => {
-      req.session.destroy()
-      return res.redirect('/')
+    // MODIFICA LAS IMAGENES SUBIDAS POR EL USUSARIO
+    if (req.file) {
+
+
+      if (fs.existsSync(path.resolve(__dirname, "..", "..", "public", "images", "users", req.session.userLogin.avatar))) {
+
+
+
+        fs.unlinkSync(path.resolve(__dirname, "..", "..", "public", "images", "users", req.session.userLogin.avatar));
+
+      }
+    };
+
+    req.session.userLogin = {
+      ...req.session.userLogin,
+      name,
+      avatar: req.file ? req.file.filename : req.session.userLogin.avatar
     }
+
+    storeUsers(usersModify);
+    return res.redirect("/users/profile");
+  },
+
+  logout: (req, res) => {
+    req.session.destroy()
+    return res.redirect('/')
+  }
 
 }
