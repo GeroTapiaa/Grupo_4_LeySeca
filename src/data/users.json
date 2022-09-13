@@ -37,5 +37,17 @@
       "avatar": "",
       "rol": "user",
       "birthday": null
+   },
+   {
+      "id": 4,
+      "name": "Geronimo",
+      "lastName": "Tapia",
+      "user": "gerotapa",
+      "date": "1998-02-04",
+      "address": "calle falsa 123",
+      "email": "gerook98@hotmail.com",
+      "password": "$2a$10$f0wgbGhABzf6JV/zayzgsOhrmVZf149BkrjTFooYCAPk95guoBDw.",
+      "avatar": "",
+      "rol": "user"
    }
 ]
