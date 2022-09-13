@@ -38,6 +38,8 @@ module.exports = {
     res.render('user/register')
   },
 
+  // REGISTRO
+
   userRegister: (req, res) => {
     const errors = validationResult(req);
 
@@ -135,4 +137,29 @@ module.exports = {
     return res.redirect('/')
   }
 
+    req.session.userLogin = {
+    ...req.session.userLogin,
+    name,
+    avatar: req.file ? req.file.filename : req.session.userLogin.avatar
+  }
+
+    storeUsers(usersModify);
+    return res.redirect("/users/profile");
+},
+
+<<<<<<< HEAD
+  logout: (req, res) => {
+    req.session.destroy()
+    return res.redirect('/')
+  }
+
 }
+=======
+  // DESLOGUEARSE
+
+  logout: (req, res) => {
+    req.session.destroy();
+    res.redirect("/");
+  },
+};
+>>>>>>> prueba

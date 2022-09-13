@@ -1,96 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head', { title : 'Perfil' }) %>
+  <%- include('../partials/head', { title : 'Perfil' }) %>
 
-    <body class="body__register">
-        <%- include( '../partials/navbar') %>
+  <body class="body__register">
+    <%- include( '../partials/navbar' ) %>
 
-            <main class="main__profile-edit">
+    <main class="main__profile-edit">
+      <div class="main__profile-section-edit">
+        <h2 class="form__title">Editá tu perfil</h2>
 
-                <div class="main__profile-section-edit">
+        <form
+          <form
+          action="/users/update/<%= user.id %>?_method=PUT"
+          class="profile-edit"
+          enctype="multipart/form-data"
+          method="POST"
+        >
+          <div class="form__register-container">
+            <div class="form__register-photo">
+              <figure class="image_profile-edit">
+                <img
+                  src="/images/users/<%= user.avatar %>  "
+                  alt=""
+                  id="img-photo"
+                />
+                <input
+                  type="file"
+                  name="avatar"
+                  id="avatar"
+                  onchange="preview(event)"
+                />
 
-                    <h2 class="form__title">Tu perfil</h2>
+                <label class="label_photo" for="avatar">
+                  <i class="fa-solid fa-camera"></i
+                ></label>
+              </figure>
+            </div>
+            <div class="form_profile">
+              <input
+                type="text"
+                id="name"
+                class="form__input"
+                name="name"
+                value="<%= user.name %>"
+              />
+              <label for="name" class="form__label">Nombre:</label>
+            </div>
 
+            <div class="form_profile">
+              <input
+                type="text"
+                id="user"
+                class="form__input"
+                name="user"
+                value="<%= user.user %>"
+              />
+              <label for="user" class="form__label">Usuario:</label>
+            </div>
+            <div class="form_profile">
+              <input
+                type="text"
+                id="address"
+                class="form__input"
+                name="address"
+                value="<%= user.address %> "
+              />
 
-                    <form action="" class="profile-edit">
+              <label for="address" class="form__label">Dirección:</label>
+            </div>
 
+            <div class="form__register-button">
+              <button type="submit" class="button">Guardar</button>
+              <input type="reset" class="button" value="Descartar" />
+            </div>
+          </div>
+        </form>
 
-                        <div class="form__register-container">
+        <%- include( '../partials/footer' ) %>
+      </div>
+    </main>
+    <script>
+      let preview = (event) => {
+        let read_img = new FileReader();
+        let id_img = document.getElementById("img-photo");
 
-
-                            <div class="form__register-photo">
-
-                                <figure class="image_profile-edit">
-                                    <img src="/images/logos/default-ley-seca.jpg" alt="">
-                                    <input type="file" name="avatar" id="avatar" accept="jpg">
-
-                                    <label class="label_photo" for="avatar">  <i class="fa-solid fa-camera"></i></label>
-                                </figure>
-
-
-
-
-                            </div>
-
-
-                            <div class="form_profile">
-                                <input type="text" id="name" class="form__input" placeholder=" " autocomplete="off" required minlength="3">
-                                <label for="name" class="form__label">Nombre y apellido:</label>
-
-                            </div>
-                            <div class="form_profile">
-                                <input type="text" id="user" class="form__input" placeholder=" " autocomplete="off">
-                                <label for="user" class="form__label">Usuario:</label>
-
-                            </div>
-                            <div class="form__register-date">
-                                <p>Fecha de nacimiento:</p>
-                                <input type="date" id="date" class="register-date">
-
-                            </div>
-                            <div class="form_profile">
-                                <input type="text" id="address" class="form__input" placeholder=" " autocomplete="off" required minlength="3">
-
-                                <label for="address" class="form__label">Dirección:</label>
-
-                            </div>
-                            <div class="form_profile">
-                                <label class="form__label" for="email">Email:</label>
-                                <input class="form__input" type="email" id="email" name="email" value="" readonly>
-                            </div>
-
-
-                            <div class="form_profile">
-                                <input type="password" id="password" class="form__input" placeholder=" ">
-                                <label for="password" class="form__label">Contraseña:</label>
-
-                            </div>
-                            <div class="form_profile">
-                                <input type="password" id="password" class="form__input" placeholder=" ">
-                                <label for="password" class="form__label">Confirmar contraseña:</label>
-
-                            </div>
-
-
-
-
-                            <div class="form__register-button">
-                                <input type="submit" class="button" value="Guardar">
-                                <input type="reset" class="button" value="Descartar">
-                            </div>
-
-
-                        </div>
-
-
-                    </form>
-
-                    <%- include( '../partials/footer') %>
-
-
-                </div>
-
-            </main>
-    </body>
-
+        read_img.onload = () => {
+          if (read_img.readyState == 2) {
+            id_img.src = read_img.result;
+          }
+        };
+        read_img.readAsDataURL(event.target.files[0]);
+      };
+    </script>
+  </body>
 </html>

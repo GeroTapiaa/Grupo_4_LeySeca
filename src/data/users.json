@@ -1,53 +1,14 @@
 [
    {
       "id": 1,
-      "name": "Nadia Florencia",
+      "name": "Florrre",
       "lastName": "Maldonado",
-      "user": "nadia15011",
-      "date": "2000-11-02",
-      "address": "Calle 165 N 1818",
-      "email": "ndo3011@gmail.com",
-      "password": "$2a$10$cnbnkKpKG8OgP4z2wmGxseMcA9P4NsrM5neskppSaiISbgWzlX5Iq",
-      "avatar": "",
-      "rol": "user",
-      "birthday": null
-   },
-   {
-      "id": 2,
-      "name": "Geronimo",
-      "lastName": "Tapia",
-      "user": "gerotapia",
-      "date": "2000-02-04",
-      "address": "calle falsa 123",
-      "email": "geronimook@hotmail.com",
-      "password": "$2a$10$RBuFlKnk5t9MiwFuIfNxL.zAJR9.yfqJqJOOF0xKBAzmbHJSCv8D2",
-      "avatar": "",
-      "rol": "user",
-      "birthday": null
-   },
-   {
-      "id": 3,
-      "name": "Gaston",
-      "lastName": "Obreque",
-      "user": "gambe95",
-      "date": "1995-09-02",
-      "address": "Urquiza N°825",
-      "email": "gambexequiel@hotmail.com",
-      "password": "$2a$10$xKh4lUERnMHKGnzG4SL/deE8PpzYEV10V8jzeEuftxplbQorunUvW",
-      "avatar": "",
-      "rol": "admin",
-      "birthday": null
-   },
-   {
-      "id": 4,
-      "name": "Geronimo",
-      "lastName": "Tapia",
-      "user": "gerotapa",
-      "date": "1998-02-04",
-      "address": "calle falsa 123",
-      "email": "gerook98@hotmail.com",
-      "password": "$2a$10$f0wgbGhABzf6JV/zayzgsOhrmVZf149BkrjTFooYCAPk95guoBDw.",
-      "avatar": "",
+      "user": "nadia15000",
+      "date": "2000-12-31",
+      "address": "Calle 165 N 1414                                                                  ",
+      "email": "nadiamaldonado3011@gmail.com",
+      "password": "$2a$10$W7E8jtE3pyX/W4PgvUKm2OpyN4EwxU8..sdJYlJc/nearZPLaehjG",
+      "avatar": "avatar-1663028221449.webp",
       "rol": "user"
    }
 ]
