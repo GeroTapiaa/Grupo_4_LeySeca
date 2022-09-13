@@ -44,7 +44,7 @@
     <div class="home__header__browser-menu__items">
       <ul>
         <% if (locals.userLogin) { %>
-        <li><a href="/products/products">Productos</a></li>
+        <li><a href="/products/products"><%= userLogin.name %> </a></li>
         <li><a href="/products/shop">Shop</a></li>
         <li><a href="/users/logout">salir</a></li>
 

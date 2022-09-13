@@ -11,53 +11,27 @@
         <div class="form__register-container-profile">
           <div class="form__register-photo">
             <figure class="image_profile">
-              <img
-                src="/images/users/<%= user.avatar %> "
-                alt="image"
-                width="200px"
-              />
+              <img src="/images/users/<%=user.avatar%>" />
             </figure>
           </div>
 
+          <div class="form_profile"><%= user.name %></div>
           <div class="form_profile">
-            <input type="text" id="name" class="form__input" />
-            <label for="name" class="form__label"
-              ><%= user.name %><%= user.lastName %>></label
-            >
-          </div>
-          <div class="form_profile">
-            <input
-              type="text"
-              id="user"
-              class="form__input"
-              placeholder=" "
-              autocomplete="off"
-            />
-            <label for="user" class="form__label"><%= user.user %> </label>
+            <p><%= user.user %></p>
           </div>
           <div class="form__register-date">
             <p>Fecha de nacimiento:</p>
-            <input
-              type="date"
-              id="date"
-              class="register-date"
-              value="<%= user.date %>"
-            />
+            <p><%= user.date %></p>
           </div>
           <div class="form_profile">
-            <input type="text" id="address" class="form__input" />
-
-            <label for="address" class="form__label"
-              ><%= user.address %>
-            </label>
+            <p><%= user.address %></p>
           </div>
           <div class="form_profile">
-            <label class="form__label" for="email"><%= user.email %> </label>
-            <input class="form__input" type="email" id="email" name="email" />
+            <p><%= user.email %></p>
           </div>
 
           <div class="form__register-button">
-            <a href="/users/profileEdit/1">
+            <a href="/users/profileEdit/<%= user.id %> ">
               <button class="button">Editar Perfil</button></a
             >
 

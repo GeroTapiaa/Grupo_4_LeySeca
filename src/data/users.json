@@ -1,140 +1,14 @@
 [
    {
       "id": 1,
-      "name": "Nadia Florencia",
+      "name": "Florrre",
       "lastName": "Maldonado",
-      "user": "nadia1501",
-      "date": "2000-12-30",
-      "address": "Calle 165 N 1818",
+      "user": "nadia15000",
+      "date": "2000-12-31",
+      "address": "Calle 165 N 1414                                                                  ",
       "email": "nadiamaldonado3011@gmail.com",
-      "password": "$2a$10$USXswFBPyFHBePhwIoKBK.b5dKqVA1RaA9OP0.tC8pyaSihnm1rwa",
-      "avatar": [
-         "default-ley-seca.jpg"
-      ],
-      "rol": "user"
-   },
-   {
-      "id": 2,
-      "name": "Nadia Florencia",
-      "lastName": "Maldonado",
-      "user": "nadia3030",
-      "date": "2000-12-30",
-      "address": "Calle 165 N 1818",
-      "email": "nadiamaldo3011@gmail.com",
-      "password": "$2a$10$zHYZ8WMRUzJ4tgHjbq9Oxej2I1WXDmurXazdK.PWT237jGCEiY2de",
-      "avatar": [
-         "default-ley-seca.jpg"
-      ],
-      "rol": "user"
-   },
-   {
-      "id": 3,
-      "name": "Nadia Florencia",
-      "lastName": "Maldonado",
-      "user": "nadia15011",
-      "date": "2000-12-30",
-      "address": "Calle 165 N 1818",
-      "email": "nadiamaldodgdgdfgnado3011@gmail.com",
-      "password": "$2a$10$V1vFIBs9Ih9pJP2XMfuy9O6b/Bsmos/kwAvhNLoTtxIomhxqnhGZ2",
-      "avatar": [
-         "default-ley-seca.jpg"
-      ],
-      "rol": "user"
-   },
-   {
-      "id": 4,
-      "name": "Nadia Florencia",
-      "lastName": "Maldonado",
-      "user": "nadia15012528",
-      "date": "2000-12-30",
-      "address": "Calle 165 N 1818",
-      "email": "nadiaflorrrhfgh@gmail.com",
-      "password": "$2a$10$yKmbO1PDEv2bO0uW3lYIh.G3SaSouqTz4BPRH.9CjvaAD90.cK9xK",
-      "avatar": [
-         "default-ley-seca.jpg"
-      ],
-      "rol": "user"
-   },
-   {
-      "id": 5,
-      "name": "jeremias",
-      "lastName": "jere",
-      "user": "jere1230",
-      "date": "2000-12-03",
-      "address": "Calle 165 N 1818",
-      "email": "emmarhcp10@gmail.com",
-      "password": "$2a$10$8cjU6MLOlsiiH8RHubywQ.bt7fGhsNV3eeCBiQ35DuunkDz2fV1Za",
-      "rol": "user"
-   },
-   {
-      "id": 6,
-      "name": "Nadia Florencia",
-      "lastName": "Maldonado",
-      "user": "nadiaaa",
-      "date": "2000-12-30",
-      "address": "Calle 165 N 1818",
-      "email": "nadiamfloro3011@gmail.com",
-      "password": "$2a$10$7o8SVFlWkXVjszsheGk.xOy9jir.EcKb02ht7Xw9yVJlxJZmei.iO",
-      "avatar": [
-         "default-ley-seca.jpg"
-      ],
-      "rol": "user"
-   },
-   {
-      "id": 7,
-      "name": "nadia",
-      "lastName": "nadia",
-      "user": "nadia30300",
-      "date": "2000-12-30",
-      "address": "Calle 165 N 1818",
-      "email": "nadflorcee3011@gmail.com",
-      "password": "$2a$10$GOeAbds/9tEhytUyoFhBDOnSZhjreA/ZjjOSbPH3nW5f9tXZ5.dB6",
-      "avatar": {
-         "fieldname": "avatar",
-         "originalname": "hamilton.jpg",
-         "encoding": "7bit",
-         "mimetype": "image/jpeg",
-         "destination": "./public/images/users",
-         "filename": "avatar-1662754004467.jpg",
-         "path": "public\\images\\users\\avatar-1662754004467.jpg",
-         "size": 12690
-      },
-      "rol": "user"
-   },
-   {
-      "id": 8,
-      "name": "jerito",
-      "lastName": "jerito",
-      "user": "jerito1230",
-      "date": "1996-12-03",
-      "address": "Calle 165 N 1818",
-      "email": "emmarhcp110@gmail.com",
-      "password": "$2a$10$lfpGKW14BM0gO5eLw5IemeG6MDMd7tB7fe6YJzoB8/CrdHGD14uC2",
-      "avatar": "avatar-1662754150446.jpg",
-      "rol": "user"
-   },
-   {
-      "id": 9,
-      "name": "nadia",
-      "lastName": "jdbfhjsdfds",
-      "user": "nadia150112",
-      "date": "2000-12-30",
-      "address": "Calle 165 N 1818",
-      "email": "florencia3011@gmail.com",
-      "password": "$2a$10$ekfdDrkBx9N3kzpmaSkiE.htPrwSj.uRxLFfO60gxx4t9EHLjDipC",
-      "avatar": "avatar-1662754487166.jpg",
-      "rol": "user"
-   },
-   {
-      "id": 10,
-      "name": "Nadia Florencia",
-      "lastName": "Maldonado",
-      "user": "valia123",
-      "date": "2000-11-30",
-      "address": "Calle 165 N 1818",
-      "email": "valiado3011@gmail.com",
-      "password": "$2a$10$CKLSYZ/uAgegwMkMKWGYbuXnL6D7hKRvwY3JZ2TK1JQUQW0wOlP.G",
-      "avatar": "avatar-1662760601492.jpg",
+      "password": "$2a$10$W7E8jtE3pyX/W4PgvUKm2OpyN4EwxU8..sdJYlJc/nearZPLaehjG",
+      "avatar": "avatar-1663028221449.webp",
       "rol": "user"
    }
 ]
