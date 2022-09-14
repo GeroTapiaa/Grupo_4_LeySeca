@@ -2,12 +2,12 @@
 <html lang="en">
   <%- include('../partials/head', { title : 'Perfil' }) %>
 
-  <body class="body__register">
+  <body class="body__profile-edit">
     <%- include( '../partials/navbar' ) %>
 
     <main class="main__profile-edit">
       <div class="main__profile-section-edit">
-        <h2 class="form__title">Editá tu perfil</h2>
+        <h2 class="form__title-edit">Editá tu perfil</h2>
 
         <form
           <form
@@ -16,8 +16,8 @@
           enctype="multipart/form-data"
           method="POST"
         >
-          <div class="form__register-container">
-            <div class="form__register-photo">
+          <div class="form__register-container-edit">
+            <div class="form__register-photo-edit">
               <figure class="image_profile-edit">
                 <img
                   src="/images/users/<%= user.avatar %>  "
@@ -31,42 +31,42 @@
                   onchange="preview(event)"
                 />
 
-                <label class="label_photo" for="avatar">
+                <label class="label_photo-edit" for="avatar">
                   <i class="fa-solid fa-camera"></i
                 ></label>
               </figure>
             </div>
-            <div class="form_profile">
+            <div class="form_profile-edit">
               <input
                 type="text"
                 id="name"
-                class="form__input"
+                class="form__input-edit"
                 name="name"
                 value="<%= user.name %>"
               />
-              <label for="name" class="form__label">Nombre:</label>
+              <label for="name" class="form__label-edit">Nombre:</label>
             </div>
 
-            <div class="form_profile">
+            <div class="form_profile-edit">
               <input
                 type="text"
                 id="user"
-                class="form__input"
+                class="form__input-edit"
                 name="user"
                 value="<%= user.user %>"
               />
-              <label for="user" class="form__label">Usuario:</label>
+              <label for="user" class="form__label-edit">Usuario:</label>
             </div>
-            <div class="form_profile">
+            <div class="form_profile-edit">
               <input
                 type="text"
                 id="address"
-                class="form__input"
+                class="form__input-edit"
                 name="address"
                 value="<%= user.address %> "
               />
 
-              <label for="address" class="form__label">Dirección:</label>
+              <label for="address" class="form__label-edit">Dirección:</label>
             </div>
 
             <div class="form__register-button">

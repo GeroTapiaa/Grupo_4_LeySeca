@@ -1,34 +1,37 @@
 :root {
-    --colorBlack: #151314;
-    --colorPearlGray: #DEDEDE;
-    --colorGray: rgb(78, 74, 74);
-    --colorOrange: #D19E59;
-    --fontBodyText: 'Bebas Neue', cursive;
-    --fontText: 'Martel Sans', sans-seri;
-    --img: url('/images/logos/background_ley-seca.webp');
-    --img-domo: url('/images/background/domos-background.jpeg');
-    --img-pata: url('/images/background/patagonia-background.jpeg');
-    --img-tour: url('/images/background/tour-background.jpeg');
-    --img-profile: url('/images/background/maltaa.jpg');
+  --colorBlack: #151314;
+  --colorPearlGray: #dedede;
+  --colorGray: rgb(78, 74, 74);
+  --colorOrange: #d19e59;
+  --fontBodyText: "Bebas Neue", cursive;
+  --fontText: "Martel Sans", sans-seri;
+  --img: url("/images/logos/background_ley-seca.webp");
+  --img-domo: url("/images/background/domos-background.jpeg");
+  --img-pata: url("/images/background/patagonia-background.jpeg");
+  --img-tour: url("/images/background/tour-background.jpeg");
+  --img-profile: url("/images/background/maltaa.jpg");
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
+li {
+  list-style: none;
+}
 body {
-    background-color: var(--colorPearlGray);
-    font-family: var(--fontBodyText);
+  background-color: var(--colorPearlGray);
+  font-family: var(--fontBodyText);
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 small {
-    color: red;
-    font-size: 10px;
+  color: red;
+  font-size: 10px;
 }

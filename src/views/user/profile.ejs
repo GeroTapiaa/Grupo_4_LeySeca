@@ -31,11 +31,10 @@
           </div>
 
           <div class="form__register-button">
-            <a href="/users/profileEdit/1">
+            <a href="/users/profileEdit/<%= user.id %>">
               <button class="button">Editar Perfil</button></a
             >
-
-            <input type="reset" class="button" value="Eliminar Perfil" />
+            <a href="/users/logout"> <button class="button">Salir</button></a>
           </div>
         </div>
 

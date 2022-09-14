@@ -15,7 +15,7 @@
     height: 63px;
   }
   .home__header__logo img {
-    width: 92px;
+    width: 78px;
     height: 100%;
   }
   .home__header__logo-letters {
@@ -32,8 +32,18 @@
   .nav__input {
     display: none;
   }
-  .icon {
+  .logout {
     display: none;
+  }
+  .icon {
+    width: 22%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 36%;
+  }
+  .icon i {
+    color: white;
   }
   /* burguer menu */
   .nav_label {
@@ -42,7 +52,7 @@
   }
   .nav_label i {
     position: absolute;
-    left: 84%;
+    left: 89%;
     background-color: var(--colorBlack);
     border-radius: 10%;
     font-size: 27px;
@@ -83,11 +93,11 @@
   .home__form {
     display: flex;
     justify-content: end;
-    width: 53%;
+    width: 30%;
   }
   .home__formgroup {
     position: relative;
-    margin: 22px;
+    margin: 22px 0px;
     width: 100%;
   }
   .home__form input {
@@ -133,7 +143,7 @@
     background: linear-gradient(180deg, #151314, transparent);
     display: flex;
     width: 100%;
-    height: 158px;
+    height: 190px;
   }
   .home__header__logo-image {
     width: 130px;
@@ -149,7 +159,7 @@
   .home__form {
     display: flex;
     justify-content: end;
-    width: 53%;
+    width: 43%;
   }
   .home__formgroup {
     position: relative;
@@ -185,12 +195,12 @@
     justify-content: flex-start;
   }
   .icon {
-    width: 22%;
+    width: 28%;
     margin: auto;
-    height: 100px;
+    height: 133px;
     display: flex;
     justify-content: flex-start;
-    gap: 33px;
+    gap: 36px;
   }
   .icon i {
     font-size: 20px;
@@ -198,6 +208,7 @@
   .nav__input {
     display: none;
   }
+
   .nav_label {
     display: inline;
     margin-left: 10%;
@@ -280,6 +291,9 @@
   .nav_label {
     display: none;
   }
+  .logoutLi {
+    display: none;
+  }
   .home__header__menu {
     position: absolute;
     top: 0;
@@ -342,7 +356,7 @@
   /* icons */
   .icon {
     position: relative;
-    right: 156px;
+    right: 197px;
     width: 12%;
     margin: auto;
     height: 100px;
