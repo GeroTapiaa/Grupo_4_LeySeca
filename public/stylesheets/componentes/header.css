@@ -257,12 +257,7 @@
   .home__nav {
     height: 95px;
   }
-  .home__header {
-    background-size: cover;
-    height: 325px;
-    background-image: var(--img);
-    margin-bottom: 47px;
-  }
+
   .home__header__logo__burguer-menu {
     display: none;
   }
@@ -273,7 +268,7 @@
     background: linear-gradient(180deg, #151314, transparent);
     display: flex;
     width: 100%;
-    height: 160px;
+    height: 100%;
   }
   .home__header__logo-image {
     width: 144px;
@@ -282,8 +277,12 @@
     justify-content: flex-start;
   }
   .home__header__logo-image img {
-    width: 57%;
+    width: 40%;
     margin-left: 18px;
+  }
+  .img-carrousel {
+    height: 505px;
+    filter: brightness(0.4);
   }
   .nav__input {
     display: none;
@@ -295,9 +294,20 @@
     display: none;
   }
   .home__header__menu {
-    position: absolute;
-    top: 0;
-    left: 160px;
+    top: 0px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 83px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .scroll {
+    top: 0px;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100px;
+    background-color: #151314;
   }
   .home__header__menu ul {
     display: flex;
@@ -336,9 +346,9 @@
     padding: 5px;
     border: none;
     outline: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     background: transparent;
-    color: black;
+    color: white;
     width: 100%;
   }
   .home__form button {
@@ -350,7 +360,7 @@
     left: 88%;
   }
   .home__form i {
-    color: black;
+    color: white;
   }
   /* search bar */
   /* icons */
@@ -359,16 +369,39 @@
     right: 197px;
     width: 12%;
     margin: auto;
-    height: 100px;
+
     display: flex;
     justify-content: flex-start;
     gap: 33px;
   }
   .icon i {
     font-size: 20px;
+    color: white;
   }
   .icon i:hover {
     color: grey;
   }
   /* icons */
+
+  .home__header__browser-menu__items {
+    position: absolute;
+    top: 0px;
+    left: 90px;
+  }
+
+  .carousel-text {
+    margin-bottom: 40px;
+  }
+
+  .btn-home {
+    background: linear-gradient(180deg, #151314, transparent);
+    width: 32%;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, 1);
+    padding: 10px;
+  }
+  .title-home {
+    font-family: var(--fontKaushan);
+    font-size: 70px;
+  }
 }

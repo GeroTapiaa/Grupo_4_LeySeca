@@ -3,7 +3,9 @@
   --colorPearlGray: #dedede;
   --colorGray: rgb(78, 74, 74);
   --colorOrange: #d19e59;
-  --fontBodyText: "Bebas Neue", cursive;
+  --fontBodyText: "Raleway", sans-serif;
+  --fontGrat: "Great Vibes", cursive;
+  --fontKaushan: "Kaushan Script", cursive;
   --fontText: "Martel Sans", sans-seri;
   --img: url("/images/logos/background_ley-seca.webp");
   --img-domo: url("/images/background/domos-background.jpeg");
@@ -24,11 +26,12 @@ li {
 body {
   background-color: var(--colorPearlGray);
   font-family: var(--fontBodyText);
+  font-weight: 700;
 }
 
 a {
-  text-decoration: none;
-  color: black;
+  text-decoration: none !important;
+  color: white !important;
 }
 
 small {
