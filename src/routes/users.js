@@ -11,10 +11,10 @@ const {
   loginRegister,
   logout,
 } = require('../controllers/userController');
-const sessionCheck = require('../middlewares/sessionCheck');
+const sessionCheck = require('../middleware/cookieCheck');
 const registerValidator = require('../validations/registerValidator');
 const loginValidator = require('../validations/loginValidator');
-const { uploadUsers } = require('../middlewares/uploadFiles');
+const { uploadUsers } = require('../middleware/uploadFiles');
 
 router
   .get("/login", login)

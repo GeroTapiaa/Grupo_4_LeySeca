@@ -86,6 +86,9 @@
     transform-origin: left top;
     color: #5757577e;
   }
+  .input__check-edit {
+    margin-right: 10px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -177,6 +180,9 @@
     transform-origin: left top;
     color: #5757577e;
   }
+  .input__check-edit {
+    margin-right: 10px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -263,5 +269,8 @@
     transform: translateY(-10px) scale(0.7);
     transform-origin: left top;
     color: #5757577e;
+  }
+  .input__check-edit {
+    margin-right: 10px;
   }
 }
