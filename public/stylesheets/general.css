@@ -12,6 +12,7 @@
   --img-pata: url("/images/background/patagonia-background.jpeg");
   --img-tour: url("/images/background/tour-background.jpeg");
   --img-profile: url("/images/background/maltaa.jpg");
+  --img-backmove: url("/images/logos/4.jpg");
 }
 
 * {
@@ -37,4 +38,7 @@ a {
 small {
   color: red;
   font-size: 10px;
+}
+h3 {
+  font-weight: 700 !important;
 }

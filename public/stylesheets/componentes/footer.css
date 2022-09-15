@@ -1,6 +1,6 @@
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .home__footer {
-    background-color: var(--colorBlack);
+    background-color: #222222;
   }
   .home__footer__redes {
     position: relative;
@@ -13,10 +13,12 @@
     opacity: 50%;
   }
   .home__footer__redes-icon {
-    justify-content: space-around;
+    justify-content: center;
     position: absolute;
-    bottom: 36px;
+    gap: 15%;
+    padding: 13% 0px 0px 20%;
     display: flex;
+    padding-bottom: 96px;
     font-size: 26px;
     color: #fff;
     width: 100%;
@@ -32,6 +34,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 35px;
   }
   .home__footer__links ul {
     list-style: none;
@@ -56,26 +59,24 @@
   }
 }
 
-@media (min-width: 767px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   /* FOOTER */
   .home__footer {
-    background-color: var(--colorBlack);
+    background-color: #222222;
   }
-  .home__footer__redes {
-    position: relative;
-    display: flex;
-    height: 17%;
-  }
+
   .home__footer__redes img {
     width: 100%;
     height: 150px;
     opacity: 50%;
   }
   .home__footer__redes-icon {
-    justify-content: space-around;
+    justify-content: center;
     position: absolute;
-    bottom: 48px;
+    gap: 102px;
+    padding: 43px 0px 0px 125px;
     display: flex;
+    padding-bottom: 96px;
     font-size: 26px;
     color: #fff;
     width: 100%;
@@ -121,23 +122,22 @@
 @media (min-width: 1024px) {
   /* FOOTER */
   .home__footer {
-    background-color: var(--colorBlack);
+    background-color: #222222;
   }
-  .home__footer__redes {
-    position: relative;
-    display: flex;
-    height: 17%;
-  }
+
   .home__footer__redes img {
     width: 100%;
     height: 160px;
     opacity: 50%;
   }
   .home__footer__redes-icon {
-    justify-content: space-around;
+    justify-content: center;
     position: absolute;
-    bottom: 58px;
+    gap: 215px;
+    padding: 43px 0px 0px 125px;
+
     display: flex;
+    padding-bottom: 96px;
     font-size: 26px;
     color: #fff;
     width: 100%;
