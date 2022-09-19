@@ -12,15 +12,13 @@ module.exports = {
     let errors = validationResult(req);
 
     if (errors.isEmpty()) {
-      let { name, rol, avatar, id } = loadUsers().find(
+      let { name, password } = loadUsers().find(
         (user) => user.user === req.body.user
       );
 
       req.session.userLogin = {
         name,
-        rol,
-        avatar,
-        id,
+        password
       };
       if (req.body.remenber) {
         res.cookie('userLeySeca', req.session.userLogin, {
@@ -29,7 +27,7 @@ module.exports = {
       }
       res.redirect("/");
     } else {
-      res.render("user/login", {
+      res.render("login", {
         errors: errors.mapped(),
       });
     }
@@ -41,6 +39,7 @@ module.exports = {
   // REGISTRO
 
   userRegister: (req, res) => {
+
     const errors = validationResult(req);
 
 

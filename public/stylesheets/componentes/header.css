@@ -360,9 +360,9 @@
   .icon i {
     font-size: 20px;
   }
-  .nav__input {
+  /* .nav__input {
     display: none;
-  }
+  } */
 
   .nav_label {
     display: inline;
