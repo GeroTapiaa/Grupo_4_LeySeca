@@ -12,11 +12,12 @@
                     <div class="title-created">
                         <h2>Creación de productos</h2>
                     </div>
-                    <form action="/products/store" method="post" class="form-create">
+                    <form action="/products/store" method="post" class="form-create" enctype="multipart/form-data">
                         <div class="product-detail">
                             <div class="form__box">
                                 <label for="name" class="label-form">Nombre del producto:</label>
-                                <input type="text" id="name" name="name" placeholder="Ingrese el producto" class="input_form">
+                                <input type="text" id="name" name="name" placeholder="Ingrese el nombre del producto" class="input_form" >
+                                <small><%=locals.errors && errors.name ? errors.name.msg : null%></small>
                             </div>
                             <div class="form__box">
                                 <label for="name" class="label-form">Precio:</label>
@@ -33,6 +34,10 @@
                             <option value="Cerveza">Cerveza</option>
                             <option value="indumentaria">indumentaria</option>
                         </select>
+                            </div>
+                            <div class="form__box-image">
+                                <label for="image" class="label-form">Imagenes:</label>
+                                <input type="file" id="image" name="images" class="input_form" multiple>
                             </div>
                             <div class="form__box--description">
                                 <label for="description" class="label-form">Descripción:</label>
