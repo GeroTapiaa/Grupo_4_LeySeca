@@ -15,6 +15,7 @@ const sessionCheck = require('../middleware/cookieCheck');
 const registerValidator = require('../validations/registerValidator');
 const loginValidator = require('../validations/loginValidator');
 const { uploadUsers } = require('../middleware/uploadFiles');
+const userSession = require('../middleware/userSessionCheck');
 
 router
   .get("/login", login)
@@ -26,7 +27,7 @@ router
     registerValidator,
     userRegister
   )
-  .get("/profile", sessionCheck, profile)
+  .get("/profile", sessionCheck,userSession, profile)
   .get("/profileEdit/:id", profileEdit)
   .put("/update/:id", uploadUsers.single('avatar'), update)
   .get("/logout", logout);
