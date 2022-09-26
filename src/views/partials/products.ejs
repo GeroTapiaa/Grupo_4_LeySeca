@@ -16,20 +16,20 @@
 
                             <%= price %>
                         </p>
-                        <p>
+                        <p class="discount-price">
                             $
                             <%= toThousand((price - (price / 100 * discount)) .toFixed(0)) %>
                         </p>
                         <% }else{ %>
-                            <p>
+                            <p class="price">
                                 $
                                 <%= price %>
                             </p>
                             <% } %>
-                                <h3>
-                                    <a href="/products/productDetail/<%= id %> ">
+                                <h3 class="name_products">
+                              
                                         <%=name %>
-                                    </a>
+                                    
                                 </h3>
                 </div>
 

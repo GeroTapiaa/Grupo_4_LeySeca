@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head', { title : 'Login' }) %>
+
+<%- include('../partials/head', { title : 'Login' }) %>
 
     <body class="login">
 
@@ -10,38 +11,24 @@
 
             <h2 class="form__title">Inicia Sesión</h2>
 
-        <form class="profile-edit" action="" method="post">
-          <div class="form__register-container-edit">
-            <p>
-              ¿No tenés cuenta?<a href="/users/register"> Registrate acá</a>
-            </p>
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="user"
-                class="form__input-edit"
-                placeholder=" "
-                name="user"
-              />
-              <label for="user" class="form__label-edit">Usuario:</label>
-              <small>
-                <%= locals.errors && errors.user ? errors.user.msg : null%>
-              </small>
-            </div>
-            <div class="form_profile-edit">
-              <input
-                class="form__input-edit"
-                placeholder=" "
-                type="password"
-                id="password"
-                name="password"
-              />
-              <label class="form__label-edit" for="password">Contraseña:</label>
-              <small>
-                <%= locals.errors && errors.password ? errors.password.msg :
-                null%>
-              </small>
-            </div>
+            <form class="profile-edit" action="" method="post">
+                <div class="form__register-container">
+                    <div class="form_profile">
+                        <input type="text" id="user" class="form__input" name="user">
+                        <label for="user" class="form__label">Usuario:</label>
+                        <small>
+                            <%= locals.errors && errors.user ? errors.user.msg : null%>
+                        </small>
+
+                    </div>
+                    <div class="form_profile">
+                        <input class="form__input" type="password" id="password" name="password">
+                        <label class="form__label" for="password">Contraseña:</label>
+                        <small>
+                            <%= locals.errors && errors.password ? errors.password.msg : null%>
+                        </small>
+
+                    </div>
 
                     <div class="form__register-button">
                         <button type="submit" class="button" value="Guardar">Ingresar</button>
@@ -60,8 +47,11 @@
                 </div>
             </form>
 
-        <%- include('../partials/footer') %>
-      </div>
-    </main>
-  </body>
+            </div>
+            <%- include('../partials/footer') %>
+
+
+                </main>
+    </body>
+
 </html>
