@@ -30,5 +30,6 @@ a {
 
 small {
     color: red;
-    font-size: 10px;
+    font-size: 12px;
+    padding: 3% 0px
 }

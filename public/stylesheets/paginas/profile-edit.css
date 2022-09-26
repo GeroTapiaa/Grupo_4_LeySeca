@@ -7,6 +7,7 @@
             height: 942px;
             padding-top: 26px;
         }
+
         .profile-edit {
             background-color: rgba(239, 239, 239, 0.9);
             border-radius: 2%;
@@ -14,26 +15,31 @@
             flex-direction: column;
             align-items: center;
             width: 80%;
-            margin: auto;
+            margin: 20px auto;
         }
+
         .form__register-photo {
             width: 280px;
         }
+
         .form__title {
             text-align: center;
             margin-bottom: 33px;
         }
+
         .image_profile-edit {
             display: flex;
             position: relative;
             justify-content: center;
             opacity: 93%;
         }
+
         .image_profile-edit img {
             width: 43%;
             border-radius: 50%;
             border: 3px solid dimgrey;
         }
+
         .label_photo {
             position: absolute;
             background-color: dimgrey;
@@ -42,14 +48,18 @@
             right: 75px;
             top: 75px;
         }
+
         #avatar {
             display: none;
         }
+
         .form_profile {
             position: relative;
             display: flex;
             justify-content: center;
+            flex-direction: column;
         }
+
         .form__register-container {
             background: transparent;
             width: 60%;
@@ -60,48 +70,116 @@
             align-items: center;
             gap: 55px;
         }
+
         .form__input {
-            width: 80%;
+            width: 100%;
             font-size: 20px;
-            padding: 3px -3px;
+            padding: 5px;
             border: none;
             outline: none;
             background-color: #EFEFEF;
             border-bottom: 1px solid #5757577e;
         }
+
         .form__label {
             cursor: pointer;
             position: absolute;
             top: 0px;
-            left: 30px;
+            left: 5px;
             transform: translateY(5px);
             transition: transform .5s, color .3s;
         }
+
         .form__input:focus+.form__label,
         .fform__input:not(:placeholder-shown)+.form__label {
             transform: translateY(-10px) scale(.7);
             transform-origin: left top;
             color: #5757577e;
         }
+
         .form__register-date {
             display: flex;
             flex-wrap: wrap;
         }
+
         .form__register-date p {
             width: 60%;
             margin-left: 10px;
         }
+
         #date {
             background-color: #EFEFEF;
             margin-left: 31px;
             border: none;
         }
+
+        .form__register-remenber {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding-bottom: 10px;
+        }
+
+        .form__checkbox-remenber {
+            visibility: hidden;
+            position: absolute;
+            right: 0;
+        }
+
+        .form__checkbox-remenber+.ii {
+            background: #f0f0f0;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            position: absolute;
+            left: 0;
+            top: auto;
+            width: 41px;
+            height: 18px;
+            border-radius: 15px;
+        }
+        .form__checkbox-remenber:checked+.ii{
+            background: #555555;
+        }
+
+        .form__checkbox-remenber+.ii:before {
+            content: '';
+            /* No hay contenido */
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+            left: 0px;
+            top: 0px;
+            -webkit-box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .form__checkbox-remenber:checked+.ii:before {
+            left: 22px;
+            -webkit-box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 3px 0 -3px 0 rgba(0, 0, 0, 0.2);
+            
+            transition: .2s;
+        }
+        .form__checkbox-remenber:checked+.ii:after{
+            transition: .2s;
+        }
+
+        .content-input {
+            position: relative;
+            margin-bottom: 30px;
+            padding: 5px 0px 5px 60px;
+            display: block;
+            font-size: 100%;
+        }
     }
-    
+
     @media (min-width: 768px) and (max-width:1023px) {
         .main__profile {
             margin-top: 20px;
         }
+
         .main__profile-section-edit {
             background-image: var(--img-profile);
             background-size: cover;
@@ -110,6 +188,7 @@
             height: 927px;
             padding-top: 21px;
         }
+
         .profile {
             display: flex;
             flex-direction: column;
@@ -117,10 +196,21 @@
             width: 65%;
             margin: auto;
         }
+        .profile-edit {
+            background-color: rgba(239, 239, 239, 0.9);
+            border-radius: 2%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            margin: 20px auto;
+        }
+
         .form__title {
             text-align: center;
             margin-bottom: 28px;
         }
+
         .image_profile-edit {
             display: flex;
             position: relative;
@@ -128,11 +218,13 @@
             opacity: 93%;
             margin-top: 40px;
         }
+
         .image_profile-edit img {
             width: 43%;
             border-radius: 50%;
             border: 3px solid dimgrey;
         }
+
         .label_photo {
             position: absolute;
             background-color: dimgrey;
@@ -141,14 +233,18 @@
             right: 97px;
             top: 120px;
         }
+
         #avatar {
             display: none;
         }
+
         .form_profile {
             position: relative;
             display: flex;
             justify-content: center;
+            flex-direction: column;
         }
+
         .form__register-container {
             background-color: rgba(239, 239, 239, 0.9);
             border-radius: 2%;
@@ -160,45 +256,111 @@
             align-items: center;
             gap: 55px;
         }
+
         .form__input {
-            width: 80%;
+            width: 100%;
             font-size: 20px;
-            padding: 3px -3px;
+            padding: 5px;
             border: none;
             outline: none;
             background-color: #EFEFEF;
             border-bottom: 1px solid #5757577e;
         }
+
         .form__label {
             cursor: pointer;
             position: absolute;
             color: black;
             top: 0px;
-            left: 30px;
+            left: 5px;
             transform: translateY(5px);
             transition: transform .5s, color .3s;
         }
+
         .form__input:focus+.form__label,
         .fform__input:not(:placeholder-shown)+.form__label {
             transform: translateY(-10px) scale(.7);
             transform-origin: left top;
             color: #5757577e;
         }
+
         .form__register-date {
             display: flex;
             flex-wrap: wrap;
         }
+
         .form__register-date p {
             width: 60%;
             margin-left: 10px;
         }
+
         #date {
             background-color: #EFEFEF;
             margin-left: 31px;
             border: none;
         }
+        .form__register-remenber {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding-bottom: 10px;
+        }
+
+        .form__checkbox-remenber {
+            visibility: hidden;
+            position: absolute;
+            right: 0;
+        }
+
+        .form__checkbox-remenber+.ii {
+            background: #f0f0f0;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            position: absolute;
+            left: 0;
+            top: auto;
+            width: 41px;
+            height: 18px;
+            border-radius: 15px;
+        }
+        .form__checkbox-remenber:checked+.ii{
+            background: #555555;
+        }
+
+        .form__checkbox-remenber+.ii:before {
+            content: '';
+            /* No hay contenido */
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+            left: 0px;
+            top: 0px;
+            -webkit-box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .form__checkbox-remenber:checked+.ii:before {
+            left: 22px;
+            -webkit-box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 3px 0 -3px 0 rgba(0, 0, 0, 0.2);
+            
+            transition: .2s;
+        }
+        .form__checkbox-remenber:checked+.ii:after{
+            transition: .2s;
+        }
+
+        .content-input {
+            position: relative;
+            margin-bottom: 30px;
+            padding: 5px 0px 5px 60px;
+            display: block;
+            font-size: 100%;
+        }
     }
-    
+
     @media (min-width: 1024px) {
         .main__profile-section-edit {
             background-image: var(--img-profile);
@@ -208,6 +370,7 @@
             height: 927px;
             padding-top: 21px;
         }
+
         .profile {
             background-color: rgba(239, 239, 239, 0.9);
             border-radius: 2%;
@@ -217,10 +380,27 @@
             width: 45%;
             margin: auto;
         }
+        .form_profile {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .profile-edit {
+            background-color: rgba(239, 239, 239, 0.9);
+            border-radius: 2%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60%;
+            margin: 20px auto;
+        }
+
         .form__title {
             text-align: center;
             margin-bottom: 28px;
         }
+
         .image_profile-edit {
             position: relative;
             display: flex;
@@ -228,11 +408,13 @@
             opacity: 93%;
             margin-top: 40px;
         }
+
         .image_profile-edit img {
             width: 43%;
             border-radius: 50%;
             border: 3px solid dimgrey;
         }
+
         .label_photo {
             position: absolute;
             background-color: dimgrey;
@@ -241,14 +423,17 @@
             right: 97px;
             top: 120px;
         }
+
         #avatar {
             display: none;
         }
+
         .form_profile {
             position: relative;
             display: flex;
             justify-content: center;
         }
+
         .form__register-container {
             background-color: rgba(239, 239, 239, 0.9);
             border-radius: 2%;
@@ -260,41 +445,106 @@
             align-items: center;
             gap: 55px;
         }
+
         .form__input {
-            width: 80%;
+            width: 100%;
             font-size: 20px;
-            padding: 3px -3px;
+            padding: 5px;
             border: none;
             outline: none;
             background-color: #EFEFEF;
             border-bottom: 1px solid #5757577e;
         }
+
         .form__label {
             cursor: pointer;
             position: absolute;
-            color: black;
             top: 0px;
-            left: 30px;
+            left: 5px;
             transform: translateY(5px);
             transition: transform .5s, color .3s;
         }
+
         .form__input:focus+.form__label,
         .fform__input:not(:placeholder-shown)+.form__label {
             transform: translateY(-10px) scale(.7);
             transform-origin: left top;
             color: #5757577e;
         }
+
         .form__register-date {
             display: flex;
             flex-wrap: wrap;
         }
+
         .form__register-date p {
             width: 60%;
             margin-left: 10px;
         }
+
         #date {
             background-color: #EFEFEF;
             margin-left: 31px;
             border: none;
+        }
+        .form__register-remenber {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding-bottom: 10px;
+        }
+
+        .form__checkbox-remenber {
+            visibility: hidden;
+            position: absolute;
+            right: 0;
+        }
+
+        .form__checkbox-remenber+.ii {
+            background: #f0f0f0;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            position: absolute;
+            left: 0;
+            top: auto;
+            width: 41px;
+            height: 18px;
+            border-radius: 15px;
+        }
+        .form__checkbox-remenber:checked+.ii{
+            background: #555555;
+        }
+
+        .form__checkbox-remenber+.ii:before {
+            content: '';
+            /* No hay contenido */
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+            left: 0px;
+            top: 0px;
+            -webkit-box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .form__checkbox-remenber:checked+.ii:before {
+            left: 22px;
+            -webkit-box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 3px 0 -3px 0 rgba(0, 0, 0, 0.2);
+            
+            transition: .2s;
+        }
+        .form__checkbox-remenber:checked+.ii:after{
+            transition: .2s;
+        }
+
+        .content-input {
+            position: relative;
+            margin-bottom: 30px;
+            padding: 5px 0px 5px 60px;
+            display: block;
+            font-size: 100%;
         }
     }
