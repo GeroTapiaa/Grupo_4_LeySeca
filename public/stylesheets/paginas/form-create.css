@@ -26,6 +26,10 @@
 textarea {
     resize: none;
 }
+.form__box-image{
+    width: 100%;
+    padding: 10px;
+}
 
 .form__box--description {
     width: 100%;
@@ -42,6 +46,7 @@ textarea {
     border-radius: 8px;
     border: 1px solid black;
     padding: 10px;
+    background-color: #fff;
 }
 
 .btn__product:hover {

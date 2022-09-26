@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
+
 
 
 const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
@@ -107,22 +109,26 @@ module.exports = {
     },
     store: (req, res) => {
 
-        const { name, price, discount, description, category } = (req.body);
-        const newProduct = {
-            id: products[products.length - 1].id + 1,
-            name: name.trim(),
-            description: description.trim(),
-            price: +price,
-            discount: +discount,
-            category,
-        }
-        productsModify = [...products, newProduct]
-        saveProducts(productsModify)
-        if (newProduct.category === 'indumentaria') {
-            res.redirect('/products/shop');
-        } else {
-            res.redirect('/products/products');
-        }
+        let errors = validationResult(req)
+        
+            const { name, price, discount, description, category } = (req.body);
+            const newProduct = {
+                id: products[products.length - 1].id + 1,
+                name: name.trim(),
+                description: description.trim(),
+                price: +price,
+                discount: +discount,
+                category,
+            }
+            productsModify = [...products, newProduct]
+            saveProducts(productsModify)
+            if (newProduct.category === 'indumentaria') {
+                res.redirect('/products/shop');
+            } else {
+                res.redirect('/products/products');
+            }
+         
+
 
 
 

@@ -32,6 +32,7 @@ a {
 }
 
 small {
-  color: red;
-  font-size: 10px;
+    color: red;
+    font-size: 12px;
+    padding: 3% 0px
 }
