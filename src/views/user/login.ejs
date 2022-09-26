@@ -19,10 +19,10 @@
                 name="user"
               />
               <label for="user" class="form__label-edit">Usuario:</label>
-              <small>
-                <%= locals.errors && errors.user ? errors.user.msg : null%>
-              </small>
             </div>
+            <small>
+              <%= locals.errors && errors.user ? errors.user.msg : null%>
+            </small>
             <div class="form_profile-edit">
               <input
                 class="form__input-edit"
@@ -32,11 +32,11 @@
                 name="password"
               />
               <label class="form__label-edit" for="password">Contraseña:</label>
-              <small>
-                <%= locals.errors && errors.password ? errors.password.msg :
-                null%>
-              </small>
             </div>
+            <small>
+              <%= locals.errors && errors.password ? errors.password.msg :
+              null%>
+            </small>
             <p>
               ¿No tenés cuenta?<a class="terms" href="/users/register">
                 Registrate acá</a
