@@ -225,7 +225,7 @@
     background-color: dimgrey;
     border-radius: 51%;
     padding: 2px 5px;
-    right: 277px;
+    right: 258px;
     top: 75px;
   }
   #avatar {
@@ -246,7 +246,7 @@
   }
   .form__register-container-edit {
     background-color: rgba(239, 239, 239, 0.9);
-    padding: 10px;
+    padding: 22px;
     width: 654px;
     flex-wrap: wrap;
 

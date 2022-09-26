@@ -46,5 +46,17 @@
       "password": "$2a$10$hj/lJGfIVbZmSyAWkvXdsuRaJeadp8QHoo/WWBRr6vatyVPboaw0q",
       "avatar": "avatar-1664220834320.png",
       "rol": "user"
+   },
+   {
+      "id": 6,
+      "name": "Nadia Florencia",
+      "lastName": "Maldonado",
+      "user": "nadia15010",
+      "date": "1996-12-10",
+      "address": "Calle 165 N 1818 ",
+      "email": "nadiaado3011@gmail.com",
+      "password": "$2a$10$8KpNTgiq2PRDFWKVfoutle5yQsKLGyzsSRL/iL3tZvchMFqPEjtwK",
+      "avatar": "avatar-1664226667864.png",
+      "rol": "user"
    }
 ]
