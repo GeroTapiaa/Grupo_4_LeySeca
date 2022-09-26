@@ -1,0 +1,29 @@
+@media (min-width: 320px) and (max-width: 767px) {
+  .section img {
+    height: 214px;
+
+    filter: brightness(0.6);
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section img {
+    height: 369px;
+    filter: brightness(0.6);
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .section {
+    height: 500px;
+  }
+  .section img {
+    height: 430px;
+    filter: brightness(0.6);
+  }
+}
+
+@media (min-width: 1440px) {
+  .section img {
+    height: 465px;
+    filter: brightness(0.6);
+  }
+}
