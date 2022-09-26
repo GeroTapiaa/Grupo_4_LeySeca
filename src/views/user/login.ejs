@@ -2,19 +2,14 @@
 <html lang="en">
   <%- include('../partials/head', { title : 'Login' }) %>
 
-    <body class="login">
-
-
-
-        <%- include('../partials/navbar') %>
-
-            <h2 class="form__title">Inicia Sesión</h2>
+  <body class="login">
+    <%- include('../partials/navbar') %>
+    <main class="main__profile-edit">
+      <div class="main__profile-section-edit">
+        <h2 class="form__title-edit">Inicia Sesión</h2>
 
         <form class="profile-edit" action="" method="post">
           <div class="form__register-container-edit">
-            <p>
-              ¿No tenés cuenta?<a href="/users/register"> Registrate acá</a>
-            </p>
             <div class="form_profile-edit">
               <input
                 type="text"
@@ -42,26 +37,31 @@
                 null%>
               </small>
             </div>
+            <p>
+              ¿No tenés cuenta?<a class="terms" href="/users/register">
+                Registrate acá</a
+              >
+            </p>
+            <div class="form__register-button">
+              <button type="submit" class="button" value="Guardar">
+                Ingresar
+              </button>
+              <input type="reset" class="button" value="Salir" />
+            </div>
 
-                    <div class="form__register-button">
-                        <button type="submit" class="button" value="Guardar">Ingresar</button>
-                        <input type="reset" class="button" value="Salir">
-                    </div>
-
-                    <div class="form__register-remenber">
-                        <label class="content-input"><input type="checkbox" class="form__checkbox-remenber"
-                                id="remenber" name="remenber">Recordame
-                            <i class="ii"></i>
-                        </label>
-
-                        <!--<label for="remenber" class="form_label_remenber">Recordame</label> -->
-
-                    </div>
-                </div>
-            </form>
-
-        <%- include('../partials/footer') %>
+            <div class="form__register-button">
+              <input
+                type="checkbox"
+                class="form__checkbox"
+                id="remenber"
+                name="remenber"
+              />
+              <label for="remenber" class="form_label">Recordame</label>
+            </div>
+          </div>
+        </form>
       </div>
+      <%- include('../partials/footer') %>
     </main>
   </body>
 </html>

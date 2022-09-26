@@ -3,13 +3,17 @@
   --colorPearlGray: #dedede;
   --colorGray: rgb(78, 74, 74);
   --colorOrange: #d19e59;
-  --fontBodyText: "Bebas Neue", cursive;
+  --fontBodyText: "Raleway", sans-serif;
+  --fontGrat: "Great Vibes", cursive;
+  --fontKaushan: "Kaushan Script", cursive;
   --fontText: "Martel Sans", sans-seri;
   --img: url("/images/logos/background_ley-seca.webp");
   --img-domo: url("/images/background/domos-background.jpeg");
   --img-pata: url("/images/background/patagonia-background.jpeg");
   --img-tour: url("/images/background/tour-background.jpeg");
-  --img-profile: url("/images/background/maltaa.jpg");
+  --img-profile: url("/images/logos/maltaa.png");
+  --img-backmove: url("/images/logos/I3CHTKRQSRF2POB6QYZ6CWQXHI (1).png");
+  --img-products: url("/images/logos/bg-scotish.jpg");
 }
 
 * {
@@ -24,15 +28,19 @@ li {
 body {
   background-color: var(--colorPearlGray);
   font-family: var(--fontBodyText);
+  font-weight: 700;
 }
 
 a {
-  text-decoration: none;
-  color: black;
+  text-decoration: none !important;
+  color: white !important;
 }
 
 small {
-    color: red;
-    font-size: 12px;
-    padding: 3% 0px
+  color: red;
+  font-size: 18px;
+  margin: auto;
+}
+h3 {
+  font-weight: 700 !important;
 }
