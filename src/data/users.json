@@ -58,5 +58,17 @@
       "password": "$2a$10$8KpNTgiq2PRDFWKVfoutle5yQsKLGyzsSRL/iL3tZvchMFqPEjtwK",
       "avatar": "avatar-1664226667864.png",
       "rol": "admin"
+   },
+   {
+      "id": 7,
+      "name": "Geronimo",
+      "lastName": "Tapia",
+      "user": "gerotapa",
+      "date": "1998-02-04",
+      "address": "calle falsa 123",
+      "email": "geronimook@hotmail.com",
+      "password": "$2a$10$FxCGz9mTQg4rEPaIZKdqPugzGmeBjiZLMdZfa6lE1dVU39ywUO1nO",
+      "avatar": "default-ley-seca.jpg",
+      "rol": "admin"
    }
 ]
