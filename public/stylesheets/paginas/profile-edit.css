@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
+
     margin: auto;
   }
   .form__register-photo-edit {
@@ -100,8 +100,7 @@
     background-size: cover;
     position: relative;
     bottom: 3px;
-    height: 1136px;
-    padding-top: 21px;
+    padding: 130px;
   }
   .profile-edit {
     display: flex;
@@ -112,7 +111,9 @@
   }
   .form__title-edit {
     text-align: center;
+    font-size: 58px;
     margin-bottom: 28px;
+    font-family: var(--fontKaushan);
   }
   .image_profile-edit {
     display: flex;
@@ -121,8 +122,8 @@
     opacity: 93%;
   }
   .image_profile-edit img {
-    width: 160px;
-    height: 177px;
+    width: 118px;
+    height: 127px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid dimgrey;
@@ -131,9 +132,9 @@
     position: absolute;
     background-color: dimgrey;
     border-radius: 51%;
-    padding: 4px 5px;
-    right: 10px;
-    top: 130px;
+    padding: 2px 5px;
+    right: 257px;
+    top: 84px;
   }
   #avatar {
     display: none;
@@ -143,18 +144,22 @@
     display: flex;
     justify-content: center;
   }
+  .form__register-button {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+  }
+  .terms {
+    color: black !important;
+  }
 
   .form__register-container-edit {
     background-color: rgba(239, 239, 239, 0.9);
-    border-radius: 2%;
-    width: 100%;
-    margin: auto;
-    padding-top: 40px;
-    margin-bottom: 40px;
-    display: flex;
+    padding: 10px;
+    width: 654px;
+    flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
-    gap: 55px;
+    display: flex;
   }
   .form__input-edit {
     width: 80%;
@@ -170,10 +175,19 @@
     position: absolute;
     color: black;
     top: 0px;
-    left: 30px;
+    left: 72px;
     transform: translateY(5px);
     transition: transform 0.5s, color 0.3s;
   }
+  .form__register-date-register {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form__register-date-register p {
+    padding: 14px 0 0;
+    margin-left: 66px;
+  }
+
   .form__input-edit:focus + .form__label-edit,
   .form__input-edit:not(:placeholder-shown) + .form__label-edit {
     transform: translateY(-10px) scale(0.7);
@@ -191,19 +205,20 @@
     background-size: cover;
     position: relative;
     bottom: 3px;
-    height: 1136px;
-    padding-top: 21px;
+    padding: 130px;
   }
   .profile-edit {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 520px;
+
     margin: auto;
   }
   .form__title-edit {
     text-align: center;
+    font-size: 58px;
     margin-bottom: 28px;
+    font-family: var(--fontKaushan);
   }
   .image_profile-edit {
     position: relative;
@@ -212,8 +227,8 @@
     opacity: 93%;
   }
   .image_profile-edit img {
-    width: 160px;
-    height: 177px;
+    width: 104px;
+    height: 108px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid dimgrey;
@@ -222,32 +237,55 @@
     position: absolute;
     background-color: dimgrey;
     border-radius: 51%;
-    padding: 4px 5px;
-    right: 13px;
-    top: 130px;
+    padding: 2px 5px;
+    right: 277px;
+    top: 75px;
   }
   #avatar {
     display: none;
   }
   .form_profile-edit {
+    width: 95%;
     position: relative;
     display: flex;
     justify-content: center;
+    padding: 5px;
+  }
+
+  .form__register-button {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
   }
   .form__register-container-edit {
     background-color: rgba(239, 239, 239, 0.9);
-    border-radius: 2%;
-    width: 100%;
-    margin: auto;
-    padding-top: 40px;
-    margin-bottom: 40px;
-    display: flex;
+    padding: 10px;
+    width: 654px;
+    flex-wrap: wrap;
+
     flex-direction: column;
-    align-items: center;
-    gap: 55px;
+    display: flex;
   }
+  .form__register-date-register {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form__register-date-register p {
+    padding: 14px 0 0;
+    margin-left: 66px;
+  }
+  .form__register-date-register input {
+    background-color: #efefef;
+    margin-left: 31px;
+    border: none;
+  }
+  .terms {
+    color: black !important;
+  }
+
   .form__input-edit {
     width: 80%;
+    font-weight: bold;
     font-size: 20px;
     padding: 3px -3px;
     border: none;
@@ -260,7 +298,7 @@
     position: absolute;
     color: black;
     top: 0px;
-    left: 30px;
+    left: 65px;
     transform: translateY(5px);
     transition: transform 0.5s, color 0.3s;
   }

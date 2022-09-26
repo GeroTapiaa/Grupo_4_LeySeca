@@ -11,7 +11,7 @@
   --img-domo: url("/images/background/domos-background.jpeg");
   --img-pata: url("/images/background/patagonia-background.jpeg");
   --img-tour: url("/images/background/tour-background.jpeg");
-  --img-profile: url("/images/background/maltaa.jpg");
+  --img-profile: url("/images/logos/maltaa.png");
   --img-backmove: url("/images/logos/I3CHTKRQSRF2POB6QYZ6CWQXHI (1).png");
   --img-products: url("/images/logos/bg-scotish.jpg");
 }
@@ -38,7 +38,8 @@ a {
 
 small {
   color: red;
-  font-size: 10px;
+  font-size: 18px;
+  margin: auto;
 }
 h3 {
   font-weight: 700 !important;

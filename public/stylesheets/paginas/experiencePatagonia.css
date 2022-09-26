@@ -1,110 +1,131 @@
-@media (min-width:320px) and (max-width:767px) {
-    .main__experience__patagonia {
-        height: 670px;
-    }
-    .experience__patagonia__image {
-        background-image: var(--img-pata);
-        position: relative;
-        bottom: 22px;
-        height: 710px;
-    }
-    .main__experience__patagonia__card {
-        position: absolute;
-        background: linear-gradient(360deg, #151314, transparent);
-        width: 100%;
-        height: 30%;
-        border-radius: 9%;
-    }
-    .main__experience__patagonia_text {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 10px;
-        width: 80%;
-        margin: auto;
-    }
-    .tour-card-patagonia {
-        width: 336px;
-        margin: auto;
-        margin-top: 16%;
-    }
-    .tour-card-patagonia img {
-        width: 95%;
-        border-radius: 10%;
-    }
-    p {
-        text-align: center;
-    }
+@media (min-width: 320px) and (max-width: 767px) {
+  .main__experience__patagonia {
+    height: 670px;
+  }
+  .experience__patagonia__image {
+    background-image: var(--img-pata);
+    position: relative;
+    bottom: 22px;
+    height: 710px;
+  }
+  .main__experience__patagonia__card {
+    position: absolute;
+    background: linear-gradient(360deg, #151314, transparent);
+    width: 100%;
+    height: 30%;
+    border-radius: 9%;
+  }
+  .main__experience__patagonia_text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+  }
+  .tour-card-patagonia {
+    width: 336px;
+    margin: auto;
+    margin-top: 16%;
+  }
+  .tour-card-patagonia img {
+    width: 95%;
+    border-radius: 10%;
+  }
+  p {
+    text-align: center;
+  }
 }
 
-@media (min-width:768px) and (max-width:1023px) {
-    .experience__patagonia__image {
-        background-image: var(--img-pata);
-        position: relative;
-        height: 710px;
-    }
-    .main__experience__patagonia__card {
-        position: absolute;
-        background: linear-gradient(360deg, #151314, transparent);
-        width: 50%;
-        left: 28%;
-        height: 30%;
-        border-radius: 9%;
-    }
-    .main__experience__patagonia_text {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 23px;
-        width: 80%;
-        margin: auto;
-    }
-    .tour-card-patagonia {
-        width: 336px;
-        margin: auto;
-        margin-top: 16%;
-    }
-    .tour-card-patagonia img {
-        width: 100%;
-        border-radius: 10%;
-    }
-    p {
-        text-align: center;
-    }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .experience__patagonia__image {
+    background-image: var(--img-pata);
+    position: relative;
+    height: 838px;
+  }
+  .main__experience__patagonia__card {
+    position: absolute;
+    background: linear-gradient(360deg, #151314, transparent);
+    width: 50%;
+    left: 24%;
+    height: 39%;
+    top: 10%;
+    border-radius: 9%;
+  }
+  .main__experience__patagonia_text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+    margin: auto;
+  }
+  .main__experience__patagonia_text h1 {
+    font-family: var(--fontKaushan);
+    color: initial;
+  }
+  .main__experience__patagonia_text p {
+    text-align: center;
+    font-size: 19px;
+    color: ghostwhite;
+  }
+
+  .tour-card-patagonia {
+    width: 336px;
+    margin: auto;
+    margin-top: 16%;
+  }
+  .tour-card-patagonia img {
+    width: 100%;
+    border-radius: 10%;
+  }
+  p {
+    text-align: center;
+  }
 }
 
-@media (min-width:1024px) {
-    .experience__patagonia__image {
-        background-image: var(--img-pata);
-        position: relative;
-        height: 810px;
-    }
-    .main__experience__patagonia_text {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 30px;
-        width: 80%;
-        margin: auto;
-    }
-    .main__experience__patagonia__card {
-        position: absolute;
-        background: linear-gradient(360deg, #151314, transparent);
-        width: 50%;
-        left: 24%;
-        height: 26%;
-        border-radius: 9%;
-    }
-    .tour-card-patagonia {
-        width: 336px;
-        margin: auto;
-        margin-top: 16%;
-    }
-    .tour-card-patagonia img {
-        width: 100%;
-        border-radius: 10%;
-    }
-    p {
-        text-align: center;
-    }
+@media (min-width: 1024px) {
+  .experience__patagonia__image {
+    background-image: var(--img-pata);
+    position: relative;
+    height: 810px;
+  }
+  .main__experience__patagonia_text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+    margin: auto;
+  }
+  .main__experience__patagonia_text h1 {
+    font-family: var(--fontKaushan);
+    color: initial;
+  }
+  .main__experience__patagonia_text p {
+    text-align: center;
+    font-size: 19px;
+    color: ghostwhite;
+  }
+  .main__experience__patagonia__card {
+    position: absolute;
+    background: linear-gradient(360deg, #151314, transparent);
+    width: 50%;
+    left: 24%;
+    height: 39%;
+    top: 10%;
+    border-radius: 9%;
+  }
+  .tour-card-patagonia {
+    width: 336px;
+    margin: auto;
+    margin-top: 16%;
+  }
+  .tour-card-patagonia img {
+    width: 100%;
+    border-radius: 10%;
+  }
+  p {
+    text-align: center;
+  }
 }
