@@ -58,5 +58,29 @@
       "password": "$2a$10$8KpNTgiq2PRDFWKVfoutle5yQsKLGyzsSRL/iL3tZvchMFqPEjtwK",
       "avatar": "avatar-1664226667864.png",
       "rol": "admin"
+   },
+   {
+      "id": 7,
+      "name": "Geronimo",
+      "lastName": "Tapia",
+      "user": "gerotapa",
+      "date": "1998-02-04",
+      "address": "calle falsa 123",
+      "email": "geronimook@hotmail.com",
+      "password": "$2a$10$d5P8dCK50iLtst7bdrihEeqYFHM5TmlyQ3TyII1DNQcfeYzS8GtmG",
+      "avatar": "default-ley-seca.jpg",
+      "rol": "admin"
+   },
+   {
+      "id": 8,
+      "name": "damian",
+      "lastName": "tapia",
+      "user": "gerot",
+      "date": "1998-04-02",
+      "address": "calle falsa 123",
+      "email": "gerock98@hotmail.com",
+      "password": "$2a$10$NOt7LZl/XCjli0QJBrRKy.RuTf2JB0w.UK2DqWoqewrC1da8EWr2W",
+      "avatar": "default-ley-seca.jpg",
+      "rol": "user"
    }
 ]

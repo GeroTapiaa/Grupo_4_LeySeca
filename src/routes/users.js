@@ -10,12 +10,12 @@ const {
   userRegister,
   loginRegister,
   logout,
-} = require('../controllers/userController');
-const sessionCheck = require('../middleware/cookieCheck');
-const registerValidator = require('../validations/registerValidator');
-const loginValidator = require('../validations/loginValidator');
-const { uploadUsers } = require('../middleware/uploadFiles');
-const userSession = require('../middleware/userSessionCheck');
+} = require("../controllers/userController");
+const sessionCheck = require("../middleware/cookieCheck");
+const registerValidator = require("../validations/registerValidator");
+const loginValidator = require("../validations/loginValidator");
+const { uploadUsers } = require("../middleware/uploadFiles");
+const userSession = require("../middleware/userSessionCheck");
 
 router
   .get("/login", login)
@@ -23,13 +23,13 @@ router
   .get("/register", register)
   .post(
     "/register",
-    uploadUsers.single('avatar'),
+    uploadUsers.single("avatar"),
     registerValidator,
     userRegister
   )
-  .get("/profile", sessionCheck,userSession, profile)
+  .get("/profile", sessionCheck, userSession, profile)
   .get("/profileEdit/:id", profileEdit)
-  .put("/update/:id", uploadUsers.single('avatar'), update)
+  .put("/update/:id", uploadUsers.single("avatar"), update)
   .get("/logout", logout);
 
 module.exports = router;

@@ -364,5 +364,21 @@
         "category": "indumentaria",
         "price": 2000,
         "discount": 5
+    },
+    {
+        "id": 48,
+        "name": "cerveza",
+        "description": "dasfasfas",
+        "price": 1500,
+        "discount": 2,
+        "category": "Cerveza"
+    },
+    {
+        "id": 49,
+        "name": "cerveza",
+        "description": "gedasiodas",
+        "price": 1500,
+        "discount": 2,
+        "category": "Cerveza"
     }
 ]
