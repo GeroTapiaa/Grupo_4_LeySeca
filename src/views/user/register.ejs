@@ -1,204 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head', { title : 'Register' }) %>
+<%- include('../partials/head', { title : 'Register' }) %>
 
   <body class="body__profile-edit">
     <%- include( '../partials/navbar' ) %>
 
-    <main class="main__profile-edit">
-      <div class="main__profile-section-edit">
-        <h2 class="form__title-edit">Registrate</h2>
+      <main class="main__profile-edit">
+        <div class="main__profile-section-edit">
+          <h2 class="form__title-edit">Registrate</h2>
 
-        <form
-          action=""
-          class="profile-edit"
-          method="post"
-          enctype="multipart/form-data"
-        >
-          <div class="form__register-container-edit">
-            <div class="form__register-photo-edit">
-              <figure class="image_profile-edit">
-                <img
-                  src="/images/users/default-ley-seca.jpg"
-                  alt=""
-                  id="img-photo"
-                />
-                <input
-                  type="file"
-                  id="avatar"
-                  name="avatar"
-                  onchange="preview(event)"
-                />
+          <form action="" class="profile-edit" method="post" enctype="multipart/form-data">
+            <div class="form__register-container-edit">
+              <div class="form__register-photo-edit">
+                <figure class="image_profile-edit">
+                  <img src="/images/users/default-ley-seca.jpg" alt="" id="img-photo" />
+                  <input type="file" id="avatar" name="avatar" onchange="preview(event)" />
 
-                <label class="label_photo-edit" for="avatar">
-                  <i class="fa-solid fa-camera"></i
-                ></label>
-              </figure>
-            </div>
+                  <label class="label_photo-edit" for="avatar">
+                    <i class="fa-solid fa-camera"></i></label>
+                </figure>
+              </div>
 
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="name"
-                class="form__input-edit"
-                placeholder=" "
-                name="name"
-                value="<%= locals.old && old.name ? old.name : null %>"
-              />
-              <label for="name" class="form__label-edit">Nombre:</label>
-            </div>
-            <small>
-              <%= locals.errors && errors.name ? errors.name.msg : null %>
-            </small>
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="lastName"
-                class="form__input-edit"
-                placeholder=" "
-                name="lastName"
-                value="<%= locals.old && old.lastName ? old.lastName: null %>"
-              />
-              <label for="lastName" class="form__label-edit">Apellido:</label>
-            </div>
-            <small>
-              <%= locals.errors && errors.lastName ? errors.lastName.msg : null
-              %>
-            </small>
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="user"
-                class="form__input-edit"
-                placeholder=" "
-                name="user"
-                value="<%= locals.old && old.user ? old.user : null %>"
-              />
-              <label for="user" class="form__label-edit">Usuario:</label>
-            </div>
+              <div class="form_profile-edit">
+                <input type="text" id="name" class="form__input-edit" placeholder=" " name="name"
+                  value="<%= locals.old && old.name ? old.name : null %>" />
+                <label for="name" class="form__label-edit">Nombre:</label>
+              </div>
+              <small>
+                <%= locals.errors && errors.name ? errors.name.msg : null %>
+              </small>
+              <div class="form_profile-edit">
+                <input type="text" id="lastName" class="form__input-edit" placeholder=" " name="lastName"
+                  value="<%= locals.old && old.lastName ? old.lastName: null %>" />
+                <label for="lastName" class="form__label-edit">Apellido:</label>
+              </div>
+              <small>
+                <%= locals.errors && errors.lastName ? errors.lastName.msg : null %>
+              </small>
+              <div class="form_profile-edit">
+                <input type="text" id="user" class="form__input-edit" placeholder=" " name="user"
+                  value="<%= locals.old && old.user ? old.user : null %>" />
+                <label for="user" class="form__label-edit">Usuario:</label>
+              </div>
 
-            <small>
-              <%= locals.errors && errors.user ? errors.user.msg : null %>
-            </small>
+              <small>
+                <%= locals.errors && errors.user ? errors.user.msg : null %>
+              </small>
 
-            <div class="form__register-date-register">
-              <p>Fecha de nacimiento:</p>
-              <input
-                type="date"
-                id="date"
-                class="register-date"
-                name="date"
-                value="<%= locals.old && old.date ? old.date : null %>"
-              />
-            </div>
-            <small>
-              <%= locals.errors && errors.date ? errors.date.msg : null %>
-            </small>
+              <div class="form__register-date-register">
+                <p>Fecha de nacimiento:</p>
+                <input type="date" id="date" class="register-date" name="date"
+                  value="<%= locals.old && old.date ? old.date : null %>" />
+              </div>
+              <small>
+                <%= locals.errors && errors.date ? errors.date.msg : null %>
+              </small>
 
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="address"
-                class="form__input-edit"
-                placeholder=" "
-                name="address"
-                value="<%= locals.old && old.address ? old.address : null %>"
-              />
+              <div class="form_profile-edit">
+                <input type="text" id="address" class="form__input-edit" placeholder=" " name="address"
+                  value="<%= locals.old && old.address ? old.address : null %>" />
 
-              <label for="address" class="form__label-edit">Dirección:</label>
-            </div>
-            <small>
-              <%= locals.errors && errors.address ? errors.address.msg : null %>
-            </small>
-            <div class="form_profile-edit">
-              <input
-                class="form__input-edit"
-                placeholder=" "
-                type="email"
-                id="email"
-                name="email"
-                value="<%= locals.old && old.email ? old.email : null %>"
-              />
-              <label class="form__label-edit" for="email">E-mail: </label>
-            </div>
-            <small>
-              <%= locals.errors && errors.email ? errors.email.msg : null %>
-            </small>
+                <label for="address" class="form__label-edit">Dirección:</label>
+              </div>
+              <small>
+                <%= locals.errors && errors.address ? errors.address.msg : null %>
+              </small>
+              <div class="form_profile-edit">
+                <input class="form__input-edit" placeholder=" " type="email" id="email" name="email"
+                  value="<%= locals.old && old.email ? old.email : null %>" />
+                <label class="form__label-edit" for="email">E-mail: </label>
+              </div>
+              <small>
+                <%= locals.errors && errors.email ? errors.email.msg : null %>
+              </small>
 
-            <div class="form_profile-edit">
-              <input
-                class="form__input-edit"
-                placeholder=" "
-                type="password"
-                id="password"
-                name="password"
-                value="<%= locals.old && old.password ? old.password : null %>"
-              />
-              <label class="form__label-edit" for="password">Contraseña:</label>
-            </div>
-            <small>
-              <%= locals.errors && errors.password ? errors.password.msg : null
-              %>
-            </small>
-            <div class="form_profile-edit">
-              <input
-                class="form__input-edit"
-                placeholder=" "
-                type="password"
-                id="confirmPassword"
-                name="confirmPassword"
-                value="<%= locals.old && old.confirmPassword ? old.confirmPassword : null %>"
-              />
-              <label class="form__label-edit" for="confirmPassword"
-                >Confirmar contraseña:</label
-              >
-            </div>
-            <small>
-              <%= locals.errors && errors.confirmPassword?
-              errors.confirmPassword.msg : null %>
-            </small>
+              <div class="form_profile-edit">
+                <input class="form__input-edit" placeholder=" " type="password" id="password" name="password"
+                  value="<%= locals.old && old.password ? old.password : null %>" />
+                <label class="form__label-edit" for="password">Contraseña:</label>
+              </div>
+              <small>
+                <%= locals.errors && errors.password ? errors.password.msg : null %>
+              </small>
+              <div class="form_profile-edit">
+                <input class="form__input-edit" placeholder=" " type="password" id="confirmPassword"
+                  name="confirmPassword"
+                  value="<%= locals.old && old.confirmPassword ? old.confirmPassword : null %>" />
+                <label class="form__label-edit" for="confirmPassword">Confirmar contraseña:</label>
+              </div>
+              <small>
+                <%= locals.errors && errors.confirmPassword? errors.confirmPassword.msg : null %>
+              </small>
 
-            <div class="form_profile-edit">
-              <input
-                class="input__check-edit"
-                type="checkbox"
-                id="terminos"
-                name="terms"
-              />
-              <label class="label__check-edit" for="terminos"
-                >Acepto los
-                <a class="terms" href="/terminos" target="_blank"
-                  >términos y condiciones</a
-                ></label
-              >
-            </div>
-            <small>
-              <%= locals.errors && errors.terms ? errors.terms.msg : null %>
-            </small>
+              <div class="form_profile-edit">
+                <input class="input__check-edit" type="checkbox" id="terminos" name="terms" />
+                <label class="label__check-edit" for="terminos">Acepto los
+                  <a class="terms" href="/terminos" target="_blank">términos y condiciones</a></label>
+              </div>
+              <small>
+                <%= locals.errors && errors.terms ? errors.terms.msg : null %>
+              </small>
 
-            <div class="form__register-button">
-              <button type="submit" class="button" value="Guardar">
-                Guardar
-              </button>
-              <input type="reset" class="button" value="Descartar" />
+              <div class="form__register-button">
+                <button type="submit" class="button" value="Guardar">
+                  Guardar
+                </button>
+                <input type="reset" class="button" value="Descartar" />
+              </div>
             </div>
-          </div>
-        </form>
-      </div>
-    </main>
-    <%- include( '../partials/footer' ) %>
-    <script>
-      let preview = (event) => {
-        let read_img = new FileReader();
-        let id_img = document.getElementById("img-photo");
+          </form>
+        </div>
+      </main>
+      <%- include( '../partials/footer' ) %>
+        <script>
+          let preview = (event) => {
+            let read_img = new FileReader();
+            let id_img = document.getElementById("img-photo");
 
-        read_img.onload = () => {
-          if (read_img.readyState == 2) {
-            id_img.src = read_img.result;
-          }
-        };
-        read_img.readAsDataURL(event.target.files[0]);
-      };
-    </script>
+            read_img.onload = () => {
+              if (read_img.readyState == 2) {
+                id_img.src = read_img.result;
+              }
+            };
+            read_img.readAsDataURL(event.target.files[0]);
+          };
+        </script>
   </body>
+
 </html>

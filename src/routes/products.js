@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const { carrito, details, products, experience, create, store, edit, update, destroy, experienceTour, experiencePatagonia, shop } = require('../controllers/productsController');
 const upload = require('../middleware/uploadFile');
-const productValidation = require('../validations/createValidation')
+const productValidation = require('../validations/createValidation');
 
 
 

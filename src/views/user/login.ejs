@@ -1,67 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head', { title : 'Login' }) %>
+<%- include('../partials/head', { title : 'Login' }) %>
 
   <body class="login">
     <%- include('../partials/navbar') %>
-    <main class="main__profile-edit">
-      <div class="main__profile-section-edit">
-        <h2 class="form__title-edit">Inicia Sesión</h2>
+      <main class="main__profile-edit">
+        <div class="main__profile-section-edit">
+          <h2 class="form__title-edit">Inicia Sesión</h2>
 
-        <form class="profile-edit" action="" method="post">
-          <div class="form__register-container-edit">
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="user"
-                class="form__input-edit"
-                placeholder=" "
-                name="user"
-              />
-              <label for="user" class="form__label-edit">Usuario:</label>
-            </div>
-            <small>
-              <%= locals.errors && errors.user ? errors.user.msg : null%>
-            </small>
-            <div class="form_profile-edit">
-              <input
-                class="form__input-edit"
-                placeholder=" "
-                type="password"
-                id="password"
-                name="password"
-              />
-              <label class="form__label-edit" for="password">Contraseña:</label>
-            </div>
-            <small>
-              <%= locals.errors && errors.password ? errors.password.msg :
-              null%>
-            </small>
-            <p>
-              ¿No tenés cuenta?<a class="terms" href="/users/register">
-                Registrate acá</a
-              >
-            </p>
-            <div class="form__register-button">
-              <button type="submit" class="button" value="Guardar">
-                Ingresar
-              </button>
-              <input type="reset" class="button" value="Salir" />
-            </div>
+          <form class="profile-edit" action="" method="post">
+            <div class="form__register-container-edit">
+              <div class="form_profile-edit">
+                <input type="text" id="user" class="form__input-edit" placeholder=" " name="user" />
+                <label for="user" class="form__label-edit">Usuario:</label>
+              </div>
+              <small>
+                <%= locals.errors && errors.user ? errors.user.msg : null%>
+              </small>
+              <div class="form_profile-edit">
+                <input class="form__input-edit" placeholder=" " type="password" id="password" name="password" />
+                <label class="form__label-edit" for="password">Contraseña:</label>
+              </div>
+              <small>
+                <%= locals.errors && errors.password ? errors.password.msg : null%>
+              </small>
+              <p>
+                ¿No tenés cuenta?<a class="terms" href="/users/register">
+                  Registrate acá</a>
+              </p>
+              <div class="form__register-button">
+                <button type="submit" class="button" value="Guardar">
+                  Ingresar
+                </button>
+                <input type="reset" class="button" value="Salir" />
+              </div>
 
-            <div class="form__register-button">
-              <input
-                type="checkbox"
-                class="form__checkbox"
-                id="remenber"
-                name="remenber"
-              />
-              <label for="remenber" class="form_label">Recordame</label>
+              <div class="form__register-button">
+                <input type="checkbox" class="form__checkbox" id="remenber" name="remenber" />
+                <label for="remenber" class="form_label">Recordame</label>
+              </div>
             </div>
-          </div>
-        </form>
-      </div>
-      <%- include('../partials/footer') %>
-    </main>
+          </form>
+        </div>
+        <%- include('../partials/footer') %>
+      </main>
   </body>
+
 </html>
