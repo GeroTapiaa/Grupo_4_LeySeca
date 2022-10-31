@@ -12,26 +12,25 @@
                 <section class="carrito__main--section">
 
                     <article class="carrito__main--section-article">
-                        <% productCart.forEach(({id,name,description,price,discount,image}) => { %>
-                            <div class="image--product">
-                                <img src="/images/images_Ley-Seca/<%= image %>" alt=" botella ">
+                        
+                                <img src="/images/images_Ley-Seca/<%= productCart.image %>" alt=" botella ">
                             </div>
                             <div class="carrito__producto--compra ">
                                 <h3 class="title__beer--ipa ">
-                                    <%=name %>
+                                    <%=productCart.name %>
                                 </h3>
                                 <p>
-                                    <%=description %>
+                                    <%=productCart.description %>
                                 </p>
                                 <h4>
-                                    <%= price %>
+                                    <%= productCart.price %>
                                 </h4>
                                 <div class="cantidad--btn ">
                                     <p>Cantidad:</p>
                                     <button class="btn--agregar ">- 1 +</button></div>
 
                             </div>
-                            <% }) %>
+                           
 
 
 

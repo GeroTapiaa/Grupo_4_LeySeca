@@ -1,15 +1,14 @@
-<nav class="home__nav">
+<nav class="home__header__menu" >
   <div class="home__header__logo">
     <div class="home__header__logo-letters">
-      <a href="/"><img src="/images/logos/LETRAS_LEY-SECA2.png" alt="" /></a>
+      <a href="/"><img src="/images/logos/logoPhoto.png" /></a>
     </div>
 
     <div class="home__header__logo-image">
-      <a href="/"><img src="/images/logos/logo_ley_seca.png" /></a>
+      <a href="/"><img src="/images/logos/Nuevo proyecto (1).png" /></a>
     </div>
 
     <!-- SEARCH-BAR -->
-
     <form action="/results" method="GET" class="home__form">
       <div class="home__formgroup">
         <input
@@ -18,48 +17,90 @@
           class="home__forminput"
           autocomplete="off"
         />
-        <button type="submit" class="form__label">
+        <button type="submit" class="home__formbutton">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
     </form>
-    <div class="icon">
-      <% if (locals.userLogin) { %>
-      <a href="/users/profile"><i class="fa-solid fa-user"></i></a>
-      <i class="fa-solid fa-cart-shopping"></i>
-      <li class="logout"><a href="/users/logout">salir</a></li>
-      <% } else { %>
-      <a href="/users/login"><i class="fa-solid fa-user"></i></a>
-      <% } %>
+    
+
+
+    <!-- MENU MOBILE & TABLET -->
+    <div class="home__header__menu-burguer">
+      <div class="dropdown">
+        <a
+          class="btn btn-secondary dropdown-toggle"
+          href="#"
+          role="button"
+          id="dropdownMenuLink"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </a>
+    
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <% if (locals.userLogin) { %>
+         
+          <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
+          <li class="burguer-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
+          <li class="burguer-link dropdown-item logoutLi"><a href="/users/logout"></a></li>
+          
+          <div class="burguer-options">
+            <li><a class="link-option" href="/products/shop">Perfil </a></li>
+            <li><a class="dropdown-item" href="/users/logout">salir</a></li>
+            
+            </div>
+    
+            <% if (locals.userLogin && userLogin.rol === 1) { %>
+          <li><a class="dropdown-item" href="/products/create">Vender</a></li>
+          <% } %> <% } else { %>
+    
+          <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
+          <li class="burguer-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
+         
+          <div class="burguer-options">
+            
+          <li class="link-option"><a class="dropdown-item" href="/products/products">Registrarse</a></li>
+          <li><a class="dropdown-item" href="/products/shop">iniciar Sesion </a></li>
+          </div>
+    
+          <% } %>
+        </ul>
+      </div>
     </div>
-  </div>
-  <!-- HEADER-NAVBAR -->
-  <div class="home__header__menu">
-    <!-- burguer menu -->
-    <label for="menu" class="nav_label">
-      <i class="fa-solid fa-bars"></i>
-    </label>
-    <input type="checkbox" id="menu" class="nav__input" />
-    <!-- burguer menu -->
-    <div class="home__header__browser-menu__items">
-      <ul>
-        <% if (locals.userLogin) { %>
-        <li><a href="#title_experience">Experiencias</a></li>
-        <li><a href="/products/products">Productos</a></li>
-        <li><a href="/products/shop">Shop</a></li>
+       <!-- MENU MOBILE & TABLET -->
 
-        <li class="logoutLi"><a href="/users/logout">salir</a></li>
+          <!-- MENU DESKTOP-->
 
-        <% if (userLogin.rol==='admin' ) { %>
-        <li><a href="/products/create">Vender</a></li>
-        <% } %> <% } else { %>
-
-        <li><a href="/products/products">Productos</a></li>
-        <li><a href="/products/shop">Shop</a></li>
-        <li><a href="#title_experience">Experiencias</a></li>
-
-        <% } %>
-      </ul>
-    </div>
-  </div>
+          <div class="menu_desk">
+            <ul class="list-menu" >
+              <% if (locals.userLogin) { %>
+            
+              <li class="link"><a class="" href="/products/products">Productos</a></li>
+              <li class=""><a class="" href="/products/shop">Shop</a></li>
+              <li class=""><a class="" href="/users/profile">Perfil</a></li>
+              <li class=""><a class="" href="/users/logout">Salir</a></li>
+             
+        
+              <% if (userLogin.rol==='admin' ) { %>
+              <li><a class="" href="/products/create">Vender</a></li>
+              <% } %> <% } else { %>
+        
+              <li class=""><a class="" href="/products/products">Productos</a></li>
+              <li class=""><a class="" href="/products/shop">Shop</a></li>
+            
+              <li class="">
+                <a class="" href="/users/login">Ingresá</a>
+              </li>
+        
+              <% } %>
+            </ul>
+          </div>
+          <script>
+            window.addEventListener("scroll", function () {
+              var nav = document.querySelector("nav");
+              nav.classList.toggle("scroll", window.scrollY > 100);
+            });
+          </script>
 </nav>

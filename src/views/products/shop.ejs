@@ -10,6 +10,9 @@
             <!-- MAIN -->
 
             <main class="home__main">
+                <section class="section">
+                    <img src="/images/logos/crears - copia.png" width="100%" alt="">
+                                    </section>
 
                 <!-- MAIN SECTION PRODUCTS -->
 
@@ -17,7 +20,7 @@
 
                 <section class="home__main__section__products">
 
-                    <%  clothing.forEach(({id, name, price , discount, image}) => { %>
+                    <%  productsClothing.forEach(({id, name, price , discount, image}) => { %>
                         <%- include('../partials/products',{
                     id, 
                     name,

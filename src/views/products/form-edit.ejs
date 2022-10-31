@@ -30,16 +30,18 @@
                             </div>
                             <div class="form__box">
                                 <label for="category" class="label-form">Categoria:</label>
-                                <select name="category" id="category" class="input_form" value="<%= productEdit.category %> ">
-                        
-                                    <option value="Cerveza"<%=productEdit.category === 'Cerveza' && 'selected' %>>Cerveza</option>
-                                    <option value="indumentaria"<%=productEdit.category === 'indumetaria' && 'selected' %> >indumentaria</option>
-                        </select>
+                                <select name="category" id="category" class="input_form">
+                                    <% category.forEach(category => { %>
+                                      <option <%= locals.old && old.category && old.category == category.id ? "selected" : "" %> value="<%= category.id %>"><%= category.name %></option>
+                                      <% }); %>
+                                   
+                                  </select>
                             </div>
                             <div class="form__box--description">
                                 <label for="description" class="label-form">Descripción:</label>
                                 <textarea name="description" id="description" class="input_form"><%= productEdit.description%></textarea>
                             </div>
+                            
                             <div class="form__box-btn">
                                 <button type="submit" class="btn__product">Guardar producto</button>
 

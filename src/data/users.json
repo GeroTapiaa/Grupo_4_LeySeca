@@ -5,10 +5,10 @@
       "lastName": "Maldonado",
       "user": "nadia15000",
       "date": "2000-12-31",
-      "address": "Calle 165 N 1414                                                                    ",
+      "address": "Calle 165 N 1414                                                                     ",
       "email": "nadiamaldonado3011@gmail.com",
       "password": "$2a$10$W7E8jtE3pyX/W4PgvUKm2OpyN4EwxU8..sdJYlJc/nearZPLaehjG",
-      "avatar": "avatar-1663114126575.jpg",
+      "avatar": "avatar-1663204462287.jpg",
       "rol": "admin"
    },
    {
@@ -22,5 +22,53 @@
       "password": "$2a$10$cQH0zb.m7XjnPWiL30qjneoiQ.IxBP2ygOnuxesUvGNTd5gGDWW4W",
       "avatar": "avatar-1663127704355.jpg",
       "rol": "user"
+   },
+   {
+      "id": 4,
+      "name": "Nadia Florencia",
+      "lastName": "Maldonado",
+      "user": "nadia10",
+      "date": "2000-12-30",
+      "address": "Calle 165 N 1818   ",
+      "email": "nadiamalo3011@gmail.com",
+      "password": "$2a$10$UnYl.dLaTsrLVyvZagx.Fe/E93v0j/x6A0S.ikdh29CYzrLutnA7q",
+      "avatar": "avatar-1664219514143.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 5,
+      "name": "Nadia Florencia",
+      "lastName": "Maldonado",
+      "user": "nadiaaa",
+      "date": "2000-10-30",
+      "address": "Calle 165 N 1818 ",
+      "email": "nadi011@gmail.com",
+      "password": "$2a$10$hj/lJGfIVbZmSyAWkvXdsuRaJeadp8QHoo/WWBRr6vatyVPboaw0q",
+      "avatar": "avatar-1664220834320.png",
+      "rol": "user"
+   },
+   {
+      "id": 6,
+      "name": "Nadia Florencia",
+      "lastName": "Maldonado",
+      "user": "nadia15010",
+      "date": "1996-12-10",
+      "address": "Calle 165 N 1818 ",
+      "email": "nadiaado3011@gmail.com",
+      "password": "$2a$10$8KpNTgiq2PRDFWKVfoutle5yQsKLGyzsSRL/iL3tZvchMFqPEjtwK",
+      "avatar": "avatar-1664226667864.png",
+      "rol": "admin"
+   },
+   {
+      "id": 7,
+      "name": "Geronimo",
+      "lastName": "Tapia",
+      "user": "gerotapa",
+      "date": "1998-02-04",
+      "address": "calle falsa 123",
+      "email": "geronimook@hotmail.com",
+      "password": "$2a$10$FxCGz9mTQg4rEPaIZKdqPugzGmeBjiZLMdZfa6lE1dVU39ywUO1nO",
+      "avatar": "default-ley-seca.jpg",
+      "rol": "admin"
    }
 ]

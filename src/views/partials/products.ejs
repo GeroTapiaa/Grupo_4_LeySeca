@@ -1,4 +1,4 @@
-<a href="/products/productDetail/<%= id %> ">
+
     <article class="home__main__section--product">
         <% if (discount> 0) { %>
             <label> <%=discount %> % Off</label>
@@ -8,7 +8,7 @@
                 <div class="home__main__description-products">
                     <a href="/products/productDetail/<%= id %> " class="home__detalle"><img src="/images/images_Ley-Seca/<%= image %>" alt=""></a>
                 </div>
-                <div class="description-products">
+                 <div class="description-products">
 
                     <% if (discount> 0) { %>
                         <p class="discount">
@@ -16,20 +16,20 @@
 
                             <%= price %>
                         </p>
-                        <p>
+                        <p class="discount-price">
                             $
                             <%= toThousand((price - (price / 100 * discount)) .toFixed(0)) %>
                         </p>
                         <% }else{ %>
-                            <p>
+                            <p class="price">
                                 $
                                 <%= price %>
                             </p>
                             <% } %>
-                                <h3>
-                                    <a href="/products/productDetail/<%= id %> ">
+                           <h3 class="name_products">
+                              
                                         <%=name %>
-                                    </a>
+                                    
                                 </h3>
                 </div>
 
@@ -40,4 +40,3 @@
 
                 </div>
     </article>
-</a>
