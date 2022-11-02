@@ -198,6 +198,7 @@ module.exports = {
           name : user.name,
           user: user.user,
           address: user.address,
+          rol: req.session.userLogin.rol,
           avatar: req.file ? req.file.filename : req.session.userLogin.avatar,
         };
 
@@ -262,7 +263,8 @@ module.exports = {
   logout: (req, res) => {
     req.session.destroy();
     res.cookie("userLeySeca", null, { maxAge: -1 });
-    return res.redirect("/");
+    res.redirect("/");
   
   },
+ 
 };

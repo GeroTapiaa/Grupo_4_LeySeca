@@ -10,17 +10,20 @@ const {
   userRegister,
   loginRegister,
   logout,
+  
 } = require("../controllers/userController");
 const sessionCheck = require("../middleware/cookieCheck");
 const registerValidator = require("../validations/registerValidator");
 const loginValidator = require("../validations/loginValidator");
 const { uploadUsers } = require("../middleware/uploadFiles");
 const userSession = require("../middleware/userSessionCheck");
+const userCheck =require("../middleware/userCheck");
+
 
 router
-  .get("/login", login)
+  .get("/login",userCheck, login)
   .post("/login", loginRegister)
-  .get("/register", register)
+  .get("/register",userCheck, register)
   .post(
     "/register",
     uploadUsers.single("avatar"),
@@ -30,6 +33,7 @@ router
   .get("/profile", sessionCheck, userSession, profile)
   .get("/profileEdit/:id", profileEdit)
   .put("/update/:id", uploadUsers.single("avatar"), update)
-  .get("/logout", logout);
+  .get("/logout", logout)
+  
 
 module.exports = router;
