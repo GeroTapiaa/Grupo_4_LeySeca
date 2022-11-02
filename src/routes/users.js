@@ -19,7 +19,7 @@ const userSession = require("../middleware/userSessionCheck");
 
 router
   .get("/login", login)
-  .post("/login", loginValidator, loginRegister)
+  .post("/login", loginRegister)
   .get("/register", register)
   .post(
     "/register",

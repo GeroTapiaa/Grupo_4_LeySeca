@@ -2,7 +2,7 @@
     {
        "id": 1,
        "name": "Florrre",
-       "lastName": "Maldonado",
+       "surname": "Maldonado",
        "user": "nadia15000",
        "date": "2000-12-31",
        "address": "Calle 165 N 1414                                                                    ",
@@ -14,7 +14,7 @@
     {
        "id": 2,
        "name": "Nadia Florencia",
-       "lastName": "Maldonado",
+       "surname": "Maldonado",
        "user": "nadia1501",
        "date": "2000-12-30",
        "address": "Calle 165 N 1818",

@@ -2,7 +2,7 @@
 const status = ['off', 'Recommended'];
 const statuses = status.map(status => {
   return {
-    status,
+    name:status,
     createdAt : new Date()
   }
 })

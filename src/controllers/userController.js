@@ -15,20 +15,20 @@ module.exports = {
     let errors = validationResult(req);
     if(errors.isEmpty()){
       db.User.findOne({
-          where: {
-              user: req.body.user
-          }
-      })
-      .then(user => {
-          
-          req.session.user = {
-              id: user.id,
-              name: user.name,
-              
-              
-              avatar: user.avatar,
-              rol: user.rol
-          }
+        where: {
+            user: req.body.user
+        }
+        
+    })      
+    .then((user) => {
+      
+
+      req.session.userLogin = {
+        id: +user.id,
+        name: user.name,
+        avatar: user.avatar ? user.avatar.filename : "default-ley-seca.jpg",
+        rol: user.rolId,
+    };
         if (req.body.remember) {
           
           res.cookie("userLeySeca", req.session.userLogin, {
@@ -110,12 +110,12 @@ module.exports = {
     //   old: req.body,
     // });
     const errors = validationResult(req);
-    const { name, lastName, user, date, address, email, password} = req.body;
+    const { name, surname, user, date, address, email, password} = req.body;
 
     if (errors.isEmpty()) {
       db.User.create({
         name: name.trim(),
-        lastName: lastName.trim(),
+        surname: surname,
         user: user.trim(),
         date: date,
         address: address.trim(),
@@ -129,7 +129,7 @@ module.exports = {
         })
         .catch((err) => console.log(err));
     } else {
-      res.render("users/register", {
+      res.render("user/register", {
         errors: errors.mapped(),
         old: req.body,
       });
@@ -139,79 +139,130 @@ module.exports = {
   // PERFIL
 
   profile: (req, res) => {
-    let user = loadUsers().find((user) => user.id === req.session.userLogin.id);
-    res.render("user/profile", {
-      user,
-    });
+    db.User.findByPk(req.session.userLogin.id)
+    .then((user)=>{
+        res.render("user/profile",{
+            
+            user,
+            
+        })
+    })
+    // let user = loadUsers().find((user) => user.id === req.session.userLogin.id);
+    // res.render("user/profile", {
+    //   user,
+    // });
   },
 
   // EDITAR PERFIL
 
-  profileEdit: (req, res) => {
-    let user = loadUsers().find((user) => user.id === req.session.userLogin.id);
-    res.render("user/profileEdit", {
-      user,
-    });
+  profileEdit: async(req, res) => {
+    db.User.findByPk(req.params.id)
+    .then((user)=>{
+        res.render("user/profileEdit",{
+           
+            user,
+            session:req.session,
+          
+        })
+    })
+  
+    // let user = loadUsers().find((user) => user.id === req.session.userLogin.id);
+    // res.render("user/profileEdit", {
+    //   user,
+    // });
+    
   },
 
   // EDICION
 
-  update: (req, res) => {
-    const { user, address, name } = req.body;
-
-    let usersModify = loadUsers().map((user) => {
-      if (user.id === +req.params.id) {
-        return {
-          ...user,
-          ...req.body,
-
+  update:(req, res) => {
+   
+    db.User.update(
+      {
+          name: req.body.name?.trim(),
+          user: req.body.user?.trim(),
+         address:req.body.user?.trim(),
+          avatar: req.file ? req.file.filename : req.session.userLogin.avatar
+      },
+      {
+          where:
+          {
+              id: +req.params.id
+          }
+      })
+      .then((user) =>
+      {
+        req.session.userLogin = {
+        
+          ...req.session.userLogin,
+          name : user.name,
+          user: user.user,
+          address: user.address,
           avatar: req.file ? req.file.filename : req.session.userLogin.avatar,
         };
-      }
-      return user;
-    });
 
-    // MODIFICA LAS IMAGENES SUBIDAS POR EL USUSARIO
-    if (req.file) {
-      if (
-        fs.existsSync(
-          path.resolve(
-            __dirname,
-            "..",
-            "..",
-            "public",
-            "images",
-            "users",
-            req.session.userLogin.avatar
-          )
-        )
-      ) {
-        fs.unlinkSync(
-          path.resolve(
-            __dirname,
-            "..",
-            "..",
-            "public",
-            "images",
-            "users",
-            req.session.userLogin.avatar
-          )
-        );
-      }
-    }
+      })
+      res.redirect("/users/profile");
 
-    req.session.userLogin = {
-      ...req.session.userLogin,
-      name,
-      avatar: req.file ? req.file.filename : req.session.userLogin.avatar,
-    };
 
-    storeUsers(usersModify);
-    return res.redirect("/users/profile");
+    // const { user, address, name } = req.body;
+
+    // let usersModify = loadUsers().map((user) => {
+    //   if (user.id === +req.params.id) {
+    //     return {
+    //       ...user,
+    //       ...req.body,
+
+    //       avatar: req.file ? req.file.filename : req.session.userLogin.avatar,
+    //     };
+    //   }
+    //   return user;
+    // });
+
+    // // MODIFICA LAS IMAGENES SUBIDAS POR EL USUSARIO
+    // if (req.file) {
+    //   if (
+    //     fs.existsSync(
+    //       path.resolve(
+    //         __dirname,
+    //         "..",
+    //         "..",
+    //         "public",
+    //         "images",
+    //         "users",
+    //         req.session.userLogin.avatar
+    //       )
+    //     )
+    //   ) {
+    //     fs.unlinkSync(
+    //       path.resolve(
+    //         __dirname,
+    //         "..",
+    //         "..",
+    //         "public",
+    //         "images",
+    //         "users",
+    //         req.session.userLogin.avatar
+    //       )
+    //     );
+    //   }
+    // }
+
+    // req.session.userLogin = {
+    //   ...req.session.userLogin,
+    //   name,
+    //   avatar: req.file ? req.file.filename : req.session.userLogin.avatar,
+    // };
+
+    // storeUsers(usersModify);
+    // return res.redirect("/users/profile");
+    
   },
 
   logout: (req, res) => {
     req.session.destroy();
+    res.cookie("userLeySeca", null, { maxAge: -1 });
     return res.redirect("/");
+  
   },
 };

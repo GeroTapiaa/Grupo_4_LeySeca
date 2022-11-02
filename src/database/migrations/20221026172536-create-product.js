@@ -36,15 +36,7 @@ module.exports = {
           key : 'id'
         }
       },
-      productStatusId: {
-        type: Sequelize.INTEGER,
-        references : {
-          model :{
-            tableName : 'ProductStatuses'
-          },
-          key : 'id'
-        }
-      },
+     
       price: {
         type: Sequelize.INTEGER
       },

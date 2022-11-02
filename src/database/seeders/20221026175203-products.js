@@ -1,12 +1,12 @@
 'use strict';
 const productos = require('../../data/productsMigrate.json')
-const products = productos.map(({name , price , discount , categoryId, productStatusId ,description, sizeId, image}) => {
+const products = productos.map(({name , price , discount , categoryId,description, sizeId, image}) => {
   return {
     name,
     price,
     discount,
     categoryId,
-    productStatusId,
+   
     description,
     sizeId,
     image,
