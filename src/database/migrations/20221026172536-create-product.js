@@ -25,7 +25,8 @@ module.exports = {
             tableName : 'Categories'
           },
           key : 'id'
-        }
+        },
+        onDelete: 'cascade'
       },
       sizeId: {
         type: Sequelize.INTEGER,
