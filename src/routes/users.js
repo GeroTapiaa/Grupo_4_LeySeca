@@ -10,6 +10,7 @@ const {
   userRegister,
   loginRegister,
   logout,
+  remove
   
 } = require("../controllers/userController");
 const sessionCheck = require("../middleware/cookieCheck");
@@ -21,8 +22,8 @@ const userCheck =require("../middleware/userCheck");
 
 
 router
-  .get("/login",userCheck, login)
-  .post("/login", loginRegister)
+  .get("/login" ,userCheck, login)
+  .post("/login",loginValidator, loginRegister)
   .get("/register",userCheck, register)
   .post(
     "/register",
@@ -34,6 +35,7 @@ router
   .get("/profileEdit/:id", profileEdit)
   .put("/update/:id", uploadUsers.single("avatar"), update)
   .get("/logout", logout)
+  .delete("/remove/:id", remove)
   
 
 module.exports = router;

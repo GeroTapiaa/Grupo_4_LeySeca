@@ -2,34 +2,36 @@ const { check, body } = require("express-validator");
 const { loadUsers } = require("../data/db-module");
 const bcryptjs = require('bcryptjs')
 const db = require("../database/models");
+const { Op } = require("sequelize");
 
 
 module.exports = [
     check('user')
-        .notEmpty().withMessage('Debes ingresar el nombre de usuario').bail()
-        .custom((value, { req }) => {
-            let user = db.User.findAll({ user }).then(
-                (user) => user.user !== value || req.body.user
-            );
-            return user ? false : true;
+    .notEmpty().withMessage('Debes ingresar un usuario.').bail(),
+    
+    
+
+
+
+    check('password')
+    .notEmpty().withMessage('Debes ingresar una contraseña.')
+   
+    .custom((value, { req }) => {
+        return db.User.findOne({
+          where: {
+            user: req.body.user,
+          },
         })
-        .withMessage("El usuario no está registrado"),
-
-
-    body('password')
-
-        .notEmpty().withMessage('Debes ingresar tu contraseña').bail()
-        // .custom((value, { req }) => {
-        //     let password = loadUsers().find(user => user.user === req.body.user && bcryptjs.compareSync(value, user.password));
-        //     return password ? true : false
-        // })
-        .custom((value, { req }) => {
-            let password = db.User.findOne({ user }).then(
-                (user) =>
-                    user.user === req.body.user &&
-                    bcryptjs.compareSync(value, user.password)
-            );
-            return password ? true : false;
-        })
-        .withMessage('Comprueba tu usuario y contraseña e inténtalo de nuevo')
+          .then((user) => {
+            if (!bcryptjs.compareSync(req.body.password, user.password)) {
+              return Promise.reject();
+            }
+          })
+          .catch((error) => {
+            return Promise.reject("El usuario o contraseña son incorrectos");
+          });
+      })
+       
+    
+    
 ]

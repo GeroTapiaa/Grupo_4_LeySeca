@@ -18,10 +18,18 @@ const loadProducts = () => {
 const saveProducts = (products) => {
     fs.writeFileSync(path.join(__dirname, 'products.json'), JSON.stringify(products, null, 3), 'utf8');
 }
+const eliminarImg = (ruta) =>{
+    fs.existsSync(path.resolve(__dirname,"...","public" + ruta)) && fs.unlinkSync(path.resolve(__dirname, "...","public" + ruta))
+}
 
+const eliminarAvatarToUser = (archivo) => {
+    fs.existsSync(path.resolve(__dirname, "../../public/images/users/" + archivo)) && fs.unlinkSync(path.resolve(__dirname, "../../public/images/users/" + archivo))
+}
 module.exports = {
     loadUsers,
     storeUsers,
     loadProducts,
-    saveProducts
+    saveProducts,
+    eliminarImg,
+    eliminarAvatarToUser
 }

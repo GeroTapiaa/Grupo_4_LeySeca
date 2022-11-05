@@ -11,3 +11,15 @@
   border: none;
   border-radius: 10%;
 }
+.delete{
+  padding: 3px;
+  width: 97px;
+  margin-bottom: 6px;
+  margin-right: 3px;
+  background-color: crimson;
+  font-family: var(--fontBodyText);
+  color: white;
+  border: none;
+  border-radius: 10%;
+
+}

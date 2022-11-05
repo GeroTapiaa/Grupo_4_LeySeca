@@ -17,9 +17,9 @@ router
     .get('/patagonia', experiencePatagonia)
     .get('/tour', experienceTour)
     .get('/create', create)
-    .post('/store',upload.single('images'),productValidation, store)
+    .post('/store',upload.single('images'),productValidation,store)
     .get('/edit/:id', edit)
-    .put('/update/:id', update)
+    .put('/update/:id',upload.single('images'),productValidation, update)
     .delete('/delete/:id', destroy)
 
 
