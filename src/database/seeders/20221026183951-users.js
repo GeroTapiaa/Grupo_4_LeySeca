@@ -1,9 +1,9 @@
 'use strict';
-const usuarios = require('../../data/users.json')
-const user = usuarios.map(({name, lastName, address, avatar,user,date, email, password, rolId}) => {
+const usuarios = require('../../data/usersMigrate.json')
+const user = usuarios.map(({name, surname, address, avatar,user,date, email, password, rolId}) => {
   return {
      name,
-     lastName,
+     surname,
      address,
      avatar,
      user,

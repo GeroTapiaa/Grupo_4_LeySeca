@@ -24,12 +24,14 @@
                 name="name"
                 placeholder="Ingrese el nombre del producto"
                 class="input_form"
+                value="<%= locals.old && old.name ? old.name : null %>"
               />
-              <small
-                ><%=locals.errors && errors.name ? errors.name.msg :
-                null%></small
-              >
+               <small>
+              <%= locals.errors && errors.name ? errors.name.msg : null %>
+            </small>
             </div>
+           
+
             <div class="form__box">
               <label for="name" class="label-form">Precio:</label>
               <input
@@ -38,8 +40,14 @@
                 name="price"
                 placeholder="Ingrese el precio del producto"
                 class="input_form"
+                value="<%= locals.old && old.price ? old.price : null %>"
               />
+              <small>
+                <%= locals.errors && errors.price ? errors.price.msg : null %>
+              </small>
             </div>
+
+          
             <div class="form__box">
               <label for="name" class="label-form">Descuento:</label>
               <input
@@ -48,26 +56,47 @@
                 name="discount"
                 placeholder="Ingrese el descuento del producto"
                 class="input_form"
+                value="<%= locals.old && old.discount ? old.discount : null %>"
               />
+              
+            <small>
+              <%= locals.errors && errors.discount ? errors.discount.msg : null %>
+            </small>
             </div>
+
+
+
             <div class="form__box">
               <label for="category" class="label-form">Categoria:</label>
               <select name="category" id="category" class="input_form">
-                <option value=""></option>
+                <% categories.forEach(category => { %>
+                  <option <%= locals.old && old.category && old.category == category.id ? "selected" : "" %> value="<%= category.id %>"><%= category.name %></option>
+                  <% }); %>
+                <!-- <option value=""></option>
                 <option value="Cerveza">Cerveza</option>
-                <option value="indumentaria">indumentaria</option>
+                <option value="indumentaria">indumentaria</option> -->
               </select>
+              <small>
+                <%= locals.errors && errors.category ? errors.category.msg : null %>
+              </small>
             </div>
+         
+
             <div class="form__box-image">
-              <label for="image" class="label-form">Imagenes:</label>
+              <label for="images" class="label-form">Imagenes:</label>
               <input
                 type="file"
-                id="image"
+                id="images"
                 name="images"
                 class="input_form"
-                multiple
+              
               />
+              <small>
+                <%= locals.errors && errors.images ? errors.images.msg : null %>
+              </small>
             </div>
+
+            
             <div class="form__box--description">
               <label for="description" class="label-form">Descripción:</label>
               <textarea
@@ -75,7 +104,13 @@
                 id="description"
                 class="input_form"
               ></textarea>
+              <small>
+                <%= locals.errors && errors.description ? errors.description.msg : null %>
+              </small>
             </div>
+
+            
+
             <div class="form__box-btn">
               <button type="submit" class="btn__product">
                 Guardar producto

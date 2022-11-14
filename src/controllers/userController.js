@@ -1,151 +1,182 @@
-const { loadUsers, storeUsers } = require("../data/db-module");
+const { loadUsers, storeUsers ,eliminarAvatarToUser } = require("../data/db-module");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const fs = require("fs");
 const path = require("path");
+const db = require("../database/models");
+
 
 module.exports = {
   login: (req, res) => {
     res.render("user/login");
   },
+ 
   loginRegister: (req, res) => {
     let errors = validationResult(req);
-
-    if (errors.isEmpty()) {
-      let { name, rol, avatar, id } = loadUsers().find(
-        (user) => user.user === req.body.user
-      );
+    
+    if(errors.isEmpty()){
+      db.User.findOne({
+        where: {
+            user: req.body.user
+        }
+        
+    })      
+    .then((user) => {
+      
 
       req.session.userLogin = {
-        name,
-        rol,
-        avatar,
-        id,
-      };
-      if (req.body.remenber) {
-        res.cookie("userLeySeca", req.session.userLogin, {
-          maxAge: 1000 * 60,
-        });
-      }
-      res.redirect("/");
-    } else {
-      res.render("user/login", {
-        errors: errors.mapped(),
-      });
-    }
-  },
-  register: (req, res) => {
-    res.render("user/register");
+        id: +user.id,
+        name: user.name,
+        avatar: user.avatar ? user.avatar.filename : "default-ley-seca.jpg",
+        rol: user.rolId,
+    };
+        if (req.body.remember) {
+          
+          res.cookie("userLeySeca", req.session.userLogin, {
+                    maxAge: 1000 * 60,
+          });
+        }
+         res.redirect("/");
+      })
+      .catch((err) => console.log(err));
+  } else {
+     res.render("user/login", {
+      errors: errors.mapped(),
+    });
+    
+  }
+ 
+
+
   },
 
   // REGISTRO
 
+  register: (req, res) => {
+    res.render("user/register");
+  },
+
   userRegister: (req, res) => {
     const errors = validationResult(req);
 
-    if (errors.isEmpty()) {
-      const { name, lastName, user, date, address, email, password } = req.body;
-      const users = loadUsers();
+    
+    
+    const { name, surname, user, date, address, email, password} = req.body;
 
-      newUser = {
-        id: users[users.length - 1] ? users[users.length - 1].id + 1 : 1,
+    if (errors.isEmpty()) {
+      db.User.create({
         name: name.trim(),
-        lastName: lastName.trim(),
+        surname: surname,
         user: user.trim(),
         date: date,
         address: address.trim(),
         email: email.trim(),
         password: bcrypt.hashSync(password.trim(), 10),
         avatar: req.file ? req.file.filename : "default-ley-seca.jpg",
-        rol: "user",
-      };
-      const userModify = [...users, newUser];
-      storeUsers(userModify);
-
-      res.redirect("/users/login");
+        rolId: 2,
+      })
+        .then(() => {
+          res.redirect("/users/login");
+        })
+        .catch((err) => console.log(err));
+    } else {
+      res.render("user/register", {
+        errors: errors.mapped(),
+        old: req.body,
+      });
     }
-    res.render("user/register", {
-      errors: errors.mapped(),
-      old: req.body,
-    });
   },
 
   // PERFIL
 
   profile: (req, res) => {
-    let user = loadUsers().find((user) => user.id === req.session.userLogin.id);
-    res.render("user/profile", {
-      user,
-    });
+    db.User.findByPk(req.session.userLogin.id)
+    .then((user)=>{
+        res.render("user/profile",{
+            
+            user,
+            
+        })
+    })
+   
   },
 
   // EDITAR PERFIL
 
-  profileEdit: (req, res) => {
-    let user = loadUsers().find((user) => user.id === req.session.userLogin.id);
-    res.render("user/profileEdit", {
-      user,
-    });
+  profileEdit: async(req, res) => {
+    db.User.findByPk(req.params.id)
+    .then((user)=>{
+        res.render("user/profileEdit",{
+           
+            user,
+            session:req.session,
+          
+        })
+    })
+  
+   
+    
   },
 
   // EDICION
 
-  update: (req, res) => {
-    const { user, address, name } = req.body;
-
-    let usersModify = loadUsers().map((user) => {
-      if (user.id === +req.params.id) {
-        return {
-          ...user,
-          ...req.body,
-
+  update:(req, res) => {
+   
+    db.User.update(
+      {
+          name: req.body.name?.trim(),
+          user: req.body.user?.trim(),
+         address:req.body.user?.trim(),
+          avatar: req.file ? req.file.filename : req.session.userLogin.avatar
+      },
+      {
+          where:
+          {
+              id: +req.params.id
+          }
+      })
+      .then((user) =>
+      {
+        req.session.userLogin = {
+        
+          ...req.session.userLogin,
+          name : user.name,
+          user: user.user,
+          address: user.address,
+          rol: req.session.userLogin.rol,
           avatar: req.file ? req.file.filename : req.session.userLogin.avatar,
         };
-      }
-      return user;
-    });
 
-    // MODIFICA LAS IMAGENES SUBIDAS POR EL USUSARIO
-    if (req.file) {
-      if (
-        fs.existsSync(
-          path.resolve(
-            __dirname,
-            "..",
-            "..",
-            "public",
-            "images",
-            "users",
-            req.session.userLogin.avatar
-          )
-        )
-      ) {
-        fs.unlinkSync(
-          path.resolve(
-            __dirname,
-            "..",
-            "..",
-            "public",
-            "images",
-            "users",
-            req.session.userLogin.avatar
-          )
-        );
-      }
-    }
+      })
+      
+      res.redirect("/users/profile");
+   
 
-    req.session.userLogin = {
-      ...req.session.userLogin,
-      name,
-      avatar: req.file ? req.file.filename : req.session.userLogin.avatar,
-    };
-
-    storeUsers(usersModify);
-    return res.redirect("/users/profile");
+  
+    
   },
 
   logout: (req, res) => {
     req.session.destroy();
-    return res.redirect("/");
+    res.cookie("userLeySeca", null, { maxAge: -1 });
+    res.redirect("/");
+  
   },
+  remove: async(req, res) => {
+    try {
+      if (req.session.userLogin.avatar) {
+          eliminarAvatarToUser(req.session.userLogin.avatar)
+      }
+      await db.User.destroy({
+          where: { id: req.session.userLogin.id }
+      })
+
+      res.clearCookie("userLeySeca")
+      req.session.destroy();
+      res.redirect('/');
+  } catch (error) {
+      return console.log(error)
+  }
+},
+ 
 };

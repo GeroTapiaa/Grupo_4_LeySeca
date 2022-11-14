@@ -20,7 +20,7 @@ module.exports = [
 
     // last name
 
-    check("lastName")
+    check("surname")
         .notEmpty()
         .withMessage("Debes ingresar un apellido")
         .bail()

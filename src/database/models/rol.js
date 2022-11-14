@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.belongsTo(models.Rol,{
+        as: 'rol',
+        foreignKey : 'rolId'
+      })
     }
   }
   Rol.init({

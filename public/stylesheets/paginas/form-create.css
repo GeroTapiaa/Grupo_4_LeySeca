@@ -27,12 +27,15 @@ textarea {
   resize: none;
 }
 .form__box-image {
-  width: 100%;
+  width: 50%;
   padding: 10px;
+  display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .form__box--description {
-  width: 100%;
+  width: 50%;
   padding: 10px;
 }
 
@@ -42,6 +45,7 @@ textarea {
 
 .input_form {
   width: 100%;
+  height: 58%;
   margin: 0px 1px;
   border-radius: 8px;
   border: 1px solid black;
@@ -129,4 +133,5 @@ textarea {
   .created-container {
     margin-top: 120px;
   }
+
 }

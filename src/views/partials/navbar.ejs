@@ -52,7 +52,7 @@
             
             </div>
     
-          <% if (userLogin.rol==='admin' ) { %>
+            <% if (locals.userLogin && userLogin.rol <2) { %>
           <li><a class="dropdown-item" href="/products/create">Vender</a></li>
           <% } %> <% } else { %>
     
@@ -83,7 +83,7 @@
               <li class=""><a class="" href="/users/logout">Salir</a></li>
              
         
-              <% if (userLogin.rol==='admin' ) { %>
+              <% if (locals.userLogin && userLogin.rol === 1) { %>
               <li><a class="" href="/products/create">Vender</a></li>
               <% } %> <% } else { %>
         
