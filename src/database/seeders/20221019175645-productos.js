@@ -1,11 +1,11 @@
 'use strict';
 const productos = require('../../data/products.json')
-const products = productos.map(({name , price , discount , category, description}) => {
+const products = productos.map(({name , price , discount , categoryId, description}) => {
   return {
     name,
     price,
     discount,
-    category,
+    categoryId,
     description,
     createdAt : new Date()
   }

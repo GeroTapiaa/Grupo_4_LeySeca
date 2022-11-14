@@ -1,6 +1,6 @@
 'use strict';
 const usuarios = require('../../data/users.json')
-const user = usuarios.map(({name, lastName, address, avatar,user,date, email, password, rol}) => {
+const user = usuarios.map(({name, lastName, address, avatar,user,date, email, password, rolId}) => {
   return {
      name,
      lastName,
@@ -10,7 +10,7 @@ const user = usuarios.map(({name, lastName, address, avatar,user,date, email, pa
      date,
      email,
      password,
-     rol,
+     rolId,
     createdAt : new Date()
   }
 })
