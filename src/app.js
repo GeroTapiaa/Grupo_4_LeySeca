@@ -13,6 +13,13 @@ const cookieCheck = require('./middleware/cookieCheck')
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var productsRouter = require("./routes/products");
+
+//api
+// var apiProductsRouter = require('./routes/api/apiProducts')
+var apiUsersRouter = require('./routes/API/apiUser')
+// var apiAuthRouter = require('./routes/api/apiAuth')
+
+
 var app = express();
 
 // view engine setup
@@ -41,6 +48,11 @@ app.use(localsUserCheck);
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/products", productsRouter);
+
+//ruta api
+// app.use('/api/products',apiProductsRouter);
+app.use('/api/users',apiUsersRouter);
+// app.use('/api/auth',apiAuthRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
