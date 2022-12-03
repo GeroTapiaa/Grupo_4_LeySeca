@@ -298,4 +298,15 @@
   .input__check-edit {
     margin-right: 10px;
   }
+
+
+/* validaciones */
+.is-invalid {
+   
+  border: 2px solid #fd05057e;
+    }
+    .is-valid {
+      border: 2px solid #096d227e;
+    }
+
 }
