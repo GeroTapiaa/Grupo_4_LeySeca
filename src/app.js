@@ -15,7 +15,7 @@ var usersRouter = require("./routes/users");
 var productsRouter = require("./routes/products");
 
 //api
-// var apiProductsRouter = require('./routes/api/apiProducts')
+var apiProductsRouter = require('./routes/API/apiProduct')
 var apiUsersRouter = require('./routes/API/apiUser')
 // var apiAuthRouter = require('./routes/api/apiAuth')
 
@@ -50,7 +50,7 @@ app.use("/users", usersRouter);
 app.use("/products", productsRouter);
 
 //ruta api
-// app.use('/api/products',apiProductsRouter);
+app.use('/api/products',apiProductsRouter);
 app.use('/api/users',apiUsersRouter);
 // app.use('/api/auth',apiAuthRouter);
 
