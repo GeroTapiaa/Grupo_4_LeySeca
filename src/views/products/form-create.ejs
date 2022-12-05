@@ -12,6 +12,7 @@
         <form
           action="/products/store"
           method="post"
+          id="form-create"
           class="form-create"
           enctype="multipart/form-data"
         >
@@ -26,11 +27,11 @@
                 class="input_form"
                 value="<%= locals.old && old.name ? old.name : null %>"
               />
-               <small>
-              <%= locals.errors && errors.name ? errors.name.msg : null %>
-            </small>
+              <small>
+                <%= locals.errors && errors.name ? errors.name.msg : null %>
+              </small>
+              <small id="errorName"></small>
             </div>
-           
 
             <div class="form__box">
               <label for="name" class="label-form">Precio:</label>
@@ -45,9 +46,9 @@
               <small>
                 <%= locals.errors && errors.price ? errors.price.msg : null %>
               </small>
+              <small id="errorPrice"></small>
             </div>
 
-          
             <div class="form__box">
               <label for="name" class="label-form">Descuento:</label>
               <input
@@ -58,45 +59,37 @@
                 class="input_form"
                 value="<%= locals.old && old.discount ? old.discount : null %>"
               />
-              
-            <small>
-              <%= locals.errors && errors.discount ? errors.discount.msg : null %>
-            </small>
+
+              <small>
+                <%= locals.errors && errors.discount ? errors.discount.msg :
+                null %>
+              </small>
+              <small id="errorDiscount"></small>
             </div>
-
-
 
             <div class="form__box">
               <label for="category" class="label-form">Categoria:</label>
               <select name="category" id="category" class="input_form">
-                <% categories.forEach(category => { %>
-                  <option <%= locals.old && old.category && old.category == category.id ? "selected" : "" %> value="<%= category.id %>"><%= category.name %></option>
-                  <% }); %>
-                <!-- <option value=""></option>
+                <option value=""></option>
                 <option value="Cerveza">Cerveza</option>
-                <option value="indumentaria">indumentaria</option> -->
+                <option value="indumentaria">indumentaria</option>
               </select>
               <small>
-                <%= locals.errors && errors.category ? errors.category.msg : null %>
+                <%= locals.errors && errors.category ? errors.category.msg :
+                null %>
               </small>
+              <small id="errorCategory"></small>
             </div>
-         
 
             <div class="form__box-image">
               <label for="images" class="label-form">Imagenes:</label>
-              <input
-                type="file"
-                id="images"
-                name="images"
-                class="input_form"
-              
-              />
+              <input type="file" id="images" name="images" class="input_form" />
               <small>
                 <%= locals.errors && errors.images ? errors.images.msg : null %>
               </small>
+              <small id="errorImages"></small>
             </div>
 
-            
             <div class="form__box--description">
               <label for="description" class="label-form">Descripción:</label>
               <textarea
@@ -105,11 +98,11 @@
                 class="input_form"
               ></textarea>
               <small>
-                <%= locals.errors && errors.description ? errors.description.msg : null %>
+                <%= locals.errors && errors.description ? errors.description.msg
+                : null %>
               </small>
+              <small id="errorDescription"></small>
             </div>
-
-            
 
             <div class="form__box-btn">
               <button type="submit" class="btn__product">
@@ -121,5 +114,7 @@
       </div>
     </main>
     <%- include('../partials/footer') %>
+
+    <script defer src="/js/productsForm.js"></script>
   </body>
 </html>
