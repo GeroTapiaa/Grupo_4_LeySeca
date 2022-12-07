@@ -10,26 +10,37 @@ const { count } = require('console');
 
 module.exports = {
     getAllProduct : async (req, res) =>{
-        const {limit} = req.query
-
+        let {limit = 5, page = 1} = req.query
+        limit = limit > 15 ? 15 : +limit;
+        page = +page
+        let offset = +limit * (+page -1)
 
         try {
             let total = await db.Product.count();
             let products = await db.Product.findAll({
+                limit,
+                offset,
+
+
                 attributes : {
                     exclude : ['createdAt', 'updatedAt'],
-                    
+                    include : [
+                        [literal(`CONCAT('${req.protocol}://${req.get('host')}/api/products/',Product.id)`),'urlProduct'],
+                        [literal(`CONCAT('${req.protocol}://${req.get('host')}/api/products/',Product.image)`),'urlImage']
+                ]
                 },
                 include : [
                     {
                         association : 'category',
                         attributes : {
-                            exclude : ['createdAt', 'updatedAt']
+                            exclude : ['createdAt', 'updatedAt'],
+                            
                         }
-                    }
+                    },
+                    
                 ],
-                limit : limit ? +limit : 5,
-                offset : limit ? +limit : 5
+                /* limit : limit ? +limit : 5,
+                offset : limit ? +limit : 5 */
 
 
             });
@@ -41,7 +52,8 @@ module.exports = {
                 ok :true,
                 status : 200,
                 meta : { 
-                    total 
+                    total,
+                    page
                 },
                 data : {
                     products
@@ -105,24 +117,8 @@ module.exports = {
 
 
 
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    },
+    
 
 
 }
