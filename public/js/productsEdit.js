@@ -67,7 +67,9 @@ const validations = (e) => {
         // PRICE
 
         case "price":
-            if (exRegs.exRegNum.test(e.target.value) & (e.target.value.length > 1)) {
+            console.log(exRegs.exRegNum.test(e.target.value));
+            console.log((e.target.value.length > 1));
+            if (exRegs.exRegNum.test(e.target.value) && (e.target.value.length > 1)) {
                 ok("price", "is-valid");
                 cleanError("errorPrice");
             } else {
