@@ -187,7 +187,7 @@ let preview = (event) => {
 
 // ENVIA EL FORMULARIO SOLO SI ESTA COMPLETO
 
-$("profile-edit").addEventListener("submit", function ({ target }) {
+$("profile-edit").addEventListener("submit", function (e) {
 
     e.preventDefault();
     let error = false;
