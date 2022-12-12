@@ -8,7 +8,7 @@
         <div class="main__profile-section-edit">
           <h2 class="form__title-edit">Inicia Sesión</h2>
 
-          <form class="profile-edit" action="" method="post">
+          <form class="profile-edit" id="profile-edit" action="" method="post">
             <div class="form__register-container-edit">
               <div class="form_profile-edit">
                 <input type="text" id="user" class="form__input-edit" placeholder=" " name="user" />
@@ -17,13 +17,16 @@
               <small>
                 <%= locals.errors && errors.user ? errors.user.msg : null%>
               </small>
+              <small id="errorUser"></small>
               <div class="form_profile-edit">
                 <input class="form__input-edit" placeholder=" " type="password" id="password" name="password" />
-                <label class="form__label-edit" for="password">Contraseña:</label>
+                <label class="form__label-edit" for="password">Contraseña:</label><span class="eye-password"><i
+                    id="eye-password" class="fa-solid fa-eye-slash"></i></span>
               </div>
               <small>
                 <%= locals.errors && errors.password ? errors.password.msg : null%>
               </small>
+              <small id="errorPassword"></small>
               <p>
                 ¿No tenés cuenta?<a class="terms" href="/users/register">
                   Registrate acá</a>
@@ -37,13 +40,18 @@
 
               <div class="form__register-button">
                 <input type="checkbox" class="form__checkbox" id="remenber" name="remenber" />
+
                 <label for="remenber" class="form_label">Recordame</label>
+
               </div>
+              <p id="msgError" class="error-text"></p>
+
             </div>
           </form>
         </div>
         <%- include('../partials/footer') %>
       </main>
+      <script defer src="/js/login.js"></script>
   </body>
 
 </html>

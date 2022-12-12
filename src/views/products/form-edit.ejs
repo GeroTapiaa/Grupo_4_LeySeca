@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("../partials/head",{
-    title : "Formulario de edición de producto:"
-}) %>
+<%- include("../partials/head",{ title : "Formulario de edición de producto:" }) %>
 
     <body>
         <%- include('../partials/navbar') %>
@@ -14,61 +12,69 @@
                             <%= productEdit.name %>
                         </h2>
                     </div>
-                    <form action="/products/update/<%=productEdit.id%>?_method=put" method="POST" enctype="multipart/form-data">
+                    <form id="form-edit" action="/products/update/<%=productEdit.id%>?_method=put" method="POST"
+                        enctype="multipart/form-data">
                         <div class="product-detail">
                             <div class="form__box">
                                 <label for="name" class="label-form">Nombre del producto:</label>
-                                <input type="text" id="name" name="name" placeholder="Ingrese el producto" class="input_form" value="<%= productEdit.name %> ">
+                                <input type="text" id="name" name="name" placeholder="Ingrese el producto"
+                                    class="input_form" value="<%= productEdit.name %> ">
                                 <small>
                                     <%= locals.errors && errors.name ? errors.name.msg : null %>
-                                  </small>
+                                </small>
+                                <small id="errorName"></small>
                             </div>
                             <div class="form__box">
                                 <label for="price" class="label-form">Precio:</label>
-                                <input type="text" id="price" name="price" placeholder="Ingrese el precio del producto" class="input_form" value="<%= productEdit.price %> ">
+                                <input type="text" id="price" name="price" placeholder="Ingrese el precio del producto"
+                                    class="input_form" value="<%= productEdit.price %> ">
                                 <small>
                                     <%= locals.errors && errors.price ? errors.price.msg : null %>
-                                  </small>
+                                </small>
+                                <small id="errorPrice"></small>
                             </div>
                             <div class="form__box">
                                 <label for="discount" class="label-form">Descuento:</label>
-                                <input type="text" id="discount" name="discount" placeholder="Ingrese el descuento del producto" class="input_form" value="<%= productEdit.discount %> ">
+                                <input type="text" id="discount" name="discount"
+                                    placeholder="Ingrese el descuento del producto" class="input_form"
+                                    value="<%= productEdit.discount %> ">
                                 <small>
                                     <%= locals.errors && errors.discount ? errors.discount.msg : null %>
-                                  </small>
+                                </small>
+                                <small id="errorDiscount"></small>
                             </div>
                             <div class="form__box">
                                 <label for="category" class="label-form">Categoria:</label>
                                 <select name="category" id="category" class="input_form">
-                                    <% category.forEach(category => { %>
-                                      <option <%= locals.old && old.category && old.category == category.id ? "selected" : "" %> value="<%= category.id %>"><%= category.name %></option>
-                                      <% }); %>
-                                   
-                                  </select>
-                                  <small>
+                                    <% category.forEach(category=> { %>
+                                        <option <%=locals.old && old.category && old.category==category.id ? "selected"
+                                            : "" %> value="<%= category.id %>"><%= category.name %>
+                                        </option>
+                                        <% }); %>
+
+                                </select>
+                                <small>
                                     <%= locals.errors && errors.category ? errors.category.msg : null %>
-                                  </small>
+                                </small>
+                                <small id="errorCategory"></small>
                             </div>
                             <div class="form__box--description">
                                 <label for="description" class="label-form">Descripción:</label>
-                                <textarea name="description" id="description" class="input_form"><%= productEdit.description%></textarea>
+                                <textarea name="description" id="description"
+                                    class="input_form"><%= productEdit.description%></textarea>
                                 <small>
                                     <%= locals.errors && errors.description ? errors.description.msg : null %>
-                                  </small>
+                                </small>
+                                <small id="errorDescription"></small>
                             </div>
                             <div class="form__box-image">
                                 <label for="images" class="label-form">Imagenes:</label>
-                                <input
-                                  type="file"
-                                  id="images"
-                                  name="images"
-                                  class="input_form"
-                                
-                                />
+                                <input type="file" id="images" name="images" class="input_form" />
                                 <small>
-                                  <%= locals.errors && errors.images ? errors.images.msg : null %>
+                                    <%= locals.errors && errors.images ? errors.images.msg : null %>
                                 </small>
-                              </div>
+                                <small id="errorImages"></small>
+                            </div>
                             <div class="form__box-btn">
                                 <button type="submit" class="btn__product">Guardar producto</button>
 
@@ -80,6 +86,7 @@
                 </div>
             </main>
             <%- include('../partials/footer') %>
+                <script defer src="/js/productsEdit.js"></script>
     </body>
 
 </html>

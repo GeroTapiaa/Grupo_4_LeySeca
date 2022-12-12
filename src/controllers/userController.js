@@ -1,4 +1,4 @@
-const { loadUsers, storeUsers ,eliminarAvatarToUser } = require("../data/db-module");
+const { loadUsers, storeUsers, eliminarAvatarToUser } = require("../data/db-module");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const fs = require("fs");
@@ -10,19 +10,19 @@ module.exports = {
   login: (req, res) => {
     res.render("user/login");
   },
- 
+
   loginRegister: (req, res) => {
     let errors = validationResult(req);
-    
-    if(errors.isEmpty()){
+
+    if (errors.isEmpty()) {
       db.User.findOne({
         where: {
-            user: req.body.user
+          user: req.body.user
         }
-        
-    })      
-    .then((user) => {
-      
+
+      })
+        .then((user) => {
+
 
       req.session.userLogin = {
         id: +user.id,
@@ -108,9 +108,9 @@ module.exports = {
   userRegister: (req, res) => {
     const errors = validationResult(req);
 
-    
-    
-    const { name, surname, user, date, address, email, password} = req.body;
+
+
+    const { name, surname, user, date, address, email, password } = req.body;
 
     if (errors.isEmpty()) {
       db.User.create({
@@ -140,56 +140,55 @@ module.exports = {
 
   profile: (req, res) => {
     db.User.findByPk(req.session.userLogin.id)
-    .then((user)=>{
-        res.render("user/profile",{
-            
-            user,
-            
+      .then((user) => {
+        res.render("user/profile", {
+
+          user,
+
         })
-    })
-   
+      })
+
   },
 
   // EDITAR PERFIL
 
-  profileEdit: async(req, res) => {
+  profileEdit: async (req, res) => {
     db.User.findByPk(req.params.id)
-    .then((user)=>{
-        res.render("user/profileEdit",{
-           
-            user,
-            session:req.session,
-          
+      .then((user) => {
+        res.render("user/profileEdit", {
+
+          user,
+          session: req.session,
+
         })
-    })
-  
-   
-    
+      })
+
+
+
   },
 
   // EDICION
 
-  update:(req, res) => {
-   
+  update: (req, res) => {
+
     db.User.update(
       {
-          name: req.body.name?.trim(),
-          user: req.body.user?.trim(),
-         address:req.body.user?.trim(),
-          avatar: req.file ? req.file.filename : req.session.userLogin.avatar
+        name: req.body.name?.trim(),
+        user: req.body.user?.trim(),
+        address: req.body.address?.trim(),
+        avatar: req.file ? req.file.filename : req.session.userLogin.avatar
       },
       {
-          where:
-          {
-              id: +req.params.id
-          }
+        where:
+        {
+          id: +req.params.id
+        }
       })
-      .then((user) =>
-      {
+      .then((user) => {
         req.session.userLogin = {
-        
+
           ...req.session.userLogin,
-          name : user.name,
+          name: user.name,
           user: user.user,
           address: user.address,
           rol: req.session.userLogin.rol,
@@ -197,35 +196,35 @@ module.exports = {
         };
 
       })
-      
-      res.redirect("/users/profile");
-   
 
-  
-    
+    res.redirect("/users/profile");
+
+
+
+
   },
 
   logout: (req, res) => {
     req.session.destroy();
     res.cookie("userLeySeca", null, { maxAge: -1 });
     res.redirect("/");
-  
+
   },
-  remove: async(req, res) => {
+  remove: async (req, res) => {
     try {
       if (req.session.userLogin.avatar) {
-          eliminarAvatarToUser(req.session.userLogin.avatar)
+        eliminarAvatarToUser(req.session.userLogin.avatar)
       }
       await db.User.destroy({
-          where: { id: req.session.userLogin.id }
+        where: { id: req.session.userLogin.id }
       })
 
       res.clearCookie("userLeySeca")
       req.session.destroy();
       res.redirect('/');
-  } catch (error) {
+    } catch (error) {
       return console.log(error)
-  }
-},
- 
+    }
+  },
+
 };

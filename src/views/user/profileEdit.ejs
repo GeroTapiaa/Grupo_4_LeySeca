@@ -1,95 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head', { title : 'Perfil' }) %>
+<%- include('../partials/head', { title : 'Perfil' }) %>
 
   <body class="body__profile-edit">
     <%- include( '../partials/navbar' ) %>
 
-    <main class="main__profile-edit">
-      <div class="main__profile-section-edit">
-        <h2 class="form__title-edit">Editá tu perfil</h2>
+      <main class="main__profile-edit">
+        <div class="main__profile-section-edit">
+          <h2 class="form__title-edit">Editá tu perfil</h2>
 
-        <form
-          <form
-          action="/users/update/<%= user.id %>?_method=PUT"
-          class="profile-edit"
-          enctype="multipart/form-data"
-          method="POST"
-        >
-          <div class="form__register-container-edit">
-            <div class="form__register-photo-edit">
-              <figure class="image_profile-edit">
-                <img
-                  src="/images/users/<%= user.avatar %>  "
-                  alt=""
-                  id="img-photo"
-                />
-                <input
-                  type="file"
-                  name="avatar"
-                  id="avatar"
-                  onchange="preview(event)"
-                />
+          <form action="/users/update/<%= user.id %>?_method=PUT" class="profile-edit" id="profile-edit"
+            enctype="multipart/form-data" method="POST">
+            <div class="form__register-container-edit">
+              <div class="form__register-photo-edit">
+                <figure class="image_profile-edit">
+                  <img src="/images/users/<%= user.avatar %>  " alt="" id="img-photo" />
+                  <input type="file" name="avatar" id="avatar" onchange="preview(event)" />
 
-                <label class="label_photo-edit" for="avatar">
-                  <i class="fa-solid fa-camera"></i
-                ></label>
-              </figure>
+                  <label class="label_photo-edit" for="avatar">
+                    <i class="fa-solid fa-camera"></i></label>
+                </figure>
+              </div>
+
+              <!-- name  -->
+              <div class="form_profile-edit">
+                <input type="text" id="name" class="form__input-edit" name="name" value="<%= user.name %>" />
+                <label for="name" class="form__label-edit">Nombre:</label>
+              </div>
+              <small>
+                <%= locals.errors && errors.name ? errors.name.msg : null %>
+              </small>
+              <small id="errorName"></small>
+
+              <!-- surname -->
+              <div class="form_profile-edit">
+                <input type="text" id="surname" class="form__input-edit" name="surname" value="<%= user.surname %>" />
+                <label for="surname" class="form__label-edit">Apellido:</label>
+              </div>
+              <small>
+                <%= locals.errors && errors.surname ? errors.surname.msg : null %>
+              </small>
+              <small id="errorSurname"></small>
+
+              <!-- user  -->
+
+              <div class="form_profile-edit">
+                <input type="text" id="user" class="form__input-edit" name="user" value="<%= user.user %>" />
+                <label for="user" class="form__label-edit">Usuario:</label>
+              </div>
+              <small>
+                <%= locals.errors && errors.user ? errors.user.msg : null %>
+              </small>
+              <small id="errorUser"></small>
+
+              <!-- address -->
+
+              <div class="form_profile-edit">
+                <input type="text" id="address" class="form__input-edit" name="address" value="<%= user.address %> " />
+
+                <label for="address" class="form__label-edit">Dirección:</label>
+              </div>
+              <small>
+                <%= locals.errors && errors.address ? errors.address.msg : null %>
+              </small>
+              <small id="errorAddress"></small>
+
+              <div class="form__register-button">
+                <button type="submit" class="button">Guardar</button>
+                <a href="/"> <button class="button">Volver</button></a>
+              </div>
             </div>
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="name"
-                class="form__input-edit"
-                name="name"
-                value="<%= user.name %>"
-              />
-              <label for="name" class="form__label-edit">Nombre:</label>
-            </div>
+          </form>
+        </div>
+        <%- include( '../partials/footer' ) %>
+      </main>
 
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="user"
-                class="form__input-edit"
-                name="user"
-                value="<%= user.user %>"
-              />
-              <label for="user" class="form__label-edit">Usuario:</label>
-            </div>
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="address"
-                class="form__input-edit"
-                name="address"
-                value="<%= user.address %> "
-              />
-
-              <label for="address" class="form__label-edit">Dirección:</label>
-            </div>
-
-            <div class="form__register-button">
-              <button type="submit" class="button">Guardar</button>
-              <a href="/"> <button class="button">Volver</button></a>
-            </div>
-          </div>
-        </form>
-      </div>
-      <%- include( '../partials/footer' ) %>
-    </main>
-    <script>
-      let preview = (event) => {
-        let read_img = new FileReader();
-        let id_img = document.getElementById("img-photo");
-
-        read_img.onload = () => {
-          if (read_img.readyState == 2) {
-            id_img.src = read_img.result;
-          }
-        };
-        read_img.readAsDataURL(event.target.files[0]);
-      };
-    </script>
+      <script defer src="/js/profileEdit.js"></script>
   </body>
+
 </html>

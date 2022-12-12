@@ -1,92 +1,104 @@
 <%- include('../partials/head', { title : 'Home' }) %>
 
+
     <body class="home">
+        <!-- <div class="modall">
+            <div class="modal_container">
+
+                <video id="video" autoplay muted loop src="/video/presentacion.mp4">
+                    <source src="/video/presentacion.mp4" type="video/mp4">
+                </video>
+                <h2>Debes ser mayor de edad para acceder a nuestro sitio</h2>
+                <button class="button"> Soy mayor</button>
+                <button class="button">Salir</button>
+            </div>
+        </div> -->
+
+
         <%- include('../partials/navbar') %>
-        <%- include('../partials/header') %>
+            <%- include('../partials/header') %>
 
-            <!-- MAIN -->
+                <!-- MAIN -->
 
-            <main class="home__main">
+                <main class="home__main" id="home__main">
 
-                <div class="welcome">
-                    <h3 class="title">Bienvenidos</h3>
-                    <img src="/images/logos/shape-4.png" alt="">
-                    <p class="welcome-cart"> Ley seca nace en el año 2015 producto de la asociación de un grupo de amigos los cuales compartían una gran pasión cervecera. Los viajes y los distintos sabores fueron las bases para este proyecto que día a día crece para ustedes.  </p>
-                </div>
-                <section class="background-image">
-                    <div class="background-container">
-                        <img class="up" src="/images/background/arrow-up.png" alt="">
-                       <p class="background-text" > Disfrutá una buena cerveza</p>
 
-                      <p class="title-background">Conoce nuestros elegidos para vos </p> 
-                      <img class="down" src="/images/background/arrow-down.png" alt="">
+                    <div class="welcome">
+                        <h3 class="title">Bienvenidos</h3>
+                        <img src="/images/logos/shape-4.png" alt="">
+                        <p class="welcome-cart"> Ley seca nace en el año 2015 producto de la asociación de un grupo de
+                            amigos los cuales compartían una gran pasión cervecera. Los viajes y los distintos sabores
+                            fueron las bases para este proyecto que día a día crece para ustedes. </p>
                     </div>
-    
-                   </section>
+                    <section class="background-image">
+                        <div class="background-container">
+                            <img class="up" src="/images/background/arrow-up.png" alt="">
+                            <p class="background-text"> Disfrutá una buena cerveza</p>
+
+                            <p class="title-background">Conoce nuestros elegidos para vos </p>
+                            <img class="down" src="/images/background/arrow-down.png" alt="">
+                        </div>
+
+                    </section>
 
 
 
-                <!-- MAIN SECTION PRODUCTS -->
+                    <!-- MAIN SECTION PRODUCTS -->
 
-                <section class="home__main__section__products">
+                    <section class="home__main__section__products">
 
-                    <% productsDiscount.forEach(({id, name, price , discount, image}) => { %>
-                        <%- include('../partials/products',{
-                    id, 
-                    name,
-                    price,
-                    discount,
-                    image,
-                    toThousand
-
-                 }) %>
-                            <% }) %>
+                        <% productsDiscount.forEach(({id, name, price , discount, image})=> { %>
+                            <%- include('../partials/products',{ id, name, price, discount, image, toThousand }) %>
+                                <% }) %>
 
 
 
-                </section>
-               
+                    </section>
 
-                <!-- SECTION EXPERIENCE -->
-               
-                <section class="home__main__section__experience">
-<div class="div-desing">
 
-</div>
-<div class="div-desing2">
+                    <!-- SECTION EXPERIENCE -->
 
-</div>
-
-                    <h1 class="title-changes">EXPERIENCIAS</h1>
-
-                    <article class="home__main__section--experience">
-                        <a href="/products/experience"><label>RESERVA ACÁ</label></a>
-                        <div class="home__main__description-experience">
-                            <a href="/products/experience"><img src="/images/images_Ley-Seca/experiencia-domos.jpeg" alt=""></a>
-
-                            <h2>DOMOS</h2>
-                            <p> Viví una experiencia única y disfrutá lo mejor de nuestra naturaleza.</p>
-
+                    <section class="home__main__section__experience">
+                        <div class="div-desing">
 
                         </div>
-                    </article>
-
-                    <article class="home__main__section--experience">
-                        <a href="/products/patagonia"><label>RESERVA ACÁ</label></a>
-                        <div class="home__main__description-experience">
-                            <a href="/products/patagonia"><img src="/images/images_Ley-Seca/experiencia-patagonia.png " alt=""></a>
-
-                            <h2>EXPERIENCIA PATAGONIA</h2>
-                            <p> Viví la Patagonia de una manera diferente en un viaje único.</´p>
-
+                        <div class="div-desing2">
 
                         </div>
-                    </article>
 
-                    <article class=" home__main__section--experience">
-                        <a href="/products/tour"><label>Conocé más</label></a>
-                        <div class="home__main__description-experience ">
-                            <a href="/products/tour"><img src="/images/images_Ley-Seca/instalaciones-tanques.webp" " alt=" "> </a>
+                        <h1 class="title-changes">EXPERIENCIAS</h1>
+
+                        <article class="home__main__section--experience">
+                            <a href="/products/experience"><label>RESERVA ACÁ</label></a>
+                            <div class="home__main__description-experience">
+                                <a href="/products/experience"><img src="/images/images_Ley-Seca/experiencia-domos.jpeg"
+                                        alt=""></a>
+
+                                <h2>DOMOS</h2>
+                                <p> Viví una experiencia única y disfrutá lo mejor de nuestra naturaleza.</p>
+
+
+                            </div>
+                        </article>
+
+                        <article class="home__main__section--experience">
+                            <a href="/products/patagonia"><label>RESERVA ACÁ</label></a>
+                            <div class="home__main__description-experience">
+                                <a href="/products/patagonia"><img
+                                        src="/images/images_Ley-Seca/experiencia-patagonia.png " alt=""></a>
+
+                                <h2>EXPERIENCIA PATAGONIA</h2>
+                                <p> Viví la Patagonia de una manera diferente en un viaje único.</´p>
+
+
+                            </div>
+                        </article>
+
+                        <article class=" home__main__section--experience">
+                            <a href="/products/tour"><label>Conocé más</label></a>
+                            <div class="home__main__description-experience ">
+                                <a href="/products/tour"><img
+                                        src="/images/images_Ley-Seca/instalaciones-tanques.webp" " alt=" "> </a>
 
                             <h2>TOUR CERVECERO</h2>
                             <p> Vení a conocer como se hace nuestra cerveza y todos sus secretos.</p>
@@ -101,25 +113,23 @@
                         <div class=" home__main__description-experience ">
 
                             <img src=" /images/images_Ley-Seca/experiencia-instalaciones.jpg " alt=" ">
-                            <h2 id="sucursales">NUESTROS BARES</h2>
-                            <p> Descubrí todas nuestras sucursales.</p>
-                        </div>
-                    </article>
+                            <h2 id=" sucursales">NUESTROS BARES</h2>
+                                    <p> Descubrí todas nuestras sucursales.</p>
+                            </div>
+                        </article>
 
 
-                    <article class=" home__main__section--experience-2 ">
-                        <div class="home__main__description-experience-2 ">
-                            <img src="/images/logos/barriles_banner.jpg " alt=" ">
-                            <!-- <h2 >NUESTROS BARES</h2>
+                        <article class=" home__main__section--experience-2 ">
+                            <div class="home__main__description-experience-2 ">
+                                <img src="/images/logos/barriles_banner.jpg " alt=" ">
+                                <!-- <h2 >NUESTROS BARES</h2>
                             <p> Descubrí todas nuestras sucursales.</p> -->
 
-                        </div>
+                            </div>
 
-                    </article>
-<img class="down-dark" src="/images/background/shape-10down.png" alt="">
-                </section>
-
-
+                        </article>
+                        <img class="down-dark" src="/images/background/shape-10down.png" alt="">
+                    </section>
 
 
 
@@ -127,11 +137,18 @@
 
 
 
-            </main>
 
-            <%- include('../partials/footer') %>
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+                </main>
+
+                <%- include('../partials/footer') %>
+                    <!-- JavaScript Bundle with Popper -->
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+                        crossorigin="anonymous"></script>
+                    <script defer src="/js/index.js">
+
+                    </script>
     </body>
 
     </html>

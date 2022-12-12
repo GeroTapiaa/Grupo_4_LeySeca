@@ -604,4 +604,20 @@
     position: absolute;
     left: -1%;
   }
+
+  .modall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    display: flex;
+    z-index: 200;
+  }
+  .modal_container {
+    width: 90%;
+    background-color: #fff;
+    margin: auto;
+  }
 }
