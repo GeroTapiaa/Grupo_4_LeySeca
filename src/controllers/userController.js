@@ -36,6 +36,55 @@ module.exports = {
                     maxAge: 1000 * 60,
           });
         }
+
+        /* carrito*/
+
+
+        db.Order.findOne({
+          where : {
+            userId :  req.session.userLogin.id,
+            stateId : 1
+
+          },
+          include : [
+            { 
+              association : 'carts',
+              attributes : ['id', 'quantity'],
+              include : [
+                {
+                  association: 'product',
+                  attributes : ['id', 'name', 'price', 'discount'],
+                  
+                }
+              ]
+            }
+          ]
+        }).then(order =>{
+          if(order){
+            req.session.orderCart = {
+              id : order.id,
+              total : order.total,
+              items : order.cart
+            }
+          }else{
+            db.Order.create({
+              data : new Date(),
+              total : 0,
+              userId : req.session.userLogin.id,
+              stateId : 1
+            }).then(order => {
+              req.session.orderCart = {
+                id : order.id,
+                total : order.total,
+                items : []
+              }
+            })
+          }
+        })
+
+
+
+
          res.redirect("/");
       })
       .catch((err) => console.log(err));
