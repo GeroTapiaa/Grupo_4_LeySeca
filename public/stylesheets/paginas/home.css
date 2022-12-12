@@ -174,6 +174,37 @@
     flex-direction: column;
     align-items: center;
   }
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(3, 2, 2);
+    /* background-image: var(--img-backmove); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    z-index: 200;
+  }
+  .modal_container {
+    width: 90%;
+    margin: auto;
+  }
+  .video {
+    height: 240px;
+  }
+  #title-video {
+    color: white;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+  }
+  #button-contain {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -331,6 +362,37 @@
     position: absolute;
     bottom: -21px;
   }
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(3, 2, 2);
+    /* background-image: var(--img-backmove); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    z-index: 200;
+  }
+  .modal_container {
+    width: 90%;
+    margin: auto;
+  }
+  .video {
+    height: 470px;
+  }
+  #title-video {
+    color: white;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+  }
+  #button-contain {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -373,6 +435,7 @@
     padding: 27px;
     gap: 3px;
   }
+
   .home__main__section--product {
     display: flex;
     flex-direction: column;
@@ -488,7 +551,7 @@
   }
   .home__main__description-experience-none img {
     width: 100%;
-    height: 517px;
+    height: 550px;
     border-radius: 3%;
   }
   .home__main__section--experience-none label {
@@ -605,19 +668,38 @@
     left: -1%;
   }
 
-  .modall {
+  .modal {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #fff;
+    background-color: rgb(3, 2, 2);
+    /* background-image: var(--img-backmove); */
+    background-size: cover;
     display: flex;
+    flex-direction: column;
     z-index: 200;
   }
   .modal_container {
     width: 90%;
-    background-color: #fff;
     margin: auto;
+  }
+  .video {
+    height: 530px;
+  }
+  #title-video {
+    color: white;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+  }
+  #button-contain {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+  }
+  .modal-none {
+    display: none;
   }
 }

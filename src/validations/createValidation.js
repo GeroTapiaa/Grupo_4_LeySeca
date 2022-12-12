@@ -8,7 +8,8 @@ module.exports = [
         .notEmpty().withMessage('Debe ingresar un valor').bail()
 
         .isNumeric({
-            no_symbols: true},)
+            no_symbols: true
+        },)
         .withMessage('Solo se permiten numeros positivos').bail()
 
         .isInt({
@@ -18,7 +19,8 @@ module.exports = [
 
     check('discount')
         .isNumeric({
-            no_symbols: true})
+            no_symbols: true
+        })
         .withMessage('Solo se permiten numeros positivos')
 
         .isInt({
@@ -30,11 +32,11 @@ module.exports = [
         .notEmpty().withMessage('Debes elegir una categoria').bail(),
 
 
-        
-        check('description')
+
+    check('description')
         .notEmpty().withMessage('Debe ingresar una descipciòn del producto')
         .isLength({
-            max : 300
+            max: 300
         })
         .withMessage('Sueperó los caràcteres').bail()
 

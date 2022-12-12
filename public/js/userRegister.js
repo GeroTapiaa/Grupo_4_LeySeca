@@ -13,7 +13,8 @@ const exRegs = {
     /^(?=.*)(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,8}/,
   exRegMayu: /[A-Z]/,
   exRegMinu: /[a-z]/,
-  exRegNum: /[0-9]/,
+  exRegNum: /^[0-9]+$/,
+
   exRegEsp: /[$@$!%*?&]/,
   exRegMin: /.{6,}/,
   exRegMax: /.{8}/,
@@ -389,17 +390,16 @@ $('terminos').addEventListener("click", function (e) {
 })
 
 
-$("form-register").addEventListener("submit", function ({ target }) {
+$("form-register").addEventListener("submit", function (e) {
 
   e.preventDefault();
   let error = false;
 
-  if (!$('terms').target.checked) {
+  if (!$('terminos').checked) {
     error = true;
     $('errorTerms').innerText = "Debes aceptar las bases y condiciones";
     $('terminos').classList.add('is-invalid')
   }
-
 
 
   const elements = this.elements;
@@ -410,14 +410,19 @@ $("form-register").addEventListener("submit", function ({ target }) {
       $('msgError').innerText = 'Hay campos con errores o están vacíos';
       error = true;
     }
+
   }
-
-
+  $('msgError').innerText = null;
+  error = true;
 
 
   !error && this.submit()
 
 
 });
+
+
+
+
 
 /********/

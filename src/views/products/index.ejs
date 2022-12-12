@@ -2,17 +2,18 @@
 
 
     <body class="home">
-        <!-- <div class="modall">
-            <div class="modal_container">
+        <div id="modal" class="modal">
 
-                <video id="video" autoplay muted loop src="/video/presentacion.mp4">
-                    <source src="/video/presentacion.mp4" type="video/mp4">
-                </video>
-                <h2>Debes ser mayor de edad para acceder a nuestro sitio</h2>
-                <button class="button"> Soy mayor</button>
-                <button class="button">Salir</button>
+            <video class="video" id="video" autoplay muted loop src="/video/presentacion.mp4">
+                <source src="/video/presentacion.mp4" type="video/mp4">
+            </video>
+            <h2 id="title-video">¿Sos mayor de edad?</h2>
+            <div id="button-contain">
+                <button id="confirm" class="button"> Si</button>
+                <button class="button">No</button>
             </div>
-        </div> -->
+
+        </div>
 
 
         <%- include('../partials/navbar') %>

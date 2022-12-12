@@ -75,17 +75,19 @@
               </div>
 
               <div class="form__box-btn">
-                <button type="submit" class="btn__product">
+                <button type="submit" id="btn-submit" class="btn__product">
                   Guardar producto
                 </button>
               </div>
             </div>
+            <p id="msgError" class="error-text"></p>
+
           </form>
         </div>
       </main>
       <%- include('../partials/footer') %>
+        <script src="/js/productsForm.js"></script>
 
-        <script defer src="/js/productsForm.js"></script>
   </body>
 
 </html>
