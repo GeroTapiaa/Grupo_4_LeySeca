@@ -1,4 +1,4 @@
-<nav class="home__header__menu" >
+<nav class="home__header__menu">
   <div class="home__header__logo">
     <div class="home__header__logo-letters">
       <a href="/"><img src="/images/logos/logoPhoto.png" /></a>
@@ -11,96 +11,88 @@
     <!-- SEARCH-BAR -->
     <form action="/results" method="GET" class="home__form">
       <div class="home__formgroup">
-        <input
-          type="text"
-          name="keywords"
-          class="home__forminput"
-          autocomplete="off"
-        />
+        <input type="text" name="keywords" class="home__forminput" autocomplete="off" />
         <button type="submit" class="home__formbutton">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
     </form>
-    
+
 
 
     <!-- MENU MOBILE & TABLET -->
     <div class="home__header__menu-burguer">
       <div class="dropdown">
-        <a
-          class="btn btn-secondary dropdown-toggle"
-          href="#"
-          role="button"
-          id="dropdownMenuLink"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+          data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fa-solid fa-bars"></i>
         </a>
-    
+
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <% if (locals.userLogin) { %>
-         
-          <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
-          <li class="burguer-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
-          <li class="burguer-link dropdown-item logoutLi"><a href="/users/logout"></a></li>
-          
-          <div class="burguer-options">
-            <li><a class="link-option" href="/products/shop">Perfil </a></li>
-            <li><a class="dropdown-item" href="/users/logout">salir</a></li>
-            
+
+            <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
+            <li class="burguer-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
+            <li class="burguer-link dropdown-item logoutLi"><a href="/users/logout"></a></li>
+
+            <div class="burguer-options">
+              <li><a class="link-option" href="/products/shop">Perfil </a></li>
+              <li><a class="dropdown-item" href="/users/logout">salir</a></li>
+
             </div>
-    
+
             <% if (locals.userLogin && userLogin.rol <2) { %>
-          <li><a class="dropdown-item" href="/products/create">Vender</a></li>
-          <% } %> <% } else { %>
-    
-          <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
-          <li class="burguer-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
-         
-          <div class="burguer-options">
-            
-          <li class="link-option"><a class="dropdown-item" href="/products/products">Registrarse</a></li>
-          <li><a class="dropdown-item" href="/products/shop">iniciar Sesion </a></li>
-          </div>
-    
-          <% } %>
+              <li><a class="dropdown-item" href="/products/create">Vender</a></li>
+              <% } %>
+                <% } else { %>
+
+                  <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
+                  <li class="burguer-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
+
+                  <div class="burguer-options">
+
+                    <li class="link-option"><a class="dropdown-item" href="/products/products">Registrarse</a></li>
+                    <li><a class="dropdown-item" href="/products/shop">iniciar Sesion </a></li>
+                  </div>
+
+                  <% } %>
         </ul>
       </div>
     </div>
-       <!-- MENU MOBILE & TABLET -->
+    <!-- MENU MOBILE & TABLET -->
 
-          <!-- MENU DESKTOP-->
+    <!-- MENU DESKTOP-->
 
-          <div class="menu_desk">
-            <ul class="list-menu" >
-              <% if (locals.userLogin) { %>
-            
-              <li class="link"><a class="" href="/products/products">Productos</a></li>
-              <li class=""><a class="" href="/products/shop">Shop</a></li>
-              <li class=""><a class="" href="/users/profile">Perfil</a></li>
-              <li class=""><a class="" href="/users/logout">Salir</a></li>
-             
-        
-              <% if (locals.userLogin && userLogin.rol === 1) { %>
-              <li><a class="" href="/products/create">Vender</a></li>
-              <% } %> <% } else { %>
-        
-              <li class=""><a class="" href="/products/products">Productos</a></li>
-              <li class=""><a class="" href="/products/shop">Shop</a></li>
-            
-              <li class="">
-                <a class="" href="/users/login">Ingresá</a>
-              </li>
-        
-              <% } %>
-            </ul>
-          </div>
-          <script>
-            window.addEventListener("scroll", function () {
-              var nav = document.querySelector("nav");
-              nav.classList.toggle("scroll", window.scrollY > 100);
-            });
-          </script>
+    <div class="menu_desk">
+      <ul class="list-menu">
+        <% if (locals.userLogin) { %>
+
+          <li class="link"><a class="" href="/products/products">Productos</a></li>
+          <li class=""><a class="" href="/products/shop">Shop</a></li>
+          <li class=""><a class="" href="/users/profile">Perfil</a></li>
+          <li class=""><a class="" href="/users/logout">Salir</a></li>
+
+
+          <% if (locals.userLogin && userLogin.rol===1) { %>
+            <li><a class="" href="/products/create">Vender</a></li>
+            <% } %>
+              <% } else { %>
+
+                <li class=""><a class="" href="/products/products">Productos</a></li>
+                <li class=""><a class="" href="/products/shop">Shop</a></li>
+
+                <li class="">
+                  <a class="" href="/users/login">Ingresá</a>
+                </li>
+
+                <% } %>
+      </ul>
+    </div>
+    <script src="/js/index.js">
+            // window.addEventListener("scroll", function () {
+            //   var nav = document.querySelector("nav");
+            //   nav.classList.toggle("scroll", window.scrollY > 100);
+            // });
+
+    </script>
 </nav>

@@ -8,7 +8,7 @@ const exRegs = {
     exRegAlfa: /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/,
     exRegMayu: /[A-Z]/,
     exRegMinu: /[a-z]/,
-    exRegNum: /^[0-9]$/,
+    exRegNum: /^[0-9]+$/,
     exRegMin: /.{6,}/,
     exRegMax: /.{8}/,
     exRegUser: /^[a-zA-Z0-9\_\-]{4,100}$/,
@@ -148,10 +148,13 @@ inputs.forEach((input) => {
 });
 
 /****************************************************************************************** */
-$("form-edit").addEventListener("submit", function ({ target }) {
+const form = document.getElementById('form-edit')
+let success = false;
+form.addEventListener("submit", function (e) {
+    if (success == false) {
+        e.preventDefault();
+    }
 
-    e.preventDefault();
-    let error = false;
 
     const elements = this.elements;
     for (let i = 0; i < elements.length - 2; i++) {
@@ -162,11 +165,5 @@ $("form-edit").addEventListener("submit", function ({ target }) {
             error = true;
         }
     }
-
-
-
-
     !error && this.submit()
-
-
 });

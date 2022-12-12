@@ -1,18 +1,15 @@
+console.log('create');
+
 // funcion para solamente llamar una sola vez al "id" de un elemento.
 const $ = (element) => document.getElementById(element);
 
-// Anula la el envio del formulario hasta verificar errores de datos en los campos
-$("form-create").addEventListener("submit", function (e) {
-  e.preventDefault();
-});
-/*******/
 
 // EXPRESIONES REGULARES
 const exRegs = {
   exRegAlfa: /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/,
   exRegMayu: /[A-Z]/,
   exRegMinu: /[a-z]/,
-  exRegNum: /[0-9]/,
+  exRegNum: /^[0-9]+$/,
   exRegMin: /.{6,}/,
   exRegMax: /.{8}/,
   exRegUser: /^[a-zA-Z0-9\_\-]{4,100}$/,
@@ -51,7 +48,7 @@ const validations = (e) => {
     case "name":
       if (
         exRegs.exRegAlfa.test(e.target.value.trim()) &
-        (e.target.value.length >= 5)
+        (e.target.value.length >= 2)
       ) {
         ok("name", "is-valid");
         cleanError("errorName");
@@ -59,10 +56,15 @@ const validations = (e) => {
         errorStyle("name", "is-valid", "is-invalid");
         msgError(
           "errorName",
-          "El nombre es obligatorio y debe contener al menos 5 caracteres"
+          "El nombre es obligatorio y debe contener al menos dos caracteres alfabéticos"
         );
       }
+      console.log(e.target.value);
+      checkFields()
+
       break;
+
+
 
     // PRICE
 
@@ -77,8 +79,13 @@ const validations = (e) => {
           "El precio es obigatorio y solo debe contener números"
         );
       }
+      console.log(e.target.value);
 
       break;
+
+      checkFields()
+
+
     case "discount":
       if (!exRegs.exRegNum.test(e.target.value)) {
         errorStyle("discount", "is-valid", "is-invalid");
@@ -90,7 +97,10 @@ const validations = (e) => {
       } else {
         ok("discount", "is-valid");
         cleanError("errorDiscount");
+
       }
+      console.log(e.target.value);
+
 
       break;
   }
@@ -109,6 +119,10 @@ $("description").addEventListener("keyup", function ({ target }) {
       "La descripción es obligatoria y debe contener un mínimo de 10 caracteres"
     );
   }
+  console.log(target.value);
+  checkFields()
+
+
 });
 
 // CATEGORY
@@ -121,6 +135,10 @@ $("category").addEventListener("click", function (e) {
     ok("category", "is-valid");
     cleanError("errorCategory");
   }
+  console.log(e.target.value);
+  checkFields()
+
+
 });
 // /********/
 
@@ -141,6 +159,10 @@ $("images").addEventListener("change", function () {
     cleanError("errorImages");
 
   }
+  console.log(this.value);
+  checkFields()
+
+
 });
 
 
@@ -152,4 +174,27 @@ inputs.forEach((input) => {
   input.addEventListener("blur", validations);
 });
 
-/****************************************************************************************** */
+/*********************** */
+
+const elements = $("form-create").elements;
+
+$("form-create").addEventListener("submit", function (e) {
+  e.preventDefault();
+  let error = false;
+
+  const elements = this.elements;
+  for (let i = 0; i < elements.length - 2; i++) {
+
+    if (!elements[i].value.trim() || elements[i].classList.contains('is-invalid')) {
+      elements[i].classList.add('is-invalid')
+      $('msgError').innerText = 'Hay campos con errores o están vacíos';
+      error = true;
+    }
+  }
+
+
+  !error && this.submit()
+  console.log(error);
+
+
+});
