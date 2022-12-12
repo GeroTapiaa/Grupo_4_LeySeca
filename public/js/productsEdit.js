@@ -1,11 +1,7 @@
 // funcion para solamente llamar una sola vez al "id" de un elemento.
 const $ = (element) => document.getElementById(element);
 
-// Anula la el envio del formulario hasta verificar errores de datos en los campos
-$("form-edit").addEventListener("submit", function (e) {
-    e.preventDefault();
-});
-/*******/
+
 
 // EXPRESIONES REGULARES
 const exRegs = {
@@ -67,9 +63,7 @@ const validations = (e) => {
         // PRICE
 
         case "price":
-            console.log(exRegs.exRegNum.test(e.target.value));
-            console.log((e.target.value.length > 1));
-            if (exRegs.exRegNum.test(e.target.value) && (e.target.value.length > 1)) {
+            if (exRegs.exRegNum.test(e.target.value) & (e.target.value.length > 1)) {
                 ok("price", "is-valid");
                 cleanError("errorPrice");
             } else {
@@ -78,6 +72,20 @@ const validations = (e) => {
                     "errorPrice",
                     "El precio es obigatorio y solo debe contener números"
                 );
+            }
+
+            break;
+        case "discount":
+            if (!exRegs.exRegNum.test(e.target.value)) {
+                errorStyle("discount", "is-valid", "is-invalid");
+                msgError(
+                    "errorDiscount",
+                    "El descuento solo debe contener números"
+                );
+
+            } else {
+                ok("discount", "is-valid");
+                cleanError("errorDiscount");
             }
 
             break;
@@ -140,3 +148,25 @@ inputs.forEach((input) => {
 });
 
 /****************************************************************************************** */
+$("form-edit").addEventListener("submit", function ({ target }) {
+
+    e.preventDefault();
+    let error = false;
+
+    const elements = this.elements;
+    for (let i = 0; i < elements.length - 2; i++) {
+
+        if (!elements[i].value.trim() || elements[i].classList.contains('is-invalid')) {
+            elements[i].classList.add('is-invalid')
+            $('msgError').innerText = 'Hay campos con errores o están vacíos';
+            error = true;
+        }
+    }
+
+
+
+
+    !error && this.submit()
+
+
+});

@@ -96,8 +96,8 @@
               <div class="form_profile-edit">
                 <input class="form__input-edit" placeholder=" " type="password" id="password" name="password"
                   value="<%= locals.old && old.password ? old.password : null %>" />
-                <label class="form__label-edit" for="password">Contraseña: </label><span><i id="eye-password"
-                    class="fa-solid fa-eye-slash"></i></span>
+                <label class="form__label-edit" for="password">Contraseña: </label><span class="eye-password"><i
+                    id="eye-password" class="fa-solid fa-eye-slash"></i></span>
               </div>
               <small>
                 <%= locals.errors && errors.password ? errors.password.msg : null %>
@@ -109,8 +109,8 @@
                 <input class="form__input-edit" placeholder=" " type="password" id="confirmPassword"
                   name="confirmPassword"
                   value="<%= locals.old && old.confirmPassword ? old.confirmPassword : null %>" />
-                <label class="form__label-edit" for="confirmPassword">Confirmar contraseña:</label><span><i
-                    id="eye-password2" class="fa-solid fa-eye-slash"></i></span>
+                <label class="form__label-edit" for="confirmPassword">Confirmar contraseña:</label><span
+                  class="eye-password"><i id="eye-password2" class="fa-solid fa-eye-slash"></i></span>
               </div>
               <small>
                 <%= locals.errors && errors.confirmPassword? errors.confirmPassword.msg : null %>
@@ -128,6 +128,9 @@
               </small>
               <small id="errorTerms"></small>
 
+              <p id="msgError" class="error-text"></p>
+
+
               <div class="form__register-button">
                 <button type="submit" class="button" value="Guardar">
                   Guardar
@@ -139,6 +142,7 @@
         </div>
       </main>
       <%- include( '../partials/footer' ) %>
+        <script defer src="/js/moment.js"></script>
         <script defer src="/js/userRegister.js"></script>
   </body>
 

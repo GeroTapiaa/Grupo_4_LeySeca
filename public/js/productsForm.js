@@ -79,6 +79,20 @@ const validations = (e) => {
       }
 
       break;
+    case "discount":
+      if (!exRegs.exRegNum.test(e.target.value)) {
+        errorStyle("discount", "is-valid", "is-invalid");
+        msgError(
+          "errorDiscount",
+          "El descuento solo debe contener números"
+        );
+
+      } else {
+        ok("discount", "is-valid");
+        cleanError("errorDiscount");
+      }
+
+      break;
   }
 };
 

@@ -43,15 +43,15 @@
             <div class="form__register-button">
               <a href="/users/profileEdit/<%= user.id %>">
                 <button class="button">Editar Perfil</button></a>
-                
+
 
               <a href="/"> <button class="button">Salir</button></a>
             </div>
 
 
-            <form action="/users/remove/<%= user.id %>?_method=DELETE" method="POST" >
+            <form action="/users/remove/<%= user.id %>?_method=DELETE" method="POST">
               <button type="submit" class="delete">Eliminar</button>
-          </form>
+            </form>
           </div>
 
           <%- include( '../partials/footer' ) %>

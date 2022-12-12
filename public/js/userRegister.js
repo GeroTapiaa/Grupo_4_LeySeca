@@ -1,10 +1,8 @@
 // funcion para solamente llamar una sola vez al "id" de un elemento.
 const $ = (element) => document.getElementById(element);
 
-// Anula la el envio del formulario hasta verificar errores de datos en los campos
-$("form-register").addEventListener("submit", function (e) {
-  e.preventDefault();
-});
+
+
 /*******/
 
 // EXPRESIONES REGULARES
@@ -66,7 +64,28 @@ const verifieldEmail = async (email) => {
 
     let result = await response.json();
 
-    console.log(result);
+
+
+    return result.verified;
+  } catch (error) {
+    console.error;
+  }
+};
+const verifieldUser = async (user) => {
+  try {
+    let response = await fetch("/API/users/verify-user", {
+      method: "POST",
+      body: JSON.stringify({
+        user: user,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    let result = await response.json();
+
+
 
     return result.verified;
   } catch (error) {
@@ -76,8 +95,9 @@ const verifieldEmail = async (email) => {
 
 // /********/
 
-
-
+// ALMACEN MOMENT
+const dateNow = moment();
+// /********/
 
 
 // validaciones de formulario
@@ -100,6 +120,8 @@ const validations = (e) => {
           "El nombre es obligatorio y debe contener al menos dos caracteres alfabéticos"
         );
       }
+      console.log(e.target.value);
+
       break;
 
     // SURNAME
@@ -118,30 +140,10 @@ const validations = (e) => {
           "El apellido es obligatorio y debe contener al menos 2 caracteres alfabéticos"
         );
       }
+      console.log(e.target.value);
+
 
       break;
-
-
-    // USER
-
-
-    case "user":
-      if (
-        exRegs.exRegUser.test(e.target.value.trim()) &
-        (e.target.value.length >= 5)
-      ) {
-        ok("user", "is-valid");
-        cleanError("errorUser");
-      } else {
-        errorStyle("user", "is-valid", "is-invalid");
-        msgError(
-          "errorUser",
-          "El usuario es obligatorio y debe contener al menos 5 caracteres alfanuméricos"
-        );
-      }
-
-      break;
-
 
     // ADDRESS
 
@@ -159,9 +161,27 @@ const validations = (e) => {
           "La direccion es obligatoria"
         );
       }
+      console.log(e.target.value);
+
       break;
 
-    // PASSWORD, FUNCION 'validatePassword' lINEA 242. 
+    // DATE, VARIABLE 'dateNow' LINEA 78
+
+    case 'date':
+      if (dateNow.diff(moment(e.target.value), 'years') < 18) {
+        errorStyle("date", "is-valid", "is-invalid");
+        msgError(
+          "errorDate",
+          "Debes ser mayor de edad"
+        );
+      } else {
+        ok("date", "is-valid");
+        cleanError("errorDate");
+      }
+      console.log(e.target.value);
+
+      break;
+    // PASSWORD, FUNCION 'validatePassword' lINEA 260. 
     case 'password':
       if (
         exRegs.exRegPass.test(e.target.value) &&
@@ -180,11 +200,13 @@ const validations = (e) => {
         validatePassword()
 
       }
+      console.log(e.target.value);
+
 
       break;
 
 
-    //  CONFIRM PASSWORD, FUNCION 'validatePassword' lINEA 242. 
+    //  CONFIRM PASSWORD, FUNCION 'validatePassword' lINEA 260. 
 
     case 'confirmPassword':
       if (e.target.value.length >= 6) {
@@ -197,6 +219,7 @@ const validations = (e) => {
           "Debes confirmar la contraseña "
         );
       }
+      console.log(e.target.value);
 
       break;
 
@@ -206,7 +229,7 @@ const validations = (e) => {
   }
 };
 
-// EMAIL, FUNCION 'verifieldEmail' LINEA 55.
+// EMAIL, FUNCION 'verifieldEmail' LINEA 53.
 
 $('email').addEventListener("keyup", async function () {
   switch (true) {
@@ -236,7 +259,56 @@ $('email').addEventListener("keyup", async function () {
       cleanError("errorEmail");
       break;
   }
+  console.log(this.value);
 });
+
+// USER
+
+
+$('user').addEventListener("keyup", async function () {
+  switch (true) {
+    case !this.value:
+      errorStyle("user", "is-valid", "is-invalid");
+      msgError(
+        "errorUser",
+        "El usuario es obligatorio")
+      break;
+    case !exRegs.exRegUser.test(this.value):
+      errorStyle("user", "is-valid", "is-invalid");
+      msgError(
+        "errorUser",
+        "El usuario debe contener al menos 5 caracteres alfanuméricos"
+      );
+      break;
+    case await verifieldUser(this.value):
+      errorStyle("user", "is-valid", "is-invalid");
+      msgError(
+        "errorUser",
+        "El usuario ya se encuentra registrado"
+      );
+      break;
+
+    default:
+      ok("user", "is-valid");
+      cleanError("errorUser");
+      break;
+  }
+  console.log(this.value);
+});
+// TERMINOS Y CONDICIONES
+
+// $('terminos').addEventListener('click', ({ target }) => {
+
+//   if (target.checked === false) {
+//     msgError(
+//       "errorTerms",
+//       "Debes aceptar los términos y condiciones"
+//     );
+//   } else {
+//     cleanError("errorTerms");
+//   }
+
+// })
 
 // FUNCION PARA PROBAR SI LAS CONTRASEÑAS COINCIDEN 
 const validatePassword = () => {
@@ -259,9 +331,12 @@ const validatePassword = () => {
 
 
   }
+  console.log(password.value);
 }
 
 // /********/
+
+// SELECCIONA A TODOS LOS INPUTS DEL FORMUALRIO Y LES APLICA EL EVENTO KEYUP Y BLUR
 const inputs = document.querySelectorAll("#form-register input");
 
 inputs.forEach((input) => {
@@ -269,9 +344,8 @@ inputs.forEach((input) => {
   input.addEventListener("blur", validations);
 });
 
-/****************************************************************************************** */
+/***********************/
 
-/********/
 
 //hace visible el password
 $("eye-password").addEventListener("click", ({ target }) => {
@@ -304,5 +378,46 @@ let preview = (event) => {
   };
   read_img.readAsDataURL(event.target.files[0]);
 };
+
+/********/
+
+// ENVIA EL FORMULARIO SOLO SI ESTA COMPLETO
+$('terminos').addEventListener("click", function (e) {
+
+  cleanError("errorTerms");
+
+})
+
+
+$("form-register").addEventListener("submit", function ({ target }) {
+
+  e.preventDefault();
+  let error = false;
+
+  if (!$('terms').target.checked) {
+    error = true;
+    $('errorTerms').innerText = "Debes aceptar las bases y condiciones";
+    $('terminos').classList.add('is-invalid')
+  }
+
+
+
+  const elements = this.elements;
+  for (let i = 0; i < elements.length - 2; i++) {
+
+    if (!elements[i].value.trim() || elements[i].classList.contains('is-invalid')) {
+      elements[i].classList.add('is-invalid')
+      $('msgError').innerText = 'Hay campos con errores o están vacíos';
+      error = true;
+    }
+  }
+
+
+
+
+  !error && this.submit()
+
+
+});
 
 /********/

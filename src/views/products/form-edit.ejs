@@ -12,8 +12,8 @@
                             <%= productEdit.name %>
                         </h2>
                     </div>
-                    <form action="/products/update/<%=productEdit.id%>?_method=put" method="POST enctype="
-                        multipart/form-data" id="form-edit">
+                    <form id="form-edit" action="/products/update/<%=productEdit.id%>?_method=put" method="POST"
+                        enctype="multipart/form-data">
                         <div class="product-detail">
                             <div class="form__box">
                                 <label for="name" class="label-form">Nombre del producto:</label>
@@ -23,17 +23,15 @@
                                     <%= locals.errors && errors.name ? errors.name.msg : null %>
                                 </small>
                                 <small id="errorName"></small>
-
                             </div>
                             <div class="form__box">
                                 <label for="price" class="label-form">Precio:</label>
                                 <input type="text" id="price" name="price" placeholder="Ingrese el precio del producto"
-                                    class="input_form" value="<%= productEdit.price %>">
+                                    class="input_form" value="<%= productEdit.price %> ">
                                 <small>
                                     <%= locals.errors && errors.price ? errors.price.msg : null %>
                                 </small>
                                 <small id="errorPrice"></small>
-
                             </div>
                             <div class="form__box">
                                 <label for="discount" class="label-form">Descuento:</label>
@@ -44,14 +42,16 @@
                                     <%= locals.errors && errors.discount ? errors.discount.msg : null %>
                                 </small>
                                 <small id="errorDiscount"></small>
-
                             </div>
                             <div class="form__box">
                                 <label for="category" class="label-form">Categoria:</label>
                                 <select name="category" id="category" class="input_form">
-                                    <option value=""></option>
-                                    <option value="Cerveza">Cerveza</option>
-                                    <option value="indumentaria">indumentaria</option>
+                                    <% category.forEach(category=> { %>
+                                        <option <%=locals.old && old.category && old.category==category.id ? "selected"
+                                            : "" %> value="<%= category.id %>"><%= category.name %>
+                                        </option>
+                                        <% }); %>
+
                                 </select>
                                 <small>
                                     <%= locals.errors && errors.category ? errors.category.msg : null %>
@@ -74,7 +74,6 @@
                                     <%= locals.errors && errors.images ? errors.images.msg : null %>
                                 </small>
                                 <small id="errorImages"></small>
-
                             </div>
                             <div class="form__box-btn">
                                 <button type="submit" class="btn__product">Guardar producto</button>
@@ -87,7 +86,6 @@
                 </div>
             </main>
             <%- include('../partials/footer') %>
-
                 <script defer src="/js/productsEdit.js"></script>
     </body>
 

@@ -150,5 +150,25 @@ module.exports = {
       });
     }
   },
+  verifyUser: async (req, res) => {
+    try {
+      const { user } = req.body;
+      let userVerify = await db.User.findOne({
+        where: {
+          user,
+        },
+      });
+
+      return res.status(200).json({
+        ok: true,
+        verified: userVerify ? true : false,
+      });
+    } catch (error) {
+      return res.status(error.status || 500).json({
+        ok: false,
+        error: error.message,
+      });
+    }
+  },
 
 };

@@ -77,6 +77,24 @@
     width: 80%;
     margin: 20px auto;
   }
+  /* validaciones */
+  .is-invalid {
+    border: 2px solid #fd05057e;
+  }
+  .is-valid {
+    border: 2px solid #096d227e;
+  }
+
+  .error-text {
+    background-color: #fd05057e;
+    width: 50%;
+    margin: auto;
+  }
+  .eye-password {
+    position: absolute;
+    left: 85%;
+    top: 19%;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .main__profile-edit {
@@ -184,6 +202,24 @@
   .input__check-edit {
     margin-right: 10px;
   }
+  /* validaciones */
+  .is-invalid {
+    border: 2px solid #fd05057e;
+  }
+  .is-valid {
+    border: 2px solid #096d227e;
+  }
+
+  .error-text {
+    background-color: #fd05057e;
+    width: 50%;
+    margin: auto;
+  }
+  .eye-password {
+    position: absolute;
+    left: 85%;
+    top: 19%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -236,7 +272,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    padding: 5px;
+    padding: 10px;
   }
 
   .form__register-button {
@@ -284,8 +320,8 @@
     cursor: pointer;
     position: absolute;
     color: black;
-    top: 0px;
-    left: 65px;
+    top: 7px;
+    left: 71px;
     transform: translateY(5px);
     transition: transform 0.5s, color 0.3s;
   }
@@ -299,14 +335,22 @@
     margin-right: 10px;
   }
 
+  /* validaciones */
+  .is-invalid {
+    border: 2px solid #fd05057e;
+  }
+  .is-valid {
+    border: 2px solid #096d227e;
+  }
 
-/* validaciones */
-.is-invalid {
-   
-  border: 2px solid #fd05057e;
-    }
-    .is-valid {
-      border: 2px solid #096d227e;
-    }
-
+  .error-text {
+    background-color: #fd05057e;
+    width: 50%;
+    margin: auto;
+  }
+  .eye-password {
+    position: absolute;
+    left: 85%;
+    top: 19%;
+  }
 }
