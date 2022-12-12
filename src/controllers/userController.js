@@ -68,10 +68,10 @@ module.exports = {
             }
           }else{
             db.Order.create({
-              data : new Date(),
+              stateId : 1,
               total : 0,
               userId : req.session.userLogin.id,
-              stateId : 1
+              //paymentId : 1
             }).then(order => {
               req.session.orderCart = {
                 id : order.id,
@@ -80,12 +80,13 @@ module.exports = {
               }
             })
           }
+          res.redirect("/");
         })
 
 
 
 
-         res.redirect("/");
+        
       })
       .catch((err) => console.log(err));
   } else {
