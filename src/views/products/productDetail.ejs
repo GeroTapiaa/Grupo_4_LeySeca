@@ -1,93 +1,60 @@
-<%- include("../partials/head",{ title : "Detalle del producto" }) %>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head",{ title : "Detalle del producto" }) %>
 
-    <body class="detalle">
-        <%- include('../partials/navbar') %>
+  <body class="detalle">
+    <%- include('../partials/modal') %> <%- include('../partials/navbar') %>
 
-            <main class="detalle__main">
-                <section class="section-detail">
-                    <!-- <img src="/images/logos/crears - copia.png" width="100%" alt=""> -->
-                                    </section>
-                <section class="detalle__main--section">
-                    <article class="detalle__main--section-producto">
-                        
-                            <div class="detalle__section-producto">
-                                <img src="/images/images_Ley-Seca/<%= product.image %>" alt="">
-                            </div>
-                            <div class="detalle__producto-detalle">
-                                <h3>
-                                    <%=product.name %>
-                                </h3>
-                                <p>
-                                    <%= product.description %>
-                                </p>
-                                <div class="precio-cantidad">
-                                    <h4>Precio: $
-                                        <%= product.price %>
-                                    </h4>
-                                    <p>Cantidad:</p>
+    <main class="detalle__main">
+      <section class="section-detail">
+        <!-- <img src="/images/logos/crears - copia.png" width="100%" alt=""> -->
+      </section>
+      <section class="detalle__main--section">
+        <article class="detalle__main--section-producto">
+          <div class="detalle__section-producto">
+            <img src="/images/images_Ley-Seca/<%= product.image %>" alt="" />
+          </div>
+          <div class="detalle__producto-detalle">
+            <h3><%=product.name %></h3>
+            <p><%= product.description %></p>
+            <div class="precio-cantidad">
+              <h4>Precio: $ <%= product.price %></h4>
+              <p>Cantidad:</p>
 
-                                    <button>- 1 +</button>
-                                </div>
-                                <hr>
-                                <div class="detalle__button--agregar">
-                                    <a href="/products/shopping-cart/<%= product.id %>"> <button class="button-add-cart">AGREGAR AL
-                                            CARRITO</button></a>
+              <button>- 1 +</button>
+            </div>
+            <hr />
+            <div class="detalle__button--agregar">
+              <a href="/products/shopping-cart/<%= product.id %>">
+                <button class="button-add-cart">AGREGAR AL CARRITO</button></a
+              >
 
-                                            <% if (locals.userLogin && userLogin.rol === 1) { %>
-                                    <div class="edit-delete"><a href="/products/edit/<%=product.id%>"> <button
-                                                class="button-edit">EDITAR</button></a></div>
-                                    <form action="/products/delete/<%= product.id %> ?_method=DELETE " method="POST">
-                                        <button type="submit" class="button-delete">ELIMINAR</button>
-                                    </form>
-                                    <% } %>
-                                </div>
+              <% if (locals.userLogin && userLogin.rol === 1) { %>
+              <div class="edit-delete">
+                <a href="/products/edit/<%=product.id%>">
+                  <button class="button-edit">EDITAR</button></a
+                >
+              </div>
+              <form
+                action="/products/delete/<%= product.id %> ?_method=DELETE "
+                method="POST"
+              >
+                <button type="submit" class="button-delete">ELIMINAR</button>
+              </form>
+              <% } %>
+            </div>
+          </div>
+        </article>
+      </section>
 
+      <h2 class="detalle__text--sugerencia">Te puede interesar</h2>
+      <section class="home__main__section__products">
+        <% productsStatus.forEach(({id, name, price , discount, image}) => { %>
+        <%- include('../partials/products',{ id, name, price, discount, image,
+        toThousand }) %> <% }) %>
+      </section>
+    </main>
 
-                            </div>
-
-
-                            
-
-
-
-                    </article>
-
-
-                </section>
-
-                <h2 class="detalle__text--sugerencia">Te puede interesar</h2>
-                <section class="home__main__section__products">
-
-                   
-
-                    <% productsStatus.forEach(({id, name, price , discount, image}) => { %>
-                        <%- include('../partials/products',{
-                    id, 
-                    name,
-                    price,
-                    discount,
-                    image,
-                    toThousand
-
-                 }) %>
-                            <% }) %>
-
-
-                </section>
-
-
-
-
-
-
-
-
-
-                </section>
-
-            </main>
-
-            <%- include('../partials/footer') %>
-    </body>
-
-    </html>
+    <%- include('../partials/footer') %>
+  </body>
+</html>

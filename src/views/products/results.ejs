@@ -1,63 +1,29 @@
-<%- include('../partials/head', { title : 'Resultado de búsqueda' }) %>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head', { title : 'Resultado de búsqueda' }) %>
 
-    <body class="home">
-        <%- include('../partials/navbar') %>
+  <body class="home">
+    <%- include('../partials/modal') %> <%- include('../partials/navbar') %>
 
+    <!-- MAIN -->
 
+    <main class="main__results">
+      <section class="section-detail">
+        <div class="main__results__title">
+          <h2 class="text">Resultados de la búsqueda: <%= keywords %></h2>
+        </div>
+        <article class="home__main__section__products">
+          <% if (results.length> 0) { %> <% results.forEach(({id, name, price ,
+          discount, image})=> { %> <%- include('../partials/products',{ id,
+          name, price, discount, image, toThousand }) %> <% }) %> <% } else { %>
+          <div class="main__results__products">
+            <h2 class="text">No hubo resultados para su búsqueda.</h2>
+          </div>
+          <% }%>
+        </article>
+      </section>
+    </main>
 
-
-
-
-
-            <!-- MAIN -->
-
-            <main class="main__results">
-
-
-
-
-
-
-                <section class="section-detail">
-                    <div class="main__results__title">
-                        <h2 class="text">
-                            Resultados de la búsqueda:
-                            <%= keywords %>
-                        </h2>
-                    </div>
-                    <article class="home__main__section__products">
-                        <% if (results.length> 0) { %>
-                            <% results.forEach(({id, name, price , discount, image})=> { %>
-                                <%- include('../partials/products',{ id, name, price, discount, image, toThousand }) %>
-                                    <% }) %>
-                                        <% } else { %>
-                                            <div class="main__results__products">
-                                                <h2 class="text">
-                                                    No hubo resultados para su búsqueda.
-                                                </h2>
-                                            </div>
-                                            <% }%>
-
-
-                    </article>
-                </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </main>
-
-            <%- include('../partials/footer') %>
-
-    </body>
-
-    </html>
+    <%- include('../partials/footer') %>
+  </body>
+</html>

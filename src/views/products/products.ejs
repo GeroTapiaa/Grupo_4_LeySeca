@@ -1,57 +1,28 @@
-<%- include('../partials/head', { title : 'Productos' }) %>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head', { title : 'Productos' }) %>
 
-    <body class="home">
+  <body class="home">
+    <%- include('../partials/modal') %> <%- include('../partials/navbar') %>
 
+    <!-- MAIN -->
 
+    <main class="home__main">
+      <section class="section">
+        <img src="/images/logos/bg-beer (1).png" width="100%" alt="" />
+      </section>
 
-        <%- include('../partials/navbar') %>
-        
+      <!-- MAIN SECTION PRODUCTS -->
 
-            <!-- MAIN -->
+      <h1 id="title_shop">Nuestros Productos</h1>
 
-            <main class="home__main">
-                <section class="section">
-                    <img src="/images/logos/bg-beer (1).png" width="100%" alt="">
-                                    </section>
-        
+      <section class="home__main__section__products">
+        <% productsBeer.forEach(({id, name, price , discount, image}) => { %>
+        <%- include('../partials/products',{ id, name, price, discount, image,
+        toThousand }) %> <% }) %>
+      </section>
+    </main>
 
-
-                <!-- MAIN SECTION PRODUCTS -->
-
-                <h1 id="title_shop">Nuestros Productos</h1>
-
-                <section class="home__main__section__products">
-
-                    <% productsBeer.forEach(({id, name, price , discount, image}) => { %>
-                        <%- include('../partials/products',{
-                    id, 
-                    name,
-                    price,
-                    discount,
-                    image,
-                    toThousand
-
-                 }) %>
-                            <% }) %>
-
-
-
-                </section>
-
-
-
-
-
-
-
-
-
-
-
-            </main>
-
-            <%- include('../partials/footer') %>
-
-    </body>
-
-    </html>
+    <%- include('../partials/footer') %>
+  </body>
+</html>

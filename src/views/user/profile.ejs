@@ -1,62 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head', { title : 'Perfil' }) %>
+  <%- include('../partials/head', { title : 'Perfil' }) %>
 
   <body class="body__register">
-    <%- include( '../partials/navbar' ) %>
+    <%- include('../partials/modal') %> <%- include( '../partials/navbar' ) %>
 
-      <main class="main__profile">
-        <div class="main__profile-section">
-          <h2 class="form__title-profile">Tu perfil</h2>
-          <div class="form__register-container-profile">
-            <div class="form__register-photo">
-              <figure class="image_profile">
-                <img src="/images/users/<%= user.avatar %>" />
-              </figure>
-            </div>
-
-            <div class="form_profile">
-              <%= user.name %>
-            </div>
-            <div class="form_profile">
-              <p>
-                <%= user.user %>
-              </p>
-            </div>
-            <div class="form__register-date">
-              <p>Fecha de nacimiento:</p>
-              <p>
-                <%= user.date %>
-              </p>
-            </div>
-            <div class="form_profile">
-              <p>
-                <%= user.address %>
-              </p>
-            </div>
-            <div class="form_profile">
-              <p>
-                <%= user.email %>
-              </p>
-            </div>
-
-            <div class="form__register-button">
-              <a href="/users/profileEdit/<%= user.id %>">
-                <button class="button">Editar Perfil</button></a>
-
-
-              <a href="/"> <button class="button">Salir</button></a>
-            </div>
-
-
-            <form action="/users/remove/<%= user.id %>?_method=DELETE" method="POST">
-              <button type="submit" class="delete">Eliminar</button>
-            </form>
+    <main class="main__profile">
+      <div class="main__profile-section">
+        <h2 class="form__title-profile">Tu perfil</h2>
+        <div class="form__register-container-profile">
+          <div class="form__register-photo">
+            <figure class="image_profile">
+              <img src="/images/users/<%= user.avatar %>" />
+            </figure>
           </div>
 
-          <%- include( '../partials/footer' ) %>
-        </div>
-      </main>
-  </body>
+          <div class="form_profile"><%= user.name %></div>
+          <div class="form_profile">
+            <p><%= user.user %></p>
+          </div>
+          <div class="form__register-date">
+            <p>Fecha de nacimiento:</p>
+            <p><%= user.date %></p>
+          </div>
+          <div class="form_profile">
+            <p><%= user.address %></p>
+          </div>
+          <div class="form_profile">
+            <p><%= user.email %></p>
+          </div>
 
+          <div class="form__register-button">
+            <a href="/users/profileEdit/<%= user.id %>">
+              <button class="button">Editar Perfil</button></a
+            >
+
+            <a href="/"> <button class="button">Salir</button></a>
+          </div>
+
+          <form
+            action="/users/remove/<%= user.id %>?_method=DELETE"
+            method="POST"
+          >
+            <button type="submit" class="delete">Eliminar</button>
+          </form>
+        </div>
+
+        <%- include( '../partials/footer' ) %>
+      </div>
+    </main>
+  </body>
 </html>

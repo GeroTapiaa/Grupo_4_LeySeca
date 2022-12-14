@@ -4,6 +4,8 @@ const bcrypt = require("bcryptjs");
 const fs = require("fs");
 const path = require("path");
 const db = require("../database/models");
+const localStorage = require('localStorage')
+
 
 
 module.exports = {
@@ -22,8 +24,6 @@ module.exports = {
 
       })
         .then((user) => {
-
-
           req.session.userLogin = {
             id: +user.id,
             name: user.name,
@@ -36,7 +36,12 @@ module.exports = {
               maxAge: 1000 * 60,
             });
           }
-          res.redirect("/");
+          // res.send({ message: "ok" })
+          // localStorage.setItem('user', 'pepe')
+          // console.log(localStorage.getItem('user'));
+
+
+          res.redirect("/?user=pepe");
         })
         .catch((err) => console.log(err));
     } else {
