@@ -11,30 +11,46 @@ cuando entras a la pagina
     -no : redireccionar a youTube X
 */
 
+/*se declara una funcion anonima para usarla una unica vez*/
+
 (function () {
-    console.log(document.cookie);
-    const isLogged = localStorage.getItem('isLogged') === 'true';
+
+    // const isLogged = localStorage.getItem('isLogged') === 'true';
+
+
+    /*El valor que trae localStorage es true*/
     const isValidAge = localStorage.getItem('isValidAge') === 'true';
 
 
-    if (!isLogged && !isValidAge) {
+    /* si isValidAge es true, le aplica al modal la clase 'modal-none-ok' que quita al modal*/
+    if (!isValidAge) {
 
-
-        modal.classList.remove('modal-none')
-        modal.classList.add('modal')
+        modal.classList.remove('modal-none-ok')
+        modal.classList.add('modal-ok')
 
     }
 
 })()
 
+/* el atributo 'onclick' del archivo ejs le da el valor de true o false a la funcion 'ageValidation'
+    en el caso que la funcion ageValidation devuelva false va a redirigir al usuario a un video de YouTube
+    de lo contrario, remueve al modal y le aplica la clase  'modal-none-ok' que remueve al modal.
+
+ */
 function ageValidation(isValid) {
+    console.log(isValid);
     if (!isValid)
         return window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank').focus()
 
-    localStorage.setItem('isValidAge', true)
-    modal.classList.remove('modal')
-    modal.classList.add('modal-none')
 
+    /*se guarda un valor en el localStorage */
+
+    localStorage.setItem('isValidAge', true)
+
+    modal.classList.remove('modal-ok')
+    modal.classList.add('modal-none-ok')
+
+    /* redirecciona al usuario al home independientemente de la vista en donde se inicie la pagina*/
     window.location.href = '/'
 }
 
