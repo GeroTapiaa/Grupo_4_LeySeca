@@ -1,14 +1,77 @@
-console.log('anda');
-window.addEventListener("scroll", function () {
-    var nav = document.querySelector("nav");
-    nav.classList.toggle("scroll", window.scrollY > 100);
-});
 
 
-const modal = document.getElementById('modal');
-const click = document.getElementById('confirm')
 
-click.addEventListener('click', function (e) {
-    e.preventDefault()
+
+
+// confirm.addEventListener('click', () => {
+//     // guardo el valor del boton en una variable
+//     let button = confirm.value;
+//     // guardo el valor de la variable en el locaStorage
+//     localStorage.setItem('click', button)
+//     // si el valor de la clave de localStorage es igual a 'yes', agrego la clase modal-none
+//     if (session === 'yes') {
+//         modal.classList.add('modal-none')
+
+//     }
+// })
+
+
+
+// const modal = document.getElementById('modal');
+// const confirm = document.getElementById('confirm')
+// const session = sessionStorage.getItem('click'); // traigo el valor de sessionStorage
+
+// confirm.addEventListener('click', () => {
+//     // guardo el valor del boton en una variable
+//     let button = confirm.value;
+//     // guardo el valor de la variable en el locaStorage
+//     sessionStorage.setItem('click', button)
+//     // si el valor de la clave de sessionStorage es igual a 'yes', agrego la clase modal-none
+//     if (session === null) {
+//         modal.classList.add('modal-none')
+
+
+//     } else if (session === 'yes') {
+//         modal.classList.add('modal-none')
+
+//     }
+// })
+
+/*Ventana emergente para validar edad 
+cuando entras a la pagina 
+-si está logueado que no aparezca la ventana emergente
+-si no esta logueado se muestra la ventana emergente con las opciones X
+    -si : guardar la opcion que selecciono y redireccionar al home X
+    -no : redireccionar a youTube X
+*/
+
+(function () {
+    console.log(document.cookie);
+    const isLogged = localStorage.getItem('isLogged') === 'true';
+    const isValidAge = localStorage.getItem('isValidAge') === 'true';
+
+
+    if (!isLogged && !isValidAge) {
+
+
+        modal.classList.remove('modal-none')
+        modal.classList.add('modal')
+
+    }
+
+})()
+
+function ageValidation(isValid) {
+    if (!isValid)
+        return window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank').focus()
+
+    localStorage.setItem('isValidAge', true)
+    modal.classList.remove('modal')
     modal.classList.add('modal-none')
-})
+
+    window.location.href = '/'
+}
+
+
+
+

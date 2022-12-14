@@ -22,8 +22,6 @@ module.exports = {
 
       })
         .then((user) => {
-
-
           req.session.userLogin = {
             id: +user.id,
             name: user.name,
@@ -36,6 +34,7 @@ module.exports = {
               maxAge: 1000 * 60,
             });
           }
+
           res.redirect("/");
         })
         .catch((err) => console.log(err));
