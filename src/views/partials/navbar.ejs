@@ -1,5 +1,5 @@
 <nav class="home__header__menu" >
- 
+ <%- include('modalCart') %> 
 <nav class="home__header__menu">
   <div class="home__header__logo">
     <div class="home__header__logo-letters">
@@ -9,7 +9,7 @@
     <div class="home__header__logo-image">
       <a href="/"><img src="/images/logos/Nuevo proyecto (1).png" /></a>
     </div>
-
+    
     <!-- SEARCH-BAR -->
     <form action="/results" method="GET" class="home__form">
       <div class="home__formgroup">
@@ -17,8 +17,12 @@
         <button type="submit" class="home__formbutton">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
+        <li id="btn-cart"><button type="button" class="btn fs-4" data-bs-toggle="modal" data-bs-target="#cartModal">
+          <i class="fa-solid fa-cart-shopping"></i></i>
+          </button></li>
       </div>
     </form>
+    
 
 
 
@@ -36,6 +40,7 @@
             <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
             <li class="burguer-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
             <li class="burguer-link dropdown-item logoutLi"><a href="/users/logout"></a></li>
+            
 
             <div class="burguer-options">
               <li><a class="link-option" href="/products/shop">Perfil </a></li>
@@ -73,6 +78,7 @@
               <li class=""><a class="" href="/products/shop">Shop</a></li>
               <li class=""><a class="" href="/users/profile">Perfil</a></li>
               <li class=""><a class="" href="/users/logout">Salir</a></li>
+              
              
         
               <% if (locals.userLogin && userLogin.rol === 1) { %>
@@ -95,5 +101,5 @@
               nav.classList.toggle("scroll", window.scrollY > 100);
             });
           </script>
-          <!-- <script src="/js/cart.js"></script> -->
+          <script src="/js/cart.js"></script> 
 </nav>
