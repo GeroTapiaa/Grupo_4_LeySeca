@@ -19,10 +19,10 @@ cuando entras a la pagina
 
 
     /*El valor que trae localStorage es true*/
-    const isValidAge = localStorage.getItem('isValidAge') === 'true';
+    const isValidAge = sessionStorage.getItem('isValidAge') === 'true';
 
 
-    /* si isValidAge es true, le aplica al modal la clase 'modal-none-ok' que quita al modal*/
+    /* si isValidAge es falso, remueve al modal la clase 'modal-none-ok' que quita al modal y agrega modal-ok que lo hace visible*/
     if (!isValidAge) {
 
         modal.classList.remove('modal-none-ok')
@@ -45,7 +45,7 @@ function ageValidation(isValid) {
 
     /*se guarda un valor en el localStorage */
 
-    localStorage.setItem('isValidAge', true)
+    sessionStorage.setItem('isValidAge', true)
 
     modal.classList.remove('modal-ok')
     modal.classList.add('modal-none-ok')
