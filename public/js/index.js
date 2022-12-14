@@ -3,40 +3,6 @@
 
 
 
-// confirm.addEventListener('click', () => {
-//     // guardo el valor del boton en una variable
-//     let button = confirm.value;
-//     // guardo el valor de la variable en el locaStorage
-//     localStorage.setItem('click', button)
-//     // si el valor de la clave de localStorage es igual a 'yes', agrego la clase modal-none
-//     if (session === 'yes') {
-//         modal.classList.add('modal-none')
-
-//     }
-// })
-
-
-
-// const modal = document.getElementById('modal');
-// const confirm = document.getElementById('confirm')
-// const session = sessionStorage.getItem('click'); // traigo el valor de sessionStorage
-
-// confirm.addEventListener('click', () => {
-//     // guardo el valor del boton en una variable
-//     let button = confirm.value;
-//     // guardo el valor de la variable en el locaStorage
-//     sessionStorage.setItem('click', button)
-//     // si el valor de la clave de sessionStorage es igual a 'yes', agrego la clase modal-none
-//     if (session === null) {
-//         modal.classList.add('modal-none')
-
-
-//     } else if (session === 'yes') {
-//         modal.classList.add('modal-none')
-
-//     }
-// })
-
 /*Ventana emergente para validar edad 
 cuando entras a la pagina 
 -si está logueado que no aparezca la ventana emergente

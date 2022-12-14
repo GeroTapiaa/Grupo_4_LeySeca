@@ -6,6 +6,9 @@ const sendSequelizeError = require("../../helpers/SendSequelizeError");
 const createError = require("../../helpers/createError");
 
 module.exports = {
+  loginPrueba: async (req, res) => {
+    return res.status(200).send(true)
+  },
   getAllUsers: async (req, res) => {
     try {
       let { limit = 10, page = 1 } = req.query;
