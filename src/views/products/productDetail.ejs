@@ -30,7 +30,7 @@
                                 </div>
                                 <hr>
                                 <div class="detalle__button--agregar">
-                                    <a href="/products/shopping-cart/<%= product.id %>"> <button class="button-add-cart">AGREGAR AL
+                                    <a href="/products/shopping-cart/<%= product.id %>"> <button class="button-add-cart" onclick="addCartItem('<%=product.id%>')">AGREGAR AL
                                             CARRITO</button></a>
 
                                             <% if (locals.userLogin && userLogin.rol === 1) { %>

@@ -174,7 +174,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .modal {
+  .modalPersonal {
     position: fixed;
     top: 0;
     left: 0;
@@ -362,7 +362,7 @@
     position: absolute;
     bottom: -21px;
   }
-  .modal {
+  .modalPersonal {
     position: fixed;
     top: 0;
     left: 0;
@@ -668,7 +668,7 @@
     left: -1%;
   }
 
-  .modal {
+  .modalPersonal {
     position: fixed;
     top: 0;
     left: 0;
@@ -701,5 +701,11 @@
   }
   .modal-none {
     display: none;
+  }
+  .cart-icon{
+
+    position: relative !important;
+    left: -25% !important;
+    top: -70% !important;
   }
 }

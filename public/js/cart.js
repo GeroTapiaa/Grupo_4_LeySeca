@@ -1,4 +1,5 @@
  console.log('cart.js connected');
+ 
 
  const carrito = document.getElementById('cart-items')
  const showItems = (items) => {
@@ -8,7 +9,7 @@
             carrito.innerHTML += `
             <tr>
             <td>
-              <img src="/images/products/{product.image[0].file}" width=80 alt="image">
+              <img src="/images/products/${product.image}" width=80 alt="image">
             </td>
             <td>
               ${product.name}
@@ -40,15 +41,17 @@
     try {
         let response = await fetch('/api/carts') 
         let result = await response.json()
-
-        if(result.ok){
+        console.log(result);
+         if(result.ok){
             if(result.data.items.length){
+                
                 const {items} = result.data;
+                
                 showItems(items)
             }else{
                 carrito.innerHTML = "<p> ta vacio</p>"
             }
-        }
+        } 
     } catch (error) {
         console.log(error)
     }
@@ -76,5 +79,23 @@
         
     } catch (error) {
         console.error(error);
+    }
+    const removeQuantity = async (id) => {
+        try {
+    
+            let response = await fetch('/api/carts/' + id, {
+                method : 'DELETE'
+            });
+    
+            let result = await response.json();
+    
+            if(result.ok) {
+                showItems( result.data.items)
+            }
+    
+            
+        } catch (error) {
+            console.error(error);
+        }
     }
 };

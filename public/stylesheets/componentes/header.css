@@ -665,6 +665,8 @@
     background: transparent;
     color: white;
     width: 100%;
+    position: relative;
+    left: 0%;
   }
   .home__form button {
     cursor: pointer;
