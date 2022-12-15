@@ -36,12 +36,9 @@ module.exports = {
               maxAge: 1000 * 60,
             });
           }
-          // res.send({ message: "ok" })
-          // localStorage.setItem('user', 'pepe')
-          // console.log(localStorage.getItem('user'));
 
 
-          res.redirect("/?user=pepe");
+          res.redirect("/");
         })
         .catch((err) => console.log(err));
     } else {

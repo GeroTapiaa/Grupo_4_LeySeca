@@ -403,6 +403,7 @@ $("form-register").addEventListener("submit", function (e) {
 
 
   const elements = this.elements;
+  console.log(elements);
   for (let i = 0; i < elements.length - 2; i++) {
 
     if (!elements[i].value.trim() || elements[i].classList.contains('is-invalid')) {
@@ -413,6 +414,7 @@ $("form-register").addEventListener("submit", function (e) {
 
   }
   $('msgError').innerText = null;
+
   error = true;
 
 

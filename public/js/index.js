@@ -15,14 +15,14 @@ cuando entras a la pagina
 
 (function () {
 
-    // const isLogged = localStorage.getItem('isLogged') === 'true';
+    // const isLogged = sessionStorage.getItem('isLogged') === 'true';
 
 
-    /*El valor que trae localStorage es true*/
+    /*El valor que trae sessionStorage es true*/
     const isValidAge = sessionStorage.getItem('isValidAge') === 'true';
 
 
-    /* si isValidAge es falso, remueve al modal la clase 'modal-none-ok' que quita al modal y agrega modal-ok que lo hace visible*/
+    /* si isValidAge es true, le aplica al modal la clase 'modal-none-ok' que quita al modal*/
     if (!isValidAge) {
 
         modal.classList.remove('modal-none-ok')
@@ -43,14 +43,13 @@ function ageValidation(isValid) {
         return window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank').focus()
 
 
-    /*se guarda un valor en el localStorage */
+    /*se guarda un valor en el sessionStorage */
 
     sessionStorage.setItem('isValidAge', true)
 
     modal.classList.remove('modal-ok')
     modal.classList.add('modal-none-ok')
-
-    /* redirecciona al usuario al home independientemente de la vista en donde se inicie la pagina*/
+    /* redirecciona al usuario al home independientemente de la vista en donde se inicie la pagi*/
     window.location.href = '/'
 }
 
