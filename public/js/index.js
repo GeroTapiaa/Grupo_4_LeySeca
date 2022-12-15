@@ -12,7 +12,6 @@ cuando entras a la pagina
 */
 
 (function () {
-    console.log(document.cookie);
     const isLogged = localStorage.getItem('isLogged') === 'true';
     const isValidAge = localStorage.getItem('isValidAge') === 'true';
 
