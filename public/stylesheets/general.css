@@ -40,6 +40,7 @@ small {
   color: red;
   font-size: 10px;
   margin: auto;
+  padding-bottom: 5px;
 }
 h3 {
   font-weight: 700 !important;

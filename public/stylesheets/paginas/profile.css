@@ -4,9 +4,10 @@
     background-size: cover;
     position: relative;
     bottom: 22px;
-    height: 942px;
-    padding-top: 26px;
+
+    padding-top: 128px;
   }
+
   .profile {
     display: flex;
     flex-direction: column;
@@ -20,7 +21,9 @@
   }
   .form__title-profile {
     text-align: center;
-    margin-bottom: 23px;
+    font-size: 54px;
+    margin-top: 27px;
+    font-family: var(--fontKaushan);
   }
   .image_profile {
     display: flex;
@@ -49,11 +52,11 @@
     width: 300px;
     margin: auto;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 107px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 55px;
+    gap: 14px;
   }
   .form__input {
     width: 80%;
@@ -103,7 +106,7 @@
     background-size: cover;
     position: relative;
     bottom: 3px;
-    height: 927px;
+
     padding-top: 21px;
   }
   .profile {
@@ -115,6 +118,9 @@
   }
   .form__title-profile {
     text-align: center;
+    font-size: 54px;
+    margin-top: 65px;
+    font-family: var(--fontKaushan);
   }
   .image_profile {
     display: flex;
@@ -151,11 +157,11 @@
     width: 450px;
     margin: auto;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 98px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 55px;
+    gap: 6px;
   }
   .form__input {
     width: 80%;
@@ -220,6 +226,9 @@
   }
   .form__title-profile {
     text-align: center;
+    font-size: 54px;
+    margin-top: 27px;
+    font-family: var(--fontKaushan);
   }
   .image_profile {
     display: flex;

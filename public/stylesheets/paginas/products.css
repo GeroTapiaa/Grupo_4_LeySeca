@@ -10,6 +10,24 @@
     height: 369px;
     filter: brightness(0.6);
   }
+  .btn-secondary {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    left: 90%;
+    font-size: 35px;
+    padding-top: 18px;
+  }
+  .dropdown-menu {
+    width: 375px;
+    position: absolute !important;
+    top: 4px !important;
+    height: 379px;
+    transition: 0.5s;
+    text-align: center;
+    background: RGBA(21, 20, 21, 0.96);
+    transform: translate3d(48px, 78.5px, 0px) !important;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .section {

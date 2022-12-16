@@ -1,7 +1,7 @@
 const { check } = require('express-validator');
 
 module.exports = [
-    check("name")
+    check("nameProduct")
         .notEmpty().withMessage('El nombre obligatorio').bail(),
 
     check('price')

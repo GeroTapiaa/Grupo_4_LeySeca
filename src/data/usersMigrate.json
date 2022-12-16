@@ -1,26 +1,26 @@
 [
-    {
-       "id": 1,
-       "name": "Florrre",
-       "surname": "Maldonado",
-       "user": "nadia15000",
-       "date": "2000-12-31",
-       "address": "Calle 165 N 1414                                                                    ",
-       "email": "nadiamaldonado3011@gmail.com",
-       "password": "$2a$10$W7E8jtE3pyX/W4PgvUKm2OpyN4EwxU8..sdJYlJc/nearZPLaehjG",
-       "avatar": "avatar-1663114126575.jpg",
-       "rolId": "1"
-    },
-    {
-       "id": 2,
-       "name": "Nadia Florencia",
-       "surname": "Maldonado",
-       "user": "nadia1501",
-       "date": "2000-12-30",
-       "address": "Calle 165 N 1818",
-       "email": "nadiam@gmail.com",
-       "password": "$2a$10$cQH0zb.m7XjnPWiL30qjneoiQ.IxBP2ygOnuxesUvGNTd5gGDWW4W",
-       "avatar": "avatar-1663127704355.jpg",
-       "rolId": "2"
-    }
- ]
+   {
+      "id": 1,
+      "firstName": "Florrre",
+      "surname": "Maldonado",
+      "user": "nadia15000",
+      "date": "2000-12-31",
+      "address": "Calle 165 N 1414                                                                    ",
+      "email": "nadiamaldonado3011@gmail.com",
+      "password": "$2a$10$W7E8jtE3pyX/W4PgvUKm2OpyN4EwxU8..sdJYlJc/nearZPLaehjG",
+      "avatar": "avatar-1663114126575.jpg",
+      "rolId": "1"
+   },
+   {
+      "id": 2,
+      "firstName": "Nadia Florencia",
+      "surname": "Maldonado",
+      "user": "nadia1501",
+      "date": "2000-12-30",
+      "address": "Calle 165 N 1818",
+      "email": "nadiam@gmail.com",
+      "password": "$2a$10$cQH0zb.m7XjnPWiL30qjneoiQ.IxBP2ygOnuxesUvGNTd5gGDWW4W",
+      "avatar": "avatar-1663127704355.jpg",
+      "rolId": "2"
+   }
+]

@@ -107,19 +107,21 @@ const dateNow = moment();
 const validations = (e) => {
 
   switch (e.target.name) {
-    case "name":
+    case "firstName":
       if (
-        exRegs.exRegAlfa.test(e.target.value.trim()) &
-        (e.target.value.length >= 2)
+        !(exRegs.exRegAlfa.test(e.target.value.trim()) &
+          (e.target.value.length >= 2))
       ) {
-        ok("name", "is-valid");
-        cleanError("errorName");
-      } else {
-        errorStyle("name", "is-valid", "is-invalid");
+        errorStyle("firstName", "is-valid", "is-invalid");
         msgError(
           "errorName",
           "El nombre es obligatorio y debe contener al menos dos caracteres alfabéticos"
         );
+
+      } else {
+        ok("firstName", "is-valid");
+        cleanError("errorName");
+
       }
       console.log(e.target.value);
 
@@ -182,6 +184,7 @@ const validations = (e) => {
       console.log(e.target.value);
 
       break;
+
     // PASSWORD, FUNCION 'validatePassword' lINEA 260. 
     case 'password':
       if (
@@ -381,6 +384,7 @@ let preview = (event) => {
 };
 
 /********/
+let errores = {};
 
 // ENVIA EL FORMULARIO SOLO SI ESTA COMPLETO
 $('terminos').addEventListener("click", function (e) {
@@ -390,38 +394,27 @@ $('terminos').addEventListener("click", function (e) {
 })
 
 
-$("form-register").addEventListener("submit", function (e) {
-
+$('form-register').addEventListener('submit', (e) => {
   e.preventDefault();
-  let error = false;
 
-  if (!$('terminos').checked) {
-    error = true;
-    $('errorTerms').innerText = "Debes aceptar las bases y condiciones";
-    $('terminos').classList.add('is-invalid')
-  }
+  const inputs = [firstName, surname, email, password, confirmPassword, address];
+  console.log(inputs);
 
+  for (let i = 0; i < inputs.length; i++) {
 
-  const elements = this.elements;
-  console.log(elements);
-  for (let i = 0; i < elements.length - 2; i++) {
+    if (inputs[i].value.length == 0) {
+      inputs[i].classList.contains('is-invalid')
+      inputs[i].classList.add("is-invalid");
+      $('msgError').innerText = "Debes completar bien los campos requeridos.";
+    } else {
+      inputs[i].classList.remove("is-invalid");
 
-    if (!elements[i].value.trim() || elements[i].classList.contains('is-invalid')) {
-      elements[i].classList.add('is-invalid')
-      $('msgError').innerText = 'Hay campos con errores o están vacíos';
-      error = true;
+      $('form-register').submit()
+
     }
-
   }
-  $('msgError').innerText = null;
+})
 
-  error = true;
-
-
-  !error && this.submit()
-
-
-});
 
 
 

@@ -1,4 +1,3 @@
-console.log('create');
 
 // funcion para solamente llamar una sola vez al "id" de un elemento.
 const $ = (element) => document.getElementById(element);
@@ -45,22 +44,21 @@ const errorStyle = (target, remove, add) => {
 // // NAME
 const validations = (e) => {
   switch (e.target.name) {
-    case "name":
+    case "nameProduct":
       if (
         exRegs.exRegAlfa.test(e.target.value.trim()) &
         (e.target.value.length >= 2)
       ) {
-        ok("name", "is-valid");
+        ok("nameProduct", "is-valid");
         cleanError("errorName");
       } else {
-        errorStyle("name", "is-valid", "is-invalid");
+        errorStyle("nameProduct", "is-valid", "is-invalid");
         msgError(
           "errorName",
           "El nombre es obligatorio y debe contener al menos dos caracteres alfabéticos"
         );
       }
       console.log(e.target.value);
-      checkFields()
 
       break;
 
@@ -83,7 +81,6 @@ const validations = (e) => {
 
       break;
 
-      checkFields()
 
 
     case "discount":
@@ -120,7 +117,6 @@ $("description").addEventListener("keyup", function ({ target }) {
     );
   }
   console.log(target.value);
-  checkFields()
 
 
 });
@@ -136,7 +132,6 @@ $("category").addEventListener("click", function (e) {
     cleanError("errorCategory");
   }
   console.log(e.target.value);
-  checkFields()
 
 
 });
@@ -160,7 +155,6 @@ $("images").addEventListener("change", function () {
 
   }
   console.log(this.value);
-  checkFields()
 
 
 });
@@ -176,25 +170,25 @@ inputs.forEach((input) => {
 
 /*********************** */
 
-const elements = $("form-create").elements;
-
-$("form-create").addEventListener("submit", function (e) {
+$('form-create').addEventListener('submit', (e) => {
   e.preventDefault();
-  let error = false;
 
-  const elements = this.elements;
-  for (let i = 0; i < elements.length - 2; i++) {
+  const inputs = [nameProduct, price, discount, description, category, images];
+  console.log(inputs);
 
-    if (!elements[i].value.trim() || elements[i].classList.contains('is-invalid')) {
-      elements[i].classList.add('is-invalid')
-      $('msgError').innerText = 'Hay campos con errores o están vacíos';
-      error = true;
+  for (let i = 0; i < inputs.length; i++) {
+
+    if (inputs[i].value.length == 0) {
+      inputs[i].classList.contains('is-invalid')
+      inputs[i].classList.add("is-invalid");
+      $('msgError').innerText = "Debes completar bien los campos requeridos.";
+      console.log('hay errores');
+
+    } else {
+      console.log('paso');
+      inputs[i].classList.remove("is-invalid");
+      $('form-create').submit()
+
     }
   }
-
-
-  !error && this.submit()
-  console.log(error);
-
-
-});
+})

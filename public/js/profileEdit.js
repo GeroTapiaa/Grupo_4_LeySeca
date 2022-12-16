@@ -70,15 +70,15 @@ const verifieldUser = async (user) => {
 const validations = (e) => {
 
     switch (e.target.name) {
-        case "name":
+        case "firstName":
             if (
                 exRegs.exRegAlfa.test(e.target.value.trim()) &
                 (e.target.value.length >= 2)
             ) {
-                ok("name", "is-valid");
+                ok("firstName", "is-valid");
                 cleanError("errorName");
             } else {
-                errorStyle("name", "is-valid", "is-invalid");
+                errorStyle("firstName", "is-valid", "is-invalid");
                 msgError(
                     "errorName",
                     "El nombre debe contener al menos 2 caracteres alfabéticos"
@@ -186,25 +186,25 @@ let preview = (event) => {
 /********/
 
 // ENVIA EL FORMULARIO SOLO SI ESTA COMPLETO
-
-$("profile-edit").addEventListener("submit", function (e) {
-
+$('profile-edit').addEventListener('submit', (e) => {
     e.preventDefault();
-    let error = false;
 
-    const elements = this.elements;
-    for (let i = 0; i < elements.length - 1; i++) {
-        if (
-            !elements[i].value.trim() ||
-            elements[i].classList.contains("is-invalid")
-        ) {
-            elements[i].classList.add("is-invalid");
-            $("msgError").innerText = "¡Completá los campos correctamente!";
-            error = true;
+    const inputs = [user, address, surname, firstName];
+    console.log(inputs);
+
+    for (let i = 0; i < inputs.length; i++) {
+
+        if (inputs[i].value.length == 0) {
+            inputs[i].classList.contains('is-invalid')
+            inputs[i].classList.add("is-invalid");
+            $('msgError').innerText = "Debes completar bien los campos requeridos.";
+        } else {
+            inputs[i].classList.remove("is-invalid");
+
+            $('profile-edit').submit()
+
         }
     }
-
-    !error && this.submit()
-});
+})
 
 /********/

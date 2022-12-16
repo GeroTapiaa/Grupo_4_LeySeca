@@ -148,22 +148,26 @@ inputs.forEach((input) => {
 });
 
 /****************************************************************************************** */
-const form = document.getElementById('form-edit')
-let success = false;
-form.addEventListener("submit", function (e) {
-    if (success == false) {
-        e.preventDefault();
-    }
 
+$('form-edit').addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    const elements = this.elements;
-    for (let i = 0; i < elements.length - 2; i++) {
+    const inputs = [nameProduct, price, discount, description, category, images];
+    console.log(inputs);
 
-        if (!elements[i].value.trim() || elements[i].classList.contains('is-invalid')) {
-            elements[i].classList.add('is-invalid')
-            $('msgError').innerText = 'Hay campos con errores o están vacíos';
-            error = true;
+    for (let i = 0; i < inputs.length; i++) {
+
+        if (inputs[i].value.length == 0) {
+            inputs[i].classList.contains('is-invalid')
+            inputs[i].classList.add("is-invalid");
+            $('msgError').innerText = "Debes completar bien los campos requeridos.";
+            console.log('hay errores');
+
+        } else {
+            console.log('paso');
+            inputs[i].classList.remove("is-invalid");
+            $('form-edit').submit()
+
         }
     }
-    !error && this.submit()
-});
+})

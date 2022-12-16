@@ -9,7 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      firstName: {
         type: Sequelize.STRING
       },
       surname: {
@@ -35,11 +35,11 @@ module.exports = {
       },
       rolId: {
         type: Sequelize.INTEGER,
-        references : {
-          model :{
-            tableName : 'Rols'
+        references: {
+          model: {
+            tableName: 'Rols'
           },
-          key : 'id'
+          key: 'id'
         }
       },
       createdAt: {

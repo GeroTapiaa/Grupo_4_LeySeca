@@ -4,7 +4,7 @@ const { loadUsers } = require("../data/db-module");
 
 module.exports = [
     // name
-    check("name")
+    check("firstName")
         .notEmpty()
         .withMessage("Debes ingresar un nombre")
         .bail()
@@ -61,9 +61,9 @@ module.exports = [
     // date
 
     check("date")
-    .notEmpty()
-    .withMessage("Debes ingresar una fecha")
-    .bail()
+        .notEmpty()
+        .withMessage("Debes ingresar una fecha")
+        .bail()
         .isBefore(moment().subtract(18, "year").format("Y-M-D"))
         .withMessage("Debes ser mayor de 18 años"),
 

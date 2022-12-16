@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const { validationResult } = require("express-validator");
 const { eliminarImg } = require("../data/db-module");
+const { Op } = db.Sequelize;
 
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
@@ -45,6 +46,12 @@ module.exports = {
   details: (req, res) => {
     let product = db.Product.findByPk(req.params.id);
     let productsStatus = db.Product.findAll({
+      where: {
+        categoryId: {
+          [Op.gte]: 2,
+        },
+      },
+      order: [["categoryId", "ASC"]],
       limit: 4,
     });
     Promise.all([product, productsStatus]).then(([product, productsStatus]) => {
@@ -86,7 +93,7 @@ module.exports = {
     }
 
     if (Object.entries(errors).length === 0) {
-      const { name, discount, price, description, categoryId } = req.body;
+      const { nameProduct, discount, price, description, categoryId } = req.body;
 
       if (req.file) {
         let product = db.Product.findByPk(req.params.id);
@@ -96,7 +103,7 @@ module.exports = {
       }
       const products = {
         id: req.params.id,
-        name: name.trim(),
+        nameProduct: nameProduct.trim(),
         discount: discount,
         price: price,
         description,
@@ -115,7 +122,7 @@ module.exports = {
                 image: req.file ? req.file.filename : "default-ley-seca.jpg",
               },
               { where: { id: req.params.id } }
-            ).then((product) => {});
+            ).then((product) => { });
           }
 
           return res.redirect("/products/productDetail/" + req.params.id);
@@ -157,10 +164,10 @@ module.exports = {
     let errors = validationResult(req);
 
     if (errors.isEmpty()) {
-      const { name, price, discount, description, category } = req.body;
+      const { nameProduct, price, discount, description, category } = req.body;
 
       db.Product.create({
-        name: name.trim(),
+        nameProduct: nameProduct.trim(),
         price: +price,
         discount,
         description,

@@ -34,8 +34,8 @@
             <!-- MAIN SECTION PRODUCTS -->
 
             <section class="home__main__section__products">
-              <% productsDiscount.forEach(({id, name, price , discount, image})=> { %>
-                <%- include('../partials/products',{ id, name, price, discount, image, toThousand }) %>
+              <% productsDiscount.forEach(({id, nameProduct, price , discount, image})=> { %>
+                <%- include('../partials/products',{ id, nameProduct, price, discount, image, toThousand }) %>
                   <% }) %>
             </section>
 

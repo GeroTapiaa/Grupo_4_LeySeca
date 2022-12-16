@@ -24,64 +24,20 @@ module.exports = {
 
       })
         .then((user) => {
+          req.session.userLogin = {
+            id: +user.id,
+            firstName: user.firstName,
+            avatar: user.avatar ? user.avatar.filename : "default-ley-seca.jpg",
+            rol: user.rolId,
+          };
+          if (req.body.remember) {
 
-
-      req.session.userLogin = {
-        id: +user.id,
-        name: user.name,
-        avatar: user.avatar ? user.avatar.filename : "default-ley-seca.jpg",
-        rol: user.rolId,
-    };
-        if (req.body.remember) {
-          
-          res.cookie("userLeySeca", req.session.userLogin, {
-                    maxAge: 1000 * 60,
-          });
-        }
-
-        /* carrito*/
-
-
-        db.Order.findOne({
-          where : {
-            userId :  req.session.userLogin.id,
-            stateId : 1
-
-          },
-          include : [
-            { 
-              association : 'carts',
-              attributes : ['id', 'quantity'],
-              include : [
-                {
-                  association: 'product',
-                  attributes : ['id', 'name', 'price', 'discount'],
-                  
-                }
-              ]
-            }
-          ]
-        }).then(order =>{
-          if(order){
-            req.session.orderCart = {
-              id : order.id,
-              total : order.total,
-              items : order.cart
-            }
-          }else{
-            db.Order.create({
-              stateId : 1,
-              total : 0,
-              userId : req.session.userLogin.id,
-              //paymentId : 1
-            }).then(order => {
-              req.session.orderCart = {
-                id : order.id,
-                total : order.total,
-                items : []
-              }
-            })
+            res.cookie("userLeySeca", req.session.userLogin, {
+              maxAge: 1000 * 60,
+            });
           }
+
+
           res.redirect("/");
         })
 
@@ -113,11 +69,11 @@ module.exports = {
 
 
 
-    const { name, surname, user, date, address, email, password } = req.body;
+    const { firstName, surname, user, date, address, email, password } = req.body;
 
     if (errors.isEmpty()) {
       db.User.create({
-        name: name.trim(),
+        firstName: firstName.trim(),
         surname: surname,
         user: user.trim(),
         date: date,
@@ -176,7 +132,7 @@ module.exports = {
 
     db.User.update(
       {
-        name: req.body.name?.trim(),
+        firstName: req.body.firstName?.trim(),
         user: req.body.user?.trim(),
         address: req.body.address?.trim(),
         avatar: req.file ? req.file.filename : req.session.userLogin.avatar
@@ -191,7 +147,7 @@ module.exports = {
         req.session.userLogin = {
 
           ...req.session.userLogin,
-          name: user.name,
+          firstName: user.firstName,
           user: user.user,
           address: user.address,
           rol: req.session.userLogin.rol,
