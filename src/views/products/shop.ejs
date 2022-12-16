@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head', { title : 'Shop' }) %>
+<%- include('../partials/head', { title : 'Shop' }) %>
 
   <body class="home">
     <%- include('../partials/modal') %> <%- include('../partials/navbar') %>
 
-    <!-- MAIN -->
+        <!-- MAIN -->
 
-    <main class="home__main">
-      <section class="section">
-        <img src="/images/logos/crears - copia.png" width="100%" alt="" />
-      </section>
+        <main class="home__main">
+          <section class="section">
+            <img src="/images/logos/crears - copia.png" width="100%" alt="" />
+          </section>
 
-      <!-- MAIN SECTION PRODUCTS -->
+          <!-- MAIN SECTION PRODUCTS -->
 
-      <h1 id="title_shop">Nuestro Shop</h1>
+          <h1 id="title_shop">Nuestro Shop</h1>
 
-      <section class="home__main__section__products">
-        <% productsClothing.forEach(({id, name, price , discount, image}) => {
-        %> <%- include('../partials/products',{ id, name, price, discount,
-        image, toThousand }) %> <% }) %>
-      </section>
-    </main>
+          <section class="home__main__section__products">
+            <% productsClothing.forEach(({id, nameProduct, price , discount, image})=> {
+              %> <%- include('../partials/products',{ id, nameProduct, price, discount, image, toThousand }) %>
+                <% }) %>
+          </section>
+        </main>
 
-    <%- include('../partials/footer') %>
+        <%- include('../partials/footer') %>
   </body>
+
 </html>

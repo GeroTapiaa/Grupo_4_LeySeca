@@ -93,7 +93,7 @@ module.exports = {
     }
 
     if (Object.entries(errors).length === 0) {
-      const { name, discount, price, description, categoryId } = req.body;
+      const { nameProduct, discount, price, description, categoryId } = req.body;
 
       if (req.file) {
         let product = db.Product.findByPk(req.params.id);
@@ -103,7 +103,7 @@ module.exports = {
       }
       const products = {
         id: req.params.id,
-        name: name.trim(),
+        nameProduct: nameProduct.trim(),
         discount: discount,
         price: price,
         description,
@@ -164,10 +164,10 @@ module.exports = {
     let errors = validationResult(req);
 
     if (errors.isEmpty()) {
-      const { name, price, discount, description, category } = req.body;
+      const { nameProduct, price, discount, description, category } = req.body;
 
       db.Product.create({
-        name: name.trim(),
+        nameProduct: nameProduct.trim(),
         price: +price,
         discount,
         description,

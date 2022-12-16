@@ -1,119 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head', { title : 'Perfil' }) %>
+<%- include('../partials/head', { title : 'Perfil' }) %>
 
   <body class="body__profile-edit">
     <%- include('../partials/modal') %> <%- include( '../partials/navbar' ) %>
 
-    <main class="main__profile-edit">
-      <div class="main__profile-section-edit">
-        <h2 class="form__title-edit">Editá tu perfil</h2>
+        <main class="main__profile-edit">
+          <div class="main__profile-section-edit">
+            <h2 class="form__title-edit">Editá tu perfil</h2>
 
-        <form
-          action="/users/update/<%= user.id %>?_method=PUT"
-          class="profile-edit"
-          id="profile-edit"
-          enctype="multipart/form-data"
-          method="POST"
-        >
-          <div class="form__register-container-edit">
-            <div class="form__register-photo-edit">
-              <figure class="image_profile-edit">
-                <img
-                  src="/images/users/<%= user.avatar %>  "
-                  alt=""
-                  id="img-photo"
-                />
-                <input
-                  type="file"
-                  name="avatar"
-                  id="avatar"
-                  onchange="preview(event)"
-                />
+            <form action="/users/update/<%= user.id %>?_method=PUT" class="profile-edit" id="profile-edit"
+              enctype="multipart/form-data" method="POST">
+              <div class="form__register-container-edit">
+                <div class="form__register-photo-edit">
+                  <figure class="image_profile-edit">
+                    <img src="/images/users/<%= user.avatar %>  " alt="" id="img-photo" />
+                    <input type="file" name="avatar" id="avatar" onchange="preview(event)" />
 
-                <label class="label_photo-edit" for="avatar">
-                  <i class="fa-solid fa-camera"></i
-                ></label>
-              </figure>
-            </div>
+                    <label class="label_photo-edit" for="avatar">
+                      <i class="fa-solid fa-camera"></i></label>
+                  </figure>
+                </div>
 
-            <!-- name  -->
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="name"
-                class="form__input-edit"
-                name="name"
-                value="<%= user.name %>"
-              />
-              <label for="name" class="form__label-edit">Nombre:</label>
-            </div>
-            <small>
-              <%= locals.errors && errors.name ? errors.name.msg : null %>
-            </small>
-            <small id="errorName"></small>
+                <!-- name  -->
+                <div class="form_profile-edit">
+                  <input type="text" id="firstName" class="form__input-edit" name="firstName"
+                    value="<%= user.firstName %>" />
+                  <label for="name" class="form__label-edit">Nombre:</label>
+                </div>
+                <small>
+                  <%= locals.errors && errors.firstName ? errors.firstName.msg : null %>
+                </small>
+                <small id="errorName"></small>
 
-            <!-- surname -->
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="surname"
-                class="form__input-edit"
-                name="surname"
-                value="<%= user.surname %>"
-              />
-              <label for="surname" class="form__label-edit">Apellido:</label>
-            </div>
-            <small>
-              <%= locals.errors && errors.surname ? errors.surname.msg : null %>
-            </small>
-            <small id="errorSurname"></small>
+                <!-- surname -->
+                <div class="form_profile-edit">
+                  <input type="text" id="surname" class="form__input-edit" name="surname" value="<%= user.surname %>" />
+                  <label for="surname" class="form__label-edit">Apellido:</label>
+                </div>
+                <small>
+                  <%= locals.errors && errors.surname ? errors.surname.msg : null %>
+                </small>
+                <small id="errorSurname"></small>
 
-            <!-- user  -->
+                <!-- user  -->
 
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="user"
-                class="form__input-edit"
-                name="user"
-                value="<%= user.user %>"
-              />
-              <label for="user" class="form__label-edit">Usuario:</label>
-            </div>
-            <small>
-              <%= locals.errors && errors.user ? errors.user.msg : null %>
-            </small>
-            <small id="errorUser"></small>
+                <div class="form_profile-edit">
+                  <input type="text" id="user" class="form__input-edit" name="user" value="<%= user.user %>" />
+                  <label for="user" class="form__label-edit">Usuario:</label>
+                </div>
+                <small>
+                  <%= locals.errors && errors.user ? errors.user.msg : null %>
+                </small>
+                <small id="errorUser"></small>
 
-            <!-- address -->
+                <!-- address -->
 
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="address"
-                class="form__input-edit"
-                name="address"
-                value="<%= user.address %> "
-              />
+                <div class="form_profile-edit">
+                  <input type="text" id="address" class="form__input-edit" name="address"
+                    value="<%= user.address %> " />
 
-              <label for="address" class="form__label-edit">Dirección:</label>
-            </div>
-            <small>
-              <%= locals.errors && errors.address ? errors.address.msg : null %>
-            </small>
-            <small id="errorAddress"></small>
+                  <label for="address" class="form__label-edit">Dirección:</label>
+                </div>
+                <small>
+                  <%= locals.errors && errors.address ? errors.address.msg : null %>
+                </small>
+                <small id="errorAddress"></small>
 
-            <div class="form__register-button">
-              <button type="submit" class="button">Guardar</button>
-              <a href="/"> <button class="button">Volver</button></a>
-            </div>
+                <div class="form__register-button">
+                  <button type="submit" class="button">Guardar</button>
+                  <a href="/"> <button class="button">Volver</button></a>
+                </div>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
-      <%- include( '../partials/footer' ) %>
-    </main>
+          <%- include( '../partials/footer' ) %>
+        </main>
 
-    <script defer src="/js/profileEdit.js"></script>
+        <script defer src="/js/profileEdit.js"></script>
   </body>
+
 </html>

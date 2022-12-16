@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Cerveza Colonia Suiza",
+        "nameProduct": "Cerveza Colonia Suiza",
         "description": "Cerveza rubia de gran cuerpo y complejidad en boca enriquecida gracias al carácter especiado y el perfil espirituoso de las bayas de enebro silvestre.",
         "image": "Cerveza-colonia.png",
         "categoryId": 1,
@@ -10,7 +10,7 @@
     },
     {
         "id": 2,
-        "name": "COMBO BLONDE: 2 Porrones de nuestras Cervezas Rubias",
+        "nameProduct": "COMBO BLONDE: 2 Porrones de nuestras Cervezas Rubias",
         "description": "2 Porrones de Golden Ale + 2 Porrones de Colonia Suiza",
         "image": "Cerveza-combo_colonia-golden.png",
         "categoryId": 1,
@@ -20,7 +20,7 @@
     },
     {
         "id": 3,
-        "name": "COMBO IPA + COLONIA SUIZA",
+        "nameProduct": "COMBO IPA + COLONIA SUIZA",
         "description": "1 Porron de Ipa Patagonica + 1 Porron de Colonia Suiza ",
         "image": "Cerveza-combo_colonia-IPA.png",
         "categoryId": 1,
@@ -30,7 +30,7 @@
     },
     {
         "id": 4,
-        "name": "COMBO OLD ALE + COLONIA SUIZA",
+        "nameProduct": "COMBO OLD ALE + COLONIA SUIZA",
         "description": "1 Porron de Old Ale + 1 Porron de Colonia Suiza ",
         "image": "Cerveza-combo_colonia-old.png",
         "categoryId": 1,
@@ -40,7 +40,7 @@
     },
     {
         "id": 5,
-        "name": "COMBO RAÍCES DE VICTORIA GINGER PALE ALE + COLONIA SUIZA",
+        "nameProduct": "COMBO RAÍCES DE VICTORIA GINGER PALE ALE + COLONIA SUIZA",
         "description": "1 Porron de RAÍCES DE VICTORIA GINGER PALE ALE + 1 Porron de Colonia Suiza ",
         "image": "Cerveza-Combo_colonia-raices.png",
         "categoryId": 1,
@@ -49,7 +49,7 @@
     },
     {
         "id": 6,
-        "name": "COMBO COLONIA SUIZA + SUREÑA AMBER ALE",
+        "nameProduct": "COMBO COLONIA SUIZA + SUREÑA AMBER ALE",
         "description": "1 PORRON DE COLONIA SUIZA +1 PORRON DE SUREÑA AMBER ALE ",
         "image": "Cerveza-combo_colonia-sureña.png",
         "categoryId": 1,
@@ -57,7 +57,7 @@
     },
     {
         "id": 7,
-        "name": "COMBO IPA PATAGONICA + SUREÑA AMBER ALE",
+        "nameProduct": "COMBO IPA PATAGONICA + SUREÑA AMBER ALE",
         "description": "1 PORRON DE IPA PATAGONICA + 1 PORRON DE SUREÑA AMBER ALE ",
         "image": "Cerveza-Combo_Ipa-sureña.png",
         "categoryId": 1,
@@ -65,7 +65,7 @@
     },
     {
         "id": 8,
-        "name": "COMBO RAÍCES DE VICTORIA GINGER PALE ALE + SUREÑA AMBER ALE",
+        "nameProduct": "COMBO RAÍCES DE VICTORIA GINGER PALE ALE + SUREÑA AMBER ALE",
         "description": "1 Porron de Raíces de Victoria Ginger Pale Ale + 1 Porron de Sureña Amber Ale ",
         "image": "Cerveza-combo_sureña-raices.png",
         "categoryId": 1,
@@ -74,7 +74,7 @@
     },
     {
         "id": 9,
-        "name": "CERVEZA IPA PATAGONICA",
+        "nameProduct": "CERVEZA IPA PATAGONICA",
         "description": "Predominan las maltas caramelizadas, que le aportan su color rubí. Carácter intenso debido a la cantidad de lúpulo que la compone.",
         "image": "Cerveza-Ipa.png",
         "categoryId": 1,
@@ -84,7 +84,7 @@
     },
     {
         "id": 10,
-        "name": "CERVEZA OLD ALE",
+        "nameProduct": "CERVEZA OLD ALE",
         "description": "Cerveza de color granate. Gran cuerpo y espíritu aportado por un blend de 6 maltas caramelizadas. Su perfil maltoso, alicorado y dulzón con notas de vainilla y un reposo en madurador por 60 días le dan robustez y redondo bouquet. La cerveza mas premiada de la casa.",
         "image": "Cerveza-Old.png",
         "categoryId": 1,
@@ -93,7 +93,7 @@
     },
     {
         "id": 11,
-        "name": "CERVEZA RAÍCES DE VICTORIA GINGER PALE ALE",
+        "nameProduct": "CERVEZA RAÍCES DE VICTORIA GINGER PALE ALE",
         "price": 355,
         "categoryId": 1,
         "description": "Una Pale Ale estilo americano con lúpulo 100% Victoria cosechado en El Bolsón, que le aporta notas de Maracuyá y Mandarina, con adición de ralladura de Jengibre.",
@@ -101,7 +101,7 @@
     },
     {
         "id": 12,
-        "name": "CERVEZA SUREÑA AMBER ALE",
+        "nameProduct": "CERVEZA SUREÑA AMBER ALE",
         "discount": 5,
         "price": 330,
         "categoryId": 1,
@@ -111,7 +111,7 @@
     },
     {
         "id": 13,
-        "name": "COMBITO DÚO: 2 Porrones",
+        "nameProduct": "COMBITO DÚO: 2 Porrones",
         "description": "Incluye 2 Porrones + 1 IPA PATAGÓNICA +  1 GOLDEN ALE ",
         "image": "Cervezas-combo_golden-Ipa.png",
         "categoryId": 1,
@@ -119,7 +119,7 @@
     },
     {
         "id": 14,
-        "name": "COMBITO DÚO: 2 Porrones",
+        "nameProduct": "COMBITO DÚO: 2 Porrones",
         "description": "Incluye 2 Porrones + 1 GOLDEN ALE + 1 SUREÑA AMBER ALE ",
         "image": "Cervezas-combo_golden-sureña.png",
         "categoryId": 1,
@@ -127,7 +127,7 @@
     },
     {
         "id": 15,
-        "name": "COMBITO DÚO: 2 Porrones",
+        "nameProduct": "COMBITO DÚO: 2 Porrones",
         "description": "Incluye 2 Porrones + 1 IPA PATAGONICA + 1 RAÍCES DE VICTORIA ",
         "image": "Cervezas-combo_Ipa-raices.png",
         "categoryId": 1,
@@ -135,7 +135,7 @@
     },
     {
         "id": 16,
-        "name": "COMBITO DÚO: 2 Porrones",
+        "nameProduct": "COMBITO DÚO: 2 Porrones",
         "description": "Incluye 2 porrones + 1 GOLDEN ALE + 1 RAÍCES DE VICTORIA ",
         "image": "Cervezas-Combo-golden-raices.png",
         "categoryId": 1,
@@ -143,7 +143,7 @@
     },
     {
         "id": 17,
-        "name": "COMBO ESPECIAL SALSAS: 8 Porrones + 2 Salsas Berlina",
+        "nameProduct": "COMBO ESPECIAL SALSAS: 8 Porrones + 2 Salsas Berlina",
         "description": "Incluye + 4 Porrones Golden Ale + 4 Porrones IPA +  2 Salsas Berlina ",
         "image": "cervezasx8-salsas.jpg",
         "categoryId": 1,
@@ -153,7 +153,7 @@
     },
     {
         "id": 18,
-        "name": "SALSAS LEY SECA: 4 KETCHUP IPA",
+        "nameProduct": "SALSAS LEY SECA: 4 KETCHUP IPA",
         "description": "Incluye + 4 Salsas Ketchup IPA de 295 g ",
         "image": "Ketchup-Ipa.jpg",
         "categoryId": 1,
@@ -163,7 +163,7 @@
     },
     {
         "id": 19,
-        "name": "SALSAS LEY SECA: 4 BBQ STOUT",
+        "nameProduct": "SALSAS LEY SECA: 4 BBQ STOUT",
         "description": "Incluye + 4 Salsas BBQ Stout de 295 g ",
         "image": "salsas-bbq.jpg",
         "categoryId": 1,
@@ -173,7 +173,7 @@
     },
     {
         "id": 20,
-        "name": "VICUÑA SACRAMENTO ANDINO 750ml",
+        "nameProduct": "VICUÑA SACRAMENTO ANDINO 750ml",
         "description": "Esta cerveza ha reposado y madurado a bajas temperaturas `por más de dos años para luego ser envasada a mano, botella por botella. El resultado es una cerveza irrepetible de edición limitada.",
         "image": "vicuna.png",
         "categoryId": 1,
@@ -183,7 +183,7 @@
     },
     {
         "id": 21,
-        "name": "Gorra de lana gris Ley Seca",
+        "nameProduct": "Gorra de lana gris Ley Seca",
         "description": "Colores disponibles: Verde militar , Negro",
         "sizeId": 7,
         "image": "gorra-lana-gris.png",
@@ -194,7 +194,7 @@
     },
     {
         "id": 22,
-        "name": "Remera abducción",
+        "nameProduct": "Remera abducción",
         "description": " Talle S al XXL ",
         "sizeId": 1,
         "image": "remera-hombre-alien.png",
@@ -205,7 +205,7 @@
     },
     {
         "id": 23,
-        "name": "Remera amor por la birra",
+        "nameProduct": "Remera amor por la birra",
         "description": "Talle S al XXL",
         "sizeId": 3,
         "image": "remera-hombre-electro.png",
@@ -216,7 +216,7 @@
     },
     {
         "id": 24,
-        "name": "Remera Drinking team",
+        "nameProduct": "Remera Drinking team",
         "description": "Talle S al XXL",
         "sizeId": 3,
         "image": "remera-hombre-espalda.png",
@@ -226,7 +226,7 @@
     },
     {
         "id": 25,
-        "name": "Remera Birra eco",
+        "nameProduct": "Remera Birra eco",
         "description": "Talle S al XXL ",
         "sizeId": 3,
         "image": "remera-hombre-logo.png",
@@ -235,7 +235,7 @@
     },
     {
         "id": 26,
-        "name": "Remera azul premium",
+        "nameProduct": "Remera azul premium",
         "description": "Talle S al XXL",
         "sizeId": 3,
         "image": "remera-hombre-logo2.png",
@@ -244,7 +244,7 @@
     },
     {
         "id": 27,
-        "name": "Remera negra premium",
+        "nameProduct": "Remera negra premium",
         "description": "Talle S al XXL",
         "sizeId": 3,
         "image": "remera-hombre-logo3.png",
@@ -253,7 +253,7 @@
     },
     {
         "id": 28,
-        "name": "Remera San Patricio",
+        "nameProduct": "Remera San Patricio",
         "description": "Talle S al XXL",
         "sizeId": 3,
         "image": "remera-hombre-patricio.png",
@@ -262,7 +262,7 @@
     },
     {
         "id": 29,
-        "name": "Remera gris claro Be Er",
+        "nameProduct": "Remera gris claro Be Er",
         "description": " Talle S al XXL",
         "sizeId": 3,
         "image": "remera-mujer-grisclaro.png",
@@ -271,7 +271,7 @@
     },
     {
         "id": 30,
-        "name": "Remera gris topo Be Er",
+        "nameProduct": "Remera gris topo Be Er",
         "description": "Talle S al XXL ",
         "sizeId": 3,
         "image": "remera-mujer-grisoscuro.png",
@@ -280,7 +280,7 @@
     },
     {
         "id": 31,
-        "name": "Remera abducción",
+        "nameProduct": "Remera abducción",
         "description": "Talle S al XXL",
         "sizeId": 3,
         "image": "remera-mujer-logo-alien.png",
@@ -289,7 +289,7 @@
     },
     {
         "id": 32,
-        "name": "Remera Chop",
+        "nameProduct": "Remera Chop",
         "description": "Talle S al XXL",
         "sizeId": 3,
         "image": "remera-mujer-logo.png",
@@ -298,7 +298,7 @@
     },
     {
         "id": 33,
-        "name": "Remera Malta",
+        "nameProduct": "Remera Malta",
         "description": "Talle S al XXL",
         "sizeId": 3,
         "image": "remera-mujer-logo2.png",
@@ -307,7 +307,7 @@
     },
     {
         "id": 34,
-        "name": "Remera Beer",
+        "nameProduct": "Remera Beer",
         "description": "Talle S al XXL",
         "sizeId": 3,
         "image": "remera-mujer-logo3.png",
@@ -316,7 +316,7 @@
     },
     {
         "id": 35,
-        "name": "Remera This Girl",
+        "nameProduct": "Remera This Girl",
         "description": "Talle S al XXL",
         "sizeId": 3,
         "image": "remera-mujer-lover.png",
@@ -325,7 +325,7 @@
     },
     {
         "id": 36,
-        "name": "Remera Princesa Leia",
+        "nameProduct": "Remera Princesa Leia",
         "description": "Talle S al XXL",
         "sizeId": 3,
         "image": "remera-mujer-princesa.png",
@@ -334,7 +334,7 @@
     },
     {
         "id": 37,
-        "name": "Gorra trucker",
+        "nameProduct": "Gorra trucker",
         "description": "Colores disponibles: Rojo , Azul",
         "sizeId": 7,
         "image": "trucker-gorra.png",
@@ -345,7 +345,7 @@
     },
     {
         "id": 38,
-        "name": "Vicera Cheers",
+        "nameProduct": "Vicera Cheers",
         "description": "Colores disponibles: Verde militar , Blanco, gris.",
         "sizeId": 7,
         "image": "vicera-chers.png",
@@ -354,7 +354,7 @@
     },
     {
         "id": 39,
-        "name": "Vicera Drinking team",
+        "nameProduct": "Vicera Drinking team",
         "description": "Colores disponibles: Verde militar , Blanco, Negro.",
         "sizeId": 7,
         "image": "vicera-gris-alas.png",
@@ -363,7 +363,7 @@
     },
     {
         "id": 40,
-        "name": "Vicera Gris Ley seca",
+        "nameProduct": "Vicera Gris Ley seca",
         "description": "Colores disponibles: Verde militar , Blanco, Negro.",
         "sizeId": 7,
         "image": "vicera-gris.png",
@@ -374,7 +374,7 @@
     },
     {
         "id": 41,
-        "name": "Vicera Beers",
+        "nameProduct": "Vicera Beers",
         "description": "Colores disponibles: Rojo , Blanco, gris.",
         "sizeId": 7,
         "image": "vicera-negra-logo.png",
@@ -383,7 +383,7 @@
     },
     {
         "id": 42,
-        "name": "Vicera negra Ley Seca",
+        "nameProduct": "Vicera negra Ley Seca",
         "description": "Colores disponibles: Rojo , Blanco, gris.",
         "sizeId": 7,
         "image": "vicera-negra.png",
@@ -392,7 +392,7 @@
     },
     {
         "id": 43,
-        "name": "Vicera vede I love Beer",
+        "nameProduct": "Vicera vede I love Beer",
         "description": "Colores disponibles: Negro , Blanco, gris.",
         "sizeId": 7,
         "image": "vicera-verde.png",

@@ -18,11 +18,12 @@
                             enctype="multipart/form-data">
                             <div class="product-detail">
                                 <div class="form__box">
-                                    <label for="name" class="label-form">Nombre del producto:</label>
-                                    <input type="text" id="name" name="name" placeholder="Ingrese el producto"
-                                        class="input_form" value="<%= productEdit.name %> ">
+                                    <label for="nameProduct" class="label-form">Nombre del producto:</label>
+                                    <input type="text" id="nameProduct" name="nameProduct"
+                                        placeholder="Ingrese el producto" class="input_form"
+                                        value="<%= productEdit.nameProduct %> ">
                                     <small>
-                                        <%= locals.errors && errors.name ? errors.name.msg : null %>
+                                        <%= locals.errors && errors.nameProduct ? errors.nameProduct.msg : null %>
                                     </small>
                                     <small id="errorName"></small>
                                 </div>

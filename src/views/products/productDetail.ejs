@@ -13,7 +13,7 @@
               </div>
               <div class="detalle__producto-detalle">
                 <h3>
-                  <%=product.name %>
+                  <%=product.nameProduct %>
                 </h3>
                 <p>
                   <%= product.description %>
@@ -52,8 +52,8 @@
 
           <h2 class="detalle__text--sugerencia">Te puede interesar</h2>
           <section class="home__main__section__products">
-            <% productsStatus.forEach(({id, name, price , discount, image})=> { %>
-              <%- include('../partials/products',{ id, name, price, discount, image, toThousand }) %>
+            <% productsStatus.forEach(({id, nameProduct, price , discount, image})=> { %>
+              <%- include('../partials/products',{ id, nameProduct, price, discount, image, toThousand }) %>
                 <% }) %>
           </section>
         </main>

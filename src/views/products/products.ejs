@@ -17,8 +17,8 @@
           <h1 id="title_shop">Nuestros Productos</h1>
 
           <section class="home__main__section__products">
-            <% productsBeer.forEach(({id, name, price , discount, image})=> { %>
-              <%- include('../partials/products',{ id, name, price, discount, image, toThousand }) %>
+            <% productsBeer.forEach(({id, nameProduct, price , discount, image})=> { %>
+              <%- include('../partials/products',{ id, nameProduct, price, discount, image, toThousand }) %>
                 <% }) %>
           </section>
         </main>

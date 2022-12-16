@@ -10,7 +10,6 @@ const exRegs = {
     exRegPass:
         /^(?=.*)(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,8}/,
     exRegUser: /^[a-zA-Z0-9\_\-]{4,16}$/,
-    exRegNum: /^[0-9]+$/,
 
 };
 /********/
@@ -49,7 +48,7 @@ const validations = (e) => {
         case "user":
             if (
                 !exRegs.exRegUser.test(e.target.value.trim()) &
-                !(e.target.value.length >= 2)
+                (e.target.value.length >= 2)
             ) {
                 errorStyle("user", "is-valid", "is-invalid");
                 msgError(
@@ -66,7 +65,7 @@ const validations = (e) => {
             break;
         case 'password':
             if (
-                exRegs.exRegNum.test(e.target.value) &&
+                exRegs.exRegPass.test(e.target.value) &&
                 (e.target.value.length >= 6)
             ) {
                 ok("password", "is-valid");
@@ -115,30 +114,26 @@ $("eye-password").addEventListener("click", ({ target }) => {
 
 // ENVIA EL FORMULARIO SOLO SI ESTA COMPLETO
 
-$("login").addEventListener("submit", function (e) {
 
+$('login').addEventListener('submit', (e) => {
     e.preventDefault();
-    let error = false;
 
-    const elements = this.elements;
-    console.log(elements);
+    const inputs = [user, password];
+    console.log(inputs);
 
-    for (let i = 0; i < elements.length - 1; i++) {
-        if (
-            !elements[i].value.trim() ||
-            elements[i].classList.contains("is-invalid")
-        ) {
-            console.log('HAY ERRORES');
+    for (let i = 0; i < inputs.length; i++) {
 
-            elements[i].classList.add("is-invalid");
-            $("msgError").innerText = "¡Completá los campos correctamente!";
-            error = true;
+        if (inputs[i].value.length == 0) {
+            inputs[i].classList.contains('is-invalid')
+            inputs[i].classList.add("is-invalid");
+            $('msgError').innerText = "Debes completar bien los campos requeridos.";
+        } else {
+            inputs[i].classList.remove("is-invalid");
+
+            $('login').submit()
+
         }
     }
-    !error && this.submit()
-
-    console.log('ESTA LIMPIO');
-    e.preventDefault();
-});
+})
 
 /********/

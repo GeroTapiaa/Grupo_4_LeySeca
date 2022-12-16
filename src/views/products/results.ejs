@@ -14,8 +14,8 @@
               </h2>
             </div>
             <article class="home__main__section__products">
-              <% if (results.length> 0) { %> <% results.forEach(({id, name, price , discount, image})=> { %> <%-
-                    include('../partials/products',{ id, name, price, discount, image, toThousand }) %>
+              <% if (results.length> 0) { %> <% results.forEach(({id, nameProduct, price , discount, image})=> { %> <%-
+                    include('../partials/products',{ id, nameProduct, price, discount, image, toThousand }) %>
                     <% }) %>
                       <% } else { %>
                         <div class="main__results__products">
