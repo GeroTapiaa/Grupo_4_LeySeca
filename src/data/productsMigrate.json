@@ -4,37 +4,39 @@
         "name": "Cerveza Colonia Suiza",
         "description": "Cerveza rubia de gran cuerpo y complejidad en boca enriquecida gracias al carácter especiado y el perfil espirituoso de las bayas de enebro silvestre.",
         "image": "Cerveza-colonia.png",
-       "categoryId": 1,
-        "price": 350
+        "categoryId": 1,
+        "price": 350,
+        " productStatusId": 2
     },
     {
         "id": 2,
         "name": "COMBO BLONDE: 2 Porrones de nuestras Cervezas Rubias",
         "description": "2 Porrones de Golden Ale + 2 Porrones de Colonia Suiza",
         "image": "Cerveza-combo_colonia-golden.png",
-       "categoryId": 1,
+        "categoryId": 1,
         "price": 999,
         "discount": 10,
-        " productStatusId":2
+        " productStatusId": 1
     },
     {
         "id": 3,
         "name": "COMBO IPA + COLONIA SUIZA",
         "description": "1 Porron de Ipa Patagonica + 1 Porron de Colonia Suiza ",
         "image": "Cerveza-combo_colonia-IPA.png",
-       "categoryId": 1,
+        "categoryId": 1,
         "price": 599,
         "discount": 5,
-        " productStatusId": 2
+        " productStatusId": 1
     },
     {
         "id": 4,
         "name": "COMBO OLD ALE + COLONIA SUIZA",
         "description": "1 Porron de Old Ale + 1 Porron de Colonia Suiza ",
         "image": "Cerveza-combo_colonia-old.png",
-       "categoryId": 1,
+        "categoryId": 1,
         "price": 599,
-        "discount": 15
+        "discount": 15,
+        " productStatusId": 1
     },
     {
         "id": 5,
@@ -42,14 +44,15 @@
         "description": "1 Porron de RAÍCES DE VICTORIA GINGER PALE ALE + 1 Porron de Colonia Suiza ",
         "image": "Cerveza-Combo_colonia-raices.png",
         "categoryId": 1,
-        "price": 599
+        "price": 599,
+        " productStatusId": 2
     },
     {
         "id": 6,
         "name": "COMBO COLONIA SUIZA + SUREÑA AMBER ALE",
         "description": "1 PORRON DE COLONIA SUIZA +1 PORRON DE SUREÑA AMBER ALE ",
         "image": "Cerveza-combo_colonia-sureña.png",
-       "categoryId": 1,
+        "categoryId": 1,
         "price": 599
     },
     {
@@ -57,7 +60,7 @@
         "name": "COMBO IPA PATAGONICA + SUREÑA AMBER ALE",
         "description": "1 PORRON DE IPA PATAGONICA + 1 PORRON DE SUREÑA AMBER ALE ",
         "image": "Cerveza-Combo_Ipa-sureña.png",
-       "categoryId": 1,
+        "categoryId": 1,
         "price": 599
     },
     {
@@ -65,8 +68,9 @@
         "name": "COMBO RAÍCES DE VICTORIA GINGER PALE ALE + SUREÑA AMBER ALE",
         "description": "1 Porron de Raíces de Victoria Ginger Pale Ale + 1 Porron de Sureña Amber Ale ",
         "image": "Cerveza-combo_sureña-raices.png",
-       "categoryId": 1,
-        "price": 599
+        "categoryId": 1,
+        "price": 599,
+        " productStatusId": 2
     },
     {
         "id": 9,
@@ -75,8 +79,8 @@
         "image": "Cerveza-Ipa.png",
         "categoryId": 1,
         "price": 350,
-        "discount": 15
-       
+        "discount": 15,
+        " productStatusId": 1
     },
     {
         "id": 10,
@@ -85,7 +89,7 @@
         "image": "Cerveza-Old.png",
         "categoryId": 1,
         "price": 350,
-        "status": "te puede interesar"
+        " productStatusId": 2
     },
     {
         "id": 11,
@@ -102,7 +106,8 @@
         "price": 330,
         "categoryId": 1,
         "description": "Una cerveza a base de maltas caramelizadas que le otorgan un profundo pero cristalino tono ámbar con reflejos rojizos que evocan las puestas de sol en las montañas de la Patagonia Argentina.",
-        "image": "Cerveza-Sureña.png"
+        "image": "Cerveza-Sureña.png",
+        " productStatusId": 1
     },
     {
         "id": 13,
@@ -143,8 +148,8 @@
         "image": "cervezasx8-salsas.jpg",
         "categoryId": 1,
         "price": 3599,
-        "discount": 15
-       
+        "discount": 15,
+        " productStatusId": 1
     },
     {
         "id": 18,
@@ -153,7 +158,8 @@
         "image": "Ketchup-Ipa.jpg",
         "categoryId": 1,
         "price": 2900,
-        "discount": 5
+        "discount": 5,
+        " productStatusId": 1
     },
     {
         "id": 19,
@@ -162,28 +168,29 @@
         "image": "salsas-bbq.jpg",
         "categoryId": 1,
         "price": 2900,
-        "discount": 10
-       
+        "discount": 10,
+        " productStatusId": 1
     },
     {
         "id": 20,
         "name": "VICUÑA SACRAMENTO ANDINO 750ml",
         "description": "Esta cerveza ha reposado y madurado a bajas temperaturas `por más de dos años para luego ser envasada a mano, botella por botella. El resultado es una cerveza irrepetible de edición limitada.",
         "image": "vicuna.png",
-       "categoryId": 1,
+        "categoryId": 1,
         "price": 3500,
-        "discount": 20
-       
+        "discount": 20,
+        " productStatusId": 1
     },
     {
         "id": 21,
         "name": "Gorra de lana gris Ley Seca",
         "description": "Colores disponibles: Verde militar , Negro",
-        "sizeId":7,
+        "sizeId": 7,
         "image": "gorra-lana-gris.png",
         "categoryId": 2,
         "price": 3000,
-        "discount": 10
+        "discount": 10,
+        " productStatusId": 1
     },
     {
         "id": 22,
@@ -193,32 +200,35 @@
         "image": "remera-hombre-alien.png",
         "categoryId": 2,
         "price": 2900,
-        "discount": 5
+        "discount": 5,
+        " productStatusId": 1
     },
     {
         "id": 23,
         "name": "Remera amor por la birra",
         "description": "Talle S al XXL",
-        "sizeId":3,
-        "image":"remera-hombre-electro.png",
+        "sizeId": 3,
+        "image": "remera-hombre-electro.png",
         "categoryId": 2,
         "price": 2600,
-        "discount": 15
+        "discount": 15,
+        " productStatusId": 1
     },
     {
         "id": 24,
         "name": "Remera Drinking team",
         "description": "Talle S al XXL",
-        "sizeId":3,
+        "sizeId": 3,
         "image": "remera-hombre-espalda.png",
         "categoryId": 2,
-        "price": 2800
+        "price": 2800,
+        " productStatusId": 2
     },
     {
         "id": 25,
         "name": "Remera Birra eco",
         "description": "Talle S al XXL ",
-        "sizeId":3,
+        "sizeId": 3,
         "image": "remera-hombre-logo.png",
         "categoryId": 2,
         "price": 2600
@@ -227,7 +237,7 @@
         "id": 26,
         "name": "Remera azul premium",
         "description": "Talle S al XXL",
-        "sizeId":3,
+        "sizeId": 3,
         "image": "remera-hombre-logo2.png",
         "categoryId": 2,
         "price": 3100
@@ -236,7 +246,7 @@
         "id": 27,
         "name": "Remera negra premium",
         "description": "Talle S al XXL",
-        "sizeId":3,
+        "sizeId": 3,
         "image": "remera-hombre-logo3.png",
         "categoryId": 2,
         "price": 3100
@@ -245,7 +255,7 @@
         "id": 28,
         "name": "Remera San Patricio",
         "description": "Talle S al XXL",
-        "sizeId":3,
+        "sizeId": 3,
         "image": "remera-hombre-patricio.png",
         "categoryId": 2,
         "price": 3100
@@ -254,7 +264,7 @@
         "id": 29,
         "name": "Remera gris claro Be Er",
         "description": " Talle S al XXL",
-        "sizeId":3,
+        "sizeId": 3,
         "image": "remera-mujer-grisclaro.png",
         "categoryId": 2,
         "price": 2700
@@ -263,7 +273,7 @@
         "id": 30,
         "name": "Remera gris topo Be Er",
         "description": "Talle S al XXL ",
-        "sizeId":3,
+        "sizeId": 3,
         "image": "remera-mujer-grisoscuro.png",
         "categoryId": 2,
         "price": 2700
@@ -272,7 +282,7 @@
         "id": 31,
         "name": "Remera abducción",
         "description": "Talle S al XXL",
-        "sizeId":3,
+        "sizeId": 3,
         "image": "remera-mujer-logo-alien.png",
         "categoryId": 2,
         "price": 2900
@@ -281,7 +291,7 @@
         "id": 32,
         "name": "Remera Chop",
         "description": "Talle S al XXL",
-        "sizeId":3,
+        "sizeId": 3,
         "image": "remera-mujer-logo.png",
         "categoryId": 2,
         "price": 2500
@@ -290,7 +300,7 @@
         "id": 33,
         "name": "Remera Malta",
         "description": "Talle S al XXL",
-        "sizeId":3,
+        "sizeId": 3,
         "image": "remera-mujer-logo2.png",
         "categoryId": 2,
         "price": 2700
@@ -299,7 +309,7 @@
         "id": 34,
         "name": "Remera Beer",
         "description": "Talle S al XXL",
-        "sizeId":3,
+        "sizeId": 3,
         "image": "remera-mujer-logo3.png",
         "categoryId": 2,
         "price": 2900
@@ -308,7 +318,7 @@
         "id": 35,
         "name": "Remera This Girl",
         "description": "Talle S al XXL",
-        "sizeId":3,
+        "sizeId": 3,
         "image": "remera-mujer-lover.png",
         "categoryId": 2,
         "price": 2800
@@ -317,7 +327,7 @@
         "id": 36,
         "name": "Remera Princesa Leia",
         "description": "Talle S al XXL",
-        "sizeId":3,
+        "sizeId": 3,
         "image": "remera-mujer-princesa.png",
         "categoryId": 2,
         "price": 2800
@@ -326,17 +336,18 @@
         "id": 37,
         "name": "Gorra trucker",
         "description": "Colores disponibles: Rojo , Azul",
-        "sizeId":7,
+        "sizeId": 7,
         "image": "trucker-gorra.png",
         "categoryId": 2,
         "price": 2900,
-        "discount": 10
+        "discount": 10,
+        " productStatusId": 1
     },
     {
         "id": 38,
         "name": "Vicera Cheers",
         "description": "Colores disponibles: Verde militar , Blanco, gris.",
-        "sizeId":7,
+        "sizeId": 7,
         "image": "vicera-chers.png",
         "categoryId": 2,
         "price": 2100
@@ -345,7 +356,7 @@
         "id": 39,
         "name": "Vicera Drinking team",
         "description": "Colores disponibles: Verde militar , Blanco, Negro.",
-        "sizeId":7,
+        "sizeId": 7,
         "image": "vicera-gris-alas.png",
         "categoryId": 2,
         "price": 2200
@@ -354,17 +365,18 @@
         "id": 40,
         "name": "Vicera Gris Ley seca",
         "description": "Colores disponibles: Verde militar , Blanco, Negro.",
-        "sizeId":7,
+        "sizeId": 7,
         "image": "vicera-gris.png",
         "categoryId": 2,
         "price": 2100,
-        "discount": 5
+        "discount": 5,
+        " productStatusId": 1
     },
     {
         "id": 41,
         "name": "Vicera Beers",
         "description": "Colores disponibles: Rojo , Blanco, gris.",
-        "sizeId":7,
+        "sizeId": 7,
         "image": "vicera-negra-logo.png",
         "categoryId": 2,
         "price": 2000
@@ -373,7 +385,7 @@
         "id": 42,
         "name": "Vicera negra Ley Seca",
         "description": "Colores disponibles: Rojo , Blanco, gris.",
-        "sizeId":7,
+        "sizeId": 7,
         "image": "vicera-negra.png",
         "categoryId": 2,
         "price": 2000
@@ -382,10 +394,11 @@
         "id": 43,
         "name": "Vicera vede I love Beer",
         "description": "Colores disponibles: Negro , Blanco, gris.",
-        "sizeId":7,
+        "sizeId": 7,
         "image": "vicera-verde.png",
         "categoryId": 2,
         "price": 2000,
-        "discount": 5
+        "discount": 5,
+        " productStatusId": 1
     }
 ]

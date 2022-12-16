@@ -9,9 +9,9 @@
     </div>
 
     <!-- SEARCH-BAR -->
-    <form action="/results" method="GET" class="home__form">
+    <form action="/results" method="GET" class="home__form" id="home__form">
       <div class="home__formgroup">
-        <input type="text" name="keywords" class="home__forminput" autocomplete="off" />
+        <input type="text" name="keywords" class="home__forminput" id="input" autocomplete="off" />
         <button type="submit" class="home__formbutton">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
@@ -33,13 +33,11 @@
         <% if (locals.userLogin) { %>
 
           <li class="bur-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
-          <li class="burguer-link dropdown-item logoutLi"><a href="/users/logout"></a></li>
+          <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
+          <li><a class="link-option" href="/users/profile">Perfil </a></li>
+          <li><a class="dropdown-item" href="/users/logout">salir</a></li>
 
-          <div class="burguer-options">
-            <li><a class="link-option" href="/products/shop">Perfil </a></li>
-            <li><a class="dropdown-item" href="/users/logout">salir</a></li>
 
-          </div>
 
           <% if (locals.userLogin && userLogin.rol <2) { %>
             <li><a class="dropdown-item" href="/products/create">Vender</a></li>
@@ -48,21 +46,14 @@
 
                 <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
                 <li class="burguer-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
-                <li class="link-option"><a class="dropdown-item" href="/products/products">Registrarse</a></li>
-                <li><a class="dropdown-item" href="/products/shop">iniciar Sesion </a></li>
+                <li class="link-option"><a class="dropdown-item" href="/users/register">Registrarse</a></li>
+                <li><a class="dropdown-item" href="/users/login">iniciar Sesion </a></li>
 
 
                 <% } %>
       </ul>
     </div>
 
-    <!-- <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="fa-solid fa-bars"></i>
-        </a>
-
-      </div> -->
   </div>
   <!-- MENU MOBILE & TABLET -->
 
@@ -98,6 +89,27 @@
       var nav = document.querySelector("nav");
       nav.classList.toggle("scroll", window.scrollY > 100);
     });
+
+    const form = document.getElementById('home__form')
+    const input = document.getElementById('input')
+
+    form.addEventListener("submit", function (e) {
+
+      e.preventDefault();
+      let error = false;
+
+      console.log(input);
+
+      if (
+        !input.value.trim()) {
+
+        error = true;
+      }
+
+
+      !error && this.submit()
+    });
+
 
   </script>
 </nav>

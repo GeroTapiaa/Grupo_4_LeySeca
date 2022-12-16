@@ -7,8 +7,8 @@
   .home__header__browser-menu__items {
     background: RGBA(21, 20, 21, 0.96);
     width: 300px;
-    height: 415%;
-    margin-top: 72px;
+    height: 225%;
+    margin-top: 123px;
     display: flex;
     justify-content: center;
     clip-path: circle(0 at center);
@@ -99,7 +99,7 @@
   }
 
   .img-carrousel {
-    height: 317px;
+    height: 350px;
     filter: brightness(0.4);
   }
   .home__header__logo {
@@ -109,8 +109,9 @@
     height: 100%;
   }
   .home__header__logo img {
-    width: 78px;
-    height: 100%;
+    width: 140px;
+    height: 99%;
+    padding-top: 22px;
   }
   .home__header__logo-letters {
     width: 25%;
@@ -123,7 +124,7 @@
     position: fixed;
     z-index: 1;
     width: 100%;
-    height: 71px;
+    height: 123px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
   .scroll {
@@ -131,9 +132,8 @@
     position: fixed;
     z-index: 2;
     width: 100%;
-    height: 86px;
+    height: 124px;
     background-color: #151314;
-    padding-top: 11px;
   }
   .input {
     display: none;
@@ -160,6 +160,7 @@
     width: 40%;
     position: relative;
     left: 52px;
+    top: 38px;
   }
   .home__formgroup {
     position: relative;
@@ -187,8 +188,8 @@
     color: rgb(255, 255, 255);
   }
   /* input {
-      background-color: #151314;
-    } */
+    background-color: #151314;
+  } */
 
   .background-image {
     background-image: var(--img-backmove);

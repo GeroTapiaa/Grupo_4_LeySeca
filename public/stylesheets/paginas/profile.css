@@ -4,9 +4,10 @@
     background-size: cover;
     position: relative;
     bottom: 22px;
-    height: 942px;
-    padding-top: 26px;
+
+    padding-top: 128px;
   }
+
   .profile {
     display: flex;
     flex-direction: column;
@@ -103,7 +104,7 @@
     background-size: cover;
     position: relative;
     bottom: 3px;
-    height: 927px;
+
     padding-top: 21px;
   }
   .profile {

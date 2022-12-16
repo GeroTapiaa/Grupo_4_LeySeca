@@ -2,13 +2,14 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 8px;
+  padding-top: 125px;
 }
 
 .form-create {
+  width: 90%;
   background-color: #fff;
-  margin: 8px;
-  padding: 10px;
+  margin: auto;
+  margin-bottom: 30px;
   border-radius: 8px;
   display: flex;
   flex-wrap: wrap;
@@ -16,6 +17,7 @@
 
 .product-detail {
   width: 100%;
+  padding: 20px;
 }
 
 .form__box {
@@ -27,7 +29,7 @@ textarea {
   resize: none;
 }
 .form__box-image {
-  width: 50%;
+  width: 100%;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -35,8 +37,12 @@ textarea {
 }
 
 .form__box--description {
-  width: 50%;
+  width: 100%;
   padding: 10px;
+}
+.form__box-btn {
+  display: flex;
+  justify-content: center;
 }
 
 .label-form {
@@ -92,13 +98,7 @@ textarea {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .form__box-btn {
-    padding-right: 5px;
-    align-items: end;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 14px;
-  }
+
   .btn__product {
     width: 90%;
     background-color: rgb(212, 212, 212);
@@ -118,8 +118,30 @@ textarea {
     padding: 10px;
     background-color: #fff;
   }
+  .form__box-image {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .form__box--description {
+    width: 50%;
+    padding: 10px;
+  }
+  .form__box-btn {
+    display: flex;
+    justify-content: center;
+  }
 }
 @media (min-width: 1024px) {
+  .title-created {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1px;
+  }
   .form-create {
     margin-bottom: 30px;
   }
@@ -135,13 +157,7 @@ textarea {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .form__box-btn {
-    padding-right: 5px;
-    align-items: end;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 14px;
-  }
+
   .btn__product {
     width: 90%;
     background-color: rgb(212, 212, 212);

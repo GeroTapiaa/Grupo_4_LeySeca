@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const { validationResult } = require("express-validator");
 const { eliminarImg } = require("../data/db-module");
+const { Op } = db.Sequelize;
 
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
@@ -45,6 +46,12 @@ module.exports = {
   details: (req, res) => {
     let product = db.Product.findByPk(req.params.id);
     let productsStatus = db.Product.findAll({
+      where: {
+        categoryId: {
+          [Op.gte]: 2,
+        },
+      },
+      order: [["categoryId", "ASC"]],
       limit: 4,
     });
     Promise.all([product, productsStatus]).then(([product, productsStatus]) => {
@@ -115,7 +122,7 @@ module.exports = {
                 image: req.file ? req.file.filename : "default-ley-seca.jpg",
               },
               { where: { id: req.params.id } }
-            ).then((product) => {});
+            ).then((product) => { });
           }
 
           return res.redirect("/products/productDetail/" + req.params.id);
