@@ -182,6 +182,7 @@ const validations = (e) => {
       console.log(e.target.value);
 
       break;
+
     // PASSWORD, FUNCION 'validatePassword' lINEA 260. 
     case 'password':
       if (
@@ -407,13 +408,15 @@ $("form-register").addEventListener("submit", function (e) {
   for (let i = 0; i < elements.length - 2; i++) {
 
     if (!elements[i].value.trim() || elements[i].classList.contains('is-invalid')) {
-      elements[i].classList.add('is-invalid')
       $('msgError').innerText = 'Hay campos con errores o están vacíos';
       error = true;
     }
 
   }
   $('msgError').innerText = null;
+
+
+
 
   error = true;
 

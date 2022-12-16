@@ -72,9 +72,14 @@
     padding-left: 10px;
     text-align: center;
   }
-  .descount {
-    color: gray;
+  .discount {
+    font-size: 20px;
+    color: rgb(180, 180, 180);
     text-decoration: line-through;
+  }
+  .discount-price {
+    font-size: 20px;
+    font-weight: bold;
   }
   .home__button__products {
     display: flex;
@@ -271,9 +276,14 @@
     padding-left: 10px;
     text-align: center;
   }
-  .descount {
-    color: gray;
+  .discount {
+    font-size: 20px;
+    color: rgb(180, 180, 180);
     text-decoration: line-through;
+  }
+  .discount-price {
+    font-size: 20px;
+    font-weight: bold;
   }
   .home__button__products {
     position: absolute;
@@ -491,8 +501,13 @@
     font-weight: 700;
   }
   .discount {
-    color: gray;
+    font-size: 20px;
+    color: rgb(180, 180, 180);
     text-decoration: line-through;
+  }
+  .discount-price {
+    font-size: 20px;
+    font-weight: bold;
   }
   .home__button__products {
     display: flex;
