@@ -4,8 +4,8 @@
     background-size: cover;
     position: relative;
     bottom: 22px;
-    height: 1132px;
-    padding-top: 26px;
+    padding-top: 128px;
+    padding-bottom: 30px;
   }
   .profile-edit {
     display: flex;
@@ -69,7 +69,7 @@
   .form__title-edit {
     text-align: center;
     font-size: 54px;
-    margin-top: 105px;
+    margin-top: 27px;
     font-family: var(--fontKaushan);
   }
 
@@ -119,7 +119,7 @@
     background-image: var(--img-profile);
     background-size: cover;
     position: relative;
-    bottom: 3px;
+    bottom: 30px;
     padding: 130px;
   }
   .profile-edit {

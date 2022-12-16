@@ -117,7 +117,8 @@
   .down-dark {
     width: 100px;
     position: absolute;
-    bottom: -21px;
+    bottom: 21px;
+    z-index: 2;
   }
   .title-changes {
     font-family: var(--fontKaushan);
@@ -480,7 +481,7 @@
     margin: auto;
   }
   .home__main__description-products img {
-    width: 170px;
+    width: 150px;
   }
 
   .description-products {

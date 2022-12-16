@@ -1,225 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head', { title : 'Register' }) %>
+<%- include('../partials/head', { title : 'Register' }) %>
 
   <body class="body__profile-edit">
     <%- include('../partials/modal') %> <%- include( '../partials/navbar' ) %>
 
-    <main class="main__profile-edit">
-      <div class="main__profile-section-edit">
-        <h2 class="form__title-edit">Registrate</h2>
+        <main class="main__profile-edit">
+          <div class="main__profile-section-edit">
+            <h2 class="form__title-edit">Registrate</h2>
 
-        <form
-          action=""
-          id="form-register"
-          class="profile-edit"
-          method="post"
-          enctype="multipart/form-data"
-        >
-          <div class="form__register-container-edit">
-            <div class="form__register-photo-edit">
-              <figure class="image_profile-edit">
-                <img
-                  src="/images/users/default-ley-seca.jpg"
-                  alt=""
-                  id="img-photo"
-                />
-                <input
-                  type="file"
-                  id="avatar"
-                  name="avatar"
-                  onchange="preview(event)"
-                />
+            <form action="" id="form-register" class="profile-edit" method="post" enctype="multipart/form-data">
+              <div class="form__register-container-edit">
+                <div class="form__register-photo-edit">
+                  <figure class="image_profile-edit">
+                    <img src="/images/users/default-ley-seca.jpg" alt="" id="img-photo" />
+                    <input type="file" id="avatar" name="avatar" onchange="preview(event)" />
 
-                <label class="label_photo-edit" for="avatar">
-                  <i class="fa-solid fa-camera"></i
-                ></label>
-              </figure>
-            </div>
+                    <label class="label_photo-edit" for="avatar">
+                      <i class="fa-solid fa-camera"></i></label>
+                  </figure>
+                </div>
 
-            <!-- NAME -->
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="name"
-                class="form__input-edit"
-                placeholder=" "
-                name="name"
-                value="<%= locals.old && old.name ? old.name : null %>"
-              />
-              <label for="name" class="form__label-edit">Nombre:</label>
-            </div>
-            <small>
-              <%= locals.errors && errors.name ? errors.name.msg : null %>
-            </small>
-            <small id="errorName"></small>
+                <!-- NAME -->
+                <div class="form_profile-edit">
+                  <input type="text" id="firstName" class="form__input-edit" placeholder=" " name="firstName"
+                    value="<%= locals.old && old.firstName ? old.firstName : null %>" />
+                  <label for="firstName" class="form__label-edit">Nombre:</label>
+                </div>
+                <small>
+                  <%= locals.errors && errors.firstName ? errors.firstName.msg : null %>
+                </small>
+                <small id="errorName"></small>
 
-            <!-- SURNAME -->
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="surname"
-                class="form__input-edit"
-                placeholder=" "
-                name="surname"
-                value="<%= locals.old && old.surname ? old.surname: null %>"
-              />
-              <label for="surname" class="form__label-edit">Apellido:</label>
-            </div>
-            <small>
-              <%= locals.errors && errors.surname ? errors.surname.msg : null %>
-            </small>
-            <small id="errorSurname"></small>
+                <!-- SURNAME -->
+                <div class="form_profile-edit">
+                  <input type="text" id="surname" class="form__input-edit" placeholder=" " name="surname"
+                    value="<%= locals.old && old.surname ? old.surname: null %>" />
+                  <label for="surname" class="form__label-edit">Apellido:</label>
+                </div>
+                <small>
+                  <%= locals.errors && errors.surname ? errors.surname.msg : null %>
+                </small>
+                <small id="errorSurname"></small>
 
-            <!-- USER -->
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="user"
-                class="form__input-edit"
-                placeholder=" "
-                name="user"
-                value="<%= locals.old && old.user ? old.user : null %>"
-              />
-              <label for="user" class="form__label-edit">Usuario:</label>
-            </div>
+                <!-- USER -->
+                <div class="form_profile-edit">
+                  <input type="text" id="user" class="form__input-edit" placeholder=" " name="user"
+                    value="<%= locals.old && old.user ? old.user : null %>" />
+                  <label for="user" class="form__label-edit">Usuario:</label>
+                </div>
 
-            <small>
-              <%= locals.errors && errors.user ? errors.user.msg : null %>
-            </small>
+                <small>
+                  <%= locals.errors && errors.user ? errors.user.msg : null %>
+                </small>
 
-            <small id="errorUser"></small>
+                <small id="errorUser"></small>
 
-            <!-- DATA -->
+                <!-- DATA -->
 
-            <div class="form__register-date-register">
-              <p>Fecha de nacimiento:</p>
-              <input
-                type="date"
-                id="date"
-                class="register-date"
-                name="date"
-                value="<%= locals.old && old.date ? old.date : null %>"
-              />
-            </div>
-            <small>
-              <%= locals.errors && errors.date ? errors.date.msg : null %>
-            </small>
-            <small id="errorDate"></small>
+                <div class="form__register-date-register">
+                  <p>Fecha de nacimiento:</p>
+                  <input type="date" id="date" class="register-date" name="date"
+                    value="<%= locals.old && old.date ? old.date : null %>" />
+                </div>
+                <small>
+                  <%= locals.errors && errors.date ? errors.date.msg : null %>
+                </small>
+                <small id="errorDate"></small>
 
-            <!-- ADDRESS -->
-            <div class="form_profile-edit">
-              <input
-                type="text"
-                id="address"
-                class="form__input-edit"
-                placeholder=" "
-                name="address"
-                value="<%= locals.old && old.address ? old.address : null %>"
-              />
+                <!-- ADDRESS -->
+                <div class="form_profile-edit">
+                  <input type="text" id="address" class="form__input-edit" placeholder=" " name="address"
+                    value="<%= locals.old && old.address ? old.address : null %>" />
 
-              <label for="address" class="form__label-edit">Dirección:</label>
-            </div>
-            <small>
-              <%= locals.errors && errors.address ? errors.address.msg : null %>
-            </small>
-            <small id="errorAddress"></small>
+                  <label for="address" class="form__label-edit">Dirección:</label>
+                </div>
+                <small>
+                  <%= locals.errors && errors.address ? errors.address.msg : null %>
+                </small>
+                <small id="errorAddress"></small>
 
-            <!-- EMAIL -->
-            <div class="form_profile-edit">
-              <input
-                class="form__input-edit"
-                placeholder=" "
-                type="email"
-                id="email"
-                name="email"
-                value="<%= locals.old && old.email ? old.email : null %>"
-              />
-              <label class="form__label-edit" for="email">E-mail: </label>
-            </div>
-            <small>
-              <%= locals.errors && errors.email ? errors.email.msg : null %>
-            </small>
-            <small id="errorEmail"></small>
+                <!-- EMAIL -->
+                <div class="form_profile-edit">
+                  <input class="form__input-edit" placeholder=" " type="email" id="email" name="email"
+                    value="<%= locals.old && old.email ? old.email : null %>" />
+                  <label class="form__label-edit" for="email">E-mail: </label>
+                </div>
+                <small>
+                  <%= locals.errors && errors.email ? errors.email.msg : null %>
+                </small>
+                <small id="errorEmail"></small>
 
-            <!-- PASSWORD -->
+                <!-- PASSWORD -->
 
-            <div class="form_profile-edit">
-              <input
-                class="form__input-edit"
-                placeholder=" "
-                type="password"
-                id="password"
-                name="password"
-                value="<%= locals.old && old.password ? old.password : null %>"
-              />
-              <label class="form__label-edit" for="password">Contraseña: </label
-              ><span class="eye-password"
-                ><i id="eye-password" class="fa-solid fa-eye-slash"></i
-              ></span>
-            </div>
-            <small>
-              <%= locals.errors && errors.password ? errors.password.msg : null
-              %>
-            </small>
-            <small id="errorPassword"></small>
+                <div class="form_profile-edit">
+                  <input class="form__input-edit" placeholder=" " type="password" id="password" name="password"
+                    value="<%= locals.old && old.password ? old.password : null %>" />
+                  <label class="form__label-edit" for="password">Contraseña: </label><span class="eye-password"><i
+                      id="eye-password" class="fa-solid fa-eye-slash"></i></span>
+                </div>
+                <small>
+                  <%= locals.errors && errors.password ? errors.password.msg : null %>
+                </small>
+                <small id="errorPassword"></small>
 
-            <!-- CONFIRM PASSWORD          -->
-            <div class="form_profile-edit">
-              <input
-                class="form__input-edit"
-                placeholder=" "
-                type="password"
-                id="confirmPassword"
-                name="confirmPassword"
-                value="<%= locals.old && old.confirmPassword ? old.confirmPassword : null %>"
-              />
-              <label class="form__label-edit" for="confirmPassword"
-                >Confirmar contraseña:</label
-              ><span class="eye-password"
-                ><i id="eye-password2" class="fa-solid fa-eye-slash"></i
-              ></span>
-            </div>
-            <small>
-              <%= locals.errors && errors.confirmPassword?
-              errors.confirmPassword.msg : null %>
-            </small>
-            <small id="errorConfirmPassword"></small>
+                <!-- CONFIRM PASSWORD          -->
+                <div class="form_profile-edit">
+                  <input class="form__input-edit" placeholder=" " type="password" id="confirmPassword"
+                    name="confirmPassword"
+                    value="<%= locals.old && old.confirmPassword ? old.confirmPassword : null %>" />
+                  <label class="form__label-edit" for="confirmPassword">Confirmar contraseña:</label><span
+                    class="eye-password"><i id="eye-password2" class="fa-solid fa-eye-slash"></i></span>
+                </div>
+                <small>
+                  <%= locals.errors && errors.confirmPassword? errors.confirmPassword.msg : null %>
+                </small>
+                <small id="errorConfirmPassword"></small>
 
-            <!-- TERMS -->
-            <div class="form_profile-edit">
-              <input
-                class="input__check-edit"
-                type="checkbox"
-                id="terminos"
-                name="terms"
-              />
-              <label class="label__check-edit" for="terminos"
-                >Acepto los
-                <a class="terms" href="/terminos" target="_blank"
-                  >términos y condiciones</a
-                ></label
-              >
-            </div>
-            <small>
-              <%= locals.errors && errors.terms ? errors.terms.msg : null %>
-            </small>
-            <small id="errorTerms"></small>
+                <!-- TERMS -->
+                <div class="form_profile-edit">
+                  <input class="input__check-edit" type="checkbox" id="terminos" name="terms" />
+                  <label class="label__check-edit" for="terminos">Acepto los
+                    <a class="terms" href="/terminos" target="_blank">términos y condiciones</a></label>
+                </div>
+                <small>
+                  <%= locals.errors && errors.terms ? errors.terms.msg : null %>
+                </small>
+                <small id="errorTerms"></small>
 
-            <p id="msgError" class="error-text"></p>
+                <p id="msgError" class="error-text"></p>
 
-            <div class="form__register-button">
-              <button type="submit" class="button" value="Guardar">
-                Guardar
-              </button>
-              <input type="reset" class="button" value="Descartar" />
-            </div>
+                <div class="form__register-button">
+                  <button type="submit" class="button" value="Guardar">
+                    Guardar
+                  </button>
+                  <input type="reset" class="button" value="Descartar" />
+                </div>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
-    </main>
-    <%- include( '../partials/footer' ) %>
-    <script defer src="/js/moment.js"></script>
-    <script defer src="/js/userRegister.js"></script>
+        </main>
+        <%- include( '../partials/footer' ) %>
+          <script defer src="/js/moment.js"></script>
+          <script defer src="/js/userRegister.js"></script>
   </body>
+
 </html>

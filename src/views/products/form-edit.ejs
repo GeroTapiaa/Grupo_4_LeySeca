@@ -9,11 +9,12 @@
                 <main class="main__form-created">
                     <div class="created-container">
                         <div class="title-created">
-                            <h2>Estas editando:
+                            <h2 class="detalle__text--sugerencia">Estas editando:
                                 <%= productEdit.name %>
                             </h2>
                         </div>
-                        <form id="form-edit" action="/products/update/<%=productEdit.id%>?_method=put" method="POST"
+                        <form id="form-edit" class="form-create"
+                            action="/products/update/<%=productEdit.id%>?_method=put" method="POST"
                             enctype="multipart/form-data">
                             <div class="product-detail">
                                 <div class="form__box">

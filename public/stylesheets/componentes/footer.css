@@ -1,6 +1,8 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .home__footer {
     background-color: #222222;
+    position: relative;
+    bottom: 42px;
   }
   .home__footer__redes {
     position: relative;
@@ -63,6 +65,8 @@
   /* FOOTER */
   .home__footer {
     background-color: #222222;
+    position: relative;
+    bottom: 31px;
   }
 
   .home__footer__redes img {
