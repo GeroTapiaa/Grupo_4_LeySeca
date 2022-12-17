@@ -174,7 +174,6 @@ $('form-create').addEventListener('submit', (e) => {
   e.preventDefault();
 
   const inputs = [nameProduct, price, discount, description, category, images];
-  console.log(inputs);
 
   for (let i = 0; i < inputs.length; i++) {
 
@@ -184,9 +183,12 @@ $('form-create').addEventListener('submit', (e) => {
       $('msgError').innerText = "Debes completar bien los campos requeridos.";
       console.log('hay errores');
 
+
     } else {
       console.log('paso');
       inputs[i].classList.remove("is-invalid");
+      console.log(inputs);
+
       $('form-create').submit()
 
     }

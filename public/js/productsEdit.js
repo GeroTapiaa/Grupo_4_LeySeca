@@ -8,7 +8,7 @@ const exRegs = {
     exRegAlfa: /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/,
     exRegMayu: /[A-Z]/,
     exRegMinu: /[a-z]/,
-    exRegNum: /^[0-9]+$/,
+    exRegNum: /^-*[0-9]+$/,
     exRegMin: /.{6,}/,
     exRegMax: /.{8}/,
     exRegUser: /^[a-zA-Z0-9\_\-]{4,100}$/,
@@ -63,7 +63,7 @@ const validations = (e) => {
         // PRICE
 
         case "price":
-            if (exRegs.exRegNum.test(e.target.value) & (e.target.value.length > 1)) {
+            if (exRegs.exRegNum.test(e.target.value.replace(/\D/g, '').substring(0, 10)) & (e.target.value.length > 1)) {
                 ok("price", "is-valid");
                 cleanError("errorPrice");
             } else {
@@ -73,10 +73,14 @@ const validations = (e) => {
                     "El precio es obigatorio y solo debe contener números"
                 );
             }
+            console.log(e.target.value);
 
             break;
+
+
+
         case "discount":
-            if (!exRegs.exRegNum.test(e.target.value)) {
+            if (!exRegs.exRegNum.test(e.target.value.replace(/\D/g, '').substring(0, 10))) {
                 errorStyle("discount", "is-valid", "is-invalid");
                 msgError(
                     "errorDiscount",
@@ -86,7 +90,10 @@ const validations = (e) => {
             } else {
                 ok("discount", "is-valid");
                 cleanError("errorDiscount");
+
             }
+            console.log(e.target.value);
+
 
             break;
     }
@@ -113,7 +120,7 @@ $("category").addEventListener("click", function (e) {
     if (!e.target.value) {
         errorStyle("category", "is-valid", "is-invalid");
         msgError("errorCategory", "Debes elegir una categoría");
-    } else if (e.target.value) {
+    } else if (e.target.value.trim()) {
         ok("category", "is-valid");
         cleanError("errorCategory");
     }
@@ -152,7 +159,7 @@ inputs.forEach((input) => {
 $('form-edit').addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const inputs = [nameProduct, price, discount, description, category, images];
+    const inputs = [nameProduct, price, discount, description, category];
     console.log(inputs);
 
     for (let i = 0; i < inputs.length; i++) {

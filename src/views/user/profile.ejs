@@ -6,6 +6,19 @@
     <%- include('../partials/modal') %> <%- include( '../partials/navbar' ) %>
 
         <main class="main__profile">
+          <div class="container-modal">
+            <div id="modal-none" class=" modal-none">
+
+              <p class="delete-text"> ¿Estás seguro/a que deseas eliminar tu cuenta?</p>
+              <form action="/users/remove/<%= user.id %>?_method=DELETE" id="form-remove" method="POST">
+                <button type="submit" id="delete-ok">Si</button>
+                <button type="button" class="delete" id="delete-no">No</button>
+
+              </form>
+            </div>
+
+
+          </div>
           <div class="main__profile-section">
             <h2 class="form__title-profile">Tu perfil</h2>
             <div class="form__register-container-profile">
@@ -51,14 +64,35 @@
                 <a href="/"> <button class="button">Salir</button></a>
               </div>
 
-              <form action="/users/remove/<%= user.id %>?_method=DELETE" method="POST">
-                <button type="submit" class="delete">Eliminar</button>
-              </form>
+              <button type="submit" class="delete" id="delete">Eliminar</button>
+
             </div>
 
             <%- include( '../partials/footer' ) %>
           </div>
+
+
+
         </main>
+        <script>
+          const $ = (element) => document.getElementById(element);
+
+          $('delete').addEventListener('click', (e) => {
+            $('modal-none').classList.remove('modal-none')
+            $('modal-none').classList.add('modal-profile')
+          })
+
+          $('delete-no').addEventListener('click', (e) => {
+            $('modal-none').classList.add('modal-none')
+          })
+
+          $('delete-ok').addEventListener('click', (e) => {
+
+            $('delete-ok').submit()
+
+
+          })
+        </script>
   </body>
 
 </html>

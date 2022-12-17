@@ -105,7 +105,7 @@
     background-image: var(--img-profile);
     background-size: cover;
     position: relative;
-    bottom: 3px;
+    bottom: 16px;
 
     padding-top: 21px;
   }

@@ -110,6 +110,47 @@
     left: 85%;
     top: 19%;
   }
+  .container-modal {
+    position: absolute;
+    width: 100%;
+    z-index: 200;
+  }
+  .modal-profile {
+    background: RGBA(21, 20, 21, 0.9);
+    position: fixed;
+    position: relative;
+    top: 500px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    z-index: 1;
+    height: 169px;
+    padding: 40px;
+  }
+  #form-remove {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .delete-text {
+    text-align: center;
+    color: aliceblue;
+  }
+  .modal-none {
+    display: none;
+  }
+  #delete-ok {
+    padding: 3px;
+    width: 97px;
+    margin-bottom: 6px;
+    margin-right: 3px;
+    background-color: rgb(43, 86, 31);
+    font-family: var(--fontBodyText);
+    color: white;
+    border: none;
+    border-radius: 10%;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .main__profile-edit {
@@ -235,6 +276,47 @@
     position: absolute;
     left: 85%;
     top: 19%;
+  }
+  .container-modal {
+    position: absolute;
+    width: 100%;
+    z-index: 200;
+  }
+  .modal-profile {
+    background: RGBA(21, 20, 21, 0.9);
+    position: fixed;
+    position: relative;
+    top: 500px;
+    width: 349px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    z-index: 1;
+    height: 169px;
+    padding: 40px;
+  }
+  #form-remove {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .delete-text {
+    text-align: center;
+    color: aliceblue;
+  }
+  .modal-none {
+    display: none;
+  }
+  #delete-ok {
+    padding: 3px;
+    width: 97px;
+    margin-bottom: 6px;
+    margin-right: 3px;
+    background-color: rgb(43, 86, 31);
+    font-family: var(--fontBodyText);
+    color: white;
+    border: none;
+    border-radius: 10%;
   }
 }
 
@@ -368,5 +450,46 @@
     position: absolute;
     left: 85%;
     top: 19%;
+  }
+  .container-modal {
+    position: absolute;
+    width: 100%;
+    z-index: 200;
+  }
+  .modal-profile {
+    background: RGBA(21, 20, 21, 0.96);
+    position: fixed;
+    top: 268px;
+    left: 353px;
+    width: 349px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    z-index: 1;
+    height: 169px;
+    padding: 40px;
+  }
+  #form-remove {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .delete-text {
+    text-align: center;
+    color: aliceblue;
+  }
+  .modal-none {
+    display: none;
+  }
+  #delete-ok {
+    padding: 3px;
+    width: 97px;
+    margin-bottom: 6px;
+    margin-right: 3px;
+    background-color: rgb(43, 86, 31);
+    font-family: var(--fontBodyText);
+    color: white;
+    border: none;
+    border-radius: 10%;
   }
 }

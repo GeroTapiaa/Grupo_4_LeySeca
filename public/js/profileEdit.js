@@ -109,7 +109,7 @@ const validations = (e) => {
 
         case "address":
             if (
-                exRegs.exRegAddress.test(e.target.value) &&
+                exRegs.exRegAddress.test(e.target.value.replace(/ /g, '')) &&
                 (e.target.value.length >= 5)
             ) {
                 ok("address", "is-valid");

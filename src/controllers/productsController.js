@@ -104,8 +104,8 @@ module.exports = {
       const products = {
         id: req.params.id,
         nameProduct: nameProduct.trim(),
-        discount: discount,
-        price: price,
+        discount: +discount,
+        price: +price,
         description,
         category: categoryId,
       };
@@ -114,7 +114,7 @@ module.exports = {
           id: req.params.id,
         },
       })
-
+        // res.send(products)
         .then((product) => {
           if (req.file) {
             db.Product.update(
@@ -169,7 +169,7 @@ module.exports = {
       db.Product.create({
         nameProduct: nameProduct.trim(),
         price: +price,
-        discount,
+        discount: +discount,
         description,
         categoryId: category,
         image: req.file ? req.file.filename : "default-ley-seca.jpg",

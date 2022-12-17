@@ -48,9 +48,12 @@
                 <div class="form__box">
                   <label for="category" class="label-form">Categoria:</label>
                   <select name="category" id="category" class="input_form">
-                    <option value=""></option>
-                    <option value="Cerveza">Cerveza</option>
-                    <option value="indumentaria">indumentaria</option>
+                    <% categories.forEach(category=> { %>
+                      <option <%=locals.old && old.category && old.category==category.id ? "selected" : "" %> value="<%=
+                          category.id %>"><%= category.name %>
+                      </option>
+                      <% }); %>
+
                   </select>
                   <small>
                     <%= locals.errors && errors.category ? errors.category.msg : null %>

@@ -6,6 +6,7 @@
     <%- include('../partials/modal') %> <%- include('../partials/navbar') %>
 
         <main class="detalle__main">
+
           <section class="section-detail">
             <article class="detalle__main--section-producto">
               <div class="detalle__section-producto">
@@ -33,16 +34,15 @@
                     <a href="/products/edit/<%=product.id%>">
                       <button class="button-edit">EDITAR</button></a>
 
-                    <form action="/products/delete/<%= product.id %> ?_method=DELETE " method="POST">
-                      <button type="submit" class="button-delete">ELIMINAR</button>
-                    </form>
-                    <% } else { %>
 
-                      <a href="/products/shopping-cart/<%= product.id %>">
-                        <button class="button-add-cart">AGREGAR AL CARRITO</button></a>
+                    <button type="submit" id="delete">ELIMINAR</button>
 
 
-                      <% } %>
+                    <a href="/products/shopping-cart/<%= product.id %>">
+                      <button class="button-add-cart">AGREGAR AL CARRITO</button></a>
+
+
+                    <% } %>
                 </div>
               </div>
             </article>
@@ -56,9 +56,39 @@
               <%- include('../partials/products',{ id, nameProduct, price, discount, image, toThousand }) %>
                 <% }) %>
           </section>
+          <div class="container-modal">
+            <div id="modal-none" class=" modal-none">
+
+              <p class="delete-text"> ¿Estás seguro/a que deseas eliminar este producto?</p>
+              <% if (locals.userLogin && userLogin.rol===1) { %>
+                <form action="/products/delete/<%= product.id %> ?_method=DELETE " id="form-remove" method="POST">
+                  <button type="submit" id="delete-ok">Si</button>
+                  <button type="button" class="delete" id="delete-no">No</button>
+                </form>
+                <% } %>
+            </div>
         </main>
 
         <%- include('../partials/footer') %>
+          <script>
+            const $ = (element) => document.getElementById(element);
+
+            $('delete').addEventListener('click', (e) => {
+              $('modal-none').classList.remove('modal-none')
+              $('modal-none').classList.add('modal-profile')
+            })
+
+            $('delete-no').addEventListener('click', (e) => {
+              $('modal-none').classList.add('modal-none')
+            })
+
+            $('delete-ok').addEventListener('click', (e) => {
+
+              $('delete-ok').submit()
+
+
+            })
+          </script>
   </body>
 
 </html>

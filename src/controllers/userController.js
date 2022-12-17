@@ -127,6 +127,8 @@ module.exports = {
     db.User.update(
       {
         firstName: req.body.firstName?.trim(),
+        surname: req.body.surname?.trim(),
+
         user: req.body.user?.trim(),
         address: req.body.address?.trim(),
         avatar: req.file ? req.file.filename : req.session.userLogin.avatar
@@ -142,6 +144,7 @@ module.exports = {
 
           ...req.session.userLogin,
           firstName: user.firstName,
+          surname: req.body.surname?.trim(),
           user: user.user,
           address: user.address,
           rol: req.session.userLogin.rol,

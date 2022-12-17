@@ -17,10 +17,10 @@ module.exports = (sequelize, DataTypes) => {
       });
 
 
-      Product.belongsTo(models.ProductStatus, {
-        as: "ProductStatus",
-        foreignKey: "productStatusId",
-      });
+      // Product.belongsTo(models.ProductStatus, {
+      //   as: "ProductStatus",
+      //   foreignKey: "productStatusId",
+      // });
 
 
       Product.hasMany(models.Size, {
