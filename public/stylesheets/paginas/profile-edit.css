@@ -111,8 +111,8 @@
     top: 19%;
   }
   .container-modal {
-    position: absolute;
     width: 100%;
+    position: fixed;
     z-index: 200;
   }
   .modal-profile {
@@ -278,8 +278,8 @@
     top: 19%;
   }
   .container-modal {
-    position: absolute;
     width: 100%;
+    position: fixed;
     z-index: 200;
   }
   .modal-profile {
@@ -457,10 +457,10 @@
     z-index: 200;
   }
   .modal-profile {
-    background: RGBA(21, 20, 21, 0.96);
+    background: RGBA(21, 20, 21, 0.9);
     position: fixed;
-    top: 268px;
-    left: 353px;
+    position: relative;
+    top: 240px;
     width: 349px;
     display: flex;
     flex-direction: column;

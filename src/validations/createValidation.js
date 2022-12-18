@@ -6,24 +6,18 @@ module.exports = [
 
     check('price')
         .notEmpty().withMessage('Debe ingresar un valor').bail()
-
-        .isNumeric({
-            no_symbols: true
-        },)
+        .trim().isInt()
         .withMessage('Solo se permiten numeros positivos').bail()
 
-        .isInt({
+        .trim().isInt({
             min: 0
         }).withMessage('El valor ingresado tiene que ser mayor que 0'),
 
 
     check('discount')
-        .isNumeric({
-            no_symbols: true
-        })
-        .withMessage('Solo se permiten numeros positivos')
+        .trim().isInt().withMessage('Solo se permiten numeros positivos')
 
-        .isInt({
+        .trim().isInt({
             max: 100
         }).withMessage('El valor ingresado tiene que ser menor a 100'),
 

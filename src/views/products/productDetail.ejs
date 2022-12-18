@@ -32,17 +32,16 @@
                   <% if (locals.userLogin && userLogin.rol===1) { %>
 
                     <a href="/products/edit/<%=product.id%>">
-                      <button class="button-edit">EDITAR</button></a>
+                      <button class="delete-ok">Editar</button></a>
+                    <button type=" submit" id="delete" class="delete">ELIMINAR</button>
 
+                    <% } else { %>
 
-                    <button type="submit" id="delete">ELIMINAR</button>
+                      <a href="/products/shopping-cart/<%= product.id %>">
+                        <button class="button">AGREGAR AL CARRITO</button></a>
 
+                      <% } %>
 
-                    <a href="/products/shopping-cart/<%= product.id %>">
-                      <button class="button-add-cart">AGREGAR AL CARRITO</button></a>
-
-
-                    <% } %>
                 </div>
               </div>
             </article>
@@ -62,7 +61,7 @@
               <p class="delete-text"> ¿Estás seguro/a que deseas eliminar este producto?</p>
               <% if (locals.userLogin && userLogin.rol===1) { %>
                 <form action="/products/delete/<%= product.id %> ?_method=DELETE " id="form-remove" method="POST">
-                  <button type="submit" id="delete-ok">Si</button>
+                  <button type="submit" id="delete-ok" class="delete-ok">Si</button>
                   <button type="button" class="delete" id="delete-no">No</button>
                 </form>
                 <% } %>

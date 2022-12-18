@@ -1,6 +1,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .home__footer {
-    background-color: #222222;
+    background-color: RGB(13, 13, 13);
+
     position: relative;
     bottom: 42px;
   }
@@ -64,7 +65,8 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   /* FOOTER */
   .home__footer {
-    background-color: #222222;
+    background-color: RGB(13, 13, 13);
+
     position: relative;
     bottom: 31px;
   }
@@ -126,7 +128,7 @@
 @media (min-width: 1024px) {
   /* FOOTER */
   .home__footer {
-    background-color: #222222;
+    background-color: RGB(13, 13, 13);
   }
 
   .home__footer__redes img {
@@ -139,7 +141,6 @@
     position: absolute;
     gap: 215px;
     padding: 43px 0px 0px 125px;
-
     display: flex;
     padding-bottom: 96px;
     font-size: 26px;

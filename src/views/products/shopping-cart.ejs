@@ -3,54 +3,51 @@
 <%- include("../partials/head",{ title : "Tu carrito" }) %>
 
   <body class="cart">
-    <%- include('../partials/modal') %> <%- include('../partials/navbar') %>
+    <%- include('../partials/navbar') %>
 
-        <main class="carrito__main">
+      <main class="carrito__main">
+        <div class="container-cart">
           <section class="carrito__main--section">
-            <article class="carrito__main--section-article">
+            <div class="img">
               <img src="/images/images_Ley-Seca/<%= productCart.image %>" alt=" botella " />
+            </div>
 
-              <div class="carrito__producto--compra">
-                <h3 class="title__beer--ipa">
-                  <%=productCart.nameProduct %>
-                </h3>
-                <p>
-                  <%=productCart.description %>
-                </p>
-                <h4>
-                  <%= productCart.price %>
-                </h4>
-                <div class="cantidad--btn">
-                  <p>Cantidad:</p>
-                  <button class="btn--agregar">- 1 +</button>
-                </div>
+
+            <div class="carrito__producto--compra">
+              <h3 class="title__beer--ipa">
+                <%=productCart.nameProduct %>
+              </h3>
+              <p>
+                <%=productCart.description %>
+              </p>
+              <h4>
+                $ <%= productCart.price %>
+              </h4>
+              <p>Cantidad:</p>
+
+              <div class="contain-btn">
+
+                <button class="button">Pagar </button>
+                <button class="button">Vaciar </button>
+
+                <button class="button">
+                  Salir
+                </button>
+
               </div>
-            </article>
-          </section>
-          <hr class="" />
-          <section class="cart__main--section">
-            <div class="cart__main--section--btn">
-              <button>Vaciar carrito</button>
-              <button>Volver a la tienda</button>
+
             </div>
+
           </section>
-          <div class="description">
-            <h2 class="title__description">Titulo</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident
-              aut harum modi consectetur obcaecati. Iusto, architecto accusantium
-              cum quia expedita, non inventore fuga tenetur quaerat excepturi
-              voluptas, laborum a ipsam.
-            </p>
-          </div>
-          <%- include('../partials/footer') %>
-            <div class="conteiner__pagar--btn">
-              <button class="pagar-btn">
-                <p>Pagar :</p>
-                <small>Subtotal :</small>
-              </button>
-            </div>
-        </main>
+
+        </div>
+        <div class="payment">
+          <img src="/images/logos/Banner-paiment.jpg" alt="">
+        </div>
+
+      </main>
+      <%- include('../partials/footer') %>
+
   </body>
 
 </html>
