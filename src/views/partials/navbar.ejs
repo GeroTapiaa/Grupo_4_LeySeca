@@ -1,4 +1,6 @@
+<%- include('modalCart') %> 
 <nav class="home__header__menu">
+ 
   <div class="home__header__logo">
     <div class="home__header__logo-letters">
       <a href="/"><img src="/images/logos/logoPhoto.png" /></a>
@@ -15,12 +17,10 @@
           <button type="submit" class="home__formbutton">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
-          <button type="button" class="btn fs-4 cart-icon" data-bs-toggle="modal" data-bs-target="#cartModal">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </button>
+          
         </div>
       </form>
-
+      
 
 
 
@@ -88,32 +88,33 @@
               <% } %>
     </ul>
   </div>
-  <script>
-    window.addEventListener("scroll", function () {
-      var nav = document.querySelector("nav");
-      nav.classList.toggle("scroll", window.scrollY > 100);
-    });
-
-    const form = document.getElementById('home__form')
-    const input = document.getElementById('input')
-
-    form.addEventListener("submit", function (e) {
-
-      e.preventDefault();
-      let error = false;
-
-      console.log(input);
-
-      if (
-        !input.value.trim()) {
-
-        error = true;
-      }
-
-
-      !error && this.submit()
-    });
-
-
-  </script>
+  
 </nav>
+<script>
+  window.addEventListener("scroll", function () {
+    var nav = document.querySelector("nav");
+    nav.classList.toggle("scroll", window.scrollY > 100);
+  });
+
+  const form = document.getElementById('home__form')
+  const input = document.getElementById('input')
+
+  form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+    let error = false;
+
+    console.log(input);
+
+    if (
+      !input.value.trim()) {
+
+      error = true;
+    }
+
+
+    !error && this.submit()
+  });
+
+
+</script>

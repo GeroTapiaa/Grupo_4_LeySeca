@@ -23,25 +23,21 @@
                   </h4>
                   <p>Cantidad:</p>
 
-                                    <button>- 1 +</button>
-                                </div>
-                                <hr>
-                                <div class="detalle__button--agregar">
-                                    <a href="/products/shopping-cart/<%= product.id %>"> <button class="button-add-cart" onclick="addCartItem('<%=product.id%>')">AGREGAR AL
-                                            CARRITO</button></a>
-
+                  <button>- 1 +</button>
+                </div>
+                <hr />
+                <div class="detalle__button--agregar">
+                  
+                  <% if (locals.userLogin && userLogin.rol===1) { %>
                     <a href="/products/edit/<%=product.id%>">
                       <button class="button-edit">EDITAR</button></a>
-
                     <form action="/products/delete/<%= product.id %> ?_method=DELETE " method="POST">
                       <button type="submit" class="button-delete">ELIMINAR</button>
                     </form>
                     <% } else { %>
-
-                      <a href="/products/shopping-cart/<%= product.id %>">
-                        <button class="button-add-cart">AGREGAR AL CARRITO</button></a>
-
-
+                      <a href="/products/shopping-cart/<%= product.id %>"> <button class="button-add-cart"
+                        onclick="addCartItem('<%=product.id%>')">AGREGAR AL
+                        CARRITO</button></a>
                       <% } %>
                 </div>
               </div>
