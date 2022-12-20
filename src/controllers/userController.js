@@ -55,7 +55,7 @@ module.exports = {
               include : [
                 {
                   association: 'product',
-                  attributes : ['id', 'name', 'price', 'discount'],
+                  attributes : ['id', 'name', 'price', 'discount','image'],
                   
                 }
               ]
@@ -66,8 +66,9 @@ module.exports = {
             req.session.orderCart = {
               id : order.id,
               total : order.total,
-              items : order.cart
+              items : order.carts
             }
+            return res.redirect("/");
           }else{
             db.Order.create({
               stateId : 1,
@@ -80,9 +81,10 @@ module.exports = {
                 total : order.total,
                 items : []
               }
-            })
+              return res.redirect("/");
+            }).catch(error => console.log(error))
           }
-          res.redirect("/");
+          
         })
 
 
