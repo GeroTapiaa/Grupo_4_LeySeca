@@ -3,13 +3,14 @@
 
  const carrito = document.getElementById('cart-items')
  const showItems = (items) => {
+    carrito.innerHTML = null;
+
     if(items.length){
-        carrito.innerHTML = null;
         items.forEach(({quantity, product}) => {
             carrito.innerHTML += `
             <tr>
             <td>
-              <img src="/images/products/${product.image}" width=80 alt="image">
+              <img src="/images/images_Ley-Seca/${product.image}" width=80 alt="image">
             </td>
             <td>
               ${product.name}
@@ -27,9 +28,7 @@
             <td>
             ${((+product.price - (+product.price * +product.discount ) / 100) * +quantity).toFixed(0)}
             </td>
-            <td>
-              <button class="btn btn-sm btn-danger" onclick="removeItem(${product.id})"><i class="fas fa-trash"></i></button>
-            </td>
+           
           </tr>
             `
         });
@@ -80,22 +79,24 @@
     } catch (error) {
         console.error(error);
     }
-    const removeQuantity = async (id) => {
-        try {
     
-            let response = await fetch('/api/carts/' + id, {
-                method : 'DELETE'
-            });
-    
-            let result = await response.json();
-    
-            if(result.ok) {
-                showItems( result.data.items)
-            }
-    
-            
-        } catch (error) {
-            console.error(error);
-        }
-    }
 };
+
+const removeQuantity = async (id) => {
+    try {
+
+        let response = await fetch('/api/carts/' + id, {
+            method : 'DELETE'
+        });
+
+        let result = await response.json();
+
+        if(result.ok) {
+            showItems( result.data.items)
+        }
+
+        
+    } catch (error) {
+        console.error(error);
+    }
+}
