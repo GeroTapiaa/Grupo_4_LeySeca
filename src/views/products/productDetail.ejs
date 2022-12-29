@@ -38,7 +38,7 @@
                     <% } else { %>
 
                       <a href="/products/shopping-cart/<%= product.id %>">
-                        <button class="button">AGREGAR AL CARRITO</button></a>
+                        <button class="button" onclick="addCartItem('<%=product.id%>')">AGREGAR AL CARRITO</button></a>
 
                       <% } %>
 

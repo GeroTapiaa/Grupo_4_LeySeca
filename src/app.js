@@ -18,7 +18,7 @@ var productsRouter = require("./routes/products");
 var apiProductsRouter = require('./routes/API/apiProduct')
 var apiUsersRouter = require('./routes/API/apiUser')
 var apiCategoriesRouter = require('./routes/API/apiCategory')
-
+var apiCartsRouter = require('./routes/API/apiCart')
 // var apiAuthRouter = require('./routes/api/apiAuth')
 
 
@@ -55,6 +55,7 @@ app.use("/products", productsRouter);
 app.use('/api/products',apiProductsRouter);
 app.use('/api/users',apiUsersRouter);
 app.use('/api/categories',apiCategoriesRouter)
+app.use('/api/carts',apiCartsRouter)
 // app.use('/api/auth',apiAuthRouter);
 
 // catch 404 and forward to error handler

@@ -1,3 +1,4 @@
+<%- include('modalCart') %> 
 <nav class="home__header__menu">
   <div class="home__header__logo">
     <div class="home__header__logo-letters">
@@ -14,6 +15,9 @@
         <input type="text" name="keywords" class="home__forminput" id="input" autocomplete="off" />
         <button type="submit" class="home__formbutton">
           <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button type="button" class="btn fs-4 cart-icon" data-bs-toggle="modal" data-bs-target="#cartModal">
+          <i class="fa-solid fa-cart-shopping"></i>
         </button>
       </div>
     </form>
@@ -114,3 +118,4 @@
 
 
 </script>
+<script src="../../../js/cart.js"></script>

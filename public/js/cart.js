@@ -13,7 +13,7 @@ console.log('cart.js connected');
               <img src="/images/images_Ley-Seca/${product.image}" width=80 alt="image">
             </td>
             <td>
-              ${product.name}
+              ${product.nameProduct}
             </td>
             <td>
               <div class="d-flex">
@@ -48,7 +48,7 @@ console.log('cart.js connected');
                 
                 showItems(items)
             }else{
-                carrito.innerHTML = "<p> ta vacio</p>"
+                carrito.innerHTML = "<p>El carrito está vacío</p>"
             }
         } 
     } catch (error) {
