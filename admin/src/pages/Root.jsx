@@ -3,7 +3,6 @@ import {Outlet} from 'react-router-dom'
 import { Footer } from '../components/Footer'
 import { SideBar } from '../components/SideBar'
 import { TopBar } from '../components/TopBar'
-import { Products } from './Products'
 
 export const Root = () => {
     return (
@@ -13,7 +12,6 @@ export const Root = () => {
                 <div id="content">
 
                     <TopBar />
-<Products/>
                     <Outlet/>
                 </div>
 

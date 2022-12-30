@@ -84,7 +84,7 @@ module.exports = {
 
       const user = await db.User.findByPk(id, {
         attributes: {
-          exclude: ["createdAt", "updatedAt", "password", "avatar"],
+          exclude: ["createdAt", "updatedAt", "password"],
           include: [
             [
               literal(

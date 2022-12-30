@@ -22,6 +22,7 @@ var apiUsersRouter = require('./routes/API/apiUser')
 var apiCategoriesRouter = require('./routes/API/apiCategory')
 var apiMainRouter = require('./routes/API/apiMain')
 var apiCartsRouter = require('./routes/API/apiCart')
+var apiDashboard = require('./routes/API/dashboardRoutes')
 
 // var apiAuthRouter = require('./routes/api/apiAuth')
 
@@ -57,11 +58,14 @@ app.use("/users", usersRouter);
 app.use("/products", productsRouter);
 
 //ruta api
+app.use('/api/dashboard', apiDashboard)
+
 app.use('/api/products', apiProductsRouter);
 app.use('/api/users', apiUsersRouter);
 app.use('/api/categories', apiCategoriesRouter)
 app.use('/api/carts', apiCartsRouter)
 app.use('/api/', apiMainRouter);
+
 // app.use('/api/auth',apiAuthRouter);
 
 // catch 404 and forward to error handler

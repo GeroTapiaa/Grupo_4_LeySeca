@@ -123,9 +123,21 @@ module.exports = {
 
     },
     image: async (req, res) => {
-        console.log(req.params.image);
-        return res.sendFile(path.join(__dirname, '..', '..', '..', 'public', 'images', 'images_Ley-Seca', req.params.image))
+
+        return res.sendFile(
+            path.join(
+                __dirname,
+                "..",
+                "..",
+                "..",
+                "public",
+                "images",
+                "images_Ley-Seca",
+                req.params.image
+            )
+        );
     },
+
 
 
 }

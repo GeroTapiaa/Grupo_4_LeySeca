@@ -12,7 +12,7 @@ export const Products = () => {
     });
 
     useEffect(() => {
-        fetchWithoutToken("/reactProductsAndUsers").then((response) => {
+        fetchWithoutToken("/dashboard").then((response) => {
             if (response.ok) {
                 const { data } = response;
                 setProducts({
