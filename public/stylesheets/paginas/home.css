@@ -724,4 +724,10 @@
   .modal-none-ok {
     display: none;
   }
+  .cart-icon{
+
+    position: relative !important;
+    left: -25% !important;
+    top: -70% !important;
+  }
 }

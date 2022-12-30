@@ -20,7 +20,7 @@ module.exports = {
           },
           key: "id",
       },
-      onDelete: 'cascade'
+        //onDelete: 'set null'
       },
       stateId: {
         type: Sequelize.INTEGER,
@@ -30,7 +30,7 @@ module.exports = {
           },
           key: "id",
       },
-      onDelete: 'cascade'
+      //onDelete: 'set null'
       },
       paymentId: {
         type: Sequelize.INTEGER,
@@ -40,7 +40,7 @@ module.exports = {
           },
           key: "id",
       },
-      onDelete: 'cascade'
+       // onDelete: 'set null'
       },
       createdAt: {
         allowNull: false,

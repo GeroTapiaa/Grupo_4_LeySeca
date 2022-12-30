@@ -34,17 +34,15 @@
 
                             <h3 class="name_products">
 
-                                <%=nameProduct %>
+                                <div class="home__button__products">
+                                    <button class="button" onclick="addCartItem('<%=id%>')">Comprar</button>
+                                </div>
 
-                            </h3>
+                                <div class="home__button__products">
 
-
-            </div>
-
-            <div class="home__button__products">
-
-                <a href="/products/shopping-cart/<%= id %>"> <button class="button">Comprar</button></a>
-            </div>
+                                    <a href="/products/shopping-cart/<%= id %>"> <button
+                                            class="button">Comprar</button></a>
+                                </div>
 
             </div>
 </article>

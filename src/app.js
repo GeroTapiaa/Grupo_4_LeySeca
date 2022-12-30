@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const localsUserCheck = require('./middleware/localsUserCheck')
 const cookieCheck = require('./middleware/cookieCheck')
+var cors = require('cors');
 
 
 var indexRouter = require("./routes/index");
@@ -15,9 +16,12 @@ var usersRouter = require("./routes/users");
 var productsRouter = require("./routes/products");
 
 //api
+
 var apiProductsRouter = require('./routes/API/apiProduct')
 var apiUsersRouter = require('./routes/API/apiUser')
 var apiCategoriesRouter = require('./routes/API/apiCategory')
+var apiMainRouter = require('./routes/API/apiMain')
+var apiCartsRouter = require('./routes/API/apiCart')
 
 // var apiAuthRouter = require('./routes/api/apiAuth')
 
@@ -41,6 +45,7 @@ app.use(
     saveUninitialized: true,
   })
 );
+app.use(cors());
 app.use(cookieCheck)
 app.use(localsUserCheck);
 
@@ -52,9 +57,11 @@ app.use("/users", usersRouter);
 app.use("/products", productsRouter);
 
 //ruta api
-app.use('/api/products',apiProductsRouter);
-app.use('/api/users',apiUsersRouter);
-app.use('/api/categories',apiCategoriesRouter)
+app.use('/api/products', apiProductsRouter);
+app.use('/api/users', apiUsersRouter);
+app.use('/api/categories', apiCategoriesRouter)
+app.use('/api/carts', apiCartsRouter)
+app.use('/api/', apiMainRouter);
 // app.use('/api/auth',apiAuthRouter);
 
 // catch 404 and forward to error handler

@@ -6,15 +6,17 @@
     <%- include('../partials/modal') %> <%- include('../partials/navbar') %>
 
         <main class="detalle__main">
-
           <section class="section-detail">
+            <!-- <img src="/images/logos/crears - copia.png" width="100%" alt=""> -->
+          </section>
+          <section class="detalle__main--section">
             <article class="detalle__main--section-producto">
               <div class="detalle__section-producto">
                 <img src="/images/images_Ley-Seca/<%= product.image %>" alt="" />
               </div>
               <div class="detalle__producto-detalle">
                 <h3>
-                  <%=product.nameProduct %>
+                  <%=product.name %>
                 </h3>
                 <p>
                   <%= product.description %>
@@ -26,24 +28,46 @@
 
                   <button>- 1 +</button>
                 </div>
-                <hr />
+                <hr>
                 <div class="detalle__button--agregar">
+                  <button class="button-add-cart" onclick="addCartItem('<%=product.id%>')">AGREGAR AL
+                    CARRITO</button>
 
                   <% if (locals.userLogin && userLogin.rol===1) { %>
+                    <div class="edit-delete">
+                      <a href="/products/edit/<%=product.id%>">
+                        <button class="button-edit">EDITAR</button></a>
+                    </div>
+                    <div class="detalle__producto-detalle">
+                      <h3>
+                        <%=product.name %>
+                      </h3>
+                      <p>
+                        <%= product.description %>
+                      </p>
+                      <div class="precio-cantidad">
+                        <h4>Precio: $ <%= product.price %>
+                        </h4>
+                        <p>Cantidad:</p>
 
-                    <a href="/products/edit/<%=product.id%>">
-                      <button class="delete-ok">Editar</button></a>
-                    <button type=" submit" id="delete" class="delete">ELIMINAR</button>
+                        <button>- 1 +</button>
+                      </div>
+                      <hr>
+                      <div class="detalle__button--agregar">
 
-                    <% } else { %>
-
-                      <a href="/products/shopping-cart/<%= product.id %>">
-                        <button class="button">AGREGAR AL CARRITO</button></a>
-
-                      <% } %>
-
-                </div>
-              </div>
+                        <% if (locals.userLogin && userLogin.rol===1) { %>
+                          <a href="/products/edit/<%=product.id%>">
+                            <button class="button-edit">EDITAR</button></a>
+                          <form action="/products/delete/<%= product.id %> ?_method=DELETE " method="POST">
+                            <button type="submit" class="button-delete">ELIMINAR</button>
+                          </form>
+                          <% } else { %>
+                            <a href="/products/shopping-cart/<%= product.id %>"> <button class="button-add-cart"
+                                onclick="addCartItem('<%=product.id%>')">AGREGAR AL
+                                CARRITO</button></a>
+                            <% } %>
+                      </div>
+                    </div>
             </article>
             <!-- <img src="/images/logos/crears - copia.png" width="100%" alt=""> -->
           </section>

@@ -106,7 +106,7 @@ const validations = (e) => {
 //  DESCRIPTION
 
 $("description").addEventListener("keyup", function ({ target }) {
-  if (exRegs.exRegUser.test(target.value.trim()) & (target.value.length > 10)) {
+  if (exRegs.exRegUser.test(target.value.replace(/ /g, '')) & (target.value.length > 10)) {
     ok("description", "is-valid");
     cleanError("errorDescription");
   } else {

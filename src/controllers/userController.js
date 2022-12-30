@@ -38,7 +38,58 @@ module.exports = {
           }
 
 
-          res.redirect("/");
+          /* carrito*/
+
+
+          // db.Order.findOne({
+          //   where : {
+          //     userId :  req.session.userLogin.id,
+          //     stateId : 1
+
+          //   },
+          //   include : [
+          //     { 
+          //       association : 'carts',
+          //       attributes : ['id', 'quantity'],
+          //       include : [
+          //         {
+          //           association: 'product',
+          //           attributes : ['id', 'name', 'price', 'discount','image'],
+
+          //         }
+          //       ]
+          //     }
+          //   ]
+          // }).then(order =>{
+          //   if(order){
+          //     req.session.orderCart = {
+          //       id : order.id,
+          //       total : order.total,
+          //       items : order.carts
+          //     }
+          //     return res.redirect("/");
+          //   }else{
+          //     db.Order.create({
+          //       stateId : 1,
+          //       total : 0,
+          //       userId : req.session.userLogin.id,
+          //       //paymentId : 1
+          //     }).then(order => {
+          //       req.session.orderCart = {
+          //         id : order.id,
+          //         total : order.total,
+          //         items : []
+          //       }
+          //       return res.redirect("/");
+          //     }).catch(error => console.log(error))
+          //   }
+
+          // })
+
+
+
+          return res.redirect("/");
+
         })
         .catch((err) => console.log(err));
     } else {

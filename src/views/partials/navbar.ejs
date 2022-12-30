@@ -1,116 +1,120 @@
-<nav class="home__header__menu">
-  <div class="home__header__logo">
-    <div class="home__header__logo-letters">
-      <a href="/"><img src="/images/logos/logoPhoto.png" /></a>
-    </div>
+<%- include('modalCart') %>
+  <nav class="home__header__menu">
 
-    <div class="home__header__logo-image">
-      <a href="/"><img src="/images/logos/Nuevo proyecto (1).png" /></a>
-    </div>
-
-    <!-- SEARCH-BAR -->
-    <form action="/results" method="GET" class="home__form" id="home__form">
-      <div class="home__formgroup">
-        <input type="text" name="keywords" class="home__forminput" id="input" autocomplete="off" />
-        <button type="submit" class="home__formbutton">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+    <div class="home__header__logo">
+      <div class="home__header__logo-letters">
+        <a href="/"><img src="/images/logos/logoPhoto.png" /></a>
       </div>
-    </form>
+
+      <div class="home__header__logo-image">
+        <a href="/"><img src="/images/logos/Nuevo proyecto (1).png" /></a>
+      </div>
+
+      <!-- SEARCH-BAR -->
+      <form action="/results" method="GET" class="home__form" id="home__form">
+        <div class="home__formgroup">
+          <input type="text" name="keywords" class="home__forminput" id="input" autocomplete="off" />
+          <button type="submit" class="home__formbutton">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+        </div>
+      </form>
 
 
 
+
+      <!-- MENU MOBILE & TABLET -->
+      <!-- <div class="home__header__menu-burguer"> -->
+      <label for="menu" class="nav_label">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <input type="checkbox" id="menu" class="nav__input">
+
+      <div class="home__header__browser-menu__items">
+
+        <ul class="drop-menu" aria-labelledby="dropdownMenuLink">
+          <% if (locals.userLogin) { %>
+
+            <li class="bur-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
+            <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
+            <li><a class="link-option" href="/users/profile">Perfil </a></li>
+            <li><a class="dropdown-item" href="/users/logout">salir</a></li>
+
+
+
+            <% if (locals.userLogin && userLogin.rol <2) { %>
+              <li><a class="dropdown-item" href="/products/create">Vender</a></li>
+              <% } %>
+                <% } else { %>
+
+                  <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
+                  <li class="burguer-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
+                  <li class="link-option"><a class="dropdown-item" href="/users/register">Registrarse</a></li>
+                  <li><a class="dropdown-item" href="/users/login">iniciar Sesion </a></li>
+
+
+                  <% } %>
+        </ul>
+      </div>
+
+    </div>
     <!-- MENU MOBILE & TABLET -->
-    <!-- <div class="home__header__menu-burguer"> -->
-    <label for="menu" class="nav_label">
-      <i class="fa-solid fa-bars"></i>
-    </label>
-    <input type="checkbox" id="menu" class="nav__input">
 
-    <div class="home__header__browser-menu__items">
+    <!-- MENU DESKTOP-->
 
-      <ul class="drop-menu" aria-labelledby="dropdownMenuLink">
+    <div class="menu_desk">
+      <ul class="list-menu">
         <% if (locals.userLogin) { %>
 
-          <li class="bur-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
-          <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
-          <li><a class="link-option" href="/users/profile">Perfil </a></li>
-          <li><a class="dropdown-item" href="/users/logout">salir</a></li>
+          <li class="link"><a class="" href="/products/products">Productos</a></li>
+          <li class="link"><a class="" href="/products/shop">Shop</a></li>
+          <li class="link"><a class="" href="/users/profile">Perfil</a></li>
+          <li class="link"><a class="" href="/users/logout">Salir</a></li>
 
 
-
-          <% if (locals.userLogin && userLogin.rol <2) { %>
-            <li><a class="dropdown-item" href="/products/create">Vender</a></li>
+          <% if (locals.userLogin && userLogin.rol===1) { %>
+            <li class="link"><a href="/products/create">Vender</a></li>
             <% } %>
               <% } else { %>
 
-                <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
-                <li class="burguer-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
-                <li class="link-option"><a class="dropdown-item" href="/users/register">Registrarse</a></li>
-                <li><a class="dropdown-item" href="/users/login">iniciar Sesion </a></li>
+                <li class="link"><a class="" href="/products/products">Productos</a></li>
+                <li class="link"><a class="" href="/products/shop">Shop</a></li>
 
+                <li class="link">
+                  <a class="" href="/users/login">Ingresá</a>
+                </li>
 
                 <% } %>
       </ul>
     </div>
 
-  </div>
-  <!-- MENU MOBILE & TABLET -->
+  </nav>
+  <script>
+    window.addEventListener("scroll", function () {
+      var nav = document.querySelector("nav");
+      nav.classList.toggle("scroll", window.scrollY > 100);
+    });
 
-  <!-- MENU DESKTOP-->
+    const form = document.getElementById('home__form')
+    const input = document.getElementById('input')
 
-  <div class="menu_desk">
-    <ul class="list-menu">
-      <% if (locals.userLogin) { %>
+    form.addEventListener("submit", function (e) {
 
-        <li class="link"><a class="" href="/products/products">Productos</a></li>
-        <li class="link"><a class="" href="/products/shop">Shop</a></li>
-        <li class="link"><a class="" href="/users/profile">Perfil</a></li>
-        <li class="link"><a class="" href="/users/logout">Salir</a></li>
+      e.preventDefault();
+      let error = false;
 
+      console.log(input);
 
-        <% if (locals.userLogin && userLogin.rol===1) { %>
-          <li class="link"><a href="/products/create">Vender</a></li>
-          <% } %>
-            <% } else { %>
+      if (
+        !input.value.trim()) {
 
-              <li class="link"><a class="" href="/products/products">Productos</a></li>
-              <li class="link"><a class="" href="/products/shop">Shop</a></li>
-
-              <li class="link">
-                <a class="" href="/users/login">Ingresá</a>
-              </li>
-
-              <% } %>
-    </ul>
-  </div>
-
-</nav>
-<script>
-  window.addEventListener("scroll", function () {
-    var nav = document.querySelector("nav");
-    nav.classList.toggle("scroll", window.scrollY > 100);
-  });
-
-  const form = document.getElementById('home__form')
-  const input = document.getElementById('input')
-
-  form.addEventListener("submit", function (e) {
-
-    e.preventDefault();
-    let error = false;
-
-    console.log(input);
-
-    if (
-      !input.value.trim()) {
-
-      error = true;
-    }
+        error = true;
+      }
 
 
-    !error && this.submit()
-  });
+      !error && this.submit()
+    });
 
 
-</script>
+  </script>

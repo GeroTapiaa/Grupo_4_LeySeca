@@ -11,10 +11,16 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.hasMany(models.Cart,{
+        foreignKey : 'orderId',
+        as : 'carts',
+        onDelete : 'cascade'
+      });
       this.belongsTo(models.User, {
         as: 'user',
         foreignKey : 'userId'
       })
+      
     }
   }
   Order.init({
