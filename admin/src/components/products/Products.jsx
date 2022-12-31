@@ -30,13 +30,13 @@ export const Products = () => {
     }, []);
 
     return (
-        <div className="col-lg-6 mb-4">
-            <div className="card shadow mb-4">
-                <div className="card-header py-3">
+        <div className="cart-product mb-4">
+            <div className="container-products">
+                <div className="">
                     <h5 className="m-0 font-weight-bold text-gray-800">Productos</h5>
                 </div>
-                <div className="card-body">
-                    <div className="row">
+                <div className="row-product">
+                    <div className="row ">
                     {products.data.map((product, index) => (<Product {...product} key={product.name + index} />))}
                     </div>
                 </div>
