@@ -45,6 +45,9 @@
 
             <% if (locals.userLogin && userLogin.rol <2) { %>
               <li><a class="dropdown-item" href="/products/create">Vender</a></li>
+              <li><a class="dropdown-item" href="http://localhost:3000/">Panel administrador</a></li>
+
+
               <% } %>
                 <% } else { %>
 
@@ -75,6 +78,8 @@
 
           <% if (locals.userLogin && userLogin.rol===1) { %>
             <li class="link"><a href="/products/create">Vender</a></li>
+            <li><a class="dropdown-item" href="http://localhost:3000/">Panel administrador</a></li>
+
             <% } %>
               <% } else { %>
 

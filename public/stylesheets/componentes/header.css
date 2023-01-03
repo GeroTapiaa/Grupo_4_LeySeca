@@ -7,7 +7,7 @@
   .home__header__browser-menu__items {
     background: RGBA(21, 20, 21, 0.96);
     width: 300px;
-    height: 225%;
+    height: 262%;
     margin-top: 123px;
     display: flex;
     justify-content: center;
@@ -492,7 +492,7 @@
   .home__header__browser-menu__items {
     background: RGBA(21, 20, 21, 0.9);
     width: 311px;
-    height: 349%;
+    height: 437%;
     margin-top: 83px;
     display: flex;
     justify-content: center;
