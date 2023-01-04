@@ -5,7 +5,7 @@ export const SideBar = () => {
   return (
     <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-    <Link className="sidebar-brand " to="/">
+    <Link className="sidebar-brand " to="//">
         <div className="sidebar-brand-icon">
                   <img className="w-100" src={logo} />
         </div>
