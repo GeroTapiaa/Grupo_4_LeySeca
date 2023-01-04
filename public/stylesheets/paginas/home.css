@@ -214,6 +214,13 @@
   .modal-none-ok {
     display: none;
   }
+  .cart-icon {
+    color: white;
+    left: 17%;
+    top: 7px;
+    position: relative;
+    margin-left: 18px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -409,6 +416,12 @@
   }
   .modal-none-ok {
     display: none;
+  }
+  .cart-icon {
+    color: white;
+    left: 24%;
+    top: -2px;
+    position: relative;
   }
 }
 
@@ -724,10 +737,10 @@
   .modal-none-ok {
     display: none;
   }
-  .cart-icon{
-
-    position: relative !important;
-    left: -25% !important;
-    top: -70% !important;
+  .cart-icon {
+    color: white;
+    left: 5%;
+    top: -2px;
+    position: relative;
   }
 }

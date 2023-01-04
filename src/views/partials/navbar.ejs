@@ -1,6 +1,5 @@
 <%- include('modalCart') %>
   <nav class="home__header__menu">
-
     <div class="home__header__logo">
       <div class="home__header__logo-letters">
         <a href="/"><img src="/images/logos/logoPhoto.png" /></a>
@@ -20,43 +19,50 @@
 
         </div>
       </form>
+      <% if (locals.userLogin && userLogin.rol>1) { %>
+        <button type="button" class="btn fs-4 cart-icon" data-bs-toggle="modal" data-bs-target="#cartModal">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <% } %>
+
+
+
+          <!-- MENU MOBILE & TABLET -->
+          <!-- <div class="home__header__menu-burguer"> -->
+          <label for="menu" class="nav_label">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+          <input type="checkbox" id="menu" class="nav__input">
+
+          <div class="home__header__browser-menu__items">
+
+            <ul class="drop-menu" aria-labelledby="dropdownMenuLink">
+              <% if (locals.userLogin) { %>
+
+                <li class="bur-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
+                <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
+                <li><a class="link-option" href="/users/profile">Perfil </a></li>
+                <li><a class="dropdown-item" href="/users/logout">salir</a></li>
 
 
 
 
-      <!-- MENU MOBILE & TABLET -->
-      <!-- <div class="home__header__menu-burguer"> -->
-      <label for="menu" class="nav_label">
-        <i class="fa-solid fa-bars"></i>
-      </label>
-      <input type="checkbox" id="menu" class="nav__input">
-
-      <div class="home__header__browser-menu__items">
-
-        <ul class="drop-menu" aria-labelledby="dropdownMenuLink">
-          <% if (locals.userLogin) { %>
-
-            <li class="bur-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
-            <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
-            <li><a class="link-option" href="/users/profile">Perfil </a></li>
-            <li><a class="dropdown-item" href="/users/logout">salir</a></li>
-
-
-
-            <% if (locals.userLogin && userLogin.rol <2) { %>
-              <li><a class="dropdown-item" href="/products/create">Vender</a></li>
-              <% } %>
-                <% } else { %>
-
-                  <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
-                  <li class="burguer-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
-                  <li class="link-option"><a class="dropdown-item" href="/users/register">Registrarse</a></li>
-                  <li><a class="dropdown-item" href="/users/login">iniciar Sesion </a></li>
-
+                <% if (locals.userLogin && userLogin.rol <2) { %>
+                  <li><a class="dropdown-item" href="/products/create">Vender</a></li>
+                  <li><a class="dropdown-item" href="http://localhost:3000/">Administración</a></li>
 
                   <% } %>
-        </ul>
-      </div>
+                    <% } else { %>
+
+                      <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
+                      <li class="burguer-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
+                      <li class="link-option"><a class="dropdown-item" href="/users/register">Registrarse</a></li>
+                      <li><a class="dropdown-item" href="/users/login">Ingresar </a></li>
+
+
+                      <% } %>
+            </ul>
+          </div>
 
     </div>
     <!-- MENU MOBILE & TABLET -->
@@ -67,23 +73,26 @@
       <ul class="list-menu">
         <% if (locals.userLogin) { %>
 
-          <li class="link"><a class="" href="/products/products">Productos</a></li>
-          <li class="link"><a class="" href="/products/shop">Shop</a></li>
-          <li class="link"><a class="" href="/users/profile">Perfil</a></li>
-          <li class="link"><a class="" href="/users/logout">Salir</a></li>
+          <li class="bur-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
+          <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
+          <li><a class="link-option" href="/users/profile">Perfil </a></li>
+          <li><a class="dropdown-item" href="/users/logout">salir</a></li>
 
 
-          <% if (locals.userLogin && userLogin.rol===1) { %>
-            <li class="link"><a href="/products/create">Vender</a></li>
+
+
+          <% if (locals.userLogin && userLogin.rol <2) { %>
+            <li><a class="dropdown-item" href="/products/create">Vender</a></li>
+            <li><a class="dropdown-item" href="http://localhost:3000/">Administración</a></li>
+
             <% } %>
               <% } else { %>
 
-                <li class="link"><a class="" href="/products/products">Productos</a></li>
-                <li class="link"><a class="" href="/products/shop">Shop</a></li>
+                <li class="burguer-link"><a class="dropdown-item" href="/products/products">Productos</a></li>
+                <li class="burguer-link"><a class="dropdown-item" href="/products/shop">Shop</a></li>
 
-                <li class="link">
-                  <a class="" href="/users/login">Ingresá</a>
-                </li>
+                <li><a class="dropdown-item" href="/users/login">Ingresar</a></li>
+
 
                 <% } %>
       </ul>
@@ -118,3 +127,8 @@
 
 
   </script>
+
+
+
+  </script>
+  <script src="../../../js/cart.js"></script>

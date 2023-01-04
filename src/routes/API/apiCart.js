@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 // ************ Controller Require ************
-const {list, addItem, removeQuantity, removeAllItems, } = require('../../controllers/API/apiCartsController');
+const { list, addItem, removeQuantity, removeAllItems, } = require('../../controllers/API/apiCartController');
 
 // /api/carts
 

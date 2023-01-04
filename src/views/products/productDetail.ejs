@@ -24,51 +24,24 @@
                 <div class="precio-cantidad">
                   <h4>Precio: $ <%= product.price %>
                   </h4>
-                  <p>Cantidad:</p>
 
-                  <button>- 1 +</button>
                 </div>
                 <hr>
                 <div class="detalle__button--agregar">
-                  <button class="button-add-cart" onclick="addCartItem('<%=product.id%>')">AGREGAR AL
-                    CARRITO</button>
 
                   <% if (locals.userLogin && userLogin.rol===1) { %>
-                    <div class="edit-delete">
-                      <a href="/products/edit/<%=product.id%>">
-                        <button class="button-edit">EDITAR</button></a>
-                    </div>
-                    <div class="detalle__producto-detalle">
-                      <h3>
-                        <%=product.name %>
-                      </h3>
-                      <p>
-                        <%= product.description %>
-                      </p>
-                      <div class="precio-cantidad">
-                        <h4>Precio: $ <%= product.price %>
-                        </h4>
-                        <p>Cantidad:</p>
-
-                        <button>- 1 +</button>
-                      </div>
-                      <hr>
-                      <div class="detalle__button--agregar">
-                        <% } %>
-
-                          <% if (locals.userLogin && userLogin.rol===1) { %>
-                            <a href="/products/edit/<%=product.id%>">
-                              <button class="button-edit">EDITAR</button></a>
-                            <form action="/products/delete/<%= product.id %> ?_method=DELETE " method="POST">
-                              <button type="submit" class="button-delete">ELIMINAR</button>
-                            </form>
-                            <% } else { %>
-                              <a href="/products/shopping-cart/<%= product.id %>"> <button class="button-add-cart"
-                                  onclick="addCartItem('<%=product.id%>')">AGREGAR AL
-                                  CARRITO</button></a>
-                              <% } %>
-                      </div>
-                    </div>
+                    <a href="/products/edit/<%=product.id%>">
+                      <button class=" button button-edit">EDITAR</button></a>
+                    <form action="/products/delete/<%= product.id %> ?_method=DELETE " method="POST">
+                      <button type="submit" class=" button button-delete">ELIMINAR</button>
+                    </form>
+                    <% } else { %>
+                      <a href=""> <button class=" button button-add-cart"
+                          onclick="addCartItem('<%=product.id%>')">AGREGAR AL
+                          CARRITO</button></a>
+                      <% } %>
+                </div>
+              </div>
             </article>
             <!-- <img src="/images/logos/crears - copia.png" width="100%" alt=""> -->
           </section>
@@ -91,7 +64,11 @@
                 </form>
                 <% } %>
             </div>
+
         </main>
+        <div class="payment">
+          <img src="/images/logos/Banner-paiment.jpg" alt="">
+        </div>
 
         <%- include('../partials/footer') %>
           <script>

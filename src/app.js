@@ -24,6 +24,7 @@ var apiMainRouter = require('./routes/API/apiMain')
 var apiCartsRouter = require('./routes/API/apiCart')
 var apiDashboard = require('./routes/API/dashboardRoutes')
 
+var apiCartsRouter = require('./routes/API/apiCart')
 // var apiAuthRouter = require('./routes/api/apiAuth')
 
 
