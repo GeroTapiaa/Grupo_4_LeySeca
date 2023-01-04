@@ -33,16 +33,12 @@
 
 
                             <h3 class="name_products">
-
-                                <div class="home__button__products">
-                                    <button class="button" onclick="addCartItem('<%=id%>')">Comprar</button>
-                                </div>
-
-                                <div class="home__button__products">
-
-                                    <a href="/products/shopping-cart/<%= id %>"> <button
-                                            class="button">Comprar</button></a>
-                                </div>
+                                <% if (locals.userLogin && userLogin.rol===2) { %>
+                                    <button class="button" onclick="addCartItem('<%=id%>')">Comprar</button></a>
+                                    <% } else { %>
+                                        <a href="/users/login">
+                                            <button class="button" onclick="addCartItem('<%=id%>')">Comprar</button></a>
+                                        <% } %>
 
             </div>
 </article>

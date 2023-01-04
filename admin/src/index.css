@@ -35,3 +35,7 @@ code {
   display: flex;
   justify-content: center;
 }
+.w-100 {
+  height: 100px;
+  margin: -31px;
+}

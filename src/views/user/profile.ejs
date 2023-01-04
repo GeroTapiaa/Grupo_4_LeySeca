@@ -76,21 +76,15 @@
         </main>
         <script>
           const $ = (element) => document.getElementById(element);
-
           $('delete').addEventListener('click', (e) => {
             $('modal-none').classList.remove('modal-none')
             $('modal-none').classList.add('modal-profile')
           })
-
           $('delete-no').addEventListener('click', (e) => {
             $('modal-none').classList.add('modal-none')
           })
-
           $('delete-ok').addEventListener('click', (e) => {
-
             $('delete-ok').submit()
-
-
           })
         </script>
   </body>

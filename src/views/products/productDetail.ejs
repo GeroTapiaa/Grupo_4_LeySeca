@@ -6,17 +6,15 @@
     <%- include('../partials/modal') %> <%- include('../partials/navbar') %>
 
         <main class="detalle__main">
+
           <section class="section-detail">
-            <!-- <img src="/images/logos/crears - copia.png" width="100%" alt=""> -->
-          </section>
-          <section class="detalle__main--section">
             <article class="detalle__main--section-producto">
               <div class="detalle__section-producto">
                 <img src="/images/images_Ley-Seca/<%= product.image %>" alt="" />
               </div>
               <div class="detalle__producto-detalle">
                 <h3>
-                  <%=product.name %>
+                  <%=product.nameProduct %>
                 </h3>
                 <p>
                   <%= product.description %>
@@ -26,20 +24,22 @@
                   </h4>
 
                 </div>
-                <hr>
+                <hr />
                 <div class="detalle__button--agregar">
 
                   <% if (locals.userLogin && userLogin.rol===1) { %>
                     <a href="/products/edit/<%=product.id%>">
-                      <button class=" button button-edit">EDITAR</button></a>
-                    <form action="/products/delete/<%= product.id %> ?_method=DELETE " method="POST">
-                      <button type="submit" class=" button button-delete">ELIMINAR</button>
-                    </form>
-                    <% } else { %>
-                      <a href=""> <button class=" button button-add-cart"
-                          onclick="addCartItem('<%=product.id%>')">AGREGAR AL
+                      <button class="delete-ok">Editar</button></a>
+                    <button type=" submit" id="delete" class="delete">ELIMINAR</button>
+                    <% } %>
+                      <% if (locals.userLogin && userLogin.rol===2) { %>
+                        <button class="button" onclick="addCartItem('<%=product.id%>')">AGREGAR AL
                           CARRITO</button></a>
-                      <% } %>
+
+                        <% } %>
+
+
+
                 </div>
               </div>
             </article>
@@ -64,7 +64,6 @@
                 </form>
                 <% } %>
             </div>
-
         </main>
         <div class="payment">
           <img src="/images/logos/Banner-paiment.jpg" alt="">
@@ -73,21 +72,15 @@
         <%- include('../partials/footer') %>
           <script>
             const $ = (element) => document.getElementById(element);
-
             $('delete').addEventListener('click', (e) => {
               $('modal-none').classList.remove('modal-none')
               $('modal-none').classList.add('modal-profile')
             })
-
             $('delete-no').addEventListener('click', (e) => {
               $('modal-none').classList.add('modal-none')
             })
-
             $('delete-ok').addEventListener('click', (e) => {
-
               $('delete-ok').submit()
-
-
             })
           </script>
   </body>

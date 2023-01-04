@@ -1,4 +1,6 @@
 import React from 'react'
+import logo from './default-ley-seca.jpg'
+
 
 export const TopBar = () => {
   return (
@@ -36,11 +38,11 @@ export const TopBar = () => {
         <li className="nav-item dropdown no-arrow">
           <a className="nav-link dropdown-toggle" href="/" id="userDropdown">
             <span className="mr-2 d-none d-lg-inline text-gray-600 small">
-              Jordan Walke
+              User Ley Seca
             </span>
             <img
               className="img-profile rounded-circle"
-              src="assets/images/jordan-walke.png"
+              src={logo}
               alt="Avatar"
               width="60"
             />
